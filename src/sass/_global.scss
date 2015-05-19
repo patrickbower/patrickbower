@@ -1,0 +1,16 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// micro-clearfix
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after { clear: both; }
+.lt-ie8 .cf { zoom: 1; }
