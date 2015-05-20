@@ -31,6 +31,7 @@
         <div id="content" class="content" role="main">
 
             <?php include('modules/scenery.php'); ?> 
+            <?php include('modules/stage.php'); ?> 
 
         </div>
 

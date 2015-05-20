@@ -1,60 +1,54 @@
 .scenery {
-        position: relative;
         overflow: hidden;
         height: 3500px;
+        z-index: -1;
 
-    .inner {
-        position: absolute;
-        top: 0;
+    .scenery__layout {
+        position: relative;
         left: 50%;
-        right: 0;
-        bottom: 0;
         width: 4800px;
         margin-left: -2400px;
-        overflow: hidden;
         text-align: center;
-        z-index: -1;
     }
 
-    .flat {
+    .scenery__flat {
         width: 500px;
         height: 500px;
         border-style: solid;
         display: inline-block;
-        
     }
 
-    .flat-5 {
+    .flat--5 {
         border-width: 1800px 1800px 0 1800px;
         border-color: $blue rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0);
         margin-bottom: -700px;
         margin-left: -1800px;
     }
   
-    .flat-4 {
+    .flat--4 {
         border-width: 0 $layout-4 $layout-4 $layout-4;
         border-color: rgba(255,255,255,0) rgba(255,255,255,0) $grey rgba(255,255,255,0);
-        margin-left: -800px;
+        margin-left: -($layout-margin);
     }  
     
-    .flat-3 {
+    .flat--3 {
         border-width: 0 $layout-3 $layout-3 $layout-3;
         border-color: rgba(255,255,255,0) rgba(255,255,255,0) $red rgba(255,255,255,0);
         margin-top: -($layout-3);
-        margin-left: 800px;
+        margin-left: $layout-margin;
     } 
     
-    .flat-2 {
+    .flat--2 {
         border-width: 0 $layout-2 $layout-2 $layout-2;
         border-color: rgba(255,255,255,0) rgba(255,255,255,0) $blue rgba(255,255,255,0);
         margin-top: -($layout-2);
-        margin-left: -800px;
+        margin-left: -($layout-margin);
     }
 
-    .flat-1 {
+    .flat--1 {
         border-width: 0 $layout-1 $layout-1 $layout-1;
         border-color: rgba(255,255,255,0) rgba(255,255,255,0) $white rgba(255,255,255,0);
         margin-top: -($layout-1);
-        margin-left: 800px;
+        margin-left: $layout-margin;
     }
 }
