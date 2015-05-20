@@ -1,12 +1,12 @@
 // base
-
-@import "_normalize.scss";
-@import "_global.scss";
-@import "_variables.scss";
-@import "_layout.scss";
-@import "lists.scss";
-
+@import "global/_normalize";
+@import "global/_variables";
+@import "global/_mixins";
+@import "global/_typeography";
+@import "global/_global";
+@import "global/_layout";
+@import "global/_lists";
 
 // modules
-@import "scenery.scss";
-@import "stage.scss";
+@import "modules/_scenery";
+@import "modules/_stage";

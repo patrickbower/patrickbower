@@ -1,0 +1,28 @@
+$text__family-sans : georgia, serif;
+
+@mixin text ($size, $line, $margin: 0, $family: $text__family-sans, $color: $color__text--base, $weight : normal) {
+	
+	font-size: em($size);
+	line-height: ($line / $size);
+	margin-bottom: em($margin, $size);
+	font-family: $family;
+	color: $color;
+}
+
+h1 {
+	@include text (
+		50, 
+		$base__line, 
+		$color: $color__text--base, 
+		$weight: bold
+	);
+}
+
+h2 {
+	@include text (
+		40, 
+		$base__line, 
+		$color: $color__text--base, 
+		$weight: bold
+	);
+}

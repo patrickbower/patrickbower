@@ -1,0 +1,26 @@
+// colours
+$color__primary--white: #ffffff;
+$color__primary--blue: 	#434A54;
+$color__primary--grey: 	#CCD0D9;
+$color__primary--red: 	#DB4453;
+
+$color__grey--dark: 	#333333;
+$color__grey--med: 		#666666;
+$color__grey--light: 	#999999;
+
+$color__text--base: $color__grey--dark;
+
+// layouts
+$ratio : 600px;
+
+$triangle__size--1 : $ratio ;
+$triangle__size--2 : $ratio * 2 ;
+$triangle__size--3 : $ratio * 3 ;
+$triangle__size--4 : $ratio * 4 ;
+$triangle__size--5 : $ratio * 5 ;
+
+$triangle__margin : 800px ;
+
+// fonts 
+$base__font-size: 16 !default;
+$base__line: 20 !default;

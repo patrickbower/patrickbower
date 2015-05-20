@@ -1,27 +1,29 @@
 <div class="stage">
-	<ul class="stage__content">
-		<li class="stage__obj">
-			<div class="header">
-				This is a PB logo
+	<ul id="content" class="content" role="main">
+		<li class="content__section">
+			<div class="content__item">
+				<h1>This is a PB logo</h1>
 			</div>
 		</li>
-		<li class="stage__obj">
-			<div class="intro">
+		<li class="content__section">
+			<div class="content__item">
 				intro
 			</div>
 		</li>
-		<li class="stage__obj">
-			<div class="code">
+		<li class="content__section">
+			<div class="content__item">
 				code
 			</div>
 		</li>
-		<li class="stage__obj">
-			<div class="creative">
+		<li class="content__section">
+			<div class="content__item">
 				creative
 			</div>
 		</li>
-		<li class="stage__obj">
-			
+		<li class="content__section">
+			<div class="content__item">
+				else
+			</div>
 		</li>
 	</ul>
 </div>

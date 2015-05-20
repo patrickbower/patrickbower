@@ -2,7 +2,7 @@ module.exports = {
 
     options: {
         spawn: false,
-        livereload: true
+        livereload: false
     },
 
     scripts: {
@@ -17,7 +17,7 @@ module.exports = {
 
     styles: {
         files: [
-            'src/sass/*.scss'
+            'src/sass/*/*.scss'
         ],
         tasks: [
             'sass:dev'
