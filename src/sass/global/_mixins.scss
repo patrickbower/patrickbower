@@ -1,3 +1,7 @@
 @function em($px, $base: $base__font-size) {
     @return ($px / $base) * 1em;
 }
+
+@mixin border($color) {
+	border: 1px solid $color; 
+}

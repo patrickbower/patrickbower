@@ -10,9 +10,40 @@
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
-    border: 1px solid red;
-}
+    // @include border(red);
 
-.content__section {
-    
+	&__section {
+	    // @include border(green);
+	    display: table;
+	    width: 100%;
+	    height: 1232px;
+	    margin-top: -616px;
+	}
+
+	&__item {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+  &__item--header {
+		display: table-cell;
+		vertical-align: bottom;
+    text-align: center;
+	}
+
+	&__section--header {
+		height: 1200px;
+	}
+
+	&__section--first {
+		margin-top: 0;
+	}
+
+	&__item--right {
+		padding-left: 50%;
+	}
+
+	&__item--left {
+		padding-right: 50%;
+	}
 }

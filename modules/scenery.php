@@ -5,5 +5,5 @@
 		<li class="scenery__flat flat--3"></li>
 		<li class="scenery__flat flat--2"></li><br>
 		<li class="scenery__flat flat--1"></li>
-	</ul>	
+	</ul>
 </div>

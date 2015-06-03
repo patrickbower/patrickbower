@@ -1,3 +1,13 @@
+$ratio : 600px;
+
+$triangle__size--1 : $ratio ;
+$triangle__size--2 : $ratio * 2 ;
+$triangle__size--3 : $ratio * 3 ;
+$triangle__size--4 : $ratio * 4 ;
+$triangle__size--5 : $ratio * 5 ;
+
+$triangle__margin : 800px ;
+
 .scenery {
         overflow: hidden;
         height: 3500px;

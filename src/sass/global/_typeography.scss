@@ -1,28 +1,44 @@
-$text__family-sans : georgia, serif;
+// http://type-scale.com/
+html {
+	font-size: 1em;
+}
 
-@mixin text ($size, $line, $margin: 0, $family: $text__family-sans, $color: $color__text--base, $weight : normal) {
-	
-	font-size: em($size);
-	line-height: ($line / $size);
-	margin-bottom: em($margin, $size);
-	font-family: $family;
-	color: $color;
+body {
+  background-color: $color__primary--white;
+  font-family: source sans pro;
+  font-weight: 400;
+  line-height: 1.45;
+  color: $color__grey--dark;
+}
+
+p {
+	margin-bottom: 1.3em;
+}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
 }
 
 h1 {
-	@include text (
-		50, 
-		$base__line, 
-		$color: $color__text--base, 
-		$weight: bold
-	);
+  margin-top: 0;
+  font-size: 6.854em;
 }
 
 h2 {
-	@include text (
-		40, 
-		$base__line, 
-		$color: $color__text--base, 
-		$weight: bold
-	);
+	font-size: 4.236em;
+}
+
+h3 {
+	font-size: 2.618em;
+}
+
+h4 {
+	font-size: 1.618em;
+}
+
+small,
+.font-small {
+	font-size: 0.618em;
 }

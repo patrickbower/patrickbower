@@ -1,6 +1,5 @@
 html {
   box-sizing: border-box;
-  font-size: $base__font-size;
   height: 100%;
 }
 
@@ -9,10 +8,10 @@ html {
 }
 
 // micro-clearfix
-.cf:before,
-.cf:after {
+%cf:before,
+%cf:after {
     content: " ";
     display: table;
 }
-.cf:after { clear: both; }
-.lt-ie8 .cf { zoom: 1; }
+%cf:after { clear: both; }
+.lt-ie8 %cf { zoom: 1; }
