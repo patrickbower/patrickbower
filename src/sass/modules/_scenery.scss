@@ -9,9 +9,10 @@ $triangle__size--5 : $ratio * 5 ;
 $triangle__margin : 800px ;
 
 .scenery {
-        overflow: hidden;
-        height: 3500px;
-        z-index: -1;
+    position: relative;
+    overflow: hidden;
+    height: 3500px;
+    z-index: -1;
 }
 
 .scenery__layout {
@@ -40,14 +41,14 @@ $triangle__margin : 800px ;
     border-width: 0 $triangle__size--4 $triangle__size--4 $triangle__size--4;
     border-color: rgba(255,255,255,0) rgba(255,255,255,0) $color__primary--grey rgba(255,255,255,0);
     margin-left: -($triangle__margin);
-}  
+}
 
 .flat--3 {
     border-width: 0 $triangle__size--3 $triangle__size--3 $triangle__size--3;
     border-color: rgba(255,255,255,0) rgba(255,255,255,0) $color__primary--red rgba(255,255,255,0);
     margin-top: -($triangle__size--3);
     margin-left: $triangle__margin;
-} 
+}
 
 .flat--2 {
     border-width: 0 $triangle__size--2 $triangle__size--2 $triangle__size--2;
