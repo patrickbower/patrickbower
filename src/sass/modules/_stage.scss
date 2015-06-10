@@ -13,20 +13,15 @@ $content__item--height: 1250px;
 }
 
 .header {
-    /* border: 2px solid red; */
     height: 1200px;
-    /* background: red; */
-    /* opacity: 0.2; */
 }
 
 .content {
     max-width: 1200px;
     margin: 0 auto;
-    /* border: 1px solid yellow; */
 }
 
 .content__item {
-    /* border: 2px solid green; */
     height: 1242px;
     margin-top: -622px;
     display: table;
@@ -48,25 +43,20 @@ $content__item--height: 1250px;
 
 }
 
-.media__object {
+.media-object {
     @extend %cf;
     zoom: 1;
 
-    &-img {
+    &__img {
         float: left;
         margin: -100px 10px 0 0;
 
     }
 
-    &-text {
+    &__text {
         overflow: hidden;
     }
 }
-
-
-
-
-
 
 .content__item--creative {
     padding: 0 10px 0 50%;

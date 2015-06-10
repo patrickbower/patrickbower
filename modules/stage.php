@@ -1,7 +1,7 @@
 <div class="stage">
     <div class="stage__inner">
         <div class="header">
-            Header content
+            <?php include('modules/header.php'); ?>
         </div>
         <ul class="content">
             <li class="content__item">
@@ -11,14 +11,7 @@
             </li>
             <li class="content__item">
                 <div class="content__item--inner content__item--code">
-                    <div class="media__object">
-                        <div class="media__object-img">
-                            <object type="image/svg+xml" data="assets/icons/code.svg"></object>
-                        </div>
-                        <div class="media__object-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione culpa inventore cumque alias nihil deleniti repellat blanditiis, fugit deserunt qui voluptates odio commodi accusantium quae distinctio facilis reprehenderit aspernatur nesciunt aperiam, possimus at. Harum aperiam, a sapiente optio assumenda labore perspiciatis officiis commodi dicta, nam, voluptatibus cupiditate ipsa esse animi.
-                        </div>
-                    </div>
+                    <?php include('modules/code.php'); ?>
                 </div>
             </li>
             <li class="content__item">

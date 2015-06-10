@@ -1,3 +1,7 @@
 .i-code-path {
     fill: red;
 }
+
+.i-line-path {
+    stroke: #fff;
+}
