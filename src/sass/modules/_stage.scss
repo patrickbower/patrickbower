@@ -1,49 +1,67 @@
+$content__item--height: 1250px;
+
 .stage {
     position: absolute;
-    top: 0;
     width: 100%;
+    overflow: hidden;
+    height: 3500px;
+    z-index: 1;
+}
+
+.stage__inner {
+    position: relative;
+}
+
+.header {
+    height: 1200px;
 }
 
 .content {
     max-width: 1200px;
-    min-width: 320px;
     margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    // @include border(red);
+}
 
-	&__section {
-	    // @include border(green);
-	    display: table;
-	    width: 100%;
-	    height: 1232px;
-	    margin-top: -616px;
-	}
+.content__item {
+    height: 1242px;
+    margin-top: -622px;
+    display: table;
+    width: 100%;
+}
 
-	&__item {
-		display: table-cell;
-		vertical-align: middle;
-	}
+.content__item--inner {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 50% 0 10px;
 
-  &__item--header {
-		display: table-cell;
-		vertical-align: bottom;
-    text-align: center;
-	}
+}
 
-	&__section--header {
-		height: 1200px;
-	}
+.content__item--intro {
+    padding: 0 10px 0 50%;
+}
 
-	&__section--first {
-		margin-top: 0;
-	}
+.content__item--code {
 
-	&__item--right {
-		padding-left: 50%;
-	}
+}
 
-	&__item--left {
-		padding-right: 50%;
-	}
+.media-object {
+    @extend %cf;
+    zoom: 1;
+
+    &__img {
+        float: left;
+        margin: -100px 10px 0 0;
+
+    }
+
+    &__text {
+        overflow: hidden;
+    }
+}
+
+.content__item--creative {
+    padding: 0 10px 0 50%;
+}
+
+.content__item--contact {
+
 }

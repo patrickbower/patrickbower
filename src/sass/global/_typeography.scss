@@ -1,11 +1,19 @@
+$p : 1em;
+$h1 : 6.854em;
+$h2 : 4.236em;
+$h3 : 2.618em;
+$h4 : 1.618em;
+$text-sml : 0.618em;
+
+
 // http://type-scale.com/
 html {
-	font-size: 1em;
+	font-size: $p;
 }
 
 body {
   background-color: $color__primary--white;
-  font-family: source sans pro;
+  font-family: $body_font;
   font-weight: 400;
   line-height: 1.45;
   color: $color__grey--dark;
@@ -23,22 +31,22 @@ h1, h2, h3, h4 {
 
 h1 {
   margin-top: 0;
-  font-size: 6.854em;
+  font-size: $h1;
 }
 
 h2 {
-	font-size: 4.236em;
+	font-size: $h2;
 }
 
 h3 {
-	font-size: 2.618em;
+	font-size: $h3;
 }
 
 h4 {
-	font-size: 1.618em;
+	font-size: $h4;
 }
 
 small,
-.font-small {
-	font-size: 0.618em;
+.text-sml {
+	font-size: $text-sml;
 }

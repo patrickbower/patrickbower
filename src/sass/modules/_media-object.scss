@@ -1,0 +1,22 @@
+.media {
+    margin:10px;
+}
+
+.media__text {
+    overflow:hidden;
+    _overflow:visible;
+    zoom:1;
+}
+
+.media__img {
+    float:left;
+    margin-right: 10px;
+}
+
+.media__img img{
+    display:block;
+}
+
+.media__img--lift {
+    margin-top: -100px;
+}
