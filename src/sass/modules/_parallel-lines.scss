@@ -1,0 +1,73 @@
+@include parallax-init;
+
+/* .parallel-lines__cont {
+    border: 2px solid yellow;
+} */
+
+.parallel-line {
+
+    &__wrap {
+        position: absolute;
+    }
+
+    &--west {
+        @include parallax(-.4);
+        width: 500px;
+        top: 300px;
+        left: -100px;
+    }
+
+    &--south {
+        @include parallax(.2);
+        width: 1000px;
+        top: 500px;
+        left: 200px;
+    }
+
+    &--north {
+        @include parallax(.3);
+        width: 700px;
+        top: 120px;
+        left: 550px;
+    }
+
+    &--east {
+        @include parallax(.1);
+        width: 900px;
+        top: 350px;
+        left: 550px;
+    }
+
+    /* &--west {
+        @include parallax(-.4);
+        width: 500px;
+        top: 300px;
+        left: -100px;
+    }
+
+    &--south {
+        @include parallax(.2);
+        width: 1000px;
+        top: 550px;
+        left: 200px;
+    }
+
+    &--north {
+        @include parallax(.3);
+        width: 700px;
+        top: 120px;
+        left: 550px;
+    }
+
+    &--east {
+        @include parallax(.1);
+        width: 900px;
+        top: 350px;
+        left: 550px;
+    } */
+
+    & {
+        border: 1px solid $color__primary--red;
+        transform: rotate(-45deg);
+    }
+}
