@@ -3,7 +3,7 @@
         <div class="header">
             <?php include('modules/header.php'); ?>
         </div>
-        <ul class="content">
+        <ul class="belt">
             <li class="content__item">
                 <div class="content__item--inner content__item--intro">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab deleniti laborum, facere, atque assumenda consequuntur commodi, nobis perspiciatis laudantium a provident. Sequi consectetur dolore, labore quidem iste, tempora eaque unde officia voluptatibus dolorum enim amet totam quam? Nostrum deleniti cum officia, accusantium dolorum, adipisci eligendi. Natus magni quae commodi quos.
@@ -21,7 +21,7 @@
             </li>
             <li class="content__item">
                 <div class="content__item--inner content__item--contact">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quaerat corporis reprehenderit consequatur ullam expedita quos tempore quasi esse laudantium facilis perferendis, iure atque reiciendis sed temporibus quam ipsum earum adipisci enim doloribus. Aliquam deserunt soluta ipsa odio doloremque ullam aperiam necessitatibus voluptates porro repellat voluptate, harum minus quisquam temporibus!
+                    <?php include('modules/contact.php'); ?>
                 </div>
             </li>
         </ul>
