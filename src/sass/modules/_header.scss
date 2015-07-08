@@ -27,6 +27,7 @@
 
     // Patrick Bower
     &-name {
+        font-size: 5em; // resized from global to suit display and font
         text-transform: uppercase;
         text-align: center;
         padding-top: 200px;
@@ -36,36 +37,39 @@
         text-shadow: 0px 0px 30px $color__primary--blue;
 
         &__first {
-            margin-right: -275px;
+            margin-right: -265px;
             position: relative;
             z-index: $z-index-over;
 
             &:after {
                 content: '';
                 display: inline-block;
-                position: relative;
                 width: 0;
                 height: 0;
                 border-style: solid;
-                border-width: 0 0 40px 40px;
+                border-width: 0 0 30px 30px;
                 border-color: transparent transparent $color__primary--blue transparent;
-                margin: 0 0 0 -35px;
+                position: absolute;
+                right: -5px;
+                bottom: 22px;
             }
         }
 
         &__last {
-            margin-left: -285px;
+            margin-left: -270px;
+            position: relative;
 
             &:before {
                 content: '';
                 display: inline-block;
-                position: relative;
                 width: 0;
                 height: 0;
                 border-style: solid;
-                border-width: 60px 60px 0 0;
+                border-width: 30px 30px 0 0;
                 border-color: $color__primary--blue transparent transparent transparent;
-                margin: 0 -60px 29px 0;
+                position: absolute;
+                top: 15px;
+                left: 5px;
             }
 
         }
@@ -74,9 +78,10 @@
             width: 500px;
             border: 1px solid $color__primary--white;
             transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
             position: relative;
             display: inline-block;
-            margin: 0 0 38px 0;
+            margin: 0 0 27px 0;
             z-index: $z-index-high;
         }
     }
