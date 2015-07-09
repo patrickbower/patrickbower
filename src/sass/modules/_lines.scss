@@ -1,0 +1,43 @@
+@include parallax-init;
+
+.lines {
+
+    &__wrap {
+        width: 900px;
+        margin: auto;
+    }
+
+    &__line {
+        position: absolute;
+    }
+
+    & {
+        border: 1px solid $color__primary--red;
+        transform: rotate(-45deg);
+    }
+
+    &--one {
+        @include parallax(-.4);
+        width: 500px;
+        top: 0;
+        left: 0;
+    }
+    &--two {
+        @include parallax(.2);
+        width: 1000px;
+        top: 0;
+        left: 300px;
+    }
+    &--three {
+        @include parallax(.3);
+        width: 700px;
+        top: 300px;
+        left: 150px;
+    }
+    &--four {
+        @include parallax(.1);
+        width: 900px;
+        top: 0;
+        left: 30px;
+    }
+}

@@ -29,6 +29,7 @@
 <![endif]-->
 
 <?php include('modules/stage.php'); ?>
+<?php include('modules/lines.php'); ?>
 <?php include('modules/scenery.php'); ?>
 
 

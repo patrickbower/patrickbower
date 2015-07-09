@@ -11,17 +11,18 @@
             &:before {
                 content: '';
                 display: block;
-                width: 80px;
-                height: 160px;
+                width: 60px;
+                height: 130px;
                 background: $color__primary--grey;
                 transform: rotate(45deg);
                 margin-left: 13px;
             }
+
         }
 
         &__icon {
             position: relative;
-            margin-top: -70px;
+            margin-top: -55px;
         }
     }
 
@@ -102,50 +103,6 @@
         &__b {
             margin-left: 40px;
             text-shadow: 0px 0px 30px $color__primary--blue;
-        }
-    }
-
-    // parallax lines = http://keithclark.co.uk/articles/pure-css-parallax-websites/
-    &-line {
-
-        &__wrap {
-            height: 0;
-            width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        &__line {
-            position: absolute;
-        }
-
-        &--one {
-            width: 500px;
-            top: 0;
-            left: 0px;
-        }
-
-        &--two {
-            width: 1000px;
-            top: 0;
-            left: 10px;
-        }
-
-        &--three {
-            width: 700px;
-            top: 0;
-            left: 20px;
-        }
-
-        &--four {
-            width: 900px;
-            top: 0;
-            left: 30px;
-        }
-
-        & {
-            border: 1px solid $color__primary--red;
-            transform: rotate(-45deg);
         }
     }
 }
