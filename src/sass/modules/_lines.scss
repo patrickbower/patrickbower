@@ -1,0 +1,37 @@
+.lines {
+
+    &__wrap {
+        width: 900px;
+        margin: auto;
+    }
+
+    &__line {
+        position: absolute;
+    }
+
+    & {
+        border: 1px solid $color-brick-red;
+        transform: rotate(-45deg);
+    }
+
+    &--one {
+        width: 1000px;
+        top: 520px;
+        left: -480px;
+    }
+    &--two {
+        width: 250px;
+        top: 0;
+        left: 500px;
+    }
+    &--three {
+        width: 1000px;
+        top: 480px;
+        left: -70px;
+    }
+    &--four {
+        width: 1000px;
+        top: 290px;
+        left: 150px;
+    }
+}

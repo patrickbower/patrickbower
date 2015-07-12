@@ -7,13 +7,14 @@
 @import "global/_global";
 @import "global/_layout";
 @import "global/_lists";
+@import "global/_links";
 
 // modules
-@import "modules/_scenery";
-@import "modules/_stage";
+@import "modules/content";
 @import "modules/_header";
-@import "modules/_parallel-lines";
 @import "modules/_code";
+@import "modules/_contact";
+@import "modules/_lines";
 
 //objects
 @import "modules/_media-object";

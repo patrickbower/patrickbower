@@ -1,0 +1,114 @@
+.content {
+    background: $color-mako;
+    overflow: hidden;
+
+    &-section--header {
+        height: 100vh;
+    }
+
+    &-section {
+        // border: 1px solid yellow;
+        height: 50vh;
+        width: 100vw;
+    }
+
+    &-triangle__shape {
+        height: 100vh;
+        @media only screen and (min-width: $media-lrg) {
+            height: 100vw;
+        	width: 100vw;
+        }
+
+        &--zero {
+            background: $color-white;
+            @media only screen and (min-width: $media-lrg) {
+                transform: rotate(-45deg);
+                margin-left: 30%;
+
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: $color-white;
+                    position: absolute;
+                    display: inline-block;
+                    margin-left: 99%;
+
+                }
+            }
+        }
+
+        &--one {
+            background: $color-mischka;
+            @media only screen and (min-width: $media-lrg) {
+                transform: rotate(45deg);
+                margin-left: -30%;
+            }
+        }
+
+        &--two {
+            background: $color-brick-red;
+            @media only screen and (min-width: $media-lrg) {
+                transform: rotate(-45deg);
+                margin-left: 30%;
+            }
+        }
+
+        &--three {
+            background: $color-white;
+            @media only screen and (min-width: $media-lrg) {
+                transform: rotate(45deg);
+                margin-left: -30%;
+            }
+        }
+
+        &--four {
+            background: $color-mischka;
+            @media only screen and (min-width: $media-lrg) {
+                transform: rotate(-45deg);
+                margin-left: 30%;
+            }
+        }
+    }
+
+    @media only screen and (min-width: $media-lrg) {
+
+        &__area {
+            width: 50%;
+            // border: 1px solid green;
+            position: relative;
+            transform-origin: top right;
+
+            &--zero {
+                transform: rotate(45deg);
+                top: 35%;
+                right: -35%;
+                padding-left: 10%;
+            }
+
+            &--one {
+                transform: rotate(-45deg);
+                padding-right: 10%;
+            }
+
+            &--two {
+                transform: rotate(45deg);
+                top: 35%;
+                right: -35%;
+                padding-left: 10%;
+            }
+
+            &--three {
+                transform: rotate(-45deg);
+                padding-right: 10%;
+            }
+
+            &--four {
+                transform: rotate(45deg);
+                top: 35%;
+                right: -35%;
+                padding-left: 10%;
+            }
+        }
+    }
+}

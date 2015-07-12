@@ -12,11 +12,11 @@ html {
 }
 
 body {
-  background-color: $color__primary--white;
-  font-family: $body_font;
-  font-weight: 400;
-  line-height: 1.45;
-  color: $color__grey--dark;
+	background-color: $color-white;
+	font-family: $body_font;
+	font-weight: 400;
+	line-height: 1.45;
+	color: $color-mine-shaft;
 }
 
 p {
@@ -24,18 +24,23 @@ p {
 }
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2;
+	font-family: $heading_font;
+	text-rendering: optimizeLegibility;
+	margin: 0 0 0.5em 0;
+	font-weight: inherit;
+	line-height: 1.2;
 }
 
 h1 {
-  margin-top: 0;
-  font-size: $h1;
+	color: $color-white;
+	margin-top: 0;
+	font-size: $h1;
+	letter-spacing: -0.05em;
 }
 
 h2 {
 	font-size: $h2;
+	letter-spacing: -0.05em;
 }
 
 h3 {
@@ -49,4 +54,32 @@ h4 {
 small,
 .text-sml {
 	font-size: $text-sml;
+}
+
+.strike {
+	display: inline-block;
+
+	&:after {
+		content: '';
+		width: 100px;
+		height: 2px;
+		background: $color-mine-shaft;
+		position: absolute;
+		bottom: 35px;
+		right: -35px;
+		transform: rotate(-45deg);
+
+	}
+
+	&:before{
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 50px 50px;
+		border-color: transparent transparent $color-white transparent;
+		position: absolute;
+		bottom: 15px;
+  		right: -15px;
+	}
 }
