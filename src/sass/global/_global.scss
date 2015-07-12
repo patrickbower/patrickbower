@@ -1,10 +1,11 @@
-html {
-  box-sizing: border-box;
-  height: 100%;
+html,
+body {
+    box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
+    transform-style: preserve-3d;
 }
 
 // micro-clearfix

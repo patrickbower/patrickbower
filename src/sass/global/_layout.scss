@@ -1,3 +1,9 @@
+// widths
+// $media-xlrg: 1140px;
+$media-lrg: 767px;
+// $media-med: 620px;
+// $media-sml: 320px;
+
 .belt {
     max-width: 1200px;
     margin: 0 auto;
@@ -7,6 +13,7 @@ img {
     max-width: 100%;
 }
 
+// z indexing
 $z-index-super   : 99;
 $z-index-high    : 5;
 $z-index-over    : 1;

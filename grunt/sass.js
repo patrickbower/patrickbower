@@ -2,6 +2,7 @@ module.exports = {
     // Development settings
     dev: {
         options: {
+            // outputStyle: 'expanded',
             // outputStyle: 'nested',
             outputStyle: 'compressed',
             sourceMap: true
@@ -17,6 +18,8 @@ module.exports = {
     // Production settings
     prod: {
         options: {
+            // outputStyle: 'expanded',
+            // outputStyle: 'nested',
             outputStyle: 'compressed',
             sourceMap: false
         },
