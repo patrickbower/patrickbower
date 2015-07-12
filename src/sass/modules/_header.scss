@@ -64,6 +64,22 @@
                 right: -5px;
                 bottom: 22px;
             }
+
+            // mobile mini slash
+            &:before {
+                content: '';
+                width: 300px;
+                height: 2px;
+                background: #ffffff;
+                position: absolute;
+                bottom: 40px;
+                right: -145px;
+        		transform: rotate(-45deg);
+                z-index: $z-index-over;
+                @media only screen and (min-width: $media-lrg) {
+                    display: none;
+                }
+            }
         }
 
         &__last
@@ -85,6 +101,22 @@
                 position: absolute;
                 top: 15px;
                 left: 5px;
+            }
+
+            // mobile mini slash
+            &:after {
+                content: '';
+                width: 400px;
+                height: 2px;
+                background: #ffffff;
+                position: absolute;
+                top: 75px;
+                left: -225px;
+        		transform: rotate(-45deg);
+                z-index: $z-index-over;
+                @media only screen and (min-width: $media-lrg) {
+                    display: none;
+                }
             }
 
         }
