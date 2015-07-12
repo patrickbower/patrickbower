@@ -1,14 +1,18 @@
-.header {
+.header
+{
     height: 1200px;
 
     // PB logo
-    &-logo {
+    &-logo
+    {
 
-        &__bg {
+        &__bg
+        {
             position: absolute;
             top: -60px;
 
-            &:before {
+            &:before
+            {
                 content: '';
                 display: block;
                 width: 60px;
@@ -20,27 +24,35 @@
 
         }
 
-        &__icon {
+        &__icon
+        {
             position: relative;
             margin-top: -55px;
         }
     }
 
     // Patrick Bower
-    &-name {
-        font-size: 5em; // resized from global to suit display and font
-        text-transform: uppercase;
+    &-name
+    {
         text-align: center;
         padding-top: 200px;
+        font-size: 5em;
+        text-transform: uppercase;
         margin-left: -10px;
         text-shadow: 0px 0px 30px $color-mako;
 
-        &__first {
-            margin-right: -265px;
+        &__first
+        {
             position: relative;
+            bottom: -20px;
             z-index: $z-index-over;
+            @media only screen and (min-width: $media-lrg) {
+                margin-right: -265px;
+                bottom: 0;
+            }
 
-            &:after {
+            &:after
+            {
                 content: '';
                 display: inline-block;
                 width: 0;
@@ -54,11 +66,15 @@
             }
         }
 
-        &__last {
-            margin-left: -270px;
+        &__last
+        {
             position: relative;
+            @media only screen and (min-width: $media-lrg) {
+                margin-left: -270px;
+            }
 
-            &:before {
+            &:before
+            {
                 content: '';
                 display: inline-block;
                 width: 0;
@@ -73,32 +89,43 @@
 
         }
 
-        &__slash {
-            width: 500px;
-            border: 1px solid $color-white;
-            transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-            position: relative;
-            display: inline-block;
-            margin: 0 0 27px 0;
-            z-index: $z-index-high;
+            &__slash
+            {
+            display: none;
+
+            @media only screen and (min-width: $media-lrg) {
+                width: 500px;
+                border: 1px solid $color-white;
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                position: relative;
+                display: inline-block;
+                margin: 0 0 27px 0;
+                z-index: $z-index-high;
+            }
         }
     }
 
     // Code Creative
-    &-sub {
+    &-sub
+    {
         display: block;
         text-transform: uppercase;
+        letter-spacing: 0.5em;
         font-size: 0.25em;
-        letter-spacing: 1em;
-        margin-top: 15px;
+        @media only screen and (min-width: $media-lrg) {
+            letter-spacing: 1em;
+            margin-top: 15px;
+        }
 
-        &__a {
+        &__a
+        {
             margin-right: 40px;
             text-shadow: 0px 0px 30px $color-mako;
         }
 
-        &__b {
+        &__b
+        {
             margin-left: 40px;
             text-shadow: 0px 0px 30px $color-mako;
         }
