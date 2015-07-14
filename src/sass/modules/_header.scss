@@ -62,20 +62,27 @@
                 border-width: 0 0 30px 30px;
                 border-color: transparent transparent $color-mako transparent;
                 position: absolute;
-                right: -5px;
-                bottom: 22px;
+                right: -10px;
+                bottom: 13px;
+                @media only screen and (min-width: $media-sml) {
+                    right: -5px;
+                    bottom: 22px;
+                }
             }
 
             &:after {
+                width: 230px;
                 content: '';
-                width: 330px;
                 border-top: 1px solid $color-white;
-                -webkit-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
                 transform: rotate(-45deg);
                 position: absolute;
-                bottom: -39px;
-                right: -80px;
+                bottom: -27px;
+                right: -56px;
+                @media only screen and (min-width: $media-sml) {
+                    width: 330px;
+                    bottom: -39px;
+                    right: -80px;
+                }
                 @media only screen and (min-width: $media-lrg) {
                     content: none;
                 }
@@ -97,23 +104,30 @@
                 width: 0;
                 height: 0;
                 border-style: solid;
-                border-width: 30px 30px 0 0;
                 border-color: $color-mako transparent transparent transparent;
+                border-width: 30px 30px 0 0;
                 position: absolute;
-                top: 15px;
-                left: 5px;
+                top: 8px;
+                left: -5px;
+                @media only screen and (min-width: $media-sml) {
+                    top: 15px;
+                    left: 5px;
+                }
             }
 
             &:after {
                 content: '';
-                width: 330px;
+                width: 230px;
                 border-top: 1px solid $color-white;
-                -webkit-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
                 transform: rotate(-45deg);
                 position: absolute;
-                top: -42px;
-                left: -73px;
+                top: -30px;
+                left: -52px;
+                @media only screen and (min-width: $media-sml) {
+                    width: 330px;
+                    top: -42px;
+                    left: -73px;
+                }
                 @media only screen and (min-width: $media-lrg) {
                     content: none;
                 }
@@ -142,7 +156,10 @@
         text-transform: uppercase;
         letter-spacing: 0.25em;
         font-size: 0.25em;
-        margin-top: 50px;
+        margin-top: 40px;
+        @media only screen and (min-width: $media-sml) {
+            margin-top: 50px;
+        }
         @media only screen and (min-width: $media-lrg) {
             letter-spacing: 1em;
             margin-top: 10px;
