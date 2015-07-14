@@ -1,14 +1,18 @@
-.header {
+.header
+{
     height: 1200px;
 
     // PB logo
-    &-logo {
+    &-logo
+    {
 
-        &__bg {
+        &__bg
+        {
             position: absolute;
             top: -60px;
 
-            &:before {
+            &:before
+            {
                 content: '';
                 display: block;
                 width: 60px;
@@ -20,27 +24,36 @@
 
         }
 
-        &__icon {
+        &__icon
+        {
             position: relative;
             margin-top: -55px;
         }
     }
 
     // Patrick Bower
-    &-name {
-        font-size: 5em; // resized from global to suit display and font
-        text-transform: uppercase;
+    &-name
+    {
+        font-size: 3.5em;
         text-align: center;
         padding-top: 200px;
+        text-transform: uppercase;
         margin-left: -10px;
-        text-shadow: 0px 0px 30px $color-mako;
+        @media only screen and (min-width: $media-sml) {
+            font-size: 5em;
+        }
 
-        &__first {
-            margin-right: -265px;
+        &__first
+        {
             position: relative;
-            z-index: $z-index-over;
+            bottom: -20px;
+            @media only screen and (min-width: $media-lrg) {
+                margin-right: -265px;
+                bottom: 0;
+            }
 
-            &:after {
+            &:before
+            {
                 content: '';
                 display: inline-block;
                 width: 0;
@@ -52,13 +65,33 @@
                 right: -5px;
                 bottom: 22px;
             }
+
+            &:after {
+                content: '';
+                width: 330px;
+                border-top: 1px solid $color-white;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                position: absolute;
+                bottom: -39px;
+                right: -80px;
+                @media only screen and (min-width: $media-lrg) {
+                    content: none;
+                }
+            }
         }
 
-        &__last {
-            margin-left: -270px;
+        &__last
+        {
             position: relative;
+            @media only screen and (min-width: $media-lrg) {
+                margin-left: -270px;
+            }
 
-            &:before {
+
+            &:before
+            {
                 content: '';
                 display: inline-block;
                 width: 0;
@@ -71,36 +104,64 @@
                 left: 5px;
             }
 
+            &:after {
+                content: '';
+                width: 330px;
+                border-top: 1px solid $color-white;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                position: absolute;
+                top: -42px;
+                left: -73px;
+                @media only screen and (min-width: $media-lrg) {
+                    content: none;
+                }
+            }
         }
 
-        &__slash {
-            width: 500px;
-            border: 1px solid $color-white;
-            transform: rotate(-45deg);
-            -webkit-transform: rotate(-45deg);
-            position: relative;
-            display: inline-block;
-            margin: 0 0 27px 0;
-            z-index: $z-index-high;
+        &__slash
+        {
+            border: none;
+            margin: 0;
+            @media only screen and (min-width: $media-lrg) {
+                width: 500px;
+                border-top: 2px solid $color-white;
+                transform: rotate(-45deg);
+                position: relative;
+                display: inline-block;
+                margin: 0 0 27px 0;
+            }
         }
     }
 
     // Code Creative
-    &-sub {
+    &-sub
+    {
         display: block;
         text-transform: uppercase;
+        letter-spacing: 0.25em;
         font-size: 0.25em;
-        letter-spacing: 1em;
-        margin-top: 15px;
-
-        &__a {
-            margin-right: 40px;
-            text-shadow: 0px 0px 30px $color-mako;
+        margin-top: 50px;
+        @media only screen and (min-width: $media-lrg) {
+            letter-spacing: 1em;
+            margin-top: 10px;
         }
 
-        &__b {
-            margin-left: 40px;
-            text-shadow: 0px 0px 30px $color-mako;
+        &__a
+        {
+            margin-right: 20px;
+            @media only screen and (min-width: $media-lrg) {
+                margin-left: 40px;
+            }
+        }
+
+        &__b
+        {
+            margin-left: 20px;
+            @media only screen and (min-width: $media-lrg) {
+                margin-left: 40px;
+            }
         }
     }
 }
