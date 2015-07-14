@@ -1,21 +1,9 @@
-// widths
-// $media-xlrg: 1140px;
-$media-lrg: 767px;
-$media-med: 620px;
-// $media-sml: 320px;
-
 .belt {
-    max-width: 1200px;
+    min-width: $media-min;
+    max-width: $media-xlrg;
     margin: 0 auto;
 }
 
 img {
     max-width: 100%;
 }
-
-// z indexing
-$z-index-super   : 99;
-$z-index-high    : 5;
-$z-index-over    : 1;
-$z-index-none    : 0;
-$z-index-under   : -1;

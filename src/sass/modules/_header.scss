@@ -34,24 +34,25 @@
     // Patrick Bower
     &-name
     {
+        font-size: 3.5em;
         text-align: center;
         padding-top: 200px;
-        font-size: 5em;
         text-transform: uppercase;
         margin-left: -10px;
-        text-shadow: 0px 0px 30px $color-mako;
+        @media only screen and (min-width: $media-sml) {
+            font-size: 5em;
+        }
 
         &__first
         {
             position: relative;
             bottom: -20px;
-            z-index: $z-index-over;
             @media only screen and (min-width: $media-lrg) {
                 margin-right: -265px;
                 bottom: 0;
             }
 
-            &:after
+            &:before
             {
                 content: '';
                 display: inline-block;
@@ -65,19 +66,18 @@
                 bottom: 22px;
             }
 
-            // mobile mini slash
-            &:before {
+            &:after {
                 content: '';
-                width: 300px;
-                height: 2px;
-                background: #ffffff;
+                width: 330px;
+                border-top: 1px solid $color-white;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
                 position: absolute;
-                bottom: 40px;
-                right: -145px;
-        		transform: rotate(-45deg);
-                z-index: $z-index-over;
+                bottom: -39px;
+                right: -80px;
                 @media only screen and (min-width: $media-lrg) {
-                    display: none;
+                    content: none;
                 }
             }
         }
@@ -88,6 +88,7 @@
             @media only screen and (min-width: $media-lrg) {
                 margin-left: -270px;
             }
+
 
             &:before
             {
@@ -103,37 +104,33 @@
                 left: 5px;
             }
 
-            // mobile mini slash
             &:after {
                 content: '';
-                width: 400px;
-                height: 2px;
-                background: #ffffff;
+                width: 330px;
+                border-top: 1px solid $color-white;
+                -webkit-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
                 position: absolute;
-                top: 75px;
-                left: -225px;
-        		transform: rotate(-45deg);
-                z-index: $z-index-over;
+                top: -42px;
+                left: -73px;
                 @media only screen and (min-width: $media-lrg) {
-                    display: none;
+                    content: none;
                 }
             }
-
         }
 
-            &__slash
-            {
-            display: none;
-
+        &__slash
+        {
+            border: none;
+            margin: 0;
             @media only screen and (min-width: $media-lrg) {
                 width: 500px;
-                border: 1px solid $color-white;
+                border-top: 2px solid $color-white;
                 transform: rotate(-45deg);
-                -webkit-transform: rotate(-45deg);
                 position: relative;
                 display: inline-block;
                 margin: 0 0 27px 0;
-                z-index: $z-index-high;
             }
         }
     }
@@ -143,23 +140,28 @@
     {
         display: block;
         text-transform: uppercase;
-        letter-spacing: 0.5em;
+        letter-spacing: 0.25em;
         font-size: 0.25em;
+        margin-top: 50px;
         @media only screen and (min-width: $media-lrg) {
             letter-spacing: 1em;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         &__a
         {
-            margin-right: 40px;
-            text-shadow: 0px 0px 30px $color-mako;
+            margin-right: 20px;
+            @media only screen and (min-width: $media-lrg) {
+                margin-left: 40px;
+            }
         }
 
         &__b
         {
-            margin-left: 40px;
-            text-shadow: 0px 0px 30px $color-mako;
+            margin-left: 20px;
+            @media only screen and (min-width: $media-lrg) {
+                margin-left: 40px;
+            }
         }
     }
 }

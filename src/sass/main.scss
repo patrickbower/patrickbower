@@ -1,6 +1,10 @@
+//settings
+@import "settings/_media-query";
+@import "settings/_colours";
+@import "settings/_z-index";
+
 // base
 @import "global/_normalize";
-@import "global/_colours";
 @import "global/_mixins";
 @import "global/_fonts";
 @import "global/_typeography";
@@ -9,12 +13,12 @@
 @import "global/_lists";
 @import "global/_links";
 
+//objects
+@import "objects/_media";
+
 // modules
 @import "modules/content";
 @import "modules/_header";
 @import "modules/_code";
 @import "modules/_contact";
 @import "modules/_lines";
-
-//objects
-@import "modules/_media-object";
