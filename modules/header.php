@@ -1,12 +1,8 @@
 <header>
     <div class="header belt">
         <a href="#" class="header-logo">
-            <i class="header-logo__icon"></i>
-                <!-- <object type="image/svg+xml" data="assets/icons/pb.svg"></object> -->
+            <div class="icon-pb"></div>
         </a>
-    <div class="icon">
-		<i class="i i-pb"></i>
-	</div>
         <h1 class="header-name">
             <span class="header-text header-name__first">Patrick</span>
             <hr class="header-name__slash">
