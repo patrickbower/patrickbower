@@ -1,7 +1,7 @@
 <header>
     <div class="header belt">
         <a href="#" class="header-logo">
-            <div class="icon-pb"></div>
+            <i class="header-logo__icon icon-pb"></i>
         </a>
         <h1 class="header-name">
             <span class="header-text header-name__first">Patrick</span>

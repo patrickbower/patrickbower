@@ -1,35 +1,28 @@
+i {
+	display: inline-block;
+}
+
 .icon-pb {
-	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2236.8%22%20height%3D%2253%22%20viewBox%3D%220%200%2036.8%2053%22%3E%0A%20%20%3Cpath%20fill%3D%22%23575757%22%20d%3D%22M17.2%200H0v39.2L14%2053V40h3.2c10.8%200%2019.6-9.2%2019.6-20S28%200%2017.2%200zm.8%2028h-7V12.4l5-5.7V12h2c4.4%200%208%203.6%208%208s-3.6%208-8%208z%22/%3E%0A%3C/svg%3E%0A');
+	background: url('../icons/png/pb.png');
+  	background-image: url('../icons/svg/pb.svg'), none;
 	background-repeat: no-repeat;
 	width: 37px;
 	height: 53px;
-
-	.lt-ie9 & {
-		background-image: url('../icons/png/pb.png');
-	}
 }
 
 
 .icon-bracket {
-	background-image: url('../icons/png/bracket.png');
-	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2284.8%22%20height%3D%22112.9%22%20viewBox%3D%220%200%2084.8%20112.9%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23575757%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M35%20111c-40%200-8.4-54.5-33-54.5C26.6%2056.5-5%202%2035%202M49.7%202c40%200%208.5%2054.5%2033%2054.5-24.5%200%207%2054.4-33%2054.4%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E%0A');
+	background: url('../icons/png/bracket.png');
+	background-image: url('../icons/svg/pb.svg'), none;
 	background-repeat: no-repeat;
 	width: 85px;
 	height: 113px;
-
-	.lt-ie9 & {
-		background-image: url('../icons/png/bracket.png');
-	}
 }
 
 .icon-pencil {
-	background-image: url('../icons/png/pencil.png');
-	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2275.5%22%20height%3D%22214.1%22%20viewBox%3D%220%200%2075.5%20214.1%22%3E%0A%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23575757%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M4.4%20190.5L26%20212l21.5-21.4M75.5%20199.5%22/%3E%0A%20%20%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23575757%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M18%20184.8c0%204.4-3.6%208-8%208s-8-3.6-8-8V99M34%20184.8c0%204.4-3.6%208-8%208s-8-3.6-8-8V84M34%20122v62.8c0%204.4%203.7%208%208%208s8-3.7%208-8V2M20.4%20205.6c3.2-3%208.2-3%2011.3%200%22/%3E%0A%3C/svg%3E%0A');
+	background: url('../icons/png/pencil.png');
+	background-image: url('../icons/svg/pencil.svg'), none;
 	background-repeat: no-repeat;
 	width: 76px;
 	height: 215px;
-
-	.lt-ie9 & {
-		background-image: url('../icons/png/pencil.png');
-	}
 }
