@@ -1,10 +1,12 @@
 <header>
     <div class="header belt">
-        <a href="#" class="header-logo__bg">
-            <div class="header-logo__icon">
-                <object type="image/svg+xml" data="assets/icons/pb.svg"></object>
-            </div>
+        <a href="#" class="header-logo">
+            <i class="header-logo__icon"></i>
+                <!-- <object type="image/svg+xml" data="assets/icons/pb.svg"></object> -->
         </a>
+    <div class="icon">
+		<i class="i i-pb"></i>
+	</div>
         <h1 class="header-name">
             <span class="header-text header-name__first">Patrick</span>
             <hr class="header-name__slash">
@@ -16,4 +18,7 @@
             </span>
         </h1>
     </div>
+
+
+
 </header>
