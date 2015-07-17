@@ -1,9 +1,7 @@
 <header>
     <div class="header belt">
-        <a href="#" class="header-logo__bg">
-            <div class="header-logo__icon">
-                <object type="image/svg+xml" data="assets/icons/pb.svg"></object>
-            </div>
+        <a href="#" class="header-logo">
+            <i class="header-logo__icon icon-pb"></i>
         </a>
         <h1 class="header-name">
             <span class="header-text header-name__first">Patrick</span>
@@ -16,4 +14,7 @@
             </span>
         </h1>
     </div>
+
+
+
 </header>
