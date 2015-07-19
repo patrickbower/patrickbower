@@ -3,11 +3,13 @@
     overflow: hidden;
 
     &-section--header {
-        height: 100vh;
+        // height: 750px;
+        @media only screen and (min-width: $media-sml) {
+            height: 100vh;
+        }
     }
 
     &-section {
-        // border: 1px solid yellow;
         height: 50vh;
         width: 100vw;
     }

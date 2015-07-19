@@ -1,7 +1,5 @@
 .header
 {
-    height: 1200px;
-
     // logo
     &-logo
     {
@@ -35,10 +33,11 @@
     {
         font-size: 3.5em;
         text-align: center;
-        padding-top: 200px;
+        padding: 100px 0;
         text-transform: uppercase;
         margin-left: -10px;
         @media only screen and (min-width: $media-sml) {
+            padding: 200px 0 0 0;
             font-size: 5em;
         }
 

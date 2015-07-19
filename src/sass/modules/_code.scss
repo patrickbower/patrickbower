@@ -1,5 +1,8 @@
-/* .code */
 .code {
+
+    &__icon {
+        margin-top: -20px;
+    }
 
     &--strike:before {
         border-color: transparent transparent $color-mischka transparent;

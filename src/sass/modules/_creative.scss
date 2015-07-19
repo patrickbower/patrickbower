@@ -1,0 +1,10 @@
+.creative {
+
+    &__icon {
+        margin-top: -80px;
+    }
+
+    &--strike:before {
+        border-color: transparent transparent $color-brick-red transparent;
+    }
+}
