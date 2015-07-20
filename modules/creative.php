@@ -8,6 +8,11 @@
                 <span class="strike creative--strike">Creative</span>
             </h2>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione culpa inventore cumque alias nihil deleniti repellat blanditiis, fugit deserunt qui voluptates odio commodi accusantium quae distinctio facilis reprehenderit aspernatur nesciunt aperiam, possimus at. Harum aperiam, a sapiente optio assumenda labore perspiciatis officiis commodi dicta, nam, voluptatibus cupiditate ipsa esse animi.
+            <div class="button__wrap">
+                <a href="#" class="button">
+                    View Code
+                </a>
+            </div>
         </div>
     </div>
 </div>
