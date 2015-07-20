@@ -11,6 +11,13 @@
 .media__img {
     float:left;
     margin-right: 30px;
+    display: none;
+    @media only screen and (min-width: 990px) {
+        display: block;
+    }
+    @media only screen and (max-width: $media-lrg) {
+        display: block;
+    }
 }
 
 .media__img img{
