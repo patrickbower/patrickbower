@@ -26,7 +26,7 @@
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--three">
             <div class="content__area content__area--three">
-                <?php //include('modules/code.php'); ?>
+                <?php include('modules/contact.php'); ?>
             </div>
         </div>
     </div>
