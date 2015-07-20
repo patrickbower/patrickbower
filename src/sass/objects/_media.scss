@@ -1,5 +1,5 @@
 .media {
-    margin:10px;
+    margin: 0 10px;
 }
 
 .media__text {
@@ -9,15 +9,16 @@
 }
 
 .media__img {
+    padding-bottom: 60px;
 
-    display: none;
-    @media only screen and (min-width: 990px) {
+    @media only screen and (min-width: $media-tablet) {
+        display: none;
+    }
+    @media only screen and (min-width: $media-desktop) {
+        display: block;
+        padding-bottom: 0;
         float:left;
         margin-right: 30px;
-        display: block;
-    }
-    @media only screen and (max-width: $media-lrg) {
-        display: block;
     }
 }
 

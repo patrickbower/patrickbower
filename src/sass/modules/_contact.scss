@@ -1,7 +1,9 @@
 .contact {
 
     &__icon {
-        margin-top: -15px;
+        @media only screen and (min-width: $media-tablet) {
+            margin-top: -15px;
+        }    
     }
 
     &--strike:before {

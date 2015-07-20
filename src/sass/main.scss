@@ -1,5 +1,5 @@
 //settings
-@import "settings/_media-query";
+@import "settings/_breakpoints";
 @import "settings/_colours";
 @import "settings/_z-index";
 
@@ -21,6 +21,7 @@
 // modules
 @import "modules/content";
 @import "modules/_header";
+@import "modules/_intro";
 @import "modules/_code";
 @import "modules/_creative";
 @import "modules/_contact";

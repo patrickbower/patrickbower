@@ -1,7 +1,9 @@
 .creative {
 
     &__icon {
-        margin-top: -80px;
+        @media only screen and (min-width: $media-tablet) {
+            margin-top: -80px;
+        }    
     }
 
     &--strike:before {
