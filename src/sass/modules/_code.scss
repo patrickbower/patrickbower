@@ -7,4 +7,8 @@
     &--strike:before {
         border-color: transparent transparent $color-mischka transparent;
     }
+
+    .button {
+        @include button ($color-mischka);
+    }
 }
