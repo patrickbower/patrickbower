@@ -1,14 +1,6 @@
-<div class="lines__wrap">
-    <div class="lines__line lines--one">
-        <hr class="lines">
-    </div>
-    <div class="lines__line lines--two">
-        <hr class="lines">
-    </div>
-    <div class="lines__line lines--three">
-        <hr class="lines">
-    </div>
-    <div class="lines__line lines--four">
-        <hr class="lines">
-    </div>
+<div class="line__wrap">
+<div class="line line--one"></div>
+<div class="line line--two"></div>
+<div class="line line--three"></div>
+<div class="line line--four"></div>
 </div>

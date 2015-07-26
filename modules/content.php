@@ -1,5 +1,6 @@
 <div class="content">
     <div class="content-section--header">
+        <?php include('modules/lines.php'); ?>
         <?php include('modules/header.php'); ?>
     </div>
     <div class="content-section">
