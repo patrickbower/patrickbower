@@ -15,7 +15,7 @@
     })();
     </script>
 
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 
 </head>
 <!--[if lt IE 7]><body class="lte-ie9 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -30,22 +30,22 @@
 
 <?php include('../modules/mini-header.php'); ?>
 
-<div class="screen-takeover" id="screen-takeover">
+<div class="screen-takeover">
 
-    <?php include('../modules/ajax-code.php'); ?>
+    <?php include('../modules/code-portfolio.php'); ?>
 
     <a href="#" class="screen-takeover__close">
-        <span class="access">close</span>
-        <i class="i-close"></i>
+        <span class="accessability">close</span>
+        <i class="icon-close"></i>
     </a>
 
 </div>
 
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="assets/js/lib/jquery-1.11.2.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="../assets/js/lib/jquery-1.11.2.min.js"><\/script>')</script>
 
-<script src="assets/js/main.min.js"></script>
+<script src="../assets/js/main.min.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
