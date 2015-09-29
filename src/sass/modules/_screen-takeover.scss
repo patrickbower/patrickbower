@@ -6,6 +6,12 @@
     color: $color-white;
     overflow-y: auto;
 
+    &__content {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 120px 20px 0 20px;
+    }
+
     & {
         position: fixed;
         top: 0;
@@ -25,6 +31,7 @@
     }
 
     img {
-        width: 100%;
+        max-width: 100%;
+        padding-bottom: 50px;
     }
 }

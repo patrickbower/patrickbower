@@ -1,6 +1,6 @@
+// Gruntfile.js
 'use strict';
 
-// Gruntfile.js
 
 // our wrapper function (required by grunt and its plugins)
 // all configuration goes inside this function
@@ -29,6 +29,7 @@ module.exports = function(grunt) {
             }
         },
 
+        // css prefix
         autoprefixer: {
 
             options: {
@@ -59,6 +60,7 @@ module.exports = function(grunt) {
             }
         },
 
+        // images - minify size
         imagemin: {
             dist: {
                 options: {
