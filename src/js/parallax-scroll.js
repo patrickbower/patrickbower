@@ -13,13 +13,11 @@
 		parallaxLine : 'parallax-line'
 	};
 
-	// constrctor function
 	function ParallaxLine(line)
 	{
 		this.line = line;
 		GetPosition.call(this);
-		AnimatePosition.call(this);
-
+		Events.call(this);
 	};
 
 	function GetPosition()
@@ -28,35 +26,39 @@
 		this.position = position;
 	};
 
-	function AnimatePosition()
+	function Events()
 	{
-		var position = this.position;
-		var line = this.line;
-
+		var line = this;
 		$(window).scroll(function(){
-			var scrolled = $(window).scrollTop();
-			var parallaxAmount = 0;
-
-			var index = $(line).index();
-			switch (index) {
-				case index = 0:
-					parallaxAmount = 0.25;
-					break;
-				case index = 1:
-					parallaxAmount = 0.75;
-					break;
-				case index = 2:
-					parallaxAmount = 0.25;
-					break;
-				case index = 3:
-					parallaxAmount = 0.5;
-					break;
-			}
-
-			var	newposition = position + (scrolled * parallaxAmount);
-			$(line).css('top', newposition);
-
+			AnimatePosition(line);
 		});
+	};
+
+	function AnimatePosition(line)
+	{
+		var position = line.position;
+		var line = line.line;
+		var scrolled = $(window).scrollTop();
+		var parallaxAmount = 0;
+
+		var index = $(line).index();
+		switch (index) {
+			case index = 0:
+				parallaxAmount = 0.25;
+				break;
+			case index = 1:
+				parallaxAmount = 0.75;
+				break;
+			case index = 2:
+				parallaxAmount = 0.25;
+				break;
+			case index = 3:
+				parallaxAmount = 0.5;
+				break;
+		}
+
+		var	newposition = position + (scrolled * parallaxAmount);
+		$(line).css('top', newposition);
 	}
 
 	var parallaxLine = $('.' + selectors.parallaxLine);
