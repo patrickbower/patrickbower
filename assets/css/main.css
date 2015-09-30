@@ -856,12 +856,12 @@ a {
   background: #e6e6e6;
   border-color: #e6e6e6; }
 
-.line__wrap {
+.parallax-line-group {
   width: 900px;
   margin: 0 auto;
   position: relative; }
 
-.line {
+.parallax-line {
   display: block;
   position: absolute;
   border-top: 1px solid #DB4453;
@@ -869,22 +869,22 @@ a {
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg); }
 
-.line--one {
+.parallax-line--one {
   width: 1000px;
   top: 600px;
   left: -625px; }
 
-.line--two {
+.parallax-line--two {
   width: 500px;
   top: 100px;
   left: 420px; }
 
-.line--three {
+.parallax-line--three {
   width: 600px;
   top: 450px;
   left: 250px; }
 
-.line--four {
+.parallax-line--four {
   width: 750px;
   top: 200px;
   left: 510px; }

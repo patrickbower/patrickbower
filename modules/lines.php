@@ -1,6 +1,6 @@
-<div class="line__wrap">
-<div class="line line--one"></div>
-<div class="line line--two"></div>
-<div class="line line--three"></div>
-<div class="line line--four"></div>
+<div class="parallax-line-group">
+    <div class="parallax-line parallax-line--one"></div>
+    <div class="parallax-line parallax-line--two"></div>
+    <div class="parallax-line parallax-line--three"></div>
+    <div class="parallax-line parallax-line--four"></div>
 </div>

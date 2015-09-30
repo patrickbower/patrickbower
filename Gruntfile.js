@@ -43,16 +43,11 @@ module.exports = function(grunt) {
 
         },
 
-        // js - validation
-        jshint: {
-            options: {
-                reporter: require('jshint-stylish')
-            },
-            all: ['Grunfile.js', 'src/js/*.js']
-        },
-
         // js - concat and minify
         uglify: {
+            options: {
+              mangle: false
+            },
             all: {
                 files: {
                     'assets/js/main.min.js': ['src/js/*.js']
@@ -91,8 +86,7 @@ module.exports = function(grunt) {
                     'src/js/*.js'
                 ],
                 tasks: [
-                    'uglify',
-                    'jshint'
+                    'uglify'
                 ]
             },
         }
@@ -106,7 +100,6 @@ module.exports = function(grunt) {
     // make sure you have run npm install so our app can find these
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
@@ -114,6 +107,6 @@ module.exports = function(grunt) {
     // ===========================================================================
     // CREATE TASKS ==============================================================
     // ===========================================================================
-    grunt.registerTask('default', ['sass', 'jshint', 'uglify', 'imagemin', 'autoprefixer' ]);
+    grunt.registerTask('default', ['sass', 'uglify', 'imagemin', 'autoprefixer' ]);
 
 };
