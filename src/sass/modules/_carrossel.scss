@@ -1,0 +1,16 @@
+.code {
+
+    &__icon {
+        @media only screen and (min-width: $media-tablet) {
+            margin-top: -20px;
+        }
+    }
+
+    &--strike:before {
+        border-color: transparent transparent $color-mischka transparent;
+    }
+
+    .button {
+        @include button ($color-mischka);
+    }
+}

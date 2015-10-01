@@ -916,3 +916,18 @@ a {
   .screen-takeover img {
     max-width: 100%;
     padding-bottom: 50px; }
+
+@media only screen and (min-width: 767px) {
+  .code__icon {
+    margin-top: -20px; } }
+
+.code--strike:before {
+  border-color: transparent transparent #CCD0D9 transparent; }
+
+.code .button:hover {
+  background: #bdc3ce;
+  border-color: #bdc3ce; }
+
+.code .button:active {
+  background: #afb5c3;
+  border-color: #afb5c3; }
