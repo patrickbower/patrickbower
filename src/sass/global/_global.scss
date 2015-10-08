@@ -8,10 +8,10 @@ body {
 }
 
 // micro-clearfix
-%cf:before,
-%cf:after {
+%clearfix:before,
+%clearfix:after {
     content: " ";
     display: table;
 }
-%cf:after { clear: both; }
-.lt-ie8 %cf { zoom: 1; }
+%clearfix:after { clear: both; }
+.lt-ie8 %clearfix { zoom: 1; }

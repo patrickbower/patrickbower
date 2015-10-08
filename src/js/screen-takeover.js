@@ -15,14 +15,14 @@
 		closeBtn : 'screen-takeover__close'
  	};
 
- 	function ScreenTakeover(button)
+ 	function ScreenTakeover(properties)
     {
-        this.button = button;
-        LaunchTakeover.call(this);
-        Events(); // as no context in need should I look to make it in case it's of use later on ?
+        this.button = properties.button;
+        launch.call(this);
+        events();
  	};
 
-    function LaunchTakeover()
+    function launch()
     {
         var button          = this.button;
         var href			= $(button).attr('href').split('#');
@@ -43,13 +43,13 @@
 		});
     };
 
-    function Events()
+    function events()
     {
         var closeBtn = '.' + selectors.closeBtn;
-        $('body').on('click', closeBtn, CloseTakeover);
+        $('body').on('click', closeBtn, close);
     };
 
-    function CloseTakeover()
+    function close()
     {
         event.preventDefault();
         $('.' + selectors.screenTakeover).remove();
@@ -60,7 +60,9 @@
  	launchBtn.on('click', function(event){
         event.preventDefault();
         var button = this;
-        var screenTakeover = new ScreenTakeover(button);
+        var screenTakeover = new ScreenTakeover({
+            button: button
+        });
     });
 
  	// pb.ScreenTakeover = {
@@ -68,3 +70,6 @@
  	// };
 
  }(jQuery, window.pb = window.pb || {}));
+
+
+ // callbacks() - ref to func when something gets fired

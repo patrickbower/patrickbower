@@ -1,16 +1,48 @@
-.code {
+.carrossel
+{
+    position: relative;
 
-    &__icon {
-        @media only screen and (min-width: $media-tablet) {
-            margin-top: -20px;
-        }
+    &__controls
+    {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: green;
+        position: absolute;
+        z-index: 1;
     }
 
-    &--strike:before {
-        border-color: transparent transparent $color-mischka transparent;
+    &__controls--left
+    {
+        top: 50%;
+        left: 0;
+        margin: -25px 0 0 -25px;
     }
 
-    .button {
-        @include button ($color-mischka);
+    &__controls--right
+    {
+        top: 50%;
+        right: 0;
+        margin: -25px -25px 0 0;
+    }
+
+    &__window
+    {
+        overflow: hidden;
+    }
+
+    &__rail
+    {
+        width: 300%;
+        @extend %clearfix;
+        line-height: 0;
+    }
+
+    &__slide
+    {
+        width: 30.333%;
+        padding-right: 1%;
+        display: inline-block;
+        float: left;
     }
 }
