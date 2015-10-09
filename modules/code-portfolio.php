@@ -1,6 +1,7 @@
 <!-- screen-takeover -->
 <div class="screen-takeover__content">
-    <div class="carrossel" data-slidecount="3">
+    
+    <div class="carrossel">
 
         <nav>
             <a class="carrossel__controls carrossel__controls--left" href="#">
@@ -14,7 +15,7 @@
         <div class="carrossel__window">
             <ul class="carrossel__rail">
                 <li class="carrossel__slide">
-                    <img
+                    <img class="carrossel__image"
                         alt="vodafone.com homepage"
 
                         srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
@@ -23,7 +24,7 @@
                     />
                 </li>
                 <li class="carrossel__slide">
-                    <img
+                    <img class="carrossel__image"
                         alt="vodafone.com homepage"
 
                         srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
@@ -32,7 +33,7 @@
                     />
                 </li>
                 <li class="carrossel__slide">
-                    <img
+                    <img class="carrossel__image"
                         alt="vodafone.com homepage"
 
                         srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
@@ -44,5 +45,7 @@
         </div>
 
     </div>
+
     <h3 class="screen-takeover__heading">code here</h3>
+
 </div>

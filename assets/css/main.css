@@ -931,7 +931,7 @@ a {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: green;
+    background: white;
     position: absolute;
     z-index: 1; }
   .carrossel__controls--left {
@@ -948,7 +948,13 @@ a {
     width: 300%;
     line-height: 0; }
   .carrossel__slide {
-    width: 30.333%;
-    padding-right: 1%;
+    width: 33.333%;
     display: inline-block;
-    float: left; }
+    float: left;
+    margin: 0 -1%; }
+    .carrossel__slide:first-child {
+      margin-left: 0; }
+    .carrossel__slide:last-child {
+      margin-right: 0; }
+  .carrossel__image {
+    padding: 0 4%; }

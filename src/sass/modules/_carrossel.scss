@@ -7,7 +7,7 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: green;
+        background: white;
         position: absolute;
         z-index: 1;
     }
@@ -40,9 +40,23 @@
 
     &__slide
     {
-        width: 30.333%;
-        padding-right: 1%;
+        width: 33.333%;
         display: inline-block;
         float: left;
+        margin: 0 -1%;
+
+        &:first-child
+        {
+            margin-left: 0;
+        }
+        &:last-child
+        {
+            margin-right: 0;
+        }
+    }
+
+    &__image
+    {
+        padding: 0 4%;
     }
 }
