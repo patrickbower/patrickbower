@@ -926,22 +926,8 @@ a {
     right: 30px; }
 
 .carrossel {
-  position: relative; }
-  .carrossel__controls {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: white;
-    position: absolute;
-    z-index: 1; }
-  .carrossel__controls--left {
-    top: 50%;
-    left: 0;
-    margin: -25px 0 0 -25px; }
-  .carrossel__controls--right {
-    top: 50%;
-    right: 0;
-    margin: -25px -25px 0 0; }
+  position: relative;
+  z-index: -1; }
   .carrossel__window {
     overflow: hidden; }
   .carrossel__rail {
@@ -958,3 +944,15 @@ a {
       margin-right: 0; }
   .carrossel__image {
     padding: 0 4%; }
+
+.screen-takeover__card {
+  text-align: center;
+  padding: 100px 20px 20px;
+  background: white;
+  color: #333;
+  margin: 0 4% 100px;
+  position: relative;
+  z-index: -1; }
+  .screen-takeover__card .text {
+    padding: 0 10%;
+    text-align: left; }

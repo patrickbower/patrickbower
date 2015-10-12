@@ -1,6 +1,6 @@
 <!-- screen-takeover -->
 <div class="screen-takeover__content">
-    
+
     <div class="carrossel">
 
         <nav>
@@ -46,6 +46,14 @@
 
     </div>
 
-    <h3 class="screen-takeover__heading">code here</h3>
+    <div class="screen-takeover__card">
+        <h3 class="screen-takeover__heading">Vodafone Global Site</h3>
+        <p>
+            www.vodafone.com
+        </p>
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil deserunt aliquid illo, molestiae, ut aperiam rem quo perspiciatis reprehenderit assumenda voluptatum quae sed amet velit nisi ipsa, corporis at quos nostrum rerum unde. Quam, quisquam. Facilis et, dignissimos aspernatur quam. Id harum suscipit itaque deleniti dolorum eius modi provident architecto doloribus eveniet praesentium quae sed, aliquid aperiam sit excepturi esse animi expedita! Ipsa illo, dolor voluptate.
+        </p>
+    </div>
 
 </div>

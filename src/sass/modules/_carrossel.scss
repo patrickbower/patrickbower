@@ -1,30 +1,34 @@
 .carrossel
 {
     position: relative;
+    z-index: -1;
+    // margin-bottom: 50px;
 
-    &__controls
-    {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: white;
-        position: absolute;
-        z-index: 1;
-    }
-
-    &__controls--left
-    {
-        top: 50%;
-        left: 0;
-        margin: -25px 0 0 -25px;
-    }
-
-    &__controls--right
-    {
-        top: 50%;
-        right: 0;
-        margin: -25px -25px 0 0;
-    }
+    // &__controls
+    // {
+    //     width: 50px;
+    //     height: 50px;
+    //     border-radius: 50%;
+    //     background: white;
+    //     position: absolute;
+    //     z-index: 1;
+    //     margin-top: -25px;
+    //     box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.5);
+    // }
+    //
+    // &__controls--left
+    // {
+    //     top: 50%;
+    //     left: 0;
+    //     // margin: -25px 0 0 -25px;
+    // }
+    //
+    // &__controls--right
+    // {
+    //     top: 50%;
+    //     right: 0;
+    //     // margin: -25px -25px 0 0;
+    // }
 
     &__window
     {
@@ -59,4 +63,35 @@
     {
         padding: 0 4%;
     }
+}
+
+.screen-takeover__card {
+    text-align: center;
+    padding: 100px 20px 20px;
+    background: white;
+    color: #333;
+    margin: 0 4% 100px;
+    position: relative;
+    z-index: -1;
+    // box-shadow: inset 1px 11px 33px -13px rgba(0,0,0,0.81);
+
+    .text {
+        padding: 0 10%;
+        text-align: left;
+    }
+
+    // &:before
+    // {
+    //     content: '';
+    //     width: 80px;
+    //     height: 80px;
+    //     border-radius: 50%;
+    //     background: #333;
+    //     border: 5px solid white;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 50%;
+    //     z-index: 1;
+    //     margin: -40px 0 0 -40px;
+    // }
 }
