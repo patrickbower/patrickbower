@@ -9,6 +9,10 @@
 (function ($, pb) {
 	'use strict';
 
+	$(document).click(function(event){
+		console.log(event.target);
+	});
+
 	var selectors = {
 		carrossel : 'carrossel'
 	};

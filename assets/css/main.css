@@ -905,18 +905,19 @@ a {
 
 .screen-takeover {
   color: #ffffff;
-  overflow-y: auto; }
+  overflow-y: auto;
+  text-align: center; }
   .screen-takeover__content {
     max-width: 960px;
     margin: 0 auto;
-    padding: 120px 20px 0 20px; }
+    padding: 70px 20px 0 20px; }
   .screen-takeover {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: #000000;
+    background: #333333;
     background: rgba(0, 0, 0, 0.9);
     padding: 10px;
     z-index: 99; }
@@ -924,10 +925,25 @@ a {
     position: absolute;
     top: 30px;
     right: 30px; }
+  .screen-takeover__card {
+    padding: 100px 10% 0;
+    background: #ffffff;
+    color: #333;
+    margin: 0 4% 100px;
+    box-shadow: inset 0px 15px 30px -20px rgba(0, 0, 0, 0.75); }
+  .screen-takeover__card-button {
+    margin-bottom: 20px; }
+    .screen-takeover__card-button:hover {
+      background: #f2f2f2;
+      border-color: #f2f2f2; }
+    .screen-takeover__card-button:active {
+      background: #e6e6e6;
+      border-color: #e6e6e6; }
+  .screen-takeover__card-text {
+    text-align: left; }
 
 .carrossel {
-  position: relative;
-  z-index: -1; }
+  position: relative; }
   .carrossel__window {
     overflow: hidden; }
   .carrossel__rail {
@@ -944,15 +960,19 @@ a {
       margin-right: 0; }
   .carrossel__image {
     padding: 0 4%; }
-
-.screen-takeover__card {
-  text-align: center;
-  padding: 100px 20px 20px;
-  background: white;
-  color: #333;
-  margin: 0 4% 100px;
-  position: relative;
-  z-index: -1; }
-  .screen-takeover__card .text {
-    padding: 0 10%;
-    text-align: left; }
+  .carrossel__pip-list {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: -35px; }
+  .carrossel__pip-item {
+    display: inline-block; }
+  .carrossel__pip {
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #666666;
+    margin: 0 2px; }
+  .carrossel__pip--active {
+    background: #666666; }
