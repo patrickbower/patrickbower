@@ -1,51 +1,60 @@
 <!-- screen-takeover -->
 <div class="screen-takeover__content">
-    <div class="carrossel">
-        <div class="carrossel__window">
-            <ul class="carrossel__rail">
-                <li class="carrossel__slide">
-                    <img class="carrossel__image"
-                        alt="vodafone.com homepage"
+    <div class="slider">
+        <div class="slider__window">
+            <ul class="slider__rail">
+                <li class="slider__carriage">
+                    <a class="slider__slide" href="#" data-index="1">
+                        <img class="slider__image"
+                            aria-hidden="false"
+                            alt="vodafone dot com homepage"
 
-                        srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
-                                 ../assets/img/vodafone.com-med.jpg 768w,
-                                 ../assets/img/vodafone.com-sml.jpg 480w"
-                    />
+                            srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
+                                     ../assets/img/vodafone.com-med.jpg 768w,
+                                     ../assets/img/vodafone.com-sml.jpg 480w"
+                        />
+                    </a>
                 </li>
-                <li class="carrossel__slide">
-                    <img class="carrossel__image"
-                        alt="vodafone.com homepage"
+                <li class="slider__carriage">
+                    <a class="slider__slide" href="#" data-index="2">
+                        <img class="slider__image"
+                            aria-hidden="true"
+                            alt="vodafone dot com homepage"
 
-                        srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
-                                 ../assets/img/vodafone.com-med.jpg 768w,
-                                 ../assets/img/vodafone.com-sml.jpg 480w"
-                    />
+                            srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
+                                     ../assets/img/vodafone.com-med.jpg 768w,
+                                     ../assets/img/vodafone.com-sml.jpg 480w"
+                        />
+                    </a>
                 </li>
-                <li class="carrossel__slide">
-                    <img class="carrossel__image"
-                        alt="vodafone.com homepage"
+                <li class="slider__carriage">
+                    <a class="slider__slide" href="#" data-index="3"> 
+                        <img class="slider__image"
+                            aria-hidden="true"
+                            alt="vodafone dot com homepage"
 
-                        srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
-                                 ../assets/img/vodafone.com-med.jpg 768w,
-                                 ../assets/img/vodafone.com-sml.jpg 480w"
-                    />
+                            srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
+                                     ../assets/img/vodafone.com-med.jpg 768w,
+                                     ../assets/img/vodafone.com-sml.jpg 480w"
+                        />
+                    </a>
                 </li>
             </ul>
         </div>
         <nav>
-            <ul class="carrossel__pip-list">
-                <li class="carrossel__pip-item">
-                    <a class="carrossel__pip carrossel__pip--active" href="#">
+            <ul class="slider__pip-list">
+                <li class="slider__pip-item">
+                    <a class="slider__pip slider__pip--active" href="#">
                         <span class="accessability">1 of 3</span>
                     </a>
                 </li>
-                <li class="carrossel__pip-item">
-                    <a class="carrossel__pip" href="#">
+                <li class="slider__pip-item">
+                    <a class="slider__pip" href="#">
                         <span class="accessability">2 of 3</span>
                     </a>
                 </li>
-                <li class="carrossel__pip-item">
-                    <a class="carrossel__pip" href="#">
+                <li class="slider__pip-item">
+                    <a class="slider__pip" href="#">
                         <span class="accessability">3 of 3</span>
                     </a>
                 </li>

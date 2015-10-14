@@ -1,4 +1,4 @@
-.carrossel
+.slider
 {
     position: relative;
 
@@ -12,9 +12,14 @@
         @extend %clearfix;
         width: 300%;
         line-height: 0;
+        transition: margin-left 0.5s;
+
+        // &:hover {
+        //     margin-left: -94%;
+        // }
     }
 
-    &__slide
+    &__carriage
     {
         width: 33.333%;
         display: inline-block;
