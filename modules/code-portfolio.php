@@ -4,7 +4,7 @@
         <div class="slider__window">
             <ul class="slider__rail">
                 <li class="slider__carriage">
-                    <a class="slider__slide" href="#" data-index="1">
+                    <a class="slider__slide" href="#">
                         <img class="slider__image"
                             aria-hidden="false"
                             alt="vodafone dot com homepage"
@@ -16,7 +16,7 @@
                     </a>
                 </li>
                 <li class="slider__carriage">
-                    <a class="slider__slide" href="#" data-index="2">
+                    <a class="slider__slide" href="#">
                         <img class="slider__image"
                             aria-hidden="true"
                             alt="vodafone dot com homepage"
@@ -28,7 +28,7 @@
                     </a>
                 </li>
                 <li class="slider__carriage">
-                    <a class="slider__slide" href="#" data-index="3"> 
+                    <a class="slider__slide" href="#">
                         <img class="slider__image"
                             aria-hidden="true"
                             alt="vodafone dot com homepage"
