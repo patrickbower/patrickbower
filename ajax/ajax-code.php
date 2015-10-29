@@ -9,10 +9,10 @@
     <!--link rel="apple-touch-icon" href="apple-touch-icon.png"-->
 
     <script>
-    (function() {
-        var html = document.documentElement;
-        html.className = html.className.replace("no-js", "js");
-    })();
+        (function() {
+            var html = document.documentElement;
+            html.className = html.className.replace("no-js", "js");
+        })();
     </script>
 
     <link rel="stylesheet" href="../assets/css/main.css">
@@ -41,10 +41,7 @@
 
 </div>
 
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="../assets/js/lib/jquery-1.11.2.min.js"><\/script>')</script>
-
+<script src="../assets/js/lib/jquery-1.11.2.min.js"></script>
 <script src="../assets/js/main.min.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -10,7 +10,7 @@
     &__rail
     {
         @extend %clearfix;
-        width: 300%;
+        // width: 300%;
         line-height: 0;
         transition: margin-left 0.5s;
 
@@ -21,7 +21,7 @@
 
     &__carriage
     {
-        width: 33.333%;
+        // width: 33.333%;
         display: inline-block;
         float: left;
         margin: 0 -1%;
@@ -61,7 +61,7 @@
         width: 12px;
         display: inline-block;
         border-radius: 50%;
-        border: 2px solid $color-ironside-gray;
+        background: $color-mountain-mist;
         margin: 0 2px;
     }
 

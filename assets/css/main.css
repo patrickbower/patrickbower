@@ -947,11 +947,9 @@ a {
   .slider__window {
     overflow: hidden; }
   .slider__rail {
-    width: 300%;
     line-height: 0;
     transition: margin-left 0.5s; }
   .slider__carriage {
-    width: 33.333%;
     display: inline-block;
     float: left;
     margin: 0 -1%; }
@@ -973,7 +971,7 @@ a {
     width: 12px;
     display: inline-block;
     border-radius: 50%;
-    border: 2px solid #666666;
+    background: #999999;
     margin: 0 2px; }
   .slider__pip--active {
     background: #666666; }

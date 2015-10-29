@@ -44,18 +44,8 @@
         <nav>
             <ul class="slider__pip-list">
                 <li class="slider__pip-item">
-                    <a class="slider__pip slider__pip--active" href="#">
-                        <span class="accessability">1 of 3</span>
-                    </a>
-                </li>
-                <li class="slider__pip-item">
                     <a class="slider__pip" href="#">
-                        <span class="accessability">2 of 3</span>
-                    </a>
-                </li>
-                <li class="slider__pip-item">
-                    <a class="slider__pip" href="#">
-                        <span class="accessability">3 of 3</span>
+                        <span class="accessability"></span>
                     </a>
                 </li>
             </ul>

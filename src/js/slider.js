@@ -16,6 +16,7 @@
 		image	 	: 'slider__image',
 		carriage 	: 'slider__carriage',
 		pip 		: 'slider__pip-item',
+		pipList 	: 'slider__pip-list',
 		pipActive 	: 'slider__pip--active'
 	};
 
@@ -39,13 +40,47 @@
 	function setUp(module)
 	{
 		var slide = $(module).find('.' + selector.slide);
+		layoutSlides.call(module, slide);
 		slide.each(addIndex.bind(this));
 
+		layoutPips.call(module);
 		var pip = $(module).find('.' + selector.pip);
 		pip.each(addIndex.bind(this));
 	};
 
-	function addIndex(index, element){
+	function layoutSlides(slide)
+	{
+		var module = $(this);
+
+		var rail = module.find('.' + selector.rail)
+		rail.css('width', 100 * slide.length + '%');
+
+		var carriage = module.find('.' + selector.carriage);
+		carriage.css('width', 100 / slide.length + '%');
+
+		module.data('slideCount', slide.length);
+	};
+
+	function layoutPips()
+	{
+		var module = $(this);
+		var pip = module.find('.' + selector.pip);
+		var slideCount = module.data('slideCount');
+
+		for (var pipCount = 0 ; pipCount < slideCount ; pipCount++ )
+		{
+			pip
+				.clone()
+				.insertBefore(pip)
+				.find('.accessability')
+				.text((pipCount + 1) + ' of ' + slideCount)
+		}
+
+		pip.last().remove();
+	};
+
+	function addIndex(index, element)
+	{
 		$(element).data({
 			index : index
 		})
