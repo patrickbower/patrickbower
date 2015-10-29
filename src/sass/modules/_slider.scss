@@ -34,6 +34,12 @@
         {
             margin-right: 0;
         }
+
+        &--active
+        {
+            position: relative;
+            z-index: -5;
+        }
     }
 
     &__image
@@ -53,6 +59,10 @@
     &__pip-item
     {
         display: inline-block;
+
+        &--active .slider__pip {
+            background: $color-ironside-gray;
+        }
     }
 
     &__pip
@@ -64,10 +74,4 @@
         background: $color-mountain-mist;
         margin: 0 2px;
     }
-
-    &__pip--active
-    {
-        background: $color-ironside-gray;
-    }
-
 }

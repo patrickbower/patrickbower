@@ -10,14 +10,14 @@
 	'use strict';
 
 	var selector = {
-		slider 		: 'slider',
-		rail 		: 'slider__rail',
-		slide	 	: 'slider__slide',
-		image	 	: 'slider__image',
-		carriage 	: 'slider__carriage',
-		pip 		: 'slider__pip-item',
-		pipList 	: 'slider__pip-list',
-		pipActive 	: 'slider__pip--active'
+		slider 			: 'slider',
+		rail 			: 'slider__rail',
+		slide	 		: 'slider__slide',
+		carriage 		: 'slider__carriage',
+		carriageActive 	: 'slider__carriage--active',
+		pipList 		: 'slider__pip-list',
+		pip 			: 'slider__pip-item',
+		pipActive 		: 'slider__pip-item--active'
 	};
 
 	var setting = {
@@ -33,9 +33,12 @@
 	function init()
 	{
 		var module = this;
+
 		setUp(module);
 		events(module);
-		goTo.call(module, 0);
+
+		goToSlide.call(module, 0);
+		goToPip.call(module, 0);
 	};
 
 	function setUp(module)
@@ -76,7 +79,6 @@
 				.find('.accessability')
 				.text((pipCount + 1) + ' of ' + slideCount)
 		}
-
 		pip.last().remove();
 	};
 
@@ -99,16 +101,28 @@
 	function getIndex()
 	{
 		var index = $(this).data('index');
-		goTo(index);
+		goToSlide(index);
+		goToPip(index);
 	};
 
-	function goTo(index)
+	function goToSlide(index)
 	{
 		var module = $(this);
 		var calc = (setting.percent * index) * -1;
 		var rail = $('.' + selector.rail);
 
 		rail.css('margin-left', calc + '%');
+
+		var carriage = $('.' + selector.carriage);
+		carriage.removeClass(selector.carriageActive);
+		carriage.eq(index).addClass(selector.carriageActive);
+	};
+
+	function goToPip(index)
+	{
+		var pip = $('.' + selector.pip);
+		pip.removeClass(selector.pipActive);
+		pip.eq(index).addClass(selector.pipActive);
 	};
 
 	Slider();

@@ -957,6 +957,9 @@ a {
       margin-left: 0; }
     .slider__carriage:last-child {
       margin-right: 0; }
+    .slider__carriage--active {
+      position: relative;
+      z-index: -5; }
   .slider__image {
     padding: 0 4%; }
   .slider__pip-list {
@@ -966,6 +969,8 @@ a {
     margin-bottom: -35px; }
   .slider__pip-item {
     display: inline-block; }
+    .slider__pip-item--active .slider__pip {
+      background: #666666; }
   .slider__pip {
     height: 12px;
     width: 12px;
@@ -973,5 +978,3 @@ a {
     border-radius: 50%;
     background: #999999;
     margin: 0 2px; }
-  .slider__pip--active {
-    background: #666666; }
