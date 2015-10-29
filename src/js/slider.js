@@ -20,9 +20,9 @@
 		pipActive 	: 'slider__pip--active'
 	};
 
-	// var setting = {
-	// 	persent : 94
-	// };
+	var setting = {
+		percent : 94
+	};
 
 	function Slider()
 	{
@@ -35,6 +35,7 @@
 		var module = this;
 		setUp(module);
 		events(module);
+		goTo.call(module, 0);
 	};
 
 	function setUp(module)
@@ -103,7 +104,11 @@
 
 	function goTo(index)
 	{
-		console.log(index);
+		var module = $(this);
+		var calc = (setting.percent * index) * -1;
+		var rail = $('.' + selector.rail);
+
+		rail.css('margin-left', calc + '%');
 	};
 
 	Slider();
