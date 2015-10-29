@@ -107,7 +107,6 @@
 
 	function goToSlide(index)
 	{
-		var module = $(this);
 		var calc = (setting.percent * index) * -1;
 		var rail = $('.' + selector.rail);
 
