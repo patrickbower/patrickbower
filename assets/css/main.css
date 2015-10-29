@@ -956,13 +956,13 @@ a {
     float: left;
     margin: 0 -1%; }
     .slider__carriage:first-child {
-      margin-left: 0; }
+      margin-left: 0 !important; }
     .slider__carriage:last-child {
-      margin-right: 0; }
+      margin-right: 0 !important; }
     .slider__carriage--active {
       position: relative;
       z-index: -1; }
-  .slider__image {
+  .slider__slide {
     padding: 0 4%; }
   .slider__pip-list {
     width: 100%;

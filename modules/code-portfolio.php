@@ -39,6 +39,18 @@
                         />
                     </a>
                 </li>
+                <li class="slider__carriage">
+                    <a class="slider__slide" href="#">
+                        <img class="slider__image"
+                            aria-hidden="true"
+                            alt="vodafone dot com homepage"
+
+                            srcset=" ../assets/img/vodafone.com-lrg.jpg 1200w,
+                                     ../assets/img/vodafone.com-med.jpg 768w,
+                                     ../assets/img/vodafone.com-sml.jpg 480w"
+                        />
+                    </a>
+                </li>
             </ul>
         </div>
         <nav>

@@ -21,7 +21,8 @@
 	};
 
 	var setting = {
-		percent : 94
+		percent : 94,
+		optimised : 3
 	};
 
 	function Slider()
@@ -44,6 +45,8 @@
 	function setUp(module)
 	{
 		var slide = $(module).find('.' + selector.slide);
+		$(module).data('slideCount', slide.length);
+
 		layoutSlides.call(module, slide);
 		slide.each(addIndex.bind(this));
 
@@ -57,12 +60,13 @@
 		var module = $(this);
 
 		var rail = module.find('.' + selector.rail)
-		rail.css('width', 100 * slide.length + '%');
+		rail.css('width', (100 * slide.length) + '%');
 
 		var carriage = module.find('.' + selector.carriage);
-		carriage.css('width', 100 / slide.length + '%');
+		carriage.css('width', (100 / slide.length) + '%');
 
-		module.data('slideCount', slide.length);
+		var carriageCalc = (3 / module.data('slideCount')) * -1 ;
+		carriage.css('margin', '0% ' + (carriageCalc + '%'));
 	};
 
 	function layoutPips()

@@ -10,29 +10,23 @@
     &__rail
     {
         @extend %clearfix;
-        // width: 300%;
         line-height: 0;
         transition: margin-left 0.5s;
-
-        // &:hover {
-        //     margin-left: -94%;
-        // }
     }
 
     &__carriage
     {
-        // width: 33.333%;
         display: inline-block;
         float: left;
         margin: 0 -1%;
 
         &:first-child
         {
-            margin-left: 0;
+            margin-left: 0!important;
         }
         &:last-child
         {
-            margin-right: 0;
+            margin-right: 0!important;
         }
 
         &--active
@@ -42,7 +36,7 @@
         }
     }
 
-    &__image
+    &__slide
     {
         padding: 0 4%;
     }
