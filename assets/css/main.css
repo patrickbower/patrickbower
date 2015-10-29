@@ -930,7 +930,9 @@ a {
     background: #ffffff;
     color: #333;
     margin: 0 4% 100px;
-    box-shadow: inset 0px 15px 30px -20px rgba(0, 0, 0, 0.75); }
+    box-shadow: inset 0px 15px 30px -20px rgba(0, 0, 0, 0.75);
+    position: relative;
+    z-index: -2; }
   .screen-takeover__card-button {
     margin-bottom: 20px; }
     .screen-takeover__card-button:hover {
@@ -959,7 +961,7 @@ a {
       margin-right: 0; }
     .slider__carriage--active {
       position: relative;
-      z-index: -5; }
+      z-index: -1; }
   .slider__image {
     padding: 0 4%; }
   .slider__pip-list {
