@@ -43,7 +43,7 @@
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--one">
             <div class="content__area content__area--one">
-                <?php include('modules/code.php'); ?>
+                <?php include('modules/development.php'); ?>
             </div>
         </div>
     </div>

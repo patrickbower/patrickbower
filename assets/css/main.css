@@ -487,17 +487,6 @@ body {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.slider__rail:before,
-.slider__rail:after {
-  content: " ";
-  display: table; }
-
-.slider__rail:after {
-  clear: both; }
-
-.lt-ie8 .slider__rail {
-  zoom: 1; }
-
 .belt {
   min-width: 320px;
   max-width: 1140px;
@@ -867,102 +856,27 @@ a {
   background: #e6e6e6;
   border-color: #e6e6e6; }
 
-.parallax-line-group {
-  width: 900px;
-  margin: 0 auto;
-  position: relative; }
-
-.parallax-line {
-  display: block;
-  position: absolute;
-  border-top: 1px solid #DB4453;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-
-.parallax-line--one {
-  width: 1000px;
-  top: 600px;
-  left: -625px; }
-
-.parallax-line--two {
-  width: 500px;
-  top: 100px;
-  left: 420px; }
-
-.parallax-line--three {
-  width: 600px;
-  top: 450px;
-  left: 250px; }
-
-.parallax-line--four {
-  width: 750px;
-  top: 200px;
-  left: 510px; }
-
 .screen-takeover__active {
   overflow-y: hidden; }
 
 .screen-takeover {
   color: #ffffff;
   overflow-y: auto;
-  text-align: center; }
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #333333;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  z-index: 99; }
   .screen-takeover__content {
     max-width: 960px;
     margin: 0 auto;
     padding: 70px 20px 0 20px; }
-  .screen-takeover {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: #333333;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px;
-    z-index: 99; }
   .screen-takeover__close {
     position: absolute;
     top: 30px;
     right: 30px; }
-  .screen-takeover__card-text {
-    text-align: left; }
-
-.slider {
-  position: relative; }
-  .slider__window {
-    overflow: hidden; }
-  .slider__rail {
-    line-height: 0;
-    transition: margin-left 0.5s; }
-  .slider__carriage {
-    display: inline-block;
-    float: left;
-    margin: 0 -1%;
-    opacity: 0.5; }
-    .slider__carriage:first-child {
-      margin-left: 0 !important; }
-    .slider__carriage:last-child {
-      margin-right: 0 !important; }
-    .slider__carriage--active {
-      opacity: 1;
-      position: relative;
-      z-index: -1; }
-  .slider__slide {
-    padding: 0 4%; }
-  .slider__pip-list {
-    width: 100%;
-    text-align: center;
-    padding-top: 10px;
-    margin-bottom: -35px; }
-  .slider__pip-item {
-    display: inline-block; }
-    .slider__pip-item--active .slider__pip {
-      background: #666666; }
-  .slider__pip {
-    height: 12px;
-    width: 12px;
-    display: inline-block;
-    border-radius: 50%;
-    background: #999999;
-    margin: 0 2px; }

@@ -32,7 +32,7 @@
 
 <div class="screen-takeover">
 
-    <?php include('../modules/code-portfolio.php'); ?>
+    <?php include('../modules/development-projects.php'); ?>
 
     <a href="#" class="screen-takeover__close">
         <span class="accessability">close</span>
