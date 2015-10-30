@@ -12,7 +12,7 @@
             </p>
             <div class="button__wrap">
                 <a href="ajax/ajax-development.php#screen-takeover" class="button screen-takeover__launch">
-                    View Development
+                    View Devolopment Projects
                 </a>
             </div>
         </div>
