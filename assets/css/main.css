@@ -954,12 +954,14 @@ a {
   .slider__carriage {
     display: inline-block;
     float: left;
-    margin: 0 -1%; }
+    margin: 0 -1%;
+    opacity: 0.5; }
     .slider__carriage:first-child {
       margin-left: 0 !important; }
     .slider__carriage:last-child {
       margin-right: 0 !important; }
     .slider__carriage--active {
+      opacity: 1;
       position: relative;
       z-index: -1; }
   .slider__slide {
