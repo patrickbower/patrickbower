@@ -812,32 +812,32 @@ a {
   margin: 0 10px; }
 
 @media only screen and (min-width: 767px) {
-  .code__icon {
+  .development__icon {
     margin-top: -20px; } }
 
-.code--strike:before {
+.development--strike:before {
   border-color: transparent transparent #CCD0D9 transparent; }
 
-.code .button:hover {
+.development .button:hover {
   background: #bdc3ce;
   border-color: #bdc3ce; }
 
-.code .button:active {
+.development .button:active {
   background: #afb5c3;
   border-color: #afb5c3; }
 
 @media only screen and (min-width: 767px) {
-  .creative__icon {
+  .design__icon {
     margin-top: -80px; } }
 
-.creative--strike:before {
+.design--strike:before {
   border-color: transparent transparent #DB4453 transparent; }
 
-.creative .button:hover {
+.design .button:hover {
   background: #d72f3f;
   border-color: #d72f3f; }
 
-.creative .button:active {
+.design .button:active {
   background: #c62636;
   border-color: #c62636; }
 

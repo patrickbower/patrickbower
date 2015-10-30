@@ -50,7 +50,7 @@
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--two">
             <div class="content__area content__area--two">
-                <?php include('modules/creative.php'); ?>
+                <?php include('modules/design.php'); ?>
             </div>
         </div>
     </div>
