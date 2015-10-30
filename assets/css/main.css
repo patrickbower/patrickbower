@@ -925,22 +925,6 @@ a {
     position: absolute;
     top: 30px;
     right: 30px; }
-  .screen-takeover__card {
-    padding: 100px 10% 0;
-    background: #ffffff;
-    color: #333;
-    margin: 0 4% 100px;
-    box-shadow: inset 0px 15px 30px -20px rgba(0, 0, 0, 0.75);
-    position: relative;
-    z-index: -2; }
-  .screen-takeover__card-button {
-    margin-bottom: 20px; }
-    .screen-takeover__card-button:hover {
-      background: #f2f2f2;
-      border-color: #f2f2f2; }
-    .screen-takeover__card-button:active {
-      background: #e6e6e6;
-      border-color: #e6e6e6; }
   .screen-takeover__card-text {
     text-align: left; }
 

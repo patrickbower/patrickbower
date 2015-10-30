@@ -31,23 +31,6 @@
         right: 30px;
     }
 
-    &__card
-    {
-        padding: 100px 10% 0;
-        background: $color-white;
-        color: #333;
-        margin: 0 4% 100px;
-        box-shadow: inset 0px 15px 30px -20px rgba(0,0,0,0.75);
-        position: relative;
-        z-index: -2;
-    }
-
-    &__card-button
-    {
-        @include button ($color-white);
-        margin-bottom: 20px;
-    }
-
     &__card-text {
         text-align: left;
     }
