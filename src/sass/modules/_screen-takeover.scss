@@ -37,19 +37,23 @@
 
     &__background
     {
-        @media only screen and (min-width: $media-tablet) {
+        @media only screen and (min-width: $media-tablet)
+        {
             background: rgba(0, 0, 0, 0.5);
-            height: 150vw;
-            width: 150vw;
-            // min-height: 500px;
+            height: 100vw;
+            width: 100vw;
+            min-height: 500px;
             transform: rotate(45deg);
             transform-origin: 50% 50%;
             position: absolute;
-            right: -100vw;
-            top: -25vw;
+            right: -50vw;
+            top: 0vw;
             z-index: -1;
         }
     }
 
-
+    &--button
+    {
+        @include button ($color-mine-shaft);
+    }
 }

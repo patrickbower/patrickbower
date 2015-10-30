@@ -924,8 +924,9 @@ a {
   @media only screen and (min-width: 767px) {
     .screen-takeover__background {
       background: rgba(0, 0, 0, 0.5);
-      height: 150vw;
-      width: 150vw;
+      height: 100vw;
+      width: 100vw;
+      min-height: 500px;
       -webkit-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
               transform: rotate(45deg);
@@ -933,9 +934,15 @@ a {
           -ms-transform-origin: 50% 50%;
               transform-origin: 50% 50%;
       position: absolute;
-      right: -100vw;
-      top: -25vw;
+      right: -50vw;
+      top: 0vw;
       z-index: -1; } }
+  .screen-takeover--button:hover {
+    background: #262626;
+    border-color: #262626; }
+  .screen-takeover--button:active {
+    background: #1a1a1a;
+    border-color: #1a1a1a; }
 
 @media only screen and (min-width: 767px) {
   .contact__icon {
@@ -994,3 +1001,6 @@ a {
 
 .project__sub-head {
   margin-bottom: 30px; }
+
+.project__image {
+  margin-bottom: 20px; }
