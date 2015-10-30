@@ -5,3 +5,12 @@
 @mixin border($color) {
     border: 1px solid $color;
 }
+
+// micro-clearfix
+%clearfix:before,
+%clearfix:after {
+    content: " ";
+    display: table;
+}
+%clearfix:after { clear: both; }
+.lt-ie8 %clearfix { zoom: 1; }

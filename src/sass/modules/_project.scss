@@ -1,0 +1,23 @@
+.project {
+
+    &__index-list
+    {
+        margin-bottom: $space-75;
+    }
+
+    &__head
+    {
+        border-top: 1px solid $color-white;
+        padding-top: $space-30;
+    }
+
+    &__title
+    {
+        margin-bottom: 0;
+    }
+
+    &__sub-head
+    {
+        margin-bottom: $space-30;
+    }
+}

@@ -1,11 +1,13 @@
-.screen-takeover__active {
+.screen-takeover__active
+{
     overflow-y: hidden;
 }
 
-.screen-takeover {
+.screen-takeover
+{
     color: $color-white;
     overflow-y: auto;
-    text-align: center;
+    overflow-x: hidden;
     position: fixed;
     top: 0;
     right: 0;
@@ -16,15 +18,38 @@
     padding: 10px;
     z-index: $z-index-super;
 
-    &__content {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 70px 20px 0 20px;
-    }
-    
-    &__close {
+    &__close
+    {
         position: absolute;
         top: 30px;
         right: 30px;
     }
+
+    &__title
+    {
+        margin-bottom: $space-75;
+    }
+
+    &__content
+    {
+        padding: 50px 0 20px 0;
+    }
+
+    &__background
+    {
+        @media only screen and (min-width: $media-tablet) {
+            background: rgba(0, 0, 0, 0.5);
+            height: 150vw;
+            width: 150vw;
+            // min-height: 500px;
+            transform: rotate(45deg);
+            transform-origin: 50% 50%;
+            position: absolute;
+            right: -100vw;
+            top: -25vw;
+            z-index: -1;
+        }
+    }
+
+
 }

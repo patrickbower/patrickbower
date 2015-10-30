@@ -1,3 +1,9 @@
+// fonts
+$body_font : 'source_sans_regular';
+$heading_font : 'montserratbold';
+
+// scales
+// http://type-scale.com/
 $p : 1em;
 $h1 : 6.854em;
 $h2 : 4.236em;
@@ -5,13 +11,13 @@ $h3 : 2.618em;
 $h4 : 1.618em;
 $text-sml : 0.618em;
 
-
-// http://type-scale.com/
-html {
+html
+{
 	font-size: $p;
 }
 
-body {
+body
+{
 	background-color: $color-white;
 	font-family: $body_font;
 	font-weight: 400;
@@ -23,47 +29,63 @@ body {
 	-moz-font-feature-settings: "liga" off;
 }
 
-p {
+p
+{
 	margin: 0 0 1.3em 0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4
+{
 	font-family: $heading_font;
 	margin: 0 0 0.5em 0;
 	font-weight: inherit;
 	line-height: 1.2;
 }
 
-h1 {
+h1, .h1
+{
 	color: $color-white;
 	margin-top: 0;
 	font-size: $h1;
 	letter-spacing: -0.05em;
 	}
 
-h2 {
+h2, .h2
+{
 	font-size: $h2;
 	letter-spacing: -0.05em;
 }
 
-h3 {
+h3, .h3
+{
 	font-size: $h3;
 }
 
-h4 {
+h4, .h4
+{
 	font-size: $h4;
 }
 
+.sub-head
+{
+	font-family: $heading_font;
+	font-size: 1.25em;
+}
+
 small,
-.text-sml {
+.text-sml
+{
 	font-size: $text-sml;
 }
 
-.strike {
+.strike
+{
 	display: inline-block;
 	transform-style: preserve-3d;
 
-	&:after {
+	&:after
+	{
 		content: '';
 		width: 100px;
 		height: 2px;

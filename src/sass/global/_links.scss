@@ -1,4 +1,15 @@
 a {
 	display: inline-block;
 	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+}
+
+.link--underline
+{
+	&:hover,
+	&:focus
+	{
+		text-decoration: underline;
+	}
 }

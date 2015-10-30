@@ -7,11 +7,7 @@ body {
     box-sizing: inherit;
 }
 
-// micro-clearfix
-%clearfix:before,
-%clearfix:after {
-    content: " ";
-    display: table;
+hr
+{
+    margin: 1.5em 0;
 }
-%clearfix:after { clear: both; }
-.lt-ie8 %clearfix { zoom: 1; }
