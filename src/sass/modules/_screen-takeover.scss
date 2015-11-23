@@ -13,16 +13,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: $color-mine-shaft;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px;
     z-index: $z-index-super;
 
-    &__close
+    &__background
     {
-        position: absolute;
-        top: 30px;
-        right: 30px;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 10px 150px 10px;
     }
 
     &__title
@@ -32,28 +28,12 @@
 
     &__content
     {
-        padding: 50px 0 20px 0;
-    }
-
-    &__background
-    {
-        @media only screen and (min-width: $media-tablet)
-        {
-            background: rgba(0, 0, 0, 0.5);
-            height: 100vw;
-            width: 100vw;
-            min-height: 500px;
-            transform: rotate(45deg);
-            transform-origin: 50% 50%;
-            position: absolute;
-            right: -50vw;
-            top: 0vw;
-            z-index: -1;
-        }
+        padding-top: 50px;
     }
 
     &--button
     {
+        border-color: $color-white;
         @include button ($color-mine-shaft);
     }
 }

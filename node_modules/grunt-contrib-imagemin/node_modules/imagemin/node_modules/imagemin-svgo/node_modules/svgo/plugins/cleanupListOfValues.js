@@ -4,6 +4,8 @@ exports.type = 'perItem';
 
 exports.active = false;
 
+exports.description = 'rounds list of values to the fixed precision';
+
 exports.params = {
     floatPrecision: 3,
     leadingZero: true,
@@ -16,7 +18,7 @@ var regNumericValues = /^([\-+]?\d*\.?\d+([eE][\-+]?\d+)?)(px|pt|pc|mm|cm|m|in|f
     removeLeadingZero = require('../lib/svgo/tools').removeLeadingZero,
     absoluteLengths = { // relative to px
         cm: 96/2.54,
-        mm: 9600/2.54,
+        mm: 96/25.4,
         in: 96,
         pt: 4/3,
         pc: 16

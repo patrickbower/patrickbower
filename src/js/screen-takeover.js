@@ -11,8 +11,8 @@
 
  	var selectors = {
         screenTakeover : 'screen-takeover',
-		launchBtn : 'screen-takeover__launch',
-		closeBtn : 'screen-takeover__close'
+		launchBtn : 'js-screen-takeover__launch',
+		closeBtn : 'js-screen-takeover__close'
  	};
 
  	function ScreenTakeover(properties)

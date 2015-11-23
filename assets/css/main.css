@@ -236,7 +236,8 @@ select {
  *    `input` and others.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -363,7 +364,8 @@ th {
 .row:after {
   clear: both; }
 
-.lt-ie8 .grid, .lt-ie8 .row {
+.lt-ie8 .grid, .lt-ie8
+.row {
   zoom: 1; }
 
 @font-face {
@@ -388,6 +390,9 @@ th {
   font-style: normal; }
 
 i {
+  display: inline-block; }
+
+.icon {
   display: inline-block; }
 
 .icon-pb {
@@ -587,8 +592,7 @@ a {
   color: inherit;
   text-decoration: none; }
 
-.link--underline:hover,
-.link--underline:focus {
+.link--underline:hover, .link--underline:focus {
   text-decoration: underline; }
 
 .button__wrap {
@@ -637,6 +641,24 @@ a {
 .media__img img {
   display: block; }
 
+.close-topright {
+  position: absolute;
+  top: 30px;
+  right: 30px; }
+
+.close-row {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333333; }
+
+.card {
+  background: rgba(51, 51, 51, 0.8);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-top: 5px solid #E60000; }
+
 .content {
   background: #434A54;
   overflow: hidden; }
@@ -653,7 +675,8 @@ a {
       min-height: 500px; } }
   .content-triangle__shape {
     text-align: center;
-    padding: 50px 0; }
+    padding: 50px 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); }
     @media only screen and (min-width: 767px) {
       .content-triangle__shape {
         padding: 0;
@@ -909,40 +932,22 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #333333;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 10px;
   z-index: 99; }
-  .screen-takeover__close {
-    position: absolute;
-    top: 30px;
-    right: 30px; }
+  .screen-takeover__background {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 10px 150px 10px; }
   .screen-takeover__title {
     margin-bottom: 75px; }
   .screen-takeover__content {
-    padding: 50px 0 20px 0; }
-  @media only screen and (min-width: 767px) {
-    .screen-takeover__background {
-      background: rgba(0, 0, 0, 0.5);
-      height: 100vw;
-      width: 100vw;
-      min-height: 500px;
-      -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-              transform: rotate(45deg);
-      -webkit-transform-origin: 50% 50%;
-          -ms-transform-origin: 50% 50%;
-              transform-origin: 50% 50%;
-      position: absolute;
-      right: -50vw;
-      top: 0vw;
-      z-index: -1; } }
-  .screen-takeover--button:hover {
-    background: #262626;
-    border-color: #262626; }
-  .screen-takeover--button:active {
-    background: #1a1a1a;
-    border-color: #1a1a1a; }
+    padding-top: 50px; }
+  .screen-takeover--button {
+    border-color: #ffffff; }
+    .screen-takeover--button:hover {
+      background: #262626;
+      border-color: #262626; }
+    .screen-takeover--button:active {
+      background: #1a1a1a;
+      border-color: #1a1a1a; }
 
 @media only screen and (min-width: 767px) {
   .contact__icon {
@@ -991,13 +996,6 @@ a {
 
 .project__index-list {
   margin-bottom: 75px; }
-
-.project__head {
-  border-top: 1px solid #ffffff;
-  padding-top: 30px; }
-
-.project__title {
-  margin-bottom: 0; }
 
 .project__sub-head {
   margin-bottom: 30px; }

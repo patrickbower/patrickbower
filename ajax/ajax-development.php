@@ -26,12 +26,16 @@
 
 <div class="screen-takeover">
 
-    <?php include('../modules/development-projects.php'); ?>
+    <div class="screen-takeover__background">
 
-    <a href="#" class="screen-takeover__close">
-        <span class="accessability">close</span>
-        <i class="icon-close"></i>
-    </a>
+        <?php include('../modules/development-projects.php'); ?>
+
+        <a href="#" class="js-screen-takeover__close close-topright">
+            <span class="accessability">close</span>
+            <span class="icon icon-close"></span>
+        </a>
+
+    </div>
 
 </div>
 

@@ -1,0 +1,21 @@
+.close
+{
+
+    &-topright
+    {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+    }
+}
+
+.close-row
+{
+    display: block;
+    padding: 20px;
+    text-align: center;
+    // background: $color-white;
+    margin-bottom: 50px;
+    // border-bottom: 5px solid $color-mine-shaft;
+    color: $color-mine-shaft;
+}
