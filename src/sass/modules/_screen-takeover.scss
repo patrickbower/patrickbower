@@ -1,3 +1,16 @@
+.backgound--triangle
+{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    width: 0;
+    height: 0;
+	border-top: 75vw solid #e90000;
+    // border-top: 75vw solid $color-mountain-mist;
+	border-right: 75vw solid transparent;
+}
+
 .screen-takeover__active
 {
     overflow-y: hidden;
@@ -29,6 +42,8 @@
     &__content
     {
         padding-top: 50px;
+        z-index: 2;
+        position: relative;
     }
 
     &--button

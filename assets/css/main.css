@@ -653,11 +653,27 @@ a {
   margin-bottom: 50px;
   color: #333333; }
 
-.card {
+.card__back {
   background: rgba(51, 51, 51, 0.8);
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
-  padding: 30px;
-  border-top: 5px solid #E60000; }
+  padding: 60px 30px 30px 30px;
+  margin-right: -170%;
+  margin-top: 50px;
+  padding-right: 175%; }
+
+.card__btn {
+  margin-bottom: -52px; }
+  .card__btn a {
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    background: #e90000;
+    border: 0; }
+
+.logo {
+  background: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: -90px 0 30px 170px; }
 
 .content {
   background: #434A54;
@@ -920,6 +936,16 @@ a {
 .intro--media {
   margin: 0 10px; }
 
+.backgound--triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-top: 75vw solid #e90000;
+  border-right: 75vw solid transparent; }
+
 .screen-takeover__active {
   overflow-y: hidden; }
 
@@ -939,7 +965,9 @@ a {
   .screen-takeover__title {
     margin-bottom: 75px; }
   .screen-takeover__content {
-    padding-top: 50px; }
+    padding-top: 50px;
+    z-index: 2;
+    position: relative; }
   .screen-takeover--button {
     border-color: #ffffff; }
     .screen-takeover--button:hover {
@@ -1001,4 +1029,5 @@ a {
   margin-bottom: 30px; }
 
 .project__image {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5); }
