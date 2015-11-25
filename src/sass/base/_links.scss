@@ -4,12 +4,3 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
-
-.link--underline
-{
-	&:hover,
-	&:focus
-	{
-		text-decoration: underline;
-	}
-}

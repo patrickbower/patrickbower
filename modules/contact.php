@@ -1,10 +1,10 @@
 <div class="contact">
     <div class="media">
         <div class="media__img contact__icon">
-            <i class="icon-note"></i>
+            <span class="icon icon-note"></span>
         </div>
         <div class="media__text">
-            <h2>
+            <h2 class="h2">
                 <span class="strike contact--strike">Contact</span>
             </h2>
             <p>

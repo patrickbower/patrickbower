@@ -1,5 +1,5 @@
 <div class="intro intro--media">
-    <h2>
+    <h2 class="h2">
         <span class="strike">Hello</span>
     </h2>
     <p>

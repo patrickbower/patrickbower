@@ -1,0 +1,54 @@
+.h1,
+.h2,
+.h3,
+.h4
+{
+	font-family: $heading_font;
+}
+
+.h1
+{
+	letter-spacing: -0.05em;
+}
+
+.h2
+{
+	letter-spacing: -0.05em;
+}
+
+.sub-head
+{
+	font-family: $heading_font;
+	font-size: 1.25em;
+}
+
+.strike
+{
+	display: inline-block;
+	transform-style: preserve-3d;
+
+	&:after
+	{
+		content: '';
+		width: 100px;
+		height: 2px;
+		background: $color-mine-shaft;
+		position: absolute;
+		bottom: 32px;
+		right: -38px;
+		transform: rotate(-45deg);
+
+	}
+
+	&:before{
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 50px 50px;
+		border-color: transparent transparent $color-white transparent;
+		position: absolute;
+		bottom: 15px;
+  		right: -20px;
+	}
+}

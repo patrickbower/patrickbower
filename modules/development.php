@@ -1,10 +1,10 @@
 <div class="development">
     <div class="media">
         <div class="media__img development__icon">
-            <i class="icon-bracket"></i>
+            <span class="icon icon-bracket"></span>
         </div>
         <div class="media__text">
-            <h2>
+            <h2 class="h2">
                 <span class="strike development--strike">Coder</span>
             </h2>
             <p>

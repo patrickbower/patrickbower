@@ -1,10 +1,10 @@
 <div class="design">
     <div class="media">
         <div class="media__img design__icon">
-            <i class="icon-pencil"></i>
+            <span class="icon icon-pencil"></span>
         </div>
         <div class="media__text">
-            <h2>
+            <h2 class="h2">
                 <span class="strike design--strike">Creative</span>
             </h2>
             <p>

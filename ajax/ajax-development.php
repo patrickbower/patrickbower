@@ -31,7 +31,7 @@
         <?php include('../modules/development-projects.php'); ?>
 
         <a href="#" class="js-screen-takeover__close close-topright">
-            <span class="accessability">close</span>
+            <span class="visually-hidden">close</span>
             <span class="icon icon-close"></span>
         </a>
 
