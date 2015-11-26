@@ -24,19 +24,22 @@
 <!--[if IE 9]><body class="lte-ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <body> <!--<![endif]-->
 
+<!-- screen-takeover -->
 <div class="screen-takeover">
-
     <div class="screen-takeover__background">
+        <div class="belt">
+            <div class="screen-takeover__triangle"></div>
+            <div class="screen-takeover__content">
 
-        <?php include('../modules/development-projects.php'); ?>
+                <?php include('../modules/development-projects.php'); ?>
 
-        <a href="#" class="js-screen-takeover__close close-topright">
-            <span class="visually-hidden">close</span>
-            <span class="icon icon-close"></span>
-        </a>
-
+                <a href="#" class="js-screen-takeover__close close-topright">
+                    <span class="visually-hidden">close</span>
+                    <span class="icon icon-close"></span>
+                </a>
+            </div>
+        </div>
     </div>
-
 </div>
 
 <script src="../assets/js/lib/jquery-1.11.2.min.js"></script>

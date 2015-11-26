@@ -4,10 +4,6 @@
     margin: 0 auto;
 }
 
-img {
-    max-width: 100%;
-}
-
 .grid,
 .row {
     @extend %clearfix;
