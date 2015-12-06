@@ -11,4 +11,36 @@
 	display: inline-block;
 	color: inherit;
 	text-decoration: none;
+
+	&-close
+	{
+		position: absolute;
+        top: 30px;
+        right: 0;
+		text-align: center;
+		width: 80px;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $color-white;
+
+		// &__icon
+		// {
+		//
+		// }
+
+		&:hover
+		{
+			background: $color-white;
+			border: none;
+		}
+
+		// &__text
+		// {
+		// 	color: $color-white;
+		// 	display: block;
+		// 	text-transform: uppercase;
+		// }
+	}
 }

@@ -1,11 +1,12 @@
 <h2 class="h2 screen-takeover__title">
-    Development Projects
+    Development<br>
+    <span class="strike">Projects</span>
 </h2>
 <div class="overlap">
     <div class="overlap__back width-100">
         <div class="grid">
             <div class="column width-40">
-                <!-- <div class="overlap__logo"></div> -->
+                <div class="overlap__logo"></div>
                 <h3 class="h3">
                     Vodafone Global
                 </h3>
@@ -15,11 +16,11 @@
                 <p>
                     Deleniti minus corporis aliquam et earum atque ut, illum dolorum quo, sapiente debitis animi accusantium hic temporibus enim quod suscipit velit ipsa, voluptatibus quae sit maiores quisquam necessitatibus perspiciatis. Est, doloremque ad enim dolor architecto aperiam voluptatem neque deleniti, repellat provident laboriosam qui earum sint ab.
                 </p>
-                <!-- <div class="overlap__btn">
+                <!-- <div class="overlap__btn"> -->
                     <a href="http://www.vodafone.com" class="button screen-takeover--button" target="_blank">
                         www.vodafone.com
                     </a>
-                </div> -->
+                <!-- </div> -->
             </div>
         </div>
     </div>

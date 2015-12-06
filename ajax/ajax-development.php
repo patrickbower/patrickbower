@@ -33,9 +33,8 @@
 
                 <?php include('../modules/development-projects.php'); ?>
 
-                <a href="#" class="js-screen-takeover__close close-topright">
-                    <span class="visually-hidden">close</span>
-                    <span class="icon icon-close"></span>
+                <a href="#" class="js-screen-takeover__close button-close">
+                    <span class="icon icon-close button-close__icon"></span>
                 </a>
             </div>
         </div>

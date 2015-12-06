@@ -69,16 +69,43 @@ module.exports = function(grunt) {
             }
         },
 
+        // sprite
+        svg_sprite : {
+            dist : {
+                expand  : true,
+                cwd     : 'src/',
+                src     : ['icons/*.svg'],
+                dest    : 'assets',
+                options     : {
+                    mode    : {
+                        symbol  : {
+                            inline      : false,
+                            dest        : "icons",
+                            prefix      : "icon-%s",
+                            dimensions  : "-size",
+                            sprite      : "sprite",
+                            example     : true
+                        }
+                    }
+                }
+            }
+        },
+
         // watch - look for changes
         watch: {
             stylesheets: {
                 files: [
-                    'src/sass/**/*.scss'
+                    'src/sass/**/*.scss',
+                    'src/icons/*.svg'
                 ],
                 tasks: [
                     'sass',
-                    'autoprefixer'
-                ]
+                    'autoprefixer',
+                    'svg_sprite'
+                ],
+                options: {
+                  livereload: true,
+                },
             },
             scripts: {
                 files: [
@@ -97,6 +124,7 @@ module.exports = function(grunt) {
     // ===========================================================================
     // we can only load these if they are in our package.json
     // make sure you have run npm install so our app can find these
+    grunt.loadNpmTasks('grunt-svg-sprite');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -106,6 +134,6 @@ module.exports = function(grunt) {
     // ===========================================================================
     // CREATE TASKS ==============================================================
     // ===========================================================================
-    grunt.registerTask('default', ['sass', 'uglify', 'imagemin', 'autoprefixer' ]);
+    grunt.registerTask('default', ['sass', 'uglify', 'imagemin', 'svg_sprite', 'autoprefixer' ]);
 
 };

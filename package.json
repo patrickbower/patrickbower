@@ -8,8 +8,8 @@
     "grunt-contrib-imagemin": "^0.9.4",
     "grunt-contrib-uglify": "^0.9.1",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-sass": "^1.0.0"
+    "grunt-sass": "^1.0.0",
+    "grunt-svg-sprite": "^1.2.16"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

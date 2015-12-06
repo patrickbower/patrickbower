@@ -27,7 +27,6 @@
 // Objects: Unstyled design patterns (media object)
 @import "objects/_layout";
 @import "objects/_media";
-@import "objects/_close";
 @import "objects/_lists";
 @import "objects/_overlap";
 
@@ -47,4 +46,4 @@
 @import "components/_design";
 
 // Trumps: Helpers and overrides, e.g. .float-left { float:left !important;}
-@import "trumps/_floats";
+@import "trumps/_layout";

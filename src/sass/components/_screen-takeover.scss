@@ -5,7 +5,6 @@
 
 .screen-takeover
 {
-    color: $color-white;
     overflow-y: auto;
     overflow-x: hidden;
     position: fixed;
@@ -29,20 +28,20 @@
         z-index: 1;
         width: 0;
         height: 0;
-        border-top: 75vw solid $color-mountain-mist;
+        border-top: 75vw solid $color-white;
     	border-right: 75vw solid transparent;
+    }
+
+    &__content
+    {
+        padding-top: 10px;
+        z-index: 2;
+        position: relative;
     }
 
     &__title
     {
         margin-bottom: $space-75;
-    }
-
-    &__content
-    {
-        padding-top: 50px;
-        z-index: 2;
-        position: relative;
     }
 
     &--button
