@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'assets/css/main.css': 'src/sass/main.scss'
+                    'assets/styles/main.css': 'src/styles/main.scss'
                 }
             }
         },
@@ -36,8 +36,8 @@ module.exports = function(grunt) {
             },
 
             dist: {
-                src: 'assets/css/main.css',
-                dest: 'assets/css/main.css'
+                src: 'assets/styles/main.css',
+                dest: 'assets/styles/main.css'
             }
 
         },
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
             },
             all: {
                 files: {
-                    'assets/js/main.min.js': ['src/js/*.js']
+                    'assets/scripts/main.min.js': ['src/scripts/*.js']
                 }
             }
         },
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'src/',
-                    src: 'img/*.{png,jpg,gif}',
+                    src: 'images/*.{png,jpg,gif}',
                     dest: 'assets/'
                 }]
             }
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
         watch: {
             stylesheets: {
                 files: [
-                    'src/sass/**/*.scss',
+                    'src/styles/**/*.scss',
                     'src/icons/*.svg'
                 ],
                 tasks: [
@@ -109,7 +109,7 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: [
-                    'src/js/*.js'
+                    'src/scripts/*.js'
                 ],
                 tasks: [
                     'uglify'

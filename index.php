@@ -15,7 +15,7 @@
         })();
     </script>
 
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
 
 </head>
 <!--[if lt IE 7]><body class="lte-ie9 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -70,17 +70,8 @@
     </div>
 </div>
 
-<script src="assets/js/lib/jquery-1.11.2.min.js"></script>
-<script src="assets/js/main.min.js"></script>
+<script src="assets/scripts/lib/jquery-1.11.2.min.js"></script>
+<script src="assets/scripts/main.min.js"></script>
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-// (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-// function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-// e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-// e.src='//www.google-analytics.com/analytics.js';
-// r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-// ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-</script>
 </body>
 </html>

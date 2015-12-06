@@ -27,16 +27,16 @@
     <div class="overlap__front width-60">
         <ul class="image-list">
             <li class="image-list__item">
-                <img src="../assets/img/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
+                <img src="../assets/images/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
             </li>
             <li class="image-list__item">
-                <img src="../assets/img/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
+                <img src="../assets/images/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
             </li>
             <li class="image-list__item">
-                <img src="../assets/img/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
+                <img src="../assets/images/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
             </li>
             <li class="image-list__item">
-                <img src="../assets/img/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
+                <img src="../assets/images/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
             </li>
         </ul>
     </div>
