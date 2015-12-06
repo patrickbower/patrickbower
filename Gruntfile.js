@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 
         // all of our configuration will go here
 
-        // sass - complie sass
+        // sass
         sass: {
             options: {
                 sourceMap: true
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 
         },
 
-        // js - concat and minify
+        // js concat and minify
         uglify: {
             options: {
               mangle: false
@@ -54,7 +54,7 @@ module.exports = function(grunt) {
             }
         },
 
-        // images - minify size
+        // image cruching
         imagemin: {
             dist: {
                 options: {
@@ -91,7 +91,7 @@ module.exports = function(grunt) {
             }
         },
 
-        // watch - look for changes
+        // watch
         watch: {
             stylesheets: {
                 files: [
