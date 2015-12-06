@@ -24,6 +24,8 @@
 <!--[if IE 9]><body class="lte-ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <body> <!--<![endif]-->
 
+<?php include_once("assets/images/sprite.svg"); ?>
+
 <!-- screen-takeover -->
 <div class="screen-takeover">
     <div class="screen-takeover__background">
@@ -34,7 +36,10 @@
                 <?php include('../modules/development-projects.php'); ?>
 
                 <a href="#" class="js-screen-takeover__close button-close">
-                    <span class="icon icon-close button-close__icon"></span>
+                    <!-- <span class="icon icon-close button-close__icon"></span> -->
+                    <svg class="icon--close-size">
+                        <use xlink:href="#icon--close"></use>
+                    </svg>
                 </a>
             </div>
         </div>

@@ -1,44 +1,27 @@
-.icon {
-	display: inline-block;
-}
+.icon- {
 
-.icon-pb {
-	background: url('../icons/png/pb.png');
-  	background-image: url('../icons/svg/pb.svg'), none;
-	background-repeat: no-repeat;
-	width: 37px;
-	height: 53px;
-}
+    &-bracket {
+    	width: 84px;
+    	height: 112px;
+    }
 
+    &-close {
+    	width: 41px;
+    	height: 41px;
+    }
 
-.icon-bracket {
-	background: url('../icons/png/bracket.png');
-	background-image: url('../icons/svg/bracket.svg'), none;
-	background-repeat: no-repeat;
-	width: 85px;
-	height: 113px;
-}
+    &-note {
+    	width: 78px;
+    	height: 102px;
+    }
 
-.icon-pencil {
-	background: url('../icons/png/pencil.png');
-	background-image: url('../icons/svg/pencil.svg'), none;
-	background-repeat: no-repeat;
-	width: 53px;
-	height: 215px;
-}
+    &-pb {
+    	width: 36px;
+    	height: 53px;
+    }
 
-.icon-note {
-	background: url('../icons/png/note.png');
-	background-image: url('../icons/svg/note.svg'), none;
-	background-repeat: no-repeat;
-	width: 78px;
-	height: 102px;
-}
-
-.icon-close {
-	background: url('../icons/png/close.png');
-	background-image: url('../icons/svg/close.svg'), none;
-	background-repeat: no-repeat;
-	width: 43px;
-	height: 43px;
+    &-pencil {
+    	width: 75px;
+    	height: 214px;
+    }
 }

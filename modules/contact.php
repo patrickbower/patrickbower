@@ -1,7 +1,9 @@
 <div class="contact">
     <div class="media">
         <div class="media__img contact__icon">
-            <span class="icon icon-note"></span>
+            <svg class="icon--note">
+                <use xlink:href="#icon--note"></use>
+            </svg>
         </div>
         <div class="media__text">
             <h2 class="h2">

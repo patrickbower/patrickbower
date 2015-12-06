@@ -1,7 +1,9 @@
 <header>
     <div class="header belt">
         <a href="#" class="header-logo">
-            <span class="icon icon-pb header-logo__icon"></span>
+            <svg class="icon--pb-size">
+                <use xlink:href="#icon--pb"></use>
+            </svg>
         </a>
         <h1 class="h1 header-name">
             <span class="header-text header-name__first">Patrick</span>

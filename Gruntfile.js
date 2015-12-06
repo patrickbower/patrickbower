@@ -54,37 +54,37 @@ module.exports = function(grunt) {
             }
         },
 
-        // image cruching
+        // image optimisation
         imagemin: {
-            dist: {
-                options: {
-                    optimizationLevel: 7
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'src/',
-                    src: 'images/*.{png,jpg,gif}',
-                    dest: 'assets/'
-                }]
-            }
-        },
+           dist: {
+              options: {
+                optimizationLevel: 5
+              },
+              files: [{
+                 expand : true,
+                 cwd    : 'src/images/',
+                 src    : ['**/*.{png,jpg,gif}'],
+                 dest   : 'assets/images/'
+              }]
+           }
+       },
 
-        // sprite
-        svg_sprite : {
-            dist : {
-                expand  : true,
-                cwd     : 'src/',
-                src     : ['icons/*.svg'],
-                dest    : 'assets',
-                options     : {
-                    mode    : {
-                        symbol  : {
-                            inline      : false,
-                            dest        : "icons",
-                            prefix      : "icon-%s",
-                            dimensions  : "-size",
-                            sprite      : "sprite",
-                            example     : true
+        // svg sprite
+        svg_sprite        : {
+            dist          : {
+                expand    : true,
+                cwd       : 'src/',
+                src       : ['icon/*.svg'],
+                dest      : '.',
+                options   : {
+                    mode: {
+                        symbol: {
+                            dest        : "assets/images/",
+                            inline      : true,
+                            prefix      : ".",
+                            dimensions  : "",
+                            sprite      : "sprite.svg",
+                            example     : false
                         }
                     }
                 }
@@ -96,12 +96,10 @@ module.exports = function(grunt) {
             stylesheets: {
                 files: [
                     'src/styles/**/*.scss',
-                    'src/icons/*.svg'
                 ],
                 tasks: [
                     'sass',
                     'autoprefixer',
-                    'svg_sprite'
                 ],
                 options: {
                   livereload: true,
@@ -109,11 +107,32 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: [
-                    'src/scripts/*.js'
+                    'src/scripts/*.js',
                 ],
                 tasks: [
-                    'uglify'
-                ]
+                    'uglify',
+                ],
+                options: {
+                    livereload: true,
+                }
+            },
+            sprite: {
+                files: 'src/icon/*.svg',
+                tasks: [
+                    'svg_sprite',
+                ],
+                options: {
+                    livereload: true,
+                }
+            },
+            images: {
+                files: 'src/images/*.{png,jpg,gif}',
+                tasks: [
+                    'imagemin',
+                ],
+                options: {
+                    livereload: true,
+                }
             },
         }
 
@@ -134,6 +153,6 @@ module.exports = function(grunt) {
     // ===========================================================================
     // CREATE TASKS ==============================================================
     // ===========================================================================
-    grunt.registerTask('default', ['sass', 'uglify', 'imagemin', 'svg_sprite', 'autoprefixer' ]);
+    grunt.registerTask('default', ['imagemin', 'sass', 'uglify', 'svg_sprite', 'autoprefixer']);
 
 };
