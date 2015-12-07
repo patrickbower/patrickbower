@@ -36,8 +36,7 @@
                 <?php include('../modules/development-projects.php'); ?>
 
                 <a href="#" class="js-screen-takeover__close button-close">
-                    <!-- <span class="icon icon-close button-close__icon"></span> -->
-                    <svg class="icon--close-size">
+                    <svg class="icon--close icon-colour--white">
                         <use xlink:href="#icon--close"></use>
                     </svg>
                 </a>

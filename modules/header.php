@@ -1,7 +1,7 @@
 <header>
     <div class="header belt">
         <a href="#" class="header-logo">
-            <svg class="icon--pb-size">
+            <svg class="icon--pb icon-colour--mako header-logo__pb">
                 <use xlink:href="#icon--pb"></use>
             </svg>
         </a>

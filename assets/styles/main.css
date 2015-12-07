@@ -577,6 +577,30 @@ img {
     border-radius: 50%;
     margin: -90px 0 30px 170px; }
 
+.icon-colour--white {
+  fill: #ffffff; }
+
+.icon-colour--black {
+  fill: #000000; }
+
+.icon-colour--mako {
+  fill: #434A54; }
+
+.icon-colour--mischka {
+  fill: #CCD0D9; }
+
+.icon-colour--brick-red {
+  fill: #DB4453; }
+
+.icon-colour--mine-shaft {
+  fill: #333333; }
+
+.icon-colour--ironside-gray {
+  fill: #666666; }
+
+.icon-colour--mountain-mist {
+  fill: #999999; }
+
 .icon--bracket {
   width: 84px;
   height: 112px; }
@@ -819,6 +843,9 @@ img {
   .header-logo__icon {
     margin-top: 20px;
     position: relative; }
+  .header-logo__pb {
+    position: relative;
+    top: 20px; }
 
 .header-name {
   font-size: 3.5em;

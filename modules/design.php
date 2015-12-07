@@ -1,7 +1,9 @@
 <div class="design">
     <div class="media">
         <div class="media__img design__icon">
-            <span class="icon icon-pencil"></span>
+            <svg class="icon--pencil">
+                <use xlink:href="#icon--pencil"></use>
+            </svg>
         </div>
         <div class="media__text">
             <h2 class="h2">

@@ -1,7 +1,9 @@
 <div class="development">
     <div class="media">
         <div class="media__img development__icon">
-            <span class="icon icon-bracket"></span>
+            <svg class="icon--bracket">
+                <use xlink:href="#icon--bracket"></use>
+            </svg>
         </div>
         <div class="media__text">
             <h2 class="h2">
