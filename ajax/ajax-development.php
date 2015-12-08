@@ -29,14 +29,13 @@
 <!-- screen-takeover -->
 <div class="screen-takeover">
     <div class="screen-takeover__background">
-        <div class="belt">
-            <div class="screen-takeover__triangle"></div>
+        <div class="belt screen-takeover__background-shape">
             <div class="screen-takeover__content">
 
                 <?php include('../modules/development-projects.php'); ?>
 
-                <a href="#" class="js-screen-takeover__close button-close">
-                    <svg class="icon--close icon-colour--white">
+                <a href="#" class="js-screen-takeover__close screen-takeover__close-button screen-takeover__close-button--top">
+                    <svg class="icon icon--close icon-colour--white icon--space-sml">
                         <use xlink:href="#icon--close"></use>
                     </svg>
                 </a>

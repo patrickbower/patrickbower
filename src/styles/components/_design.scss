@@ -9,8 +9,4 @@
     &--strike:before {
         border-color: transparent transparent $color-brick-red transparent;
     }
-
-    .button {
-        @include button ($color-brick-red);
-    }
 }

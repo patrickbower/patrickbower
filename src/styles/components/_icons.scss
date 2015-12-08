@@ -1,62 +1,39 @@
-// icon colours
-
-.icon-colour--white {
-    fill: $color-white;
-}
-
-.icon-colour--black {
-    fill: $color-black;
-}
-
-.icon-colour--mako {
-    fill: $color-mako;
-}
-
-.icon-colour--mischka {
-    fill: $color-mischka;
-}
-
-.icon-colour--brick-red {
-    fill: $color-brick-red;
-}
-
-.icon-colour--mine-shaft {
-    fill: $color-mine-shaft;
-}
-
-.icon-colour--ironside-gray {
-    fill: $color-ironside-gray;
-}
-
-.icon-colour--mountain-mist {
-    fill: $color-mountain-mist;
-}
-
 // icon sizes
-.icon- {
+.icon {
+    display: block;
 
-    &-bracket {
+    &--bracket {
     	width: 84px;
     	height: 112px;
     }
 
-    &-close {
-    	width: 41px;
-    	height: 41px;
+    &--close {
+    	width: 30px;
+    	height: 30px;
     }
 
-    &-note {
+    &--note {
     	width: 78px;
     	height: 102px;
     }
 
-    &-pb {
+    &--pb {
     	width: 36px;
     	height: 53px;
     }
 
-    &-pencil {
+    &--pencil {
     	width: 75px;
     	height: 214px;
+    }
+
+    &--vodafone {
+    	width: 50px;
+    	height: 50px;
+    }
+
+    &--space-sml
+    {
+        margin: 10px;
     }
 }

@@ -1,12 +1,18 @@
 <h2 class="h2 screen-takeover__title">
     Development<br>
-    <span class="strike">Projects</span>
+    Projects
 </h2>
-<div class="overlap">
-    <div class="overlap__back width-100">
+<div class="card-cross project">
+    <div class="card-cross__back width-100">
         <div class="grid">
             <div class="column width-40">
-                <div class="overlap__logo"></div>
+                <div class="project__logo-cont align">
+                    <span class="shape shape--disc align">
+                        <svg class="icon--vodafone icon-color--mine-shaft">
+                            <use xlink:href="#icon--vodafone"></use>
+                        </svg>
+                    </span>
+                </div>
                 <h3 class="h3">
                     Vodafone Global
                 </h3>
@@ -16,27 +22,25 @@
                 <p>
                     Deleniti minus corporis aliquam et earum atque ut, illum dolorum quo, sapiente debitis animi accusantium hic temporibus enim quod suscipit velit ipsa, voluptatibus quae sit maiores quisquam necessitatibus perspiciatis. Est, doloremque ad enim dolor architecto aperiam voluptatem neque deleniti, repellat provident laboriosam qui earum sint ab.
                 </p>
-                <!-- <div class="overlap__btn"> -->
-                    <a href="http://www.vodafone.com" class="button screen-takeover--button" target="_blank">
-                        www.vodafone.com
-                    </a>
-                <!-- </div> -->
+                <a href="http://www.vodafone.com" class="button button-color--white" target="_blank">
+                    www.vodafone.com
+                </a>
             </div>
         </div>
     </div>
-    <div class="overlap__front width-60">
+    <div class="card-cross__front width-60">
         <ul class="image-list">
             <li class="image-list__item">
-                <img src="../assets/images/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
+                <img src="../assets/images/vodafone-lrg.jpg" alt="vodafone global site homepage">
             </li>
             <li class="image-list__item">
-                <img src="../assets/images/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
+                <img src="../assets/images/vodafone-lrg.jpg" alt="vodafone global site homepage">
             </li>
             <li class="image-list__item">
-                <img src="../assets/images/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
+                <img src="../assets/images/vodafone-lrg.jpg" alt="vodafone global site homepage">
             </li>
             <li class="image-list__item">
-                <img src="../assets/images/vodafone.com-lrg.jpg" alt="vodafone global site homepage">
+                <img src="../assets/images/vodafone-lrg.jpg" alt="vodafone global site homepage">
             </li>
         </ul>
     </div>

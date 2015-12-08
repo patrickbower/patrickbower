@@ -3,14 +3,10 @@
     &__icon {
         @media only screen and (min-width: $media-tablet) {
             margin-top: -15px;
-        }    
+        }
     }
 
     &--strike:before {
         border-color: transparent transparent $color-white transparent;
-    }
-
-    .button {
-        @include button ($color-white);
     }
 }

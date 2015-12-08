@@ -1,6 +1,6 @@
-// Settings: Global variables config switches (colours, screen sizes)
+// Settings: Global variables config switches (colors, screen sizes)
 @import "settings/_breakpoints";
-@import "settings/_colours";
+@import "settings/_colors";
 @import "settings/_z-index";
 @import "settings/_scales";
 @import "settings/_shadows";
@@ -28,19 +28,22 @@
 @import "objects/_layout";
 @import "objects/_media";
 @import "objects/_lists";
-@import "objects/_overlap";
 
 // Components: Styled objects, chunks of UI
+@import "components/_shapes";
 @import "components/_icons";
+@import "components/_icon-colors";
 @import "components/_typeography";
 @import "components/_links";
 @import "components/_buttons";
+@import "components/_button-color";
 
-
+@import "components/_card-cross";
 @import "components/_content";
 @import "components/_header";
 @import "components/_intro";
 @import "components/_screen-takeover";
+@import "components/_project";
 @import "components/_contact";
 @import "components/_development";
 @import "components/_design";
