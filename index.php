@@ -65,7 +65,7 @@
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--four">
             <div class="content__area content__area--four">
-                <?php //include('modules/code.php'); ?>
+
             </div>
         </div>
     </div>

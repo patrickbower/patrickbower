@@ -45,7 +45,7 @@ module.exports = function(grunt) {
         // js concat and minify
         uglify: {
             options: {
-              mangle: false
+                mangle: false
             },
             all: {
                 files: {
@@ -56,18 +56,18 @@ module.exports = function(grunt) {
 
         // image optimisation
         imagemin: {
-           dist: {
-              options: {
-                optimizationLevel: 5
-              },
-              files: [{
-                 expand : true,
-                 cwd    : 'src/images/',
-                 src    : ['**/*.{png,jpg,gif}'],
-                 dest   : 'assets/images/'
-              }]
-           }
-       },
+            dist: {
+                options: {
+                    optimizationLevel: 5
+                },
+                files: [{
+                    expand : true,
+                    cwd    : 'src/images/',
+                    src    : ['**/*.{png,jpg,gif}'],
+                    dest   : 'assets/images/'
+                }]
+            }
+        },
 
         // svg sprite
         svg_sprite        : {
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
                     'autoprefixer',
                 ],
                 options: {
-                  livereload: true,
+                    livereload: true,
                 },
             },
             scripts: {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Patrick Bower</title>
-    <meta name="description" content="Web Devolopment &amp; Design Portfolio">
+    <meta name="description" content="Web Development &amp; Design Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--link rel="apple-touch-icon" href="apple-touch-icon.png"-->
 
