@@ -19,17 +19,10 @@
 				<p>
 					Please feel free to use either the conatct form or the email address below - they both go to the same place and I'll come back to you as soon a possible.
 				</p>
-
-				<script type="text/javascript">
-					var first      = "bower.patrick";
-					var last       = "gmail.com";
-					$('.add-email').html('<a class="button button-color--white" href="mailto:'+first + '@' + last+'">'+first + '@' + last+'<\/a>');
-				</script>
-				<span class="add-email"></span>
+				<span class="direct-link"></span>
 				<noscript>
 					Please enable javascript or use the contact form.
 				</noscript>
-
             </div>
         </div>
     </div>
@@ -45,12 +38,16 @@
 
 			<!-- Important: if you add any fields to this page, you will also need to update the php script -->
 
+            <!-- ToDo : move to external style file -->
 			<style type="text/css">
-				.antispam { display:none;}
+				.email--two { display:none;}
 			</style>
 
-			<p class="antispam">Leave this empty:
-			<br /><input name="url" /></p>
+			<p class="email--two">Leave this empty:
+			    <br />
+                <!-- ToDo :  change to // 'repeatemail' here and in the submit file -->
+                <input name="url" />
+            </p>
 
 			<p>Your message:
 			<br /><textarea name="message" rows="10" cols="50"></textarea></p>

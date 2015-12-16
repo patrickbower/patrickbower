@@ -5,15 +5,20 @@
         ContactForm: 'contact'
  	};
 
-    function contactForm()
+    function addEmail(module)
     {
-        console.log('contact form is ready to go');
+        var first   = "bower.patrick";
+        var last    = "gmail.com";
+
+        $(module).find('.direct-link').html(
+            '<a class="button button-color--white" href="mailto:' +
+                first + '@' + last +'">' + first + '@' + last +
+            '<\/a>');
     }
 
     function init(module)
     {
-        // console.log('contactform', context);
-        contactForm();
+        addEmail(module);
  	};
 
     pb.contactform = {
