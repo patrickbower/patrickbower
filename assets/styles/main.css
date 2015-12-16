@@ -1089,6 +1089,10 @@ img {
 .design--strike:before {
   border-color: transparent transparent #DB4453 transparent; }
 
+.contact-form {
+  padding: 20px;
+  background: #ffffff; }
+
 .float--left {
   float: left; }
 

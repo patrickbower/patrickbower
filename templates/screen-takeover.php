@@ -1,4 +1,4 @@
-<?php include ('../templates/base.php'); ?>
+<?php include ('base.php'); ?>
 
 <?php startblock('content') ?>
 

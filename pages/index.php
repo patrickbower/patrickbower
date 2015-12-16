@@ -2,7 +2,7 @@
 
 <?php startblock('content') ?>
 
-<div class="content">
+<div class="content" data-init="screentakeover">
     <div class="content-section--header">
         <?php include('../modules/header.php'); ?>
     </div>
