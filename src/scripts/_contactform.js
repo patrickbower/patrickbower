@@ -2,7 +2,7 @@
  	'use strict';
 
  	var selectors = {
-        ContactForm : 'contact'
+        ContactForm: 'contact'
  	};
 
     function contactForm()
@@ -10,7 +10,7 @@
         console.log('contact form is ready to go');
     }
 
-    function init(context)
+    function init(module)
     {
         // console.log('contactform', context);
         contactForm();

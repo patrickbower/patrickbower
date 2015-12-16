@@ -2,9 +2,9 @@
  	'use strict';
 
     var selectors = {
-        screenTakeover : 'screen-takeover',
-        launchBtn : 'js-screen-takeover__launch',
-        closeBtn : 'js-screen-takeover__close'
+        screenTakeover: 'screen-takeover',
+        launchBtn: 'js-screen-takeover__launch',
+        closeBtn: 'js-screen-takeover__close'
     };
 
     function ScreenTakeover(properties)
@@ -50,11 +50,9 @@
     	$('body').removeClass('screen-takeover__active');
     };
 
-    function init(context)
+    function init(module)
     {
-        // console.log('takeover', context);
     	$('.' + selectors.launchBtn, context).on('click', function(event){
-
             event.preventDefault();
             var button = this;
             var screenTakeover = new ScreenTakeover({
