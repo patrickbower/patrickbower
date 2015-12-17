@@ -16,9 +16,18 @@
             '<\/a>');
     }
 
+    function hiddenInput(module)
+    {
+        $(module).find('.form__input--confirm').attr('tabindex', '-1');
+    }
+
     function init(module)
     {
+        // add direct email (limit spaming bots)
         addEmail(module);
+
+        // prevent tabbing into hidden input (limit spaming bots)
+        hiddenInput(module)
  	};
 
     pb.contactform = {

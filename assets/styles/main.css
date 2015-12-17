@@ -28,7 +28,7 @@
 .row, .lt-ie8 .card-cross {
   zoom: 1; }
 
-.visually-hidden {
+.visually-hidden, .form__row--confirm {
   border: none;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -464,6 +464,21 @@ hr {
 img {
   max-width: 100%; }
 
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: 100%;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+  outline: 0;
+  vertical-align: middle;
+  border: none;
+  background: #f2f2f2; }
+
 .belt {
   min-width: 320px;
   max-width: 1140px;
@@ -674,6 +689,9 @@ img {
   padding: 13px 46px;
   border: 1px solid #333333; }
 
+.button--submit {
+  background: none; }
+
 .button-color--brick-red {
   display: inline-block;
   color: inherit;
@@ -706,6 +724,48 @@ img {
   .button-color--white:active {
     background: #e6e6e6;
     border-color: #e6e6e6; }
+
+.form {
+  padding: 50px 30px 30px 30px;
+  background: #ffffff; }
+  .form__row {
+    position: relative;
+    margin-bottom: 30px;
+    background: #f2f2f2;
+    z-index: 0;
+    height: 3.316em; }
+    .form__row--confirm {
+      margin-bottom: 0;
+      height: 0; }
+    .form__row--message {
+      min-height: 13.264em; }
+  .form__label {
+    z-index: 1;
+    position: absolute;
+    display: inline-block;
+    top: 1em;
+    left: 1em;
+    transition: 0.2s ease all; }
+  .form__input {
+    z-index: 2;
+    padding: 1em;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    transition: 0.2s ease all;
+    border-bottom: 1px solid #f2f2f2; }
+    .form__input--textarea {
+      height: 100%; }
+    .form__input:focus {
+      border-bottom: 1px solid #333333; }
+    .form__input:focus ~ label,
+    .form__input:valid ~ label {
+      top: -1.45em;
+      left: 0;
+      color: #b3b3b3;
+      font-size: 90%; }
 
 .card-cross {
   position: relative;
@@ -1014,7 +1074,8 @@ img {
       text-align: left; } }
   .screen-takeover__background {
     background: rgba(0, 0, 0, 0.9);
-    padding: 10px; }
+    padding: 10px;
+    min-height: 75vw; }
   @media only screen and (min-width: 767px) {
     .screen-takeover__background-shape:before {
       content: '';
@@ -1088,10 +1149,6 @@ img {
 
 .design--strike:before {
   border-color: transparent transparent #DB4453 transparent; }
-
-.contact-form {
-  padding: 20px;
-  background: #ffffff; }
 
 .float--left {
   float: left; }

@@ -25,12 +25,15 @@
     {
         background: rgba(0, 0, 0, 0.9);
         padding: 10px;
+        min-height: 75vw;
     }
 
     &__background-shape
     {
         @media only screen and (min-width: $media-tablet)
         {
+
+
             &:before
             {
                 content: '';

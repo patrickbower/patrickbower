@@ -1,5 +1,5 @@
 <h2 class="h2 screen-takeover__title">
-    Contact
+    Get in touch
 </h2>
 <div class="card-cross project" data-init="contactform">
     <div class="card-cross__back width-100">
@@ -27,34 +27,26 @@
         </div>
     </div>
     <div class="card-cross__front width-60">
-
-		<form method="post" class="contact-form" action="submit.php">
-
-			<p>Your name:
-			<br /><input name="name" /></p>
-
-			<p>Your email:
-			<br /><input name="email" /></p>
-
-			<!-- Important: if you add any fields to this page, you will also need to update the php script -->
-
-            <!-- ToDo : move to external style file -->
-			<style type="text/css">
-				.email--two { display:none;}
-			</style>
-
-			<p class="email--two">Leave this empty:
-			    <br />
-                <!-- ToDo :  change to // 'repeatemail' here and in the submit file -->
-                <input name="url" />
-            </p>
-
-			<p>Your message:
-			<br /><textarea name="message" rows="10" cols="50"></textarea></p>
-
-			<p><input type="submit" value="Send" /></p>
-
+		<form class="form contact-form" method="post" action="submit.php">
+            <!-- look at html5 native validation -->
+            <!-- EG: accept="" -->
+			<div class="form__row">
+                <input class="form__input" name="name" type="text" required/>
+                <label class="form__label form__label--active" for="name">Your name</label>
+            </div>
+			<div class="form__row">
+                <input class="form__input" name="email" type="email" required/>
+                <label class="form__label" for="email">Your email</label>
+            </div>
+            <div class="form__row form__row--confirm">
+                <input class="form__input form__input--confirm" name="url" type="email"/>
+                <label class="form__label" for="url">Confirm email</label>
+            </div>
+            <div class="form__row form__row--message">
+                <textarea class="form__input form__input--textarea" name="message" maxlength="600" required></textarea>
+                <label class="form__label" for="message">Your message</label>
+            </div>
+            <button class="button button--submit button-color--white" type="submit">Send</button>
 		</form>
-
     </div>
 </div>

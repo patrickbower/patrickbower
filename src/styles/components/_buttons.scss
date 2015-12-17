@@ -10,3 +10,8 @@
 	padding: 13px 46px;
 	@include border($color-mine-shaft)
 }
+
+.button--submit
+{
+	background: none;
+}

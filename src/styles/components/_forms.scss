@@ -1,0 +1,68 @@
+.form
+{
+    padding: 50px 30px 30px 30px;
+    background: $color-white;
+
+    &__row
+    {
+        position: relative;
+        margin-bottom: 30px;
+        background: darken($color-white, 5%);
+        z-index: 0;
+        height: 3.316em;
+
+        &--confirm
+        {
+            margin-bottom: 0;
+            height: 0;
+            @extend .visually-hidden;
+        }
+
+        &--message
+        {
+            min-height: 13.264em;
+        }
+    }
+
+    &__label
+    {
+        z-index: 1;
+        position: absolute;
+        display: inline-block;
+        top: 1em;
+        left: 1em;
+        transition: 0.2s ease all;
+    }
+
+    &__input
+    {
+        z-index: 2;
+        padding: 1em;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: none;
+        transition: 0.2s ease all;
+        border-bottom: 1px solid darken($color-white, 5%);
+
+        &--textarea
+        {
+            height: 100%;
+        }
+
+        &:focus
+        {
+            border-bottom: 1px solid $color-mine-shaft;
+        }
+
+        &:focus ~ label,
+        &:valid ~ label
+        {
+            top: -1.45em;
+            left: 0;
+            color: lighten($color-mine-shaft, 50%);
+            font-size: 90%;
+        }
+    }
+}
