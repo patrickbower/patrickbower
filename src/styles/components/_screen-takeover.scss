@@ -90,6 +90,11 @@
             position: absolute;
             top: 0;
             right: 0;
+
+            @media only screen and (min-width: $media-tablet)
+            {
+                top: 75px;
+            }
         }
     }
 }

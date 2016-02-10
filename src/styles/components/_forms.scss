@@ -2,6 +2,7 @@
 {
     padding: 50px 30px 30px 30px;
     background: $color-white;
+    box-shadow: 0 0 80px 0 rgba(0,0,0,0.2);
 
     &__row
     {
@@ -64,5 +65,52 @@
             color: lighten($color-mine-shaft, 50%);
             font-size: 90%;
         }
+    }
+}
+
+.airmail
+{
+    &:before,
+    &:after
+    {
+        content: '';
+        position: relative;
+    }
+
+    &:before
+    {
+        top: 5px;
+        height: 5px;
+        display: block;
+        background-image: repeating-linear-gradient(
+            135deg,
+            #F29B91 0px,
+            #F09290 30px,
+            transparent 30px,
+            transparent 50px,
+            #83B3DB 50px,
+            #84ADCB 80px,
+            transparent 80px,
+            transparent 100px
+        );
+    }
+
+    &:after
+    {
+        bottom: 5px;
+        height: 5px;
+        display: block;
+        transform: rotate(180deg);
+        background-image: repeating-linear-gradient(
+            135deg,
+            #83B3DB 0px,
+            #84ADCB 30px,
+            transparent 30px,
+            transparent 50px,
+            #F29B91 50px,
+            #F09290 80px,
+            transparent 80px,
+            transparent 100px
+        );
     }
 }

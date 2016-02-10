@@ -7,8 +7,8 @@
             <div class="column width-40">
                 <div class="project__logo-cont align">
                     <span class="shape shape--disc align">
-                        <svg class="icon--vodafone icon-color--mine-shaft">
-                            <use xlink:href="#icon--vodafone"></use>
+                        <svg class="icon--email icon-color--mine-shaft">
+                            <use xlink:href="#icon--email"></use>
                         </svg>
                     </span>
                 </div>
@@ -26,6 +26,7 @@
             </div>
         </div>
     </div>
+    <!-- airmail -->
     <div class="card-cross__front width-60">
 		<form class="form contact-form" method="post" action="submit.php">
             <!-- look at html5 native validation -->
@@ -35,12 +36,12 @@
                 <label class="form__label form__label--active" for="name">Your name</label>
             </div>
 			<div class="form__row">
-                <input class="form__input" name="email" type="email" required/>
+                <input class="form__input" name="email" type="text" required/>
                 <label class="form__label" for="email">Your email</label>
             </div>
             <div class="form__row form__row--confirm">
-                <input class="form__input form__input--confirm" name="url" type="email"/>
-                <label class="form__label" for="url">Confirm email</label>
+                <input class="form__input form__input--confirm" name="confirm" type="text"/>
+                <label class="form__label" for="confirm">Confirm email</label>
             </div>
             <div class="form__row form__row--message">
                 <textarea class="form__input form__input--textarea" name="message" maxlength="600" required></textarea>

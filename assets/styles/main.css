@@ -583,8 +583,8 @@ button {
     width: 84px;
     height: 112px; }
   .icon--close {
-    width: 30px;
-    height: 30px; }
+    width: 20px;
+    height: 20px; }
   .icon--note {
     width: 78px;
     height: 102px; }
@@ -597,8 +597,11 @@ button {
   .icon--vodafone {
     width: 50px;
     height: 50px; }
+  .icon--email {
+    width: 35px;
+    height: 35px; }
   .icon--space-sml {
-    margin: 10px; }
+    margin: 7px; }
 
 .icon-color--white {
   fill: #ffffff; }
@@ -727,7 +730,8 @@ button {
 
 .form {
   padding: 50px 30px 30px 30px;
-  background: #ffffff; }
+  background: #ffffff;
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2); }
   .form__row {
     position: relative;
     margin-bottom: 30px;
@@ -766,6 +770,25 @@ button {
       left: 0;
       color: #b3b3b3;
       font-size: 90%; }
+
+.airmail:before, .airmail:after {
+  content: '';
+  position: relative; }
+
+.airmail:before {
+  top: 5px;
+  height: 5px;
+  display: block;
+  background-image: repeating-linear-gradient(135deg, #F29B91 0px, #F09290 30px, transparent 30px, transparent 50px, #83B3DB 50px, #84ADCB 80px, transparent 80px, transparent 100px); }
+
+.airmail:after {
+  bottom: 5px;
+  height: 5px;
+  display: block;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background-image: repeating-linear-gradient(135deg, #83B3DB 0px, #84ADCB 30px, transparent 30px, transparent 50px, #F29B91 50px, #F09290 80px, transparent 80px, transparent 100px); }
 
 .card-cross {
   position: relative;
@@ -807,8 +830,7 @@ button {
       min-height: 500px; } }
   .content-triangle__shape {
     text-align: center;
-    padding: 50px 0;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); }
+    padding: 50px 0; }
     @media only screen and (min-width: 767px) {
       .content-triangle__shape {
         padding: 0;
@@ -1121,6 +1143,9 @@ button {
       position: absolute;
       top: 0;
       right: 0; }
+      @media only screen and (min-width: 767px) {
+        .screen-takeover__close-button--top {
+          top: 75px; } }
 
 .project__logo-cont {
   margin: -90px 0 20px 0;

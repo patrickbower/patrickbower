@@ -7,15 +7,13 @@
         closeBtn: 'js-screen-takeover__close'
     };
 
-    function ScreenTakeover(properties)
-    {
+    function ScreenTakeover(properties) {
         this.button = properties.button;
         launch.call(this);
         events();
-    	};
+    };
 
-    function launch()
-    {
+    function launch() {
         var button          = this.button;
         var href			= $(button).attr('href').split('#');
     	var	pagePath 		= href[0];
@@ -37,14 +35,12 @@
     	});
     };
 
-    function events()
-    {
+    function events() {
         var closeBtn = '.' + selectors.closeBtn;
         $('body').on('click', closeBtn, close);
     };
 
-    function close()
-    {
+    function close() {
         event.preventDefault();
         $('.' + selectors.screenTakeover).remove();
     	$('body').removeClass('screen-takeover__active');

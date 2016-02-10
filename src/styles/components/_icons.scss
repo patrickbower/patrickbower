@@ -8,8 +8,8 @@
     }
 
     &--close {
-    	width: 30px;
-    	height: 30px;
+    	width: 20px;
+    	height: 20px;
     }
 
     &--note {
@@ -32,8 +32,12 @@
     	height: 50px;
     }
 
-    &--space-sml
-    {
-        margin: 10px;
+    &--email {
+    	width: 35px;
+    	height: 35px;
+    }
+
+    &--space-sml {
+        margin: 7px;
     }
 }
