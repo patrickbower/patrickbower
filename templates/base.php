@@ -16,7 +16,7 @@
         })();
     </script>
 
-    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/public/styles/main.css">
 
 </head>
 <!--[if lt IE 7]><body class="lte-ie9 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -25,7 +25,7 @@
 <!--[if IE 9]><body class="lte-ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <body> <!--<![endif]-->
 
-<?php include_once("./assets/images/sprite.svg"); ?>
+<?php include_once("./public/images/sprite.svg"); ?>
 
 <!--[if lt IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -33,8 +33,8 @@
 
 <?php emptyblock('content') ?>
 
-<script src="/assets/scripts/lib/jquery-1.11.2.min.js"></script>
-<script src="/assets/scripts/main.min.js"></script>
+<script src="/public/scripts/lib/jquery-1.11.2.min.js"></script>
+<script src="/public/scripts/main.min.js"></script>
 
 </body>
 </html>

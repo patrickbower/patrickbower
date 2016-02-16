@@ -23,7 +23,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'assets/styles/main.css': 'src/styles/main.scss'
+                    'public/styles/main.css': 'source/styles/main.scss'
                 }
             }
         },
@@ -36,8 +36,8 @@ module.exports = function(grunt) {
             },
 
             dist: {
-                src: 'assets/styles/main.css',
-                dest: 'assets/styles/main.css'
+                src: 'public/styles/main.css',
+                dest: 'public/styles/main.css'
             }
 
         },
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
             },
             all: {
                 files: {
-                    'assets/scripts/main.min.js': ['src/scripts/*.js']
+                    'public/scripts/main.min.js': ['source/scripts/*.js']
                 }
             }
         },
@@ -62,9 +62,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand : true,
-                    cwd    : 'src/images/',
+                    cwd    : 'source/images/',
                     src    : ['**/*.{png,jpg,gif}'],
-                    dest   : 'assets/images/'
+                    dest   : 'public/images/'
                 }]
             }
         },
@@ -73,13 +73,13 @@ module.exports = function(grunt) {
         svg_sprite        : {
             dist          : {
                 expand    : true,
-                cwd       : 'src/',
+                cwd       : 'source/',
                 src       : ['icon/*.svg'],
                 dest      : '.',
                 options   : {
                     mode: {
                         symbol: {
-                            dest        : "assets/images/",
+                            dest        : "public/images/",
                             inline      : true,
                             prefix      : ".",
                             dimensions  : "",
@@ -95,7 +95,7 @@ module.exports = function(grunt) {
         watch: {
             stylesheets: {
                 files: [
-                    'src/styles/**/*.scss',
+                    'source/styles/**/*.scss',
                 ],
                 tasks: [
                     'sass',
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: [
-                    'src/scripts/*.js',
+                    'source/scripts/*.js',
                 ],
                 tasks: [
                     'uglify',
@@ -117,7 +117,7 @@ module.exports = function(grunt) {
                 }
             },
             sprite: {
-                files: 'src/icon/*.svg',
+                files: 'source/icon/*.svg',
                 tasks: [
                     'svg_sprite',
                 ],
@@ -126,7 +126,7 @@ module.exports = function(grunt) {
                 }
             },
             images: {
-                files: 'src/images/*.{png,jpg,gif}',
+                files: 'source/images/*.{png,jpg,gif}',
                 tasks: [
                     'imagemin',
                 ],
