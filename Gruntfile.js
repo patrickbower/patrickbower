@@ -90,16 +90,11 @@ module.exports = function(grunt) {
 
         // jekyll
         jekyll: {
-			serve : {
-                options: {
-    				server : false
-                }
-			},
 			dist: {
                 options: {
                     config: '_config.yml',
-    				src: './source',
-    				dest: './public'
+    				src: 'source',
+    				dest: 'public'
                 }
 			}
 		},

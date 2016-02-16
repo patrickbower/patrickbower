@@ -1,6 +1,6 @@
-exclude: ['_imgs', '_js', '_scss', '_svg', _'html']
+# exclude: ['filename']
 
-# # _config.build.yml sets future and show_drafts to false on `grunt build`
+## _config.build.yml sets future and show_drafts to false on `grunt build`
 # future: true
 # show_drafts: true
 #
@@ -8,12 +8,12 @@ exclude: ['_imgs', '_js', '_scss', '_svg', _'html']
 # paginate: 5
 # paginate_path: '/page:num'
 #
-# # Markdown library
+## Markdown library
 # markdown: kramdown
 #
-# # Site settings
+## Site settings
 # baseurl: ""
 # url: ""
 #
-# # Varibles
+## Varibles
 # sitename: "Jekyll & Grunt"

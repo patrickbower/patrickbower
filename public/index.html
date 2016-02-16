@@ -9,10 +9,10 @@
     <!--link rel="apple-touch-icon" href="apple-touch-icon.png"-->
 
     <script>
-        (function() {
-            var html = document.documentElement;
-            html.className = html.className.replace("no-js", "js");
-        })();
+    (function() {
+        var html = document.documentElement;
+        html.className = html.className.replace("no-js", "js");
+    })();
     </script>
 
     <link rel="stylesheet" href="assets/styles/main.css">
@@ -32,44 +32,139 @@
 
 <div class="content">
     <div class="content-section--header">
-        {% include _html/modules/header.html %}
+        <header>
+            <div class="header belt">
+                <a href="#" class="header-logo">
+                    <svg class="icon--pb icon-colour--mako header-logo__pb">
+                        <use xlink:href="#icon--pb"></use>
+                    </svg>
+                </a>
+                <h1 class="h1 header-name">
+                    <span class="header-text header-name__first">Patrick</span>
+                    <hr class="header-name__slash">
+                    <span class="header-text header-name__last">Bower</span>
+
+                    <span class="header-sub">
+                        <span class="header-sub__a">Coder</span>
+                        <span class="header-sub__b">Creative</span>
+                    </span>
+                </h1>
+            </div>
+        </header>
+
     </div>
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--zero">
             <div class="content__area content__area--zero">
-                {% include _html/modules/intro.html %}
+                <div class="intro intro--media">
+                    <h2 class="h2">
+                        <span class="strike">Hello</span>
+                    </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione culpa inventore cumque alias nihil deleniti repellat blanditiis, fugit deserunt qui voluptates odio commodi accusantium quae distinctio facilis reprehenderit aspernatur nesciunt aperiam, possimus at. Harum aperiam, a sapiente optio assumenda labore perspiciatis officiis commodi dicta, nam, voluptatibus cupiditate ipsa esse animi.
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--one">
             <div class="content__area content__area--one">
-                {% include _html/modules/development.html %}
+                <div class="development">
+                    <div class="media">
+                        <div class="media__img development__icon">
+                            <svg class="icon--bracket">
+                                <use xlink:href="#icon--bracket"></use>
+                            </svg>
+                        </div>
+                        <div class="media__text">
+                            <h2 class="h2">
+                                <span class="strike development--strike">Coder</span>
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione culpa inventore cumque alias nihil deleniti repellat blanditiis, fugit deserunt qui voluptates odio commodi accusantium quae distinctio facilis reprehenderit aspernatur nesciunt aperiam, possimus at. Harum aperiam, a sapiente optio assumenda labore perspiciatis officiis commodi dicta, nam, voluptatibus cupiditate ipsa esse animi.
+                            </p>
+                            <div class="button__wrap">
+                                <a href="pages/development.php#screen-takeover" class="button button-color--mischka js-screen-takeover__launch">
+                                    View Devolopment Projects
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--two">
             <div class="content__area content__area--two">
-                {% include _html/modules/design.html %}
+                <div class="design">
+                    <div class="media">
+                        <div class="media__img design__icon">
+                            <svg class="icon--pencil">
+                                <use xlink:href="#icon--pencil"></use>
+                            </svg>
+                        </div>
+                        <div class="media__text">
+                            <h2 class="h2">
+                                <span class="strike design--strike">Creative</span>
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione culpa inventore cumque alias nihil deleniti repellat blanditiis, fugit deserunt qui voluptates odio commodi accusantium quae distinctio facilis reprehenderit aspernatur nesciunt aperiam, possimus at. Harum aperiam, a sapiente optio assumenda labore perspiciatis officiis commodi dicta, nam, voluptatibus cupiditate ipsa esse animi.
+                            </p>
+                            <div class="button__wrap">
+                                <a href="pages/ajax-design.php#screen-takeover" class="button button-color--brick-red screen-takeover__launch">
+                                    View Design Projects
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--three">
             <div class="content__area content__area--three">
-                {% include _html/modules/contact.html %}
+                <div class="contact">
+                    <div class="media">
+                        <div class="media__img contact__icon">
+                            <svg class="icon--note">
+                                <use xlink:href="#icon--note"></use>
+                            </svg>
+                        </div>
+                        <div class="media__text">
+                            <h2 class="h2">
+                                <span class="strike contact--strike">Contact</span>
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione culpa inventore cumque alias nihil deleniti repellat blanditiis, fugit deserunt qui voluptates odio commodi accusantium quae distinctio facilis reprehenderit aspernatur nesciunt aperiam, possimus at. Harum aperiam, a sapiente optio assumenda labore perspiciatis officiis commodi dicta, nam, voluptatibus cupiditate ipsa esse animi.
+                            </p>
+                            <div class="button__wrap">
+                                <a href="pages/contact.php#screen-takeover" class="button button-color--white js-screen-takeover__launch">
+                                    Visit contact
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--four">
             <div class="content__area content__area--four">
-
+                <!-- stuff here -->
             </div>
         </div>
     </div>
 </div>
+
+
 
 <script src="assets/scripts/lib/jquery-1.11.2.min.js"></script>
 <script src="assets/scripts/main.min.js"></script>
