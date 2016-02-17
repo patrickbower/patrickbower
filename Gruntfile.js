@@ -101,10 +101,6 @@ module.exports = function(grunt) {
 
         // watch
         watch: {
-            // jekyll: {
-            //     files: ['source/templates/*.html'],
-            //     tasks: ['jekyll:dev']
-            // },
             stylesheets: {
                 files: [ 'source/_scss/**/*.scss'],
                 tasks: [ 'sass', 'autoprefixer' ],
@@ -132,6 +128,13 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true,
                 }
+            },
+            jekyll: {
+                files: [
+                    'source/_includes/*.html',
+                    'source/_layouts/*.html'
+                ],
+                tasks: ['jekyll']
             },
         }
 
