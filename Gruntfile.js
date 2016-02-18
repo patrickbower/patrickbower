@@ -71,7 +71,7 @@ module.exports = function(grunt) {
             dist          : {
                 expand    : true,
                 cwd       : 'source/',
-                src       : ['_svg/*.svg'],
+                src       : ['_icon/*.svg'],
                 dest      : '.',
                 options   : {
                     mode: {
@@ -116,7 +116,7 @@ module.exports = function(grunt) {
                 }
             },
             sprite: {
-                files: 'source/_svg/*.svg',
+                files: 'source/_icon/*.svg',
                 tasks: [ 'svg_sprite' ],
                 options: {
                     livereload: true,

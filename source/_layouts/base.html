@@ -1,19 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <!-- <title>Patrick Bower</title> -->
     <title>{{ page.title }}</title>
     <meta name="description" content="Web Devolopment &amp; Design Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--link rel="apple-touch-icon" href="apple-touch-icon.png"-->
 
     <script>
-        (function() {
-            var html = document.documentElement;
-            html.className = html.className.replace("no-js", "js");
-        })();
+    (function() {
+        var html = document.documentElement;
+        html.className = html.className.replace("no-js", "js");
+    })();
     </script>
 
     <link rel="stylesheet" href="styles/main.css">
@@ -25,7 +24,17 @@
 <!--[if IE 9]><body class="lte-ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <body> <!--<![endif]-->
 
-<?php include_once("images/sprite.svg"); ?>
+<script>
+    var ajax = new XMLHttpRequest();
+    ajax.open("GET", "images/sprite.svg", true);
+    ajax.send();
+    ajax.onload = function(e) {
+        var div = document.createElement("div");
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+    }
+</script>
+
 
 <!--[if lt IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -33,7 +42,7 @@
 
 {{ content }}
 
-<script src="scripts/lib/jquery-1.11.2.min.js"></script>
+<script src="scripts/library/jquery-1.11.2.min.js"></script>
 <script src="scripts/main.min.js"></script>
 
 </body>
