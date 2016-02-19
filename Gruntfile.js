@@ -132,7 +132,8 @@ module.exports = function(grunt) {
             jekyll: {
                 files: [
                     'source/_includes/*.html',
-                    'source/_layouts/*.html'
+                    'source/_layouts/*.html',
+                    'source/pages/*.html'
                 ],
                 tasks: ['jekyll']
             },
