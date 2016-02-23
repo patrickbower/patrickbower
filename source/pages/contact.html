@@ -1,6 +1,8 @@
----
-layout: base
-title: Patrick Bower Development Projects
----
 
-{% include contact-form.html %}
+<?php include ('../templates/screen-takeover.php'); ?>
+
+<?php startblock('screen-takeover-module') ?>
+
+    <?php include('../modules/contact-form.php'); ?>
+
+<?php endblock(); ?>
