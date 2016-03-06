@@ -23,23 +23,20 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'assets/styles/main.css': 'src/styles/main.scss'
+                    'source/styles/main.css': 'source/_scss/main.scss'
                 }
             }
         },
 
         // css prefix
         autoprefixer: {
-
             options: {
                 browsers: ['last 2 versions', 'ie 8', 'ie 9']
             },
-
             dist: {
-                src: 'assets/styles/main.css',
-                dest: 'assets/styles/main.css'
+                src: 'source/styles/main.css',
+                dest: 'source/styles/main.css'
             }
-
         },
 
         // js concat and minify
@@ -49,7 +46,7 @@ module.exports = function(grunt) {
             },
             all: {
                 files: {
-                    'assets/scripts/main.min.js': ['src/scripts/*.js']
+                    'source/scripts/main.min.js': ['source/_js/*.js']
                 }
             }
         },
@@ -62,9 +59,9 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand : true,
-                    cwd    : 'src/images/',
+                    cwd    : 'source/_imgs/',
                     src    : ['**/*.{png,jpg,gif}'],
-                    dest   : 'assets/images/'
+                    dest   : 'source/images/'
                 }]
             }
         },
@@ -73,13 +70,13 @@ module.exports = function(grunt) {
         svg_sprite        : {
             dist          : {
                 expand    : true,
-                cwd       : 'src/',
-                src       : ['icon/*.svg'],
+                cwd       : 'source/',
+                src       : ['_icon/*.svg'],
                 dest      : '.',
                 options   : {
                     mode: {
                         symbol: {
-                            dest        : "assets/images/",
+                            dest        : "source/images/",
                             inline      : true,
                             prefix      : ".",
                             dimensions  : "",
@@ -91,48 +88,42 @@ module.exports = function(grunt) {
             }
         },
 
+        // jekyll
+        jekyll: {
+            dist: {
+                options: {
+                    config: '_config.yml',
+                    src: 'source',
+                    dest: 'public'
+                }
+            }
+        },
+
         // watch
         watch: {
             stylesheets: {
-                files: [
-                    'src/styles/**/*.scss',
-                ],
-                tasks: [
-                    'sass',
-                    'autoprefixer',
-                ],
-                options: {
-                    livereload: true,
-                },
+                files: [ 'source/_scss/**/*.scss'],
+                tasks: [ 'sass', 'autoprefixer', 'jekyll' ],
             },
             scripts: {
-                files: [
-                    'src/scripts/*.js',
-                ],
-                tasks: [
-                    'uglify',
-                ],
-                options: {
-                    livereload: true,
-                }
+                files: [ 'source/_js/*.js' ],
+                tasks: [ 'uglify', 'jekyll' ],
             },
             sprite: {
-                files: 'src/icon/*.svg',
-                tasks: [
-                    'svg_sprite',
-                ],
-                options: {
-                    livereload: true,
-                }
+                files: 'source/_icon/*.svg',
+                tasks: [ 'svg_sprite', 'jekyll' ],
             },
             images: {
-                files: 'src/images/*.{png,jpg,gif}',
-                tasks: [
-                    'imagemin',
+                files: 'source/_imgs/*.{png,jpg,gif}',
+                tasks: [ 'imagemin', 'jekyll' ],
+            },
+            jekyll: {
+                files: [
+                    'source/_includes/*.html',
+                    'source/_layouts/*.html',
+                    'source/pages/*.html'
                 ],
-                options: {
-                    livereload: true,
-                }
+                tasks: ['jekyll']
             },
         }
 
@@ -149,10 +140,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-jekyll');
 
     // ===========================================================================
     // CREATE TASKS ==============================================================
     // ===========================================================================
-    grunt.registerTask('default', ['imagemin', 'sass', 'uglify', 'svg_sprite', 'autoprefixer']);
+    grunt.registerTask('default', ['imagemin', 'sass', 'uglify', 'svg_sprite', 'autoprefixer', 'jekyll']);
 
 };
