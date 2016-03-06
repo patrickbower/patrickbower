@@ -90,44 +90,32 @@ module.exports = function(grunt) {
 
         // jekyll
         jekyll: {
-			dist: {
+            dist: {
                 options: {
                     config: '_config.yml',
-    				src: 'source',
-    				dest: 'public'
+                    src: 'source',
+                    dest: 'public'
                 }
-			}
-		},
+            }
+        },
 
         // watch
         watch: {
             stylesheets: {
                 files: [ 'source/_scss/**/*.scss'],
-                tasks: [ 'sass', 'autoprefixer' ],
-                options: {
-                    livereload: true,
-                },
+                tasks: [ 'sass', 'autoprefixer', 'jekyll' ],
             },
             scripts: {
                 files: [ 'source/_js/*.js' ],
-                tasks: [ 'uglify' ],
-                options: {
-                    livereload: true,
-                }
+                tasks: [ 'uglify', 'jekyll' ],
             },
             sprite: {
                 files: 'source/_icon/*.svg',
-                tasks: [ 'svg_sprite' ],
-                options: {
-                    livereload: true,
-                }
+                tasks: [ 'svg_sprite', 'jekyll' ],
             },
             images: {
                 files: 'source/_imgs/*.{png,jpg,gif}',
-                tasks: [ 'imagemin' ],
-                options: {
-                    livereload: true,
-                }
+                tasks: [ 'imagemin', 'jekyll' ],
             },
             jekyll: {
                 files: [

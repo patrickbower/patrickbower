@@ -40,16 +40,14 @@
 @import "components/_button-color";
 @import "components/_forms";
 
-@import "components/_card-cross";
 @import "components/_content";
 @import "components/_header";
 @import "components/_intro";
-@import "components/_screen-takeover";
-@import "components/_project";
 @import "components/_contact";
 @import "components/_development";
 @import "components/_design";
 @import "components/_contact-form";
+@import "components/_splash";
 
 // Trumps: Helpers and overrides, e.g. .float-left { float:left !important;}
 @import "trumps/_layout";
