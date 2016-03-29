@@ -1,0 +1,63 @@
+.screentakeover {
+    position: relative;
+    overflow-y: hidden;
+
+    @keyframes slideDown {
+        0% {
+            top: -200vw;
+            bottom: 200vw;
+        }
+        100% {
+            top: 0;
+            bottom: 0;
+        }
+    }
+
+    &__window {
+        position: fixed;
+        right: 0;
+        left: 0;
+        background: rgba(0,0,0,0.9);
+        z-index: $z-index-super;
+        color: $color-white;
+        animation: slideDown 1s forwards;
+
+        &:after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-left: 100vw solid transparent;
+            border-right: 100vw solid transparent;
+            border-top: 100vw solid rgba(0,0,0,0.9);
+            position: absolute;
+            bottom: -100vw;
+            left: -100vw;
+        }
+    }
+
+    &__close {
+        @extend .cf;
+        display: block;
+        float: right;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 50%;
+
+        &:hover {
+            background: rgba(100,100,100,0.25);
+        }
+    }
+
+    // intergrated styling, no JS will not show model style
+    .no-js & {
+
+        &__window {
+            background: $color-white;
+            color: $color-mine-shaft;
+        }
+
+        &__close {
+            display: none;
+        }
+    }
+}
