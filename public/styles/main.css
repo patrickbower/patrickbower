@@ -1173,25 +1173,45 @@ button {
   100% {
     top: 0;
     bottom: 0; } }
-  .screentakeover__window {
+  .screentakeover__window-frame {
     position: fixed;
     right: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: #333333;
     z-index: 99;
     color: #ffffff;
     -webkit-animation: slideDown 1s forwards;
             animation: slideDown 1s forwards; }
-    .screentakeover__window:after {
+    .screentakeover__window-frame:after {
       content: '';
-      width: 0px;
-      height: 0px;
+      width: 0;
+      height: 0;
       border-left: 100vw solid transparent;
       border-right: 100vw solid transparent;
-      border-top: 100vw solid rgba(0, 0, 0, 0.9);
+      border-top: 100vw solid #333333;
       position: absolute;
       bottom: -100vw;
       left: -100vw; }
+  .screentakeover__window {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .screentakeover__content {
+    opacity: 0;
+    -webkit-animation: fadeIn 1s forwards 1s;
+            animation: fadeIn 1s forwards 1s; }
   .screentakeover__close {
     display: block;
     float: right;
