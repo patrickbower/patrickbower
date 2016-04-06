@@ -2,7 +2,7 @@
      'use strict';
 
     var selectors = {
-        screenTakeover: 'screentakeover__window-frame',
+        screenTakeover: 'screentakeover__window',
         launchBtn: 'js-screentakeover__launch',
         closeBtn: 'js-screentakeover__close'
     };

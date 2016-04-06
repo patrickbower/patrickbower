@@ -1157,32 +1157,34 @@ button {
 .screentakeover {
   position: relative;
   overflow-y: hidden; }
-
-@-webkit-keyframes slideDown {
-  0% {
-    top: -200vw;
-    bottom: 200vw; }
-  100% {
-    top: 0;
-    bottom: 0; } }
-
-@keyframes slideDown {
-  0% {
-    top: -200vw;
-    bottom: 200vw; }
-  100% {
-    top: 0;
-    bottom: 0; } }
-  .screentakeover__window-frame {
+  .screentakeover__window {
     position: fixed;
     right: 0;
     left: 0;
     background: #333333;
     z-index: 99;
     color: #ffffff;
-    -webkit-animation: slideDown 1s forwards;
-            animation: slideDown 1s forwards; }
-    .screentakeover__window-frame:after {
+    -webkit-animation: 1s forwards;
+            animation: 1s forwards;
+    -webkit-animation-name: slide-in-from-top;
+            animation-name: slide-in-from-top; }
+
+@-webkit-keyframes slide-in-from-top {
+  from {
+    top: -200vw;
+    bottom: 200vw; }
+  to {
+    top: 0;
+    bottom: 0; } }
+
+@keyframes slide-in-from-top {
+  from {
+    top: -200vw;
+    bottom: 200vw; }
+  to {
+    top: 0;
+    bottom: 0; } }
+    .screentakeover__window:after {
       content: '';
       width: 0;
       height: 0;
@@ -1192,26 +1194,28 @@ button {
       position: absolute;
       bottom: -100vw;
       left: -100vw; }
-  .screentakeover__window {
+  .screentakeover__content {
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden; }
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-  .screentakeover__content {
+  .screentakeover__project {
     opacity: 0;
-    -webkit-animation: fadeIn 1s forwards 1s;
-            animation: fadeIn 1s forwards 1s; }
+    -webkit-animation: 0.5s forwards 1s;
+            animation: 0.5s forwards 1s;
+    -webkit-animation-name: fade-content-in;
+            animation-name: fade-content-in; }
+
+@-webkit-keyframes fade-content-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-content-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
   .screentakeover__close {
     display: block;
     float: right;
