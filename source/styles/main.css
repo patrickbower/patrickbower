@@ -1154,10 +1154,10 @@ button {
             transform: rotate(-45deg);
     margin-top: -15vw; }
 
-.screentakeover {
+.model {
   position: relative;
   overflow-y: hidden; }
-  .screentakeover__window {
+  .model__window {
     position: fixed;
     right: 0;
     left: 0;
@@ -1184,7 +1184,7 @@ button {
   to {
     top: 0;
     bottom: 0; } }
-    .screentakeover__window:after {
+    .model__window:after {
       content: '';
       width: 0;
       height: 0;
@@ -1194,11 +1194,11 @@ button {
       position: absolute;
       bottom: -100vw;
       left: -100vw; }
-  .screentakeover__content {
+  .model__content {
     height: 100%;
     overflow-y: scroll;
     overflow-x: hidden; }
-  .screentakeover__project {
+  .model__project {
     opacity: 0;
     -webkit-animation: 0.5s forwards 1s;
             animation: 0.5s forwards 1s;
@@ -1216,18 +1216,18 @@ button {
     opacity: 0; }
   to {
     opacity: 1; } }
-  .screentakeover__close {
+  .model__close {
     display: block;
     float: right;
     padding: 20px;
     margin: 20px;
     border-radius: 50%; }
-    .screentakeover__close:hover {
+    .model__close:hover {
       background: rgba(100, 100, 100, 0.25); }
-  .no-js .screentakeover__window {
+  .no-js .model__window {
     background: #ffffff;
     color: #333333; }
-  .no-js .screentakeover__close {
+  .no-js .model__close {
     display: none; }
 
 .float--left {

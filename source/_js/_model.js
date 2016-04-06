@@ -2,12 +2,12 @@
      'use strict';
 
     var selectors = {
-        screenTakeover: 'screentakeover__window',
-        launchBtn: 'js-screentakeover__launch',
-        closeBtn: 'js-screentakeover__close'
+        Model: 'model__window',
+        launchBtn: 'js-model__launch',
+        closeBtn: 'js-model__close'
     };
 
-    function ScreenTakeover(properties) {
+    function Model(properties) {
         this.button = properties.button;
         launch.call(this);
         events();
@@ -28,7 +28,7 @@
 
                 $('body')
                     .prepend(htmlFragment)
-                    .addClass('screentakeover');
+                    .addClass('model');
 
                 window.init($('.' + fragmentName));
             }
@@ -42,21 +42,21 @@
 
     function close() {
         event.preventDefault();
-        $('.' + selectors.screenTakeover).remove();
-        $('body').removeClass('screentakeover');
+        $('.' + selectors.Model).remove();
+        $('body').removeClass('model');
     };
 
     function init(module) {
         $('.' + selectors.launchBtn, context).on('click', function(event){
             event.preventDefault();
             var button = this;
-            var screenTakeover = new ScreenTakeover({
+            var model = new Model({
                 button: button
             });
         });
     };
 
-    pb.screentakeover = {
+    pb.model = {
         init: init
     };
 
