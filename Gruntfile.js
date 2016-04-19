@@ -19,7 +19,8 @@ module.exports = function(grunt) {
         // sass
         sass: {
             options: {
-                sourceMap: true
+                sourceMap: true,
+                sourceMapContents: true
             },
             dist: {
                 files: {
@@ -42,7 +43,8 @@ module.exports = function(grunt) {
         // js concat and minify
         uglify: {
             options: {
-                mangle: false
+                sourceMap: true,
+                sourceMapIncludeSources: true
             },
             all: {
                 files: {

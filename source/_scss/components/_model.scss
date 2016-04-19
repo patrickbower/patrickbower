@@ -1,0 +1,76 @@
+.model
+{
+    &__active
+    {
+        position: relative;
+        overflow-y: hidden;
+    }
+
+    &__window-spring
+    {
+        position: fixed;
+        right: 0;
+        left: 0;
+        background: $color-mine-shaft;
+        z-index: $z-index-super;
+        color: $color-white;
+        animation: 1s forwards;
+        @include animation-keyframes(slide-in-from-top) {
+            from {
+                top: -200vw;
+                bottom: 200vw;
+            } to {
+                top: 0;
+                bottom: 0;
+            }
+        }
+
+        &:after
+        {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 100vw solid transparent;
+            border-right: 100vw solid transparent;
+            border-top: 100vw solid $color-mine-shaft;
+            position: absolute;
+            bottom: -100vw;
+            left: -100vw;
+        }
+    }
+
+    &__window
+    {
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    &__project
+    {
+        opacity: 0;
+        animation: 0.5s forwards 1s;
+        @include animation-keyframes(fade-content-in) {
+            from {
+                opacity: 0;
+            } to {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__close
+    {
+        @extend .cf;
+        display: block;
+        float: right;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 50%;
+
+        &:hover
+        {
+            background: rgba(100,100,100,0.25);
+        }
+    }
+}
