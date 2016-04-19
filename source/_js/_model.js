@@ -1,63 +1,12 @@
-(function ($, pb) {
-     'use strict';
+'use strict';
 
-    var selectors = {
-        Model: 'model__window',
-        launchBtn: 'js-model__launch',
-        closeBtn: 'js-model__close'
-    };
+var Model = function(module) {
+    return this;
+}
 
-    function Model(properties) {
-        this.button = properties.button;
-        launch.call(this);
-        events();
-    };
+Model.prototype.launch = function() {
 
-    function launch() {
-        var button          = this.button;
-        var href            = $(button).attr('href').split('#');
-        var pagePath        = href[0];
-        var fragmentName    = href[1];
+    event.preventDefault();
 
-        $.ajax({
-            type: "POST",
-            url : pagePath,
-            success: function(data) {
-
-                var htmlFragment = $(data).filter('#' + fragmentName);
-
-                $('body')
-                    .prepend(htmlFragment)
-                    .addClass('model');
-
-                window.init($('.' + fragmentName));
-            }
-        });
-    };
-
-    function events() {
-        var closeBtn = '.' + selectors.closeBtn;
-        $('body').on('click', closeBtn, close);
-    };
-
-    function close() {
-        event.preventDefault();
-        $('.' + selectors.Model).remove();
-        $('body').removeClass('model');
-    };
-
-    function init(module) {
-        $('.' + selectors.launchBtn, context).on('click', function(event){
-            event.preventDefault();
-            var button = this;
-            var model = new Model({
-                button: button
-            });
-        });
-    };
-
-    pb.model = {
-        init: init
-    };
-
-}(jQuery, window.pb = window.pb || {}));
+    console.log('do stuff', this);
+}

@@ -1,9 +1,12 @@
 .model
 {
-    position: relative;
-    overflow-y: hidden;
+    &__active
+    {
+        position: relative;
+        overflow-y: hidden;
+    }
 
-    &__window
+    &__window-spring
     {
         position: fixed;
         right: 0;
@@ -36,7 +39,7 @@
         }
     }
 
-    &__content
+    &__window
     {
         height: 100%;
         overflow-y: scroll;
@@ -68,22 +71,6 @@
         &:hover
         {
             background: rgba(100,100,100,0.25);
-        }
-    }
-
-    // change to <template> html
-    .no-js &
-    {
-
-        &__window
-        {
-            background: $color-white;
-            color: $color-mine-shaft;
-        }
-
-        &__close
-        {
-            display: none;
         }
     }
 }

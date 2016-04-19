@@ -1154,20 +1154,21 @@ button {
             transform: rotate(-45deg);
     margin-top: -15vw; }
 
-.model {
+.model__active {
   position: relative;
   overflow-y: hidden; }
-  .model__window {
-    position: fixed;
-    right: 0;
-    left: 0;
-    background: #333333;
-    z-index: 99;
-    color: #ffffff;
-    -webkit-animation: 1s forwards;
-            animation: 1s forwards;
-    -webkit-animation-name: slide-in-from-top;
-            animation-name: slide-in-from-top; }
+
+.model__window-spring {
+  position: fixed;
+  right: 0;
+  left: 0;
+  background: #333333;
+  z-index: 99;
+  color: #ffffff;
+  -webkit-animation: 1s forwards;
+          animation: 1s forwards;
+  -webkit-animation-name: slide-in-from-top;
+          animation-name: slide-in-from-top; }
 
 @-webkit-keyframes slide-in-from-top {
   from {
@@ -1184,26 +1185,28 @@ button {
   to {
     top: 0;
     bottom: 0; } }
-    .model__window:after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 100vw solid transparent;
-      border-right: 100vw solid transparent;
-      border-top: 100vw solid #333333;
-      position: absolute;
-      bottom: -100vw;
-      left: -100vw; }
-  .model__content {
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden; }
-  .model__project {
-    opacity: 0;
-    -webkit-animation: 0.5s forwards 1s;
-            animation: 0.5s forwards 1s;
-    -webkit-animation-name: fade-content-in;
-            animation-name: fade-content-in; }
+  .model__window-spring:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 100vw solid transparent;
+    border-right: 100vw solid transparent;
+    border-top: 100vw solid #333333;
+    position: absolute;
+    bottom: -100vw;
+    left: -100vw; }
+
+.model__window {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+.model__project {
+  opacity: 0;
+  -webkit-animation: 0.5s forwards 1s;
+          animation: 0.5s forwards 1s;
+  -webkit-animation-name: fade-content-in;
+          animation-name: fade-content-in; }
 
 @-webkit-keyframes fade-content-in {
   from {
@@ -1216,19 +1219,15 @@ button {
     opacity: 0; }
   to {
     opacity: 1; } }
-  .model__close {
-    display: block;
-    float: right;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 50%; }
-    .model__close:hover {
-      background: rgba(100, 100, 100, 0.25); }
-  .no-js .model__window {
-    background: #ffffff;
-    color: #333333; }
-  .no-js .model__close {
-    display: none; }
+
+.model__close {
+  display: block;
+  float: right;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 50%; }
+  .model__close:hover {
+    background: rgba(100, 100, 100, 0.25); }
 
 .float--left {
   float: left; }
