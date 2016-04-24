@@ -36,13 +36,13 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<template>
-    <div style="display:none;" data-model="js-model__template">
+<template data-model-template="template">
+    <div style="display:none;">
         <div class="model__window-spring">
             <div class="model__window">
                 <div class="grid">
                     <div class="column width-100">
-                        <a href="#" class="model__close leading--none" data-model="js-model__close">
+                        <a href="#" class="model__close leading--none" data-model-template="close">
                             <svg class="icon--close">
                                 <use xlink:href="#_icon--close"></use>
                             </svg>
@@ -50,7 +50,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="model__project belt" data-model="js-model__content-space"></div>
+                <div class="model__project belt" data-model-template="content"></div>
             </div>
         </div>
     </div>
@@ -114,7 +114,7 @@
             </p>
             <div class="button__wrap">
                 <!-- <a href="/pages/development.html#js-model__content" class="button button-color--mischka" data-model="model-launch"> -->
-                <a href="#" class="button button-color--mischka" data-model="click--launch">
+                <a href="#" class="button button-color--mischka" data-model="launch">
                     View Devolopment Projects
                 </a>
             </div>
@@ -143,7 +143,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione culpa inventore cumque alias nihil deleniti repellat blanditiis, fugit deserunt qui voluptates odio commodi accusantium quae distinctio facilis reprehenderit aspernatur nesciunt aperiam, possimus at. Harum aperiam, a sapiente optio assumenda labore perspiciatis officiis commodi dicta, nam, voluptatibus cupiditate ipsa esse animi.
             </p>
             <div class="button__wrap">
-                <a href="pages/ajax-design.html#model" class="button button-color--brick-red" data-model="click--launch">
+                <a href="pages/ajax-design.html#model" class="button button-color--brick-red" data-model="launch">
                     View Design Projects
                 </a>
             </div>

@@ -1,49 +1,38 @@
 'use strict';
 
+/*
+Coding Standards - code convensions
+
+• Open brances on same line.
+• Whitespace before braces and brakets of functions.
+• Capitalize first letter for constructor functions.
+• Varabules all lowercase with underscores for word breaks unless global or values not changing and then all caps.
+• Private Varabules start with an underscore.
+*/
+
 // UTIL - ES6 module patteren please!
 
-String.prototype.capitalizeFirstLetter = function() {
+// capitalize first letter of a string
+String.prototype.capitalizeFirstLetter = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
 // INIT
 
 // after page load
-window.onload = function() {
+window.onload = function () {
 
     // find all data js
-    var moduleArray = document.querySelectorAll('[data-js-init]');
+    var module_array = document.querySelectorAll('[data-js-init]');
 
     // for each data attribue
-    [].forEach.call(moduleArray, function(module) {
+    [].forEach.call(module_array, function (module) {
 
         // get js module name
-        var newObject = module.getAttribute('data-js-init').capitalizeFirstLetter();
+        var new_object = module.getAttribute('data-js-init').capitalizeFirstLetter();
 
-        // create and return new object
-        var instance = new window[newObject]();
-
-        // get modules data attribues
-        var elementArray = module.querySelectorAll('[data-model]');
-
-        // for each one found
-        [].forEach.call(elementArray, function(element) {
-
-            // break into componant parts
-            var split = element.dataset.model.split('--');
-
-            // get the event type to trigger
-            var eventType = split[0].toString();
-
-            // get function to invoke
-            var functionName = split[1].toString();
-
-            // create the event listener
-            element.addEventListener([eventType], function(){
-                instance[functionName]();
-            });
-
-        });
+        // start
+        new window[new_object](module);
 
     });
-}
+};
