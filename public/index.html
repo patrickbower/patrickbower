@@ -36,13 +36,13 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<template data-model-template="template">
+<template id="js-model-template">
     <div style="display:none;">
-        <div class="model__window-spring">
+        <div class="model__window-spring js-model-template__window">
             <div class="model__window">
                 <div class="grid">
                     <div class="column width-100">
-                        <a href="#" class="model__close leading--none" data-model-template="close">
+                        <a href="#" class="model__close leading--none js-model-template__close">
                             <svg class="icon--close">
                                 <use xlink:href="#_icon--close"></use>
                             </svg>
@@ -50,7 +50,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="model__project belt" data-model-template="content"></div>
+                <div class="model__project belt js-model-template__content"></div>
             </div>
         </div>
     </div>
@@ -96,7 +96,7 @@
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--one">
             <div class="content__area content__area--one">
-                <div class="development" data-js-init="model">
+                <div class="development" data-js-init="launchModel">
     <div class="media">
         <div class="media__img development__icon">
             <svg class="icon--bracket">
@@ -114,7 +114,7 @@
             </p>
             <div class="button__wrap">
                 <!-- <a href="/pages/development.html#js-model__content" class="button button-color--mischka" data-model="model-launch"> -->
-                <a href="#" class="button button-color--mischka" data-model="launch">
+                <a href="#" class="button button-color--mischka js-model__launch">
                     View Devolopment Projects
                 </a>
             </div>
@@ -128,7 +128,7 @@
     <div class="content-section">
         <div class="content-triangle__shape content-triangle__shape--two">
             <div class="content__area content__area--two">
-                <div class="design" data-js-init="model">
+                <div class="design" data-js-init="launchModel">
     <div class="media">
         <div class="media__img design__icon">
             <svg class="icon--pencil">
@@ -143,7 +143,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione culpa inventore cumque alias nihil deleniti repellat blanditiis, fugit deserunt qui voluptates odio commodi accusantium quae distinctio facilis reprehenderit aspernatur nesciunt aperiam, possimus at. Harum aperiam, a sapiente optio assumenda labore perspiciatis officiis commodi dicta, nam, voluptatibus cupiditate ipsa esse animi.
             </p>
             <div class="button__wrap">
-                <a href="pages/ajax-design.html#model" class="button button-color--brick-red" data-model="launch">
+                <a href="pages/ajax-design.html#model" class="button button-color--brick-red js-model__launch">
                     View Design Projects
                 </a>
             </div>

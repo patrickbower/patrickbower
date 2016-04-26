@@ -1,47 +1,89 @@
 'use strict';
+
 /**
  * Builds full page model from template in HTML.
  *
  * @constructor
- * @this {ModelTemplate}
  */
 var ModelTemplate = function () {
-    this.create();
-    this.addEvents();
+
+    // selectors
+    this.selector = {
+        close : 'js-model-template__close'
+    }
+
+    // get template parts
+    var module_template = document.querySelector('#js-model-template');
+    this.modelWindowTemplate = module_template.content.querySelector('.js-model-template__window');
+
+    // go to work
+    this.createModel(this.defineElements, this.bindEvents);
 }
+
+/**
+ * Model controller.
+ *
+ * @param {functionCallback} defineElements - Store created elements to instance.
+ * @param {functionCallback} bindEvents - Bind events to created elements.
+ */
+ModelTemplate.prototype.createModel = function (defineElements, bindEvents) {
+
+    // add model to page
+    this.appendModel();
+
+    // callbacks on model
+    this.defineElements();
+    this.bindEvents();
+}
+
 /**
  * Append model to page.
  *
  */
-ModelTemplate.prototype.create = function () {
+ModelTemplate.prototype.appendModel = function () {
 
-    /** @class module html */
-    this.module = document.querySelector('[data-model-template="template"]');
-
+    var create_model = document.createElement('div');
+    create_model = this.modelWindowTemplate.parentNode.innerHTML;
+    document.body.insertAdjacentHTML('afterbegin', create_model);
 }
+
 /**
- * Attach all events.
+ * Store created elements to instance.
  *
  */
-ModelTemplate.prototype.addEvents = function () {
-    var module = this.module;
+ModelTemplate.prototype.defineElements = function () {
 
-    /**
-     * Attach close event to html.
-     *
-     * @event click
-     * @fires Model#handleEvent
-     */
-    var closeButton = module.content.querySelector('[data-model-template="close"]');
-    closeButton.addEventListener('click', this);
+    this.modelWindow = document.querySelector('.js-model-template__window');
+    this.closeButton = this.modelWindow.querySelector('.js-model-template__close');
 }
+
 /**
- * Handle all events.
+ * Bind events to created elements.
  *
- * @param {event} detemine the event type and origin
- * @listens ModelTemplate#addEvents
  */
-ModelTemplate.prototype.handleEvents = function (event) {
+ModelTemplate.prototype.bindEvents = function () {
+
+    // close button
+    this.closeButton.addEventListener('click', this);
+}
+
+/**
+ * Handle events.
+ *
+ * @param {object} event - To prevent any default behaviour, detemine origin of event and/or the event type.
+ */
+ModelTemplate.prototype.handleEvent = function (event) {
     event.preventDefault();
-    console.log(event);
+
+    // close button
+    if (elementHasClass(this.selector.close)) this.closeModel();
+
+}
+
+/**
+ * Close model.
+ *
+ */
+ModelTemplate.prototype.closeModel = function () {
+    this.modelWindow.parentNode.removeChild(this.modelWindow);
 }
