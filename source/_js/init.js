@@ -1,16 +1,7 @@
 'use strict';
 
-/*
-Coding Standards - code convensions
-
-• Open brances on same line.
-• Whitespace before braces and brakets of functions.
-• Capitalize first letter for constructor functions.
-• Varabules all lowercase with underscores for word breaks unless global or values not changing and then all caps.
-• Private Varabules start with an underscore.
-*/
-
-// UTIL - ES6 module patteren please!
+// UTIL
+// ADD ES6 module patteren please!
 
 // capitalize first letter of a string
 String.prototype.capitalizeFirstLetter = function () {
@@ -22,7 +13,6 @@ function elementHasClass (className) {
 }
 
 // INIT
-
 // after page load
 window.onload = function () {
 
