@@ -1,23 +1,28 @@
 'use strict';
 
 /**
- * Builds full page model from template in HTML.
- *
- * @constructor
- */
-var ModelTemplate = function () {
+* Builds full page model from template stored on current page.
+*
+* @constructor
+* @param {LaunchModel} LaunchModel class - Dependency injection.
+*/
+var ModelTemplate = function (LaunchModel) {
+
+    // dependency injection class
+    this.LaunchModel = LaunchModel;
 
     // selectors
     this.selector = {
-        'template': 'js-model-template',
-        'template-window': 'js-model-template__window',
-        'close': 'js-model-template__close',
-        'model-active': 'model__active'
+        'model-template': 'js-model-template',
+        'model-window': 'js-model-template__window',
+        'model-close': 'js-model-template__close',
+        'model-active': 'model__active',
+        'model-content': 'js-model-template__content'
     }
 
-    // get template parts
-    var module_template = document.querySelector('#' + this.selector['template']);
-    this.modelWindowTemplate = module_template.content.querySelector('.' + this.selector['template-window']);
+    // // get template parts
+    // var module_template = document.querySelector('#' + this.selector['model-template']);
+    // this.modelWindowTemplate = module_template.content.querySelector('.' + this.selector['model-window']);
 
     // go to work
     this.setPage();
@@ -25,94 +30,110 @@ var ModelTemplate = function () {
 }
 
 /**
- * Set page styling for takeover style model.
- *
- */
+* Set page styling for takeover style model.
+*
+*/
 ModelTemplate.prototype.setPage = function () {
     document.body.classList.add(this.selector['model-active']);
 }
 
 /**
- * Control functions that create model and setup page.
- *
- * @param {functionCallback} defineElements - Store created elements to instance.
- * @param {functionCallback} bindEvents - Bind events to created elements.
- */
+* Control functions that create model and setup page.
+*
+* @param {functionCallback} defineElements - Store created elements to instance.
+* @param {functionCallback} bindEvents - Bind events to created elements.
+*/
 ModelTemplate.prototype.createModel = function (defineElements, bindEvents) {
 
-    // add model to page
     this.appendModel();
-
-    // callbacks on model
     this.defineElements();
     this.bindEvents();
+    this.addContent();
 }
 
 /**
- * Append model to page.
- *
- */
+* Append model to page.
+*
+*/
 ModelTemplate.prototype.appendModel = function () {
 
     var create_model = document.createElement('div');
-    create_model = this.modelWindowTemplate.parentNode.innerHTML;
+    create_model = this.LaunchModel.modelWindowTemplate.parentNode.innerHTML;
     document.body.insertAdjacentHTML('afterbegin', create_model);
 }
 
 /**
- * Store created elements to instance.
- *
- */
+* Store created elements to instance.
+*
+*/
 ModelTemplate.prototype.defineElements = function () {
 
-    this.modelWindow = document.querySelector('.' + this.selector['template-window']);
-    this.closeButton = this.modelWindow.querySelector('.' + this.selector['close']);
+    this.modelWindow = document.querySelector('.' + this.selector['model-window']);
+    this.closeButton = this.modelWindow.querySelector('.' + this.selector['model-close']);
+    this.modelContent = this.modelWindow.querySelector('.' + this.selector['model-content']);
 }
 
 /**
- * Bind events to created elements.
- *
- */
+* Bind events to created elements - Using a handleEvent object to configure the function call.
+*
+*/
 ModelTemplate.prototype.bindEvents = function () {
+    var instance = this;
 
-    // close button
-    this.closeButton.addEventListener('click', this);
+    var close_button_event = {
+        handleEvent: function(event) {
+            event.preventDefault();
+            instance.closeModel();
+        }
+    }
+
+    this.closeButton.addEventListener('click', close_button_event);
 }
 
 /**
- * Handle events.
- *
- * @param {object} event - To prevent any default behaviour, detemine origin of event and/or the event type.
- */
-ModelTemplate.prototype.handleEvent = function (event) {
-    event.preventDefault();
+* Get content via Ajax and place in model window.
+*
+*/
+ModelTemplate.prototype.addContent = function () {
+    var instance = this;
 
-    // close button
-    if (elementHasClass(this.selector['close'])) this.closeModel();
+    // get parts from href string
+    var full_url = this.LaunchModel.launchHref.split('#');
+    var page_url = full_url[0];
+    var fragment_selector = full_url[1];
 
+    // ajax (util function)
+    ajaxRequest(page_url, function(data){
+
+        // parse (util function), and append
+        var html = parseHTML(data);
+        var html_fragment = html.querySelector('.' + fragment_selector);
+
+        instance.modelContent.appendChild(html_fragment);
+    });
 }
 
 /**
- * Control functions that remove model and reset page
- *
- */
+* Control functions that remove model and reset page
+*
+*/
 ModelTemplate.prototype.closeModel = function () {
     this.removeModel();
     this.resetPage();
 }
 
 /**
- * Remove model HTML.
- *
- */
+* Remove model HTML.
+*
+*/
 ModelTemplate.prototype.removeModel = function () {
     this.modelWindow.parentNode.removeChild(this.modelWindow);
 }
 
 /**
- * Reset page styling.
- *
- */
+* Reset page styling.
+*
+*/
 ModelTemplate.prototype.resetPage = function () {
     document.body.classList.remove(this.selector['model-active']);
 }

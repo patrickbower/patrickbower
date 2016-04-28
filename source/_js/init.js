@@ -12,6 +12,25 @@ function elementHasClass (className) {
     return event.currentTarget.classList.contains(className);
 }
 
+function ajaxRequest (url, callback) {
+
+    var request = new XMLHttpRequest();
+    request.open('GET', url, true);
+
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+            callback(request.responseText);
+        }
+    };
+    request.send();
+}
+
+function parseHTML (htmlString) {
+    var html = document.implementation.createHTMLDocument("example");
+    html.documentElement.innerHTML = htmlString;
+    return html.body;
+}
+
 // INIT
 // after page load
 window.onload = function () {
