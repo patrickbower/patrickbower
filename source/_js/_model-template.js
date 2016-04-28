@@ -13,16 +13,11 @@ var ModelTemplate = function (LaunchModel) {
 
     // selectors
     this.selector = {
-        'model-template': 'js-model-template',
         'model-window': 'js-model-template__window',
         'model-close': 'js-model-template__close',
         'model-active': 'model__active',
         'model-content': 'js-model-template__content'
     }
-
-    // // get template parts
-    // var module_template = document.querySelector('#' + this.selector['model-template']);
-    // this.modelWindowTemplate = module_template.content.querySelector('.' + this.selector['model-window']);
 
     // go to work
     this.setPage();
