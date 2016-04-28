@@ -24,7 +24,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'source/styles/main.css': 'source/_scss/main.scss'
+                    'source/styles/main.css': 'resources/scss/main.scss'
                 }
             }
         },
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
             },
             all: {
                 files: {
-                    'source/scripts/main.min.js': ['source/_js/*.js']
+                    'source/scripts/main.min.js': ['resources/js/*.js']
                 }
             }
         },
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand : true,
-                    cwd    : 'source/_imgs/',
+                    cwd    : 'resources/imgs/',
                     src    : ['**/*.{png,jpg,gif}'],
                     dest   : 'source/images/'
                 }]
@@ -72,8 +72,8 @@ module.exports = function(grunt) {
         svg_sprite        : {
             dist          : {
                 expand    : true,
-                cwd       : 'source/',
-                src       : ['_icon/*.svg'],
+                cwd       : 'resources/',
+                src       : ['icon/*.svg'],
                 dest      : '.',
                 options   : {
                     mode: {
@@ -104,19 +104,19 @@ module.exports = function(grunt) {
         // watch
         watch: {
             stylesheets: {
-                files: [ 'source/_scss/**/*.scss'],
+                files: [ 'resources/scss/**/*.scss'],
                 tasks: [ 'sass', 'autoprefixer', 'jekyll' ],
             },
             scripts: {
-                files: [ 'source/_js/*.js' ],
+                files: [ 'resources/js/*.js' ],
                 tasks: [ 'uglify', 'jekyll' ],
             },
             sprite: {
-                files: 'source/_icon/*.svg',
+                files: 'resources/icon/*.svg',
                 tasks: [ 'svg_sprite', 'jekyll' ],
             },
             images: {
-                files: 'source/_imgs/*.{png,jpg,gif}',
+                files: 'resources/imgs/*.{png,jpg,gif}',
                 tasks: [ 'imagemin', 'jekyll' ],
             },
             jekyll: {
