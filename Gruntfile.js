@@ -110,7 +110,7 @@ module.exports = function(grunt) {
                 tasks: [ 'sass', 'autoprefixer', 'jekyll' ],
             },
             scripts: {
-                files: [ 'resources/js/*.js', 'resources/js/**/*.js' ],
+                files: [ 'resources/js/**/*.js' ],
                 tasks: [ 'uglify', 'jekyll' ],
             },
             sprite: {

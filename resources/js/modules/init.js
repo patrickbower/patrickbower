@@ -8,7 +8,7 @@
 * @param {object} document - Document object referance.
 * @param {object} undefined - Ensure undefined remains valueless.
 */
-(function(window, document, undefined){
+(function(window, document, undefined) {
 
     // find all data js
     var module_array = document.querySelectorAll('[data-js-init]');
