@@ -1,6 +1,8 @@
 // Gruntfile.js
 'use strict';
 
+var js = require('./resources/js/main.js');
+
 // our wrapper function (required by grunt and its plugins)
 // all configuration goes inside this function
 module.exports = function(grunt) {
@@ -48,7 +50,7 @@ module.exports = function(grunt) {
             },
             all: {
                 files: {
-                    'source/scripts/main.min.js': ['resources/js/*.js']
+                    'source/scripts/main.min.js': js.files()
                 }
             }
         },
@@ -108,7 +110,7 @@ module.exports = function(grunt) {
                 tasks: [ 'sass', 'autoprefixer', 'jekyll' ],
             },
             scripts: {
-                files: [ 'resources/js/*.js' ],
+                files: [ 'resources/js/*.js', 'resources/js/**/*.js' ],
                 tasks: [ 'uglify', 'jekyll' ],
             },
             sprite: {
