@@ -1,17 +1,14 @@
 # Personal Website of Patrick Bower
-An online presence of Patrick Bower, a developer and designer who wants a pimped out portfolio and introductory information on the WWW.
+An online presence of Patrick Bower, a front end developer and designer who wants a pimped out portfolio and introductory information on the WWW.
 
 ## Installation
-This projects runs on nothing but Node (grunt).
+This project runs on nuthin' but Node (Grunt).
 
 ## Usage
-Please visit the [wiki](WIKI.md) for my chosen Standards.
+Please visit the [wiki](./wiki.md) for my chosen Standards.
 
 ## Contributing
 This project is only open for the public to observe.
-
-## History
-This is the forth or fith portfolio I've made (I'd love to get round to hosting my legacy sites).
 
 ## Credits
 Patrick Bower
