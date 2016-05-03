@@ -1,4 +1,6 @@
-Coding Standards - code conventions
+#Coding Standards
+
+##Code conventions:
 
 - Open branches on same line.
 - Whitespace before braces and brackets of functions.
