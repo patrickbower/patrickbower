@@ -4,7 +4,6 @@ exports.files = function () {
 
     return [
         // libraries
-        './resources/js/libraries/lazysizes.js',
 
         // utilities
         './resources/js/utilities/utilities.js',
