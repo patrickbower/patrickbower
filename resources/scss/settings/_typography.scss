@@ -1,13 +1,5 @@
 // Default px value
-
 $base : 16;
-
-@media only screen and (min-width: $media-tablet) {
-    $base : 18;
-}
-@media only screen and (min-width: $media-desktop) {
-    $base : 20;
-}
 
 // fonts
 $body-font : 'source_sans_regular';
@@ -15,9 +7,9 @@ $heading-font : 'montserratbold';
 
 // scales
 // http://type-scale.com/
-$p : 1em;
-$h1 : 6.854em;
-$h2 : 4.236em;
-$h3 : 2.618em;
-$h4 : 1.618em;
-$text-sml : 0.618em;
+$p : 1rem;
+$h1 : 6.854rem;
+$h2 : 4.236rem;
+$h3 : 2.618rem;
+$h4 : 1.618rem;
+$text-sml : 0.618rem;

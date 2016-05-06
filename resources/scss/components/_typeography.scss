@@ -9,8 +9,8 @@
 
 .h1
 {
-    letter-spacing: -0.05em;
-    margin: 0 0 0.5em 0;
+    letter-spacing: -0.25rem;
+    margin: 0 0 0.5rem 0;
     font-weight: inherit;
     line-height: 1.2;
     color: $color-white;
@@ -20,7 +20,7 @@
 
 .h2
 {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.05rem;
     font-size: $h2;
 }
 
@@ -37,7 +37,7 @@
 .sub-head
 {
     font-family: $heading-font;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 .strike
