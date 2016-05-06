@@ -1,13 +1,13 @@
 .button__wrap {
-    margin-top: em(50px);
+    margin-top: rem(50px);
     @media only screen and (min-width: $media-tablet) {
-        margin-top: em(30px);
+        margin-top: rem(30px);
     }
 }
 
 .button
 {
-    padding: em(13px) em(46px);
+    padding: rem(13px) rem(46px);
     @include border($color-mine-shaft)
 }
 

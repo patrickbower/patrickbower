@@ -64,8 +64,8 @@
         @extend .cf;
         display: block;
         float: right;
-        padding: em(20px);
-        margin: em(20px);
+        padding: rem(20px);
+        margin: rem(20px);
         border-radius: 50%;
 
         &:hover
