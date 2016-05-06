@@ -6,30 +6,30 @@
         display: inline-block;
         position: relative;
         top: 0;
-        left: 30px;
+        left: em(30px);
 
         &:before
         {
             content: '';
             display: inline-block;
-            width: 60px;
-            height: 130px;
+            width: em(60px);
+            height: em(130px);
             background: $color-white;
             transform: rotate(45deg);
             position: absolute;
-            top: -50px;
-            left: 10px;
+            top: em(-50px);
+            left: em(10px);
         }
 
         &__icon
         {
-            margin-top: 20px;
+            margin-top: em(20px);
             position: relative;
         }
 
         &__pb {
             position: relative;
-            top: 20px;
+            top: em(20px);
         }
     }
 
@@ -38,11 +38,10 @@
     {
         font-size: 3.5em;
         text-align: center;
-        padding: 100px 0;
+        padding: 200px 0;
         text-transform: uppercase;
         margin-left: -10px;
         @media only screen and (min-width: $media-mobile) {
-            padding: 200px 0 0 0;
             font-size: 5em;
         }
 

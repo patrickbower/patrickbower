@@ -1,14 +1,14 @@
 .button {
 
-	&-color--brick-red {
-		@include button ($color-brick-red);
-	}
+    &-color--brick-red {
+        @include button ($color-brick-red);
+    }
 
-	&-color--mischka {
-		@include button ($color-mischka);
-	}
+    &-color--mischka {
+        @include button ($color-mischka);
+    }
 
-	&-color--white {
-		@include button ($color-white);
-	}
+    &-color--white {
+        @include button ($color-white);
+    }
 }

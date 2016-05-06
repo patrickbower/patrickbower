@@ -23,7 +23,7 @@
     &__heading {
         position: relative;
         flex: none;
-        padding-left: 40px;
+        padding-left: em(40px);
     }
 
     &__tilt-image {
