@@ -1,17 +1,17 @@
 .button__wrap {
-	margin-top: 50px;
-	@media only screen and (min-width: $media-tablet) {
-		margin-top: 30px;
-	}
+    margin-top: rem(50px);
+    @media only screen and (min-width: $media-tablet) {
+        margin-top: rem(30px);
+    }
 }
 
 .button
 {
-	padding: 13px 46px;
-	@include border($color-mine-shaft)
+    padding: rem(13px) rem(46px);
+    @include border($color-mine-shaft)
 }
 
 .button--submit
 {
-	background: none;
+    background: none;
 }

@@ -1,3 +1,4 @@
+
 .h1,
 .h2,
 .h3,
@@ -8,8 +9,8 @@
 
 .h1
 {
-    letter-spacing: -0.05em;
-    margin: 0 0 0.5em 0;
+    letter-spacing: -0.25rem;
+    margin: 0 0 0.5rem 0;
     font-weight: inherit;
     line-height: 1.2;
     color: $color-white;
@@ -19,7 +20,7 @@
 
 .h2
 {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.05rem;
     font-size: $h2;
 }
 
@@ -36,7 +37,7 @@
 .sub-head
 {
     font-family: $heading-font;
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 .strike
@@ -47,12 +48,12 @@
     &:after
     {
         content: '';
-        width: 100px;
-        height: 2px;
+        width: rem(100px);
+        height: rem(2px);
         background: $color-mine-shaft;
         position: absolute;
-        bottom: 32px;
-        right: -38px;
+        bottom: rem(32px);
+        right: rem(-38px);
         transform: rotate(-45deg);
 
     }
@@ -62,10 +63,10 @@
         width: 0;
         height: 0;
         border-style: solid;
-        border-width: 0 0 50px 50px;
+        border-width: 0 0 rem(50px) rem(50px);
         border-color: transparent transparent $color-white transparent;
         position: absolute;
-        bottom: 15px;
-          right: -20px;
+        bottom: rem(15px);
+        right: rem(-20px);
     }
 }

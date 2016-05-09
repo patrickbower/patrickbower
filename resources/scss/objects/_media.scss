@@ -1,5 +1,5 @@
 .media {
-    margin: 0 10px;
+    margin: 0 rem(10px);
 }
 
 .media__text {
@@ -9,7 +9,7 @@
 }
 
 .media__img {
-    padding-bottom: 60px;
+    padding-bottom: rem(60px);
 
     @media only screen and (min-width: $media-tablet) {
         display: none;
@@ -18,7 +18,7 @@
         display: block;
         padding-bottom: 0;
         float:left;
-        margin-right: 30px;
+        margin-right: rem(30px);
     }
 }
 

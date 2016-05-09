@@ -6,30 +6,30 @@
         display: inline-block;
         position: relative;
         top: 0;
-        left: 30px;
+        left: rem(30px);
 
         &:before
         {
             content: '';
             display: inline-block;
-            width: 60px;
-            height: 130px;
+            width: rem(60px);
+            height: rem(130px);
             background: $color-white;
             transform: rotate(45deg);
             position: absolute;
-            top: -50px;
-            left: 10px;
+            top: rem(-50px);
+            left: rem(10px);
         }
 
         &__icon
         {
-            margin-top: 20px;
+            margin-top: rem(20px);
             position: relative;
         }
 
         &__pb {
             position: relative;
-            top: 20px;
+            top: rem(20px);
         }
     }
 
@@ -38,20 +38,19 @@
     {
         font-size: 3.5em;
         text-align: center;
-        padding: 100px 0;
+        padding: rem(200px) 0;
         text-transform: uppercase;
-        margin-left: -10px;
+        margin-left: rem(-10px);
         @media only screen and (min-width: $media-mobile) {
-            padding: 200px 0 0 0;
             font-size: 5em;
         }
 
         &__first
         {
             position: relative;
-            bottom: -20px;
+            bottom: rem(-20px);
             @media only screen and (min-width: $media-tablet) {
-                margin-right: -265px;
+                margin-right: rem(-265px);
                 bottom: 0;
             }
 
@@ -62,29 +61,29 @@
                 width: 0;
                 height: 0;
                 border-style: solid;
-                border-width: 0 0 30px 30px;
+                border-width: 0 0 rem(30px) rem(30px);
                 border-color: transparent transparent $color-mako transparent;
                 position: absolute;
-                right: -10px;
-                bottom: 13px;
+                right: rem(-10px);
+                bottom: rem(13px);
                 @media only screen and (min-width: $media-mobile) {
-                    right: -5px;
-                    bottom: 22px;
+                    right: rem(-5px);
+                    bottom: rem(22px);
                 }
             }
 
             &:after {
-                width: 230px;
+                width: rem(230px);
                 content: '';
                 border-top: 1px solid $color-white;
                 transform: rotate(-45deg);
                 position: absolute;
-                bottom: -27px;
-                right: -56px;
+                bottom: rem(-27px);
+                right: rem(-56px);
                 @media only screen and (min-width: $media-mobile) {
-                    width: 330px;
-                    bottom: -39px;
-                    right: -80px;
+                    width: rem(330px);
+                    bottom: rem(-39px);
+                    right: rem(-80px);
                 }
                 @media only screen and (min-width: $media-tablet) {
                     content: none;
@@ -96,7 +95,7 @@
         {
             position: relative;
             @media only screen and (min-width: $media-tablet) {
-                margin-left: -270px;
+                margin-left: rem(-270px);
             }
 
 
@@ -108,28 +107,28 @@
                 height: 0;
                 border-style: solid;
                 border-color: $color-mako transparent transparent transparent;
-                border-width: 30px 30px 0 0;
+                border-width: rem(30px) rem(30px) 0 0;
                 position: absolute;
-                top: 8px;
-                left: -5px;
+                top: rem(8px);
+                left: rem(-5px);
                 @media only screen and (min-width: $media-mobile) {
-                    top: 15px;
-                    left: 5px;
+                    top: rem(15px);
+                    left: rem(5px);
                 }
             }
 
             &:after {
                 content: '';
-                width: 230px;
-                border-top: 1px solid $color-white;
+                width: rem(230px);
+                border-top: rem(1px) solid $color-white;
                 transform: rotate(-45deg);
                 position: absolute;
-                top: -30px;
-                left: -52px;
+                top: rem(-30px);
+                left: rem(-52px);
                 @media only screen and (min-width: $media-mobile) {
-                    width: 330px;
-                    top: -42px;
-                    left: -73px;
+                    width: rem(330px);
+                    top: rem(-42px);
+                    left: rem(-73px);
                 }
                 @media only screen and (min-width: $media-tablet) {
                     content: none;
@@ -142,12 +141,12 @@
             border: none;
             margin: 0;
             @media only screen and (min-width: $media-tablet) {
-                width: 500px;
-                border-top: 2px solid $color-white;
+                width: rem(500px);
+                border-top: rem(2px) solid $color-white;
                 transform: rotate(-45deg);
                 position: relative;
                 display: inline-block;
-                margin: 0 0 27px 0;
+                margin: 0 0 rem(27px) 0;
             }
         }
     }
@@ -159,28 +158,28 @@
         text-transform: uppercase;
         letter-spacing: 0.25em;
         font-size: 0.25em;
-        margin-top: 40px;
+        margin-top: rem(40px);
         @media only screen and (min-width: $media-mobile) {
-            margin-top: 50px;
+            margin-top: rem(50px);
         }
         @media only screen and (min-width: $media-tablet) {
             letter-spacing: 1em;
-            margin-top: 10px;
+            margin-top: rem(10px);
         }
 
         &__a
         {
-            margin-right: 20px;
+            margin-right: rem(20px);
             @media only screen and (min-width: $media-tablet) {
-                margin-left: 40px;
+                margin-left: rem(40px);
             }
         }
 
         &__b
         {
-            margin-left: 20px;
+            margin-left: rem(20px);
             @media only screen and (min-width: $media-tablet) {
-                margin-left: 40px;
+                margin-left: rem(40px);
             }
         }
     }

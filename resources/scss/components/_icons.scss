@@ -3,36 +3,36 @@
     display: block;
 
     &--bracket {
-    	width: 84px;
-    	height: 112px;
+        width: rem(84px);
+        height: rem(112px);
     }
 
     &--close {
-    	width: 20px;
-    	height: 20px;
+        width: rem(20px);
+        height: rem(20px);
     }
 
     &--note {
-    	width: 78px;
-    	height: 102px;
+        width: rem(78px);
+        height: rem(102px);
     }
 
     &--pb {
-    	width: 36px;
-    	height: 53px;
+        width: rem(36px);
+        height: rem(53px);
     }
 
     &--pencil {
-    	width: 75px;
-    	height: 214px;
+        width: rem(75px);
+        height: rem(214px);
     }
 
     &--email {
-    	width: 35px;
-    	height: 35px;
+        width: rem(35px);
+        height: rem(35px);
     }
 
     &--space-sml {
-        margin: 7px;
+        margin: rem(7px);
     }
 }
