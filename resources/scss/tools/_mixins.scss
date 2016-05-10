@@ -14,25 +14,13 @@
     zoom: 1;
 }
 
-// convert px to em
-// @function rem($pixels, $context: $base)
-// {
-//   @if (unitless($pixels)) {
-//     $pixels: $pixels * 1px;
-//   }
-//   @if (unitless($context)) {
-//     $context: $context * 1px;
-//   }
-//   @return $pixels / $context * 1em;
-// }
-
 // convert px to rem
 @function rem($size)
 {
     $size: $size / ($size * 0 + 1);
     $remSize: $size / $base;
 
-    @return #{$remSize}rem
+    @return #{$remSize}rem;
 }
 
 // borders
@@ -42,21 +30,87 @@
 }
 
 // buttons
-@mixin button ($button-color)
+@mixin button ($button-background-color: inherit, $button-color: inherit, $button-text-hover-color: inherit)
 {
     display: inline-block;
-    color: inherit;
     text-decoration: none;
+    color: $button-color;
+    padding: rem(13px) rem(46px);
+    @include border($button-color);
 
     &:hover
     {
-        background: darken($button-color, 5%);
-        border-color: darken($button-color, 5%);
+        background: darken($button-background-color, 5%);
+        border-color: darken($button-background-color, 5%);
+        color: $button-text-hover-color;
     }
 
     &:active
     {
-        background: darken($button-color, 10%);
-        border-color: darken($button-color, 10%);
+        background: darken($button-background-color, 10%);
+        border-color: darken($button-background-color, 10%);
+        color: $button-text-hover-color;
     }
+}
+
+
+
+
+@mixin strips($color, $angle)
+{
+    $color: saturate(lighten($color, 2%), 10%);
+    background: $color linear-gradient($angle, $color 0%, $color 10%,
+        mix(black, $color, 5%) 10%, mix(black, $color, 5%) 20%,
+        mix(black, $color, 12%) 19%, mix(black, $color, 10%) 21%, // Thin line between gradient
+        mix(black, $color, 10%) 20%, mix(black, $color, 10%) 30%,
+        mix(black, $color, 17%) 29%, mix(black, $color, 15%) 31%, // Thin line between gradient
+        mix(black, $color, 15%) 30%, mix(black, $color, 15%) 40%,
+        mix(black, $color, 22%) 39%, mix(black, $color, 20%) 41%, // Thin line between gradient
+        mix(black, $color, 20%) 40%, mix(black, $color, 20%) 50%,
+        mix(black, $color, 27%) 49%, mix(black, $color, 25%) 51%, // Thin line between gradient
+        mix(black, $color, 25%) 50%, mix(black, $color, 25%) 60%,
+        mix(black, $color, 32%) 59%, mix(black, $color, 30%) 61%, // Thin line between gradient
+        mix(black, $color, 30%) 60%, mix(black, $color, 30%) 70%,
+        mix(black, $color, 37%) 69%, mix(black, $color, 35%) 71%, // Thin line between gradient
+        mix(black, $color, 35%) 70%, mix(black, $color, 35%) 80%,
+        mix(black, $color, 42%) 79%, mix(black, $color, 40%) 81%, // Thin line between gradient
+        mix(black, $color, 40%) 80%, mix(black, $color, 40%) 90%,
+        mix(black, $color, 47%) 89%, mix(black, $color, 45%) 91%, // Thin line between gradient
+        mix(black, $color, 45%) 90%, mix(black, $color, 45%) 100%);
+
+    // &.benday {
+        //   position: relative;
+        //   overflow: hidden;
+        //
+        //   &:before,
+        //   &:after{
+        //     content: '';
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     background: linear-gradient(to bottom, rgba(#fff, 0.0001) 10%, rgba(#fff, 0.1)),
+        //       repeating-radial-gradient(center center, rgba(255,255,255,0.1), rgba(255,255,255,0.1) 1px, transparent 2px, transparent 100%);
+        //
+        //     mix-blend-mode: lighten;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     margin: auto;
+        //     background-size: cover,
+        //                     4px 4px;
+        //     background-position: center center;
+        //   }
+        //   &:before {
+        //     content: '';
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     z-index: 0;
+        //     mix-blend-mode: lighten;
+        //   }
+    // }
 }

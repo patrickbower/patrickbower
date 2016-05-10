@@ -9,6 +9,9 @@
     }
 
     &-color--white {
-        @include button ($color-white);
+        @include button (
+            $button-background-color: $color-white,
+            $button-color: $color-white,
+            $button-text-hover-color: $color-mine-shaft);
     }
 }

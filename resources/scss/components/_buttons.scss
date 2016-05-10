@@ -7,8 +7,9 @@
 
 .button
 {
-    padding: rem(13px) rem(46px);
-    @include border($color-mine-shaft)
+    @include button(
+        $button-background-color: $color-mine-shaft,
+        $button-color: $color-mine-shaft);
 }
 
 .button--submit
