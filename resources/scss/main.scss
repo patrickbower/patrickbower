@@ -31,7 +31,8 @@
 @import "objects/_media";
 @import "objects/_lists";
 
-// Components: Styled objects, chunks of UI
+// Components
+// ~ Styled objects
 @import "components/_shapes";
 @import "components/_icons";
 @import "components/_icon-colors";
@@ -40,7 +41,7 @@
 @import "components/_buttons";
 @import "components/_button-color";
 @import "components/_forms";
-
+// ~ Pieces of UI
 @import "components/_content";
 @import "components/_header";
 @import "components/_intro";

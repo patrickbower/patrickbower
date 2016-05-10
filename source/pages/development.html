@@ -3,4 +3,24 @@ layout: base
 title: Patrick Bower Development Projects
 ---
 
-{% include development-gallery.html %}
+<div class="secondary-page">
+
+    <div class="content">
+        <header>
+            <div class="belt">
+                <a href="#" class="header-logo">
+                    <svg class="icon--pb icon-colour--mako header-logo__pb">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon--pb"></use>
+                    </svg>
+                </a>
+                <h1 class="h1 secondary-page__title">
+                    Devolopement Projects
+                </h1>
+            </div>
+        </header>
+        <div class="belt">
+            {% include development-gallery.html %}
+            {% include secondary-page-footer.html %}
+        </div>
+    </div>
+</div>
