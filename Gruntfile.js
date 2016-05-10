@@ -80,7 +80,7 @@ module.exports = function(grunt) {
                 options   : {
                     mode: {
                         symbol: {
-                            dest        : "source/images/",
+                            dest        : "source/_includes/",
                             inline      : true,
                             prefix      : ".",
                             dimensions  : "",
