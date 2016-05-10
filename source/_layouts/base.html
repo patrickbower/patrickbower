@@ -21,16 +21,7 @@
 <!--[if IE 9]><body class="lte-ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <body> <!--<![endif]-->
 
-<script>
-    var ajax = new XMLHttpRequest();
-    ajax.open("GET", "/images/sprite.svg", true);
-    ajax.send();
-    ajax.onload = function(e) {
-        var div = document.createElement("div");
-        div.innerHTML = ajax.responseText;
-        document.body.insertBefore(div, document.body.childNodes[0]);
-    }
-</script>
+{% include sprite.svg %}
 
 <!--[if lt IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
