@@ -398,6 +398,18 @@ td,
 th {
   padding: 0; }
 
+body {
+  font-size: 1rem;
+  background-color: #ffffff;
+  font-family: "source_sans_regular";
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333333;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" off; }
+
 html,
 body {
   box-sizing: border-box; }
@@ -426,18 +438,6 @@ h3 {
 
 h4 {
   font-size: 1.618rem; }
-
-body {
-  font-size: 1rem;
-  background-color: #ffffff;
-  font-family: "source_sans_regular";
-  font-weight: 400;
-  line-height: 1.45;
-  color: #333333;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "liga" off; }
 
 p {
   margin: 0 0 1.3em 0; }
@@ -859,6 +859,9 @@ button {
 .content {
   background: #434A54;
   overflow: hidden; }
+  .content--secondary {
+    background: #333333;
+    color: #ffffff; }
   .content-section--header {
     min-height: 100vh; }
     @media only screen and (min-width: 479px) {
