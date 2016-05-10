@@ -611,7 +611,7 @@ button {
   display: block; }
 
 .image-list__item {
-  margin-bottom: 20px; }
+  margin-bottom: 1.25rem; }
 
 .shape {
   display: inline-block; }
@@ -1282,3 +1282,7 @@ button {
 
 .leading--none {
   line-height: 0; }
+
+.space--vertical-lrg {
+  margin-top: 6.25rem;
+  margin-bottom: 6.25rem; }
