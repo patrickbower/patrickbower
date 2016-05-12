@@ -2,7 +2,6 @@
 @import "settings/_breakpoints";
 @import "settings/_colors";
 @import "settings/_z-index";
-@import "settings/_paddings-margins";
 @import "settings/_shadows";
 @import "settings/_fonts";
 @import "settings/_typography";
@@ -17,6 +16,7 @@
 @import "generic/_normalize";
 
 // Base: Unclassed HTML elements (type selectors)
+@import "base/_body";
 @import "base/_box-sizing";
 @import "base/_headings";
 @import "base/_paragraph";
@@ -31,7 +31,8 @@
 @import "objects/_media";
 @import "objects/_lists";
 
-// Components: Styled objects, chunks of UI
+// Components
+// ~ Styled objects
 @import "components/_shapes";
 @import "components/_icons";
 @import "components/_icon-colors";
@@ -40,7 +41,7 @@
 @import "components/_buttons";
 @import "components/_button-color";
 @import "components/_forms";
-
+// ~ Pieces of UI
 @import "components/_content";
 @import "components/_header";
 @import "components/_intro";
@@ -53,3 +54,4 @@
 
 // Trumps: Helpers and overrides, e.g. .float-left { float:left !important;}
 @import "trumps/_layout";
+@import "trumps/_spaceing";

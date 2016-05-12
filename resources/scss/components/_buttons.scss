@@ -9,7 +9,7 @@
 {
     @include button(
         $button-background-color: $color-mine-shaft,
-        $button-color: $color-mine-shaft);
+        $button-text-color: $color-mine-shaft);
 }
 
 .button--submit
