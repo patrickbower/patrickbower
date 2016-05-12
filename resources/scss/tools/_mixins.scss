@@ -30,51 +30,53 @@
 }
 
 // buttons
-@mixin button ($button-background-color: inherit, $button-color: inherit, $button-text-hover-color: inherit)
+@mixin button (
+
+    // input argument
+    $button-background-color: inherit,
+    $button-text-color: inherit,
+    $button-text-hover-color: inherit,
+    $button-hover-tint: 'darken'
+
+)
 {
+
+    // output
     display: inline-block;
     text-decoration: none;
-    color: $button-color;
+    color: $button-text-color;
     padding: rem(13px) rem(46px);
-    @include border($button-color);
+    @include border($button-text-color);
 
     &:hover
     {
-        background: darken($button-background-color, 5%);
-        border-color: darken($button-background-color, 5%);
+        @if $button-hover-tint == 'lighten'
+        {
+            background: lighten($button-background-color, 5%);
+            border-color: lighten($button-background-color, 5%);
+        }
+
+        @else if $button-hover-tint == 'darken'
+        {
+            background: darken($button-background-color, 5%);
+            border-color: darken($button-background-color, 5%);
+        }
         color: $button-text-hover-color;
     }
 
     &:active
     {
-        background: darken($button-background-color, 10%);
-        border-color: darken($button-background-color, 10%);
+        @if $button-hover-tint == 'lighten'
+        {
+            background: lighten($button-background-color, 10%);
+            border-color: lighten($button-background-color, 10%);
+        }
+
+        @else if $button-hover-tint == 'darken'
+        {
+            background: darken($button-background-color, 10%);
+            border-color: darken($button-background-color, 10%);
+        }
         color: $button-text-hover-color;
     }
-}
-
-
-
-
-@mixin strips($color, $angle)
-{
-    $color: saturate(lighten($color, 2%), 10%);
-    background: $color linear-gradient($angle, $color 0%, $color 10%,
-        mix(black, $color, 5%) 10%, mix(black, $color, 5%) 20%,
-        mix(black, $color, 12%) 19%, mix(black, $color, 10%) 21%,
-        mix(black, $color, 10%) 20%, mix(black, $color, 10%) 30%,
-        mix(black, $color, 17%) 29%, mix(black, $color, 15%) 31%,
-        mix(black, $color, 15%) 30%, mix(black, $color, 15%) 40%,
-        mix(black, $color, 22%) 39%, mix(black, $color, 20%) 41%,
-        mix(black, $color, 20%) 40%, mix(black, $color, 20%) 50%,
-        mix(black, $color, 27%) 49%, mix(black, $color, 25%) 51%,
-        mix(black, $color, 25%) 50%, mix(black, $color, 25%) 60%,
-        mix(black, $color, 32%) 59%, mix(black, $color, 30%) 61%,
-        mix(black, $color, 30%) 60%, mix(black, $color, 30%) 70%,
-        mix(black, $color, 37%) 69%, mix(black, $color, 35%) 71%,
-        mix(black, $color, 35%) 70%, mix(black, $color, 35%) 80%,
-        mix(black, $color, 42%) 79%, mix(black, $color, 40%) 81%,
-        mix(black, $color, 40%) 80%, mix(black, $color, 40%) 90%,
-        mix(black, $color, 47%) 89%, mix(black, $color, 45%) 91%,
-        mix(black, $color, 45%) 90%, mix(black, $color, 45%) 100%);
 }

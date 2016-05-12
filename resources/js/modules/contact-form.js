@@ -11,7 +11,7 @@
 //         var last    = "gmail.com";
 //
 //         $(module).find('.direct-link').html(
-//             '<a class="button button-color--white" href="mailto:' +
+//             '<a class="button button--white" href="mailto:' +
 //                 first + '@' + last +'">' + first + '@' + last +
 //             '<\/a>');
 //     }

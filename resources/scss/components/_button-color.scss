@@ -1,17 +1,28 @@
 .button {
 
-    &-color--brick-red {
-        @include button ($color-brick-red);
+    &--brickred {
+        @include button (
+            $button-background-color: $color-brick-red,
+            $button-text-color: $color-mine-shaft);
     }
 
-    &-color--mischka {
-        @include button ($color-mischka);
+    &--mischka {
+        @include button (
+            $button-background-color: $color-mischka,
+            $button-text-color: $color-mine-shaft);
     }
 
-    &-color--white {
+    &--white {
         @include button (
             $button-background-color: $color-white,
-            $button-color: $color-white,
-            $button-text-hover-color: $color-mine-shaft);
+            $button-text-color: $color-mine-shaft);
+    }
+
+    &--white-grey {
+        @include button (
+            $button-background-color: $color-mine-shaft,
+            $button-text-color: $color-white,
+            $button-text-hover-color: $color-white,
+            $button-hover-tint: 'lighten');
     }
 }

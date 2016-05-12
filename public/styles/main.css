@@ -749,50 +749,65 @@ button {
 .button--submit {
   background: none; }
 
-.button-color--brick-red {
+.button--brickred {
   display: inline-block;
   text-decoration: none;
-  color: inherit;
+  color: #333333;
   padding: 0.8125rem 2.875rem;
-  border: 1px solid inherit; }
-  .button-color--brick-red:hover {
+  border: 1px solid #333333; }
+  .button--brickred:hover {
     background: #d72f3f;
     border-color: #d72f3f;
     color: inherit; }
-  .button-color--brick-red:active {
+  .button--brickred:active {
     background: #c62636;
     border-color: #c62636;
     color: inherit; }
 
-.button-color--mischka {
+.button--mischka {
   display: inline-block;
   text-decoration: none;
-  color: inherit;
+  color: #333333;
   padding: 0.8125rem 2.875rem;
-  border: 1px solid inherit; }
-  .button-color--mischka:hover {
+  border: 1px solid #333333; }
+  .button--mischka:hover {
     background: #bdc3ce;
     border-color: #bdc3ce;
     color: inherit; }
-  .button-color--mischka:active {
+  .button--mischka:active {
     background: #afb5c3;
     border-color: #afb5c3;
     color: inherit; }
 
-.button-color--white {
+.button--white {
+  display: inline-block;
+  text-decoration: none;
+  color: #333333;
+  padding: 0.8125rem 2.875rem;
+  border: 1px solid #333333; }
+  .button--white:hover {
+    background: #f2f2f2;
+    border-color: #f2f2f2;
+    color: inherit; }
+  .button--white:active {
+    background: #e6e6e6;
+    border-color: #e6e6e6;
+    color: inherit; }
+
+.button--white-grey {
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
   padding: 0.8125rem 2.875rem;
   border: 1px solid #ffffff; }
-  .button-color--white:hover {
-    background: #f2f2f2;
-    border-color: #f2f2f2;
-    color: #333333; }
-  .button-color--white:active {
-    background: #e6e6e6;
-    border-color: #e6e6e6;
-    color: #333333; }
+  .button--white-grey:hover {
+    background: #404040;
+    border-color: #404040;
+    color: #ffffff; }
+  .button--white-grey:active {
+    background: #4d4d4d;
+    border-color: #4d4d4d;
+    color: #ffffff; }
 
 .form {
   padding: 3.125rem 1.875rem 1.875rem 1.875rem;
