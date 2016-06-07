@@ -1,3 +1,26 @@
+'use strict';
+/**
+ * ...
+ *
+ * @constructor
+ * @param {...} ... - ...
+ */
+var ContactForm = function (module) {
+
+    this.originModule = module;
+
+    // selectors
+    this.selector = {
+        'contact-form': 'contact'
+    }
+
+    this.addInlineEmail();
+}
+
+ContactForm.prototype.addInlineEmail = function() {
+    console.log('addInlineEmail');
+}
+
 // (function ($, pb) {
 //  	'use strict';
 //
