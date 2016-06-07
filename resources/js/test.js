@@ -1,1 +1,1 @@
-import One from './one.js';
+import './one.js';
