@@ -1,11 +1,12 @@
 'use strict';
 
 // utils
-import {capitalise} from './util/capitalise.js';
+import capitalise from './utilities/capitalise';
 
 // modules
-import Model from './modules/model.js';
+import Model from './modules/model';
 
+// classses
 var modules = {
     Model: Model
 };
@@ -29,11 +30,8 @@ var modules = {
         // get class name
         var className = capitalise(module.getAttribute('data-js-init'));
 
-        console.log('className', className);
-
         // start
         var moduleInstance = new modules[className](module);
-
         moduleInstance.init();
 
     });

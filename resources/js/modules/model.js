@@ -7,12 +7,13 @@
  * @param {object} the origin module that launches the model
  */
 class Model {
-    constructor(context) {
+
+    constructor (context) {
         this.context = context;
     }
 
-    init() {
-        console.log(`hello ${this.context} constructor`);
+    init () {
+        console.log('init');
     }
 }
 
