@@ -71,7 +71,7 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 files: {
-                    './source/scripts/main.min.js': ['./resources/js/test.js']
+                    './source/scripts/main.min.js': ['./resources/js/main.js']
                 },
                 options: {
                     transform: [
