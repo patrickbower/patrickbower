@@ -1,19 +1,36 @@
-var exports = module.exports = {};
+'use strict';
 
-exports.files = function () {
+// init modules
+import {ModelLaunch} from './modules/modellaunch';
 
-    return [
-        // libraries
+// init class list
+var modules = {
+    model: ModelLaunch
+};
 
-        // utilities
-        './resources/js/utilities/utilities.js',
+/**
+* Initalize requiried JS from data attribures found in page HTML.
+*
+* @constructor
+* @param {object} window - Global object referance.
+* @param {object} document - Document object referance.
+* @param {object} undefined - Ensure undefined remains valueless.
+*/
+(function(window, document, undefined) {
 
-        // modules
-        './resources/js/modules/model-launch.js',
-        './resources/js/modules/model-template.js',
-        './resources/js/modules/contact-form.js',
+    // find all data js
+    var module_array = document.querySelectorAll('[data-init]');
 
-        // initalise
-        './resources/js/modules/init.js'
-    ]
-}
+    // for each data attribue
+    [].forEach.call(module_array, function (module) {
+
+        // get class name
+        var className = module.getAttribute('data-init');
+
+        // instantiate
+        var moduleInstance = new modules[className](module);
+        moduleInstance.init();
+
+    });
+
+})(window, document);
