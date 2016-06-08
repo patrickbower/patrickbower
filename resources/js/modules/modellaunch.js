@@ -1,13 +1,13 @@
 'use strict';
 
-// dependencies
+/**
+ * @class ModelLaunch - Setup and get params from source markup ready to launch model
+ *
+ * @requires ModelWindow
+ */
+
 import {ModelWindow} from '../modules/modelwindow';
 
-/**
- * ModelLaunch - Setup and get params from source markup ready to launch model
- *
- * @class ModelLaunch
- */
 export class ModelLaunch {
 
     /**
@@ -45,7 +45,7 @@ export class ModelLaunch {
      */
     storeTemplate () {
 
-        var module_template = document.querySelector('#' + this.selector['model-template']);
+        let module_template = document.querySelector('#' + this.selector['model-template']);
         this.modelWindowTemplate = module_template.content.querySelector('.' + this.selector['model-window']);
     };
 
@@ -54,9 +54,9 @@ export class ModelLaunch {
      *
      */
     bindEvents () {
-        var instance = this;
+        let instance = this;
 
-        var launch_button_event = {
+        let launch_button_event = {
             handleEvent: function(event) {
                 event.preventDefault();
                 instance.createModel();
@@ -78,7 +78,7 @@ export class ModelLaunch {
         this.launchHref = this.launchButton.href;
 
         // create new model
-        var moduleInstance = new ModelWindow(this);
+        let moduleInstance = new ModelWindow(this);
         moduleInstance.init();
     };
 }
