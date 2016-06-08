@@ -1,16 +1,17 @@
 'use strict';
 
-// module dependencies
+/**
+ * @class ModelWindow - Appended template element to body of ModelLaunch source page
+ * with content taken from the target page via an ajax request.
+ *
+ * @extends ModelLaunch
+ * @requires ajaxRequest
+ * @requires parseHTML
+ */
+
 import {ajaxRequest} from '../utilities/ajax';
 import {parseHTML} from '../utilities/parsehtml';
 
-/**
- * ModelWindow - Appended template element to body of ModelLaunch source page
- * with content taken from the target page via an ajax request.
- *
- * @class ModelWindow
- * @extends ModelLaunch
- */
 export class ModelWindow {
 
     /**
@@ -72,7 +73,7 @@ export class ModelWindow {
     */
     appendModel () {
 
-        var create_model = document.createElement('div');
+        let create_model = document.createElement('div');
         create_model = this.ModelLaunch.modelWindowTemplate.parentNode.innerHTML;
         document.body.insertAdjacentHTML('afterbegin', create_model);
     };
@@ -93,9 +94,9 @@ export class ModelWindow {
     *
     */
     bindEvents () {
-        var instance = this;
+        let instance = this;
 
-        var close_button_event = {
+        let close_button_event = {
             handleEvent: function(event) {
                 event.preventDefault();
                 instance.closeModel();
@@ -110,19 +111,19 @@ export class ModelWindow {
     *
     */
     addContent () {
-        var instance = this;
+        let instance = this;
 
         // get parts from href string
-        var full_url = this.ModelLaunch.launchHref.split('#');
-        var page_url = full_url[0];
-        var fragment_selector = full_url[1];
+        let full_url = this.ModelLaunch.launchHref.split('#');
+        let page_url = full_url[0];
+        let fragment_selector = full_url[1];
 
         // ajax (util function)
         ajaxRequest(page_url, function(data){
 
             // parse (util function), and append
-            var html = parseHTML(data);
-            var html_fragment = html.querySelector('.' + fragment_selector);
+            let html = parseHTML(data);
+            let html_fragment = html.querySelector('.' + fragment_selector);
 
             instance.modelContent.appendChild(html_fragment);
         });

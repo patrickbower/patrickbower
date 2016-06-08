@@ -8,7 +8,7 @@
 */
 export function parseHTML (htmlString) {
 
-    var html = document.implementation.createHTMLDocument("example");
+    let html = document.implementation.createHTMLDocument("example");
 
     html.documentElement.innerHTML = htmlString;
     return html.body;
