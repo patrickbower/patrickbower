@@ -410,6 +410,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" off; }
 
+body:before {
+  display: none;
+  content: "mobile"; }
+
+@media (min-width: 767px) {
+  body:before {
+    content: "tablet"; } }
+
+@media (min-width: 979px) {
+  body:before {
+    content: "desktop"; } }
+
 html,
 body {
   box-sizing: border-box; }
