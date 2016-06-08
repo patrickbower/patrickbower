@@ -4,9 +4,9 @@
  * @class ModelWindow - Appended template element to body of ModelLaunch source page
  * with content taken from the target page via an ajax request.
  *
- * @extends ModelLaunch
- * @requires ajaxRequest
- * @requires parseHTML
+ * @extends {object} ModelLaunch
+ * @requires {function} ajaxRequest
+ * @requires {function} parseHTML
  */
 
 import {ajaxRequest} from '../utilities/ajax';

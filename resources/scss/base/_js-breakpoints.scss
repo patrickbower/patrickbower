@@ -1,0 +1,21 @@
+// make breakpoints availble to js
+
+body
+{
+    &:before {
+        display: none;
+        content: "mobile";
+    }
+
+    @media (min-width: $media-tablet) {
+        &:before {
+            content: "tablet";
+        }
+    }
+
+    @media (min-width: $media-desktop) {
+        &:before {
+            content: "desktop";
+        }
+    }
+}

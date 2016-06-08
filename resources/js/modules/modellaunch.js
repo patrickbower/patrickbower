@@ -1,12 +1,14 @@
 'use strict';
 
 /**
- * @class ModelLaunch - Setup and get params from source markup ready to launch model
+ * @class ModelLaunch - Setup and get params from source markup ready to launch model.
  *
- * @requires ModelWindow
+ * @requires {object} ModelWindow.
+ * @requires {function} layout.
  */
 
 import {ModelWindow} from '../modules/modelwindow';
+import {breakpoint} from '../utilities/breakpoint';
 
 export class ModelLaunch {
 
@@ -35,9 +37,25 @@ export class ModelLaunch {
         }
 
         // setup
+        this.getLayout();
         this.storeTemplate();
         this.bindEvents();
     };
+
+    /**
+     * Model should only be shown for desktop - mobile should link to page
+     *
+     */
+    getLayout () {
+
+        let layout = breakpoint();
+
+        if (layout.value === 'mobile' || layout.value === 'tablet') {
+            this.modelLayout = false;
+        } else {
+            this.modelLayout = true;
+        }
+    }
 
     /**
      * Fetch and keep model template in memory.
@@ -56,15 +74,36 @@ export class ModelLaunch {
     bindEvents () {
         let instance = this;
 
+        // check breakpoint on window resize
+        let window_resize_event = {
+            handleEvent: function(event) {
+                instance.getLayout();
+            }
+        }
+
+        window.addEventListener('resize', window_resize_event);
+
+
+        // launch via button
         let launch_button_event = {
             handleEvent: function(event) {
-                event.preventDefault();
-                instance.createModel();
+
+                // link directly to page
+                if (instance.modelLayout === false) {
+                    return;
+
+                // or display in model
+                } else {
+                    event.preventDefault();
+                    instance.createModel();
+                }
+                
             }
         }
 
         this.launchButton = this.context.querySelector('.' + this.selector['launch-button']);
         this.launchButton.addEventListener('click', launch_button_event);
+
     };
 
     /**
