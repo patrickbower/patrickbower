@@ -1,14 +1,11 @@
 'use strict';
 
-// utils
-import capitalise from './utilities/capitalise';
+// init modules
+import {ModelLaunch} from './modules/modellaunch';
 
-// modules
-import Model from './modules/model';
-
-// classses
+// init class list
 var modules = {
-    Model: Model
+    model: ModelLaunch
 };
 
 /**
@@ -22,15 +19,15 @@ var modules = {
 (function(window, document, undefined) {
 
     // find all data js
-    var module_array = document.querySelectorAll('[data-js-init]');
+    var module_array = document.querySelectorAll('[data-init]');
 
     // for each data attribue
     [].forEach.call(module_array, function (module) {
 
         // get class name
-        var className = capitalise(module.getAttribute('data-js-init'));
+        var className = module.getAttribute('data-init');
 
-        // start
+        // instantiate
         var moduleInstance = new modules[className](module);
         moduleInstance.init();
 
