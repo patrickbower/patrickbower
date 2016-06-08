@@ -643,8 +643,8 @@ button {
     width: 4.875rem;
     height: 6.375rem; }
   .icon--pb {
-    width: 2.25rem;
-    height: 3.3125rem; }
+    width: 4.375rem;
+    height: 4.375rem; }
   .icon--pencil {
     width: 4.6875rem;
     height: 13.375rem; }
@@ -995,27 +995,17 @@ button {
 
 .header-logo {
   display: inline-block;
-  position: relative;
-  top: 0;
-  left: 1.875rem; }
-  .header-logo:before {
-    content: '';
-    display: inline-block;
-    width: 3.75rem;
-    height: 8.125rem;
-    background: #ffffff;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    position: absolute;
-    top: -3.125rem;
-    left: 0.625rem; }
-  .header-logo__icon {
-    margin-top: 1.25rem;
-    position: relative; }
-  .header-logo__pb {
-    position: relative;
-    top: 1.25rem; }
+  position: absolute;
+  left: 50%;
+  margin-left: -2.1875rem;
+  top: 1.25rem; }
+  @media only screen and (min-width: 767px) {
+    .header-logo {
+      margin-left: 0;
+      left: 1.25rem; } }
+
+.header {
+  padding-top: 3.125rem; }
 
 .header-name {
   font-size: 3.5em;
