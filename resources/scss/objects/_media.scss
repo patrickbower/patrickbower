@@ -3,25 +3,22 @@
 }
 
 .media__text {
-    overflow:hidden;
-    _overflow:visible;
-    zoom:1;
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1;
 }
 
 .media__img {
-    padding-bottom: rem(60px);
+    padding: rem(30px) 0 rem(60px) 0;
 
-    @media only screen and (min-width: $media-tablet) {
-        display: none;
-    }
     @media only screen and (min-width: $media-desktop) {
         display: block;
-        padding-bottom: 0;
-        float:left;
+        padding: 0 0 rem(60px) 0;
+        float: left;
         margin-right: rem(30px);
     }
 }
 
 .media__img img{
-    display:block;
+    display: block;
 }

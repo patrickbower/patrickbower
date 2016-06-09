@@ -4,33 +4,27 @@
     &-logo
     {
         display: inline-block;
-        position: relative;
-        top: 0;
-        left: rem(30px);
+        position: absolute;
+        left: 50%;
+        margin-left: rem(-35px);
+        top: rem(20px);
 
-        &:before
-        {
-            content: '';
-            display: inline-block;
-            width: rem(60px);
-            height: rem(130px);
-            background: $color-white;
-            transform: rotate(45deg);
-            position: absolute;
-            top: rem(-50px);
-            left: rem(10px);
+        @media only screen and (min-width: $media-tablet) {
+            margin-left: 0;
+            left: rem(20px);
         }
 
-        &__icon
-        {
-            margin-top: rem(20px);
-            position: relative;
-        }
+        // &__icon
+        // {
+        //     @media only screen and (min-width: $media-desktop) {
+        //         width: rem(70px);
+        //         height: rem(77px);
+        //     }
+        // }
+    }
 
-        &__pb {
-            position: relative;
-            top: rem(20px);
-        }
+    & {
+        padding-top: rem(50px)
     }
 
     // Patrick Bower

@@ -410,6 +410,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" off; }
 
+body:before {
+  display: none;
+  content: "mobile"; }
+
+@media (min-width: 767px) {
+  body:before {
+    content: "tablet"; } }
+
+@media (min-width: 979px) {
+  body:before {
+    content: "desktop"; } }
+
 html,
 body {
   box-sizing: border-box; }
@@ -596,14 +608,11 @@ button {
   zoom: 1; }
 
 .media__img {
-  padding-bottom: 3.75rem; }
-  @media only screen and (min-width: 767px) {
-    .media__img {
-      display: none; } }
+  padding: 1.875rem 0 3.75rem 0; }
   @media only screen and (min-width: 979px) {
     .media__img {
       display: block;
-      padding-bottom: 0;
+      padding: 0 0 3.75rem 0;
       float: left;
       margin-right: 1.875rem; } }
 
@@ -634,8 +643,8 @@ button {
     width: 4.875rem;
     height: 6.375rem; }
   .icon--pb {
-    width: 2.25rem;
-    height: 3.3125rem; }
+    width: 4.375rem;
+    height: 4.375rem; }
   .icon--pencil {
     width: 4.6875rem;
     height: 13.375rem; }
@@ -880,15 +889,15 @@ button {
       .content-section--header {
         height: 100vh;
         min-height: 56.25rem; } }
-  @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: 979px) {
     .content-section {
       height: 50vh;
       width: 100vw;
       min-height: 31.25rem; } }
   .content-triangle__shape {
     text-align: center;
-    padding: 3.125rem 0; }
-    @media only screen and (min-width: 767px) {
+    padding: 6.25rem 0; }
+    @media only screen and (min-width: 979px) {
       .content-triangle__shape {
         padding: 0;
         text-align: left;
@@ -896,7 +905,7 @@ button {
         width: 100vw; } }
     .content-triangle__shape--zero {
       background: #ffffff; }
-      @media only screen and (min-width: 767px) {
+      @media only screen and (min-width: 979px) {
         .content-triangle__shape--zero {
           -webkit-transform: rotate(-45deg);
               -ms-transform: rotate(-45deg);
@@ -912,7 +921,7 @@ button {
             margin-left: 99%; } }
     .content-triangle__shape--one {
       background: #CCD0D9; }
-      @media only screen and (min-width: 767px) {
+      @media only screen and (min-width: 979px) {
         .content-triangle__shape--one {
           -webkit-transform: rotate(45deg);
               -ms-transform: rotate(45deg);
@@ -920,7 +929,7 @@ button {
           margin-left: -30%; } }
     .content-triangle__shape--two {
       background: #DB4453; }
-      @media only screen and (min-width: 767px) {
+      @media only screen and (min-width: 979px) {
         .content-triangle__shape--two {
           -webkit-transform: rotate(-45deg);
               -ms-transform: rotate(-45deg);
@@ -928,7 +937,7 @@ button {
           margin-left: 30%; } }
     .content-triangle__shape--three {
       background: #ffffff; }
-      @media only screen and (min-width: 767px) {
+      @media only screen and (min-width: 979px) {
         .content-triangle__shape--three {
           -webkit-transform: rotate(45deg);
               -ms-transform: rotate(45deg);
@@ -936,13 +945,13 @@ button {
           margin-left: -30%; } }
     .content-triangle__shape--four {
       background: #CCD0D9; }
-      @media only screen and (min-width: 767px) {
+      @media only screen and (min-width: 979px) {
         .content-triangle__shape--four {
           -webkit-transform: rotate(-45deg);
               -ms-transform: rotate(-45deg);
                   transform: rotate(-45deg);
           margin-left: 30%; } }
-  @media only screen and (min-width: 767px) {
+  @media only screen and (min-width: 979px) {
     .content__area {
       width: 50%;
       position: relative;
@@ -983,27 +992,17 @@ button {
 
 .header-logo {
   display: inline-block;
-  position: relative;
-  top: 0;
-  left: 1.875rem; }
-  .header-logo:before {
-    content: '';
-    display: inline-block;
-    width: 3.75rem;
-    height: 8.125rem;
-    background: #ffffff;
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    position: absolute;
-    top: -3.125rem;
-    left: 0.625rem; }
-  .header-logo__icon {
-    margin-top: 1.25rem;
-    position: relative; }
-  .header-logo__pb {
-    position: relative;
-    top: 1.25rem; }
+  position: absolute;
+  left: 50%;
+  margin-left: -2.1875rem;
+  top: 1.25rem; }
+  @media only screen and (min-width: 767px) {
+    .header-logo {
+      margin-left: 0;
+      left: 1.25rem; } }
+
+.header {
+  padding-top: 3.125rem; }
 
 .header-name {
   font-size: 3.5em;
@@ -1133,21 +1132,21 @@ button {
 .intro--media {
   margin: 0 0.625rem; }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 979px) {
   .contact__icon {
     margin-top: -0.9375rem; } }
 
 .contact--strike:before {
   border-color: transparent transparent #ffffff transparent; }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 979px) {
   .development__icon {
     margin-top: -1.25rem; } }
 
 .development--strike:before {
   border-color: transparent transparent #CCD0D9 transparent; }
 
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 979px) {
   .design__icon {
     margin-top: -5rem; } }
 
