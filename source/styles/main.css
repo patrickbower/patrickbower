@@ -794,28 +794,42 @@ button {
     border-color: #e6e6e6;
     color: inherit; }
 
-.button--white-grey {
+.button--mineshaft-darken {
+  display: inline-block;
+  text-decoration: none;
+  color: #333333;
+  padding: 0.8125rem 2.875rem;
+  border: 1px solid #333333; }
+  .button--mineshaft-darken:hover {
+    background: #f2f2f2;
+    border-color: #f2f2f2;
+    color: #333333; }
+  .button--mineshaft-darken:active {
+    background: #e6e6e6;
+    border-color: #e6e6e6;
+    color: #333333; }
+
+.button--mineshaft-lighten {
   display: inline-block;
   text-decoration: none;
   color: #ffffff;
   padding: 0.8125rem 2.875rem;
   border: 1px solid #ffffff; }
-  .button--white-grey:hover {
+  .button--mineshaft-lighten:hover {
     background: #404040;
     border-color: #404040;
     color: #ffffff; }
-  .button--white-grey:active {
+  .button--mineshaft-lighten:active {
     background: #4d4d4d;
     border-color: #4d4d4d;
     color: #ffffff; }
 
 .form {
   padding: 3.125rem 1.875rem 1.875rem 1.875rem;
-  background: #ffffff;
-  box-shadow: 0 0 5rem 0 rgba(0, 0, 0, 0.2); }
+  background: #ffffff; }
   .form__row {
     position: relative;
-    margin-bottom: 1.875rem;
+    margin-bottom: 2.5rem;
     background: #f2f2f2;
     z-index: 0;
     height: 3.316em; }
@@ -830,7 +844,8 @@ button {
     display: inline-block;
     top: 1em;
     left: 1em;
-    transition: 0.2s ease all; }
+    transition: 0.2s ease all;
+    color: #333333; }
   .form__input {
     z-index: 2;
     padding: 1em;
@@ -840,7 +855,8 @@ button {
     left: 0;
     background: none;
     transition: 0.2s ease all;
-    border-bottom: 0.0625rem solid #f2f2f2; }
+    border-bottom: 0.0625rem solid #f2f2f2;
+    color: #333333; }
     .form__input--textarea {
       height: 100%; }
     .form__input:focus {
@@ -849,27 +865,8 @@ button {
     .form__input:valid ~ label {
       top: -1.45em;
       left: 0;
-      color: #b3b3b3;
+      color: #B3B3B3;
       font-size: 90%; }
-
-.airmail:before, .airmail:after {
-  content: '';
-  position: relative; }
-
-.airmail:before {
-  top: 0.3125rem;
-  height: 0.3125rem;
-  display: block;
-  background-image: repeating-linear-gradient(135deg, #F29B91 0rem, #F09290 1.875rem, transparent 1.875rem, transparent 3.125rem, #83B3DB 3.125rem, #84ADCB 5rem, transparent 5rem, transparent 6.25rem); }
-
-.airmail:after {
-  bottom: 0.3125rem;
-  height: 0.3125rem;
-  display: block;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  background-image: repeating-linear-gradient(135deg, #83B3DB 0rem, #84ADCB 1.875rem, transparent 1.875rem, transparent 3.125rem, #F29B91 3.125rem, #F09290 5rem, transparent 5rem, transparent 6.25rem); }
 
 .content {
   background: #434A54;

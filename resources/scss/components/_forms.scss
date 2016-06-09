@@ -2,13 +2,12 @@
 {
     padding: rem(50px) rem(30px) rem(30px) rem(30px);
     background: $color-white;
-    box-shadow: 0 0 rem(80px) 0 rgba(0,0,0,0.2);
 
     &__row
     {
         position: relative;
-        margin-bottom: rem(30px);
-        background: darken($color-white, 5%);
+        margin-bottom: rem(40px);
+        background: $color-concrete;
         z-index: 0;
         height: 3.316em;
 
@@ -33,6 +32,7 @@
         top: 1em;
         left: 1em;
         transition: 0.2s ease all;
+        color: $color-mine-shaft;
     }
 
     &__input
@@ -45,7 +45,8 @@
         left: 0;
         background: none;
         transition: 0.2s ease all;
-        border-bottom: rem(1px) solid darken($color-white, 5%);
+        border-bottom: rem(1px) solid $color-concrete;
+        color: $color-mine-shaft;
 
         &--textarea
         {
@@ -62,55 +63,8 @@
         {
             top: -1.45em;
             left: 0;
-            color: lighten($color-mine-shaft, 50%);
+            color: $color-nobel;
             font-size: 90%;
         }
-    }
-}
-
-.airmail
-{
-    &:before,
-    &:after
-    {
-        content: '';
-        position: relative;
-    }
-
-    &:before
-    {
-        top: rem(5px);
-        height: rem(5px);
-        display: block;
-        background-image: repeating-linear-gradient(
-            135deg,
-            #F29B91 rem(0px),
-            #F09290 rem(30px),
-            transparent rem(30px),
-            transparent rem(50px),
-            #83B3DB rem(50px),
-            #84ADCB rem(80px),
-            transparent rem(80px),
-            transparent rem(100px)
-        );
-    }
-
-    &:after
-    {
-        bottom: rem(5px);
-        height: rem(5px);
-        display: block;
-        transform: rotate(180deg);
-        background-image: repeating-linear-gradient(
-            135deg,
-            #83B3DB rem(0px),
-            #84ADCB rem(30px),
-            transparent rem(30px),
-            transparent rem(50px),
-            #F29B91 rem(50px),
-            #F09290 rem(80px),
-            transparent rem(80px),
-            transparent rem(100px)
-        );
     }
 }
