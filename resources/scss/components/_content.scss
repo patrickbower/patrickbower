@@ -6,6 +6,8 @@
     {
         background: $color-mine-shaft;
         color: $color-white;
+        padding: 0 rem(10px);
+        min-height: 100vh;
     }
 
     &-section--header {

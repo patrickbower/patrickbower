@@ -97,7 +97,7 @@ export class ModelLaunch {
                     event.preventDefault();
                     instance.createModel();
                 }
-                
+
             }
         }
 

@@ -109,14 +109,16 @@ export class ModelWindow {
     /**
     * Get content via Ajax and place in model window.
     *
+    * @requires {function} ajaxRequest
+    * @requires {function} parseHTML
     */
     addContent () {
         let instance = this;
 
         // get parts from href string
-        let full_url = this.ModelLaunch.launchHref.split('#');
-        let page_url = full_url[0];
-        let fragment_selector = full_url[1];
+        let full_path = this.ModelLaunch.launchHref.split('#');
+        let page_url = full_path[0];
+        let fragment_selector = full_path[1];
 
         // ajax (util function)
         ajaxRequest(page_url, function(data){

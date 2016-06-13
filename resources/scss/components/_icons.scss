@@ -1,38 +1,46 @@
 // icon sizes
-.icon {
+.icon
+{
     display: block;
 
-    &--bracket {
+    &--bracket
+    {
         width: rem(84px);
         height: rem(112px);
     }
 
-    &--close {
+    &--close
+    {
         width: rem(20px);
         height: rem(20px);
     }
 
-    &--note {
+    &--note
+    {
         width: rem(78px);
         height: rem(102px);
     }
 
-    &--pb {
-        width: rem(70px);
-        height: rem(70px);
+    &--pb
+    {
+        width: rem(36px);
+        height: rem(53px);
     }
 
-    &--pencil {
+    &--pencil
+    {
         width: rem(75px);
         height: rem(214px);
     }
 
-    &--email {
+    &--email
+    {
         width: rem(35px);
         height: rem(35px);
     }
 
-    &--space-sml {
+    &--space-sml
+    {
         margin: rem(7px);
     }
 }
