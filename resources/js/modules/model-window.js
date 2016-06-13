@@ -1,30 +1,37 @@
-'use strict';
+/**
+ * Dependencies
+ */
+import {ajaxRequest} from '../utilities/ajax';
+import {parseHTML} from '../utilities/parsehtml';
+
+/**
+ * Module settings
+ */
+ const defaults = {
+    selectors: {
+        model_window: 'js-model-template--window',
+        model_close: 'js-model-template--close',
+        model_active: 'model--active',
+        model_content: 'js-model-template--content'
+    }
+}
 
 /**
  * @class ModelWindow - Appended template element to body of ModelLaunch source page
  * with content taken from the target page via an ajax request.
  *
  * @extends {object} ModelLaunch
- * @requires {function} ajaxRequest
- * @requires {function} parseHTML
  */
-
-import {ajaxRequest} from '../utilities/ajax';
-import {parseHTML} from '../utilities/parsehtml';
-
 export class ModelWindow {
 
     /**
-     * Launches full page model.
-     *
      * @constructor
      * @param {object} the origin module that launches the model
      */
     constructor (ModelLaunch) {
-
         // dependency injection
         this.ModelLaunch = ModelLaunch;
-    };
+    }
 
     /**
      * initalise
@@ -32,26 +39,17 @@ export class ModelWindow {
      */
     init () {
 
-        // selectors
-        this.selector = {
-            'model-window': 'js-model-template__window',
-            'model-close': 'js-model-template__close',
-            'model-active': 'model__active',
-            'model-content': 'js-model-template__content'
-        }
-
-        // go to work
         this.setPage();
         this.createModel(this.defineElements, this.bindEvents);
-    };
+    }
 
     /**
     * Set page styling for takeover style model.
     *
     */
     setPage () {
-        document.body.classList.add(this.selector['model-active']);
-    };
+        document.body.classList.add(defaults.selectors.model_active);
+    }
 
     /**
     * Control functions that create model and setup page.
@@ -65,7 +63,7 @@ export class ModelWindow {
         this.defineElements();
         this.bindEvents();
         this.addContent();
-    };
+    }
 
     /**
     * Append model to page.
@@ -76,7 +74,7 @@ export class ModelWindow {
         let create_model = document.createElement('div');
         create_model = this.ModelLaunch.modelWindowTemplate.parentNode.innerHTML;
         document.body.insertAdjacentHTML('afterbegin', create_model);
-    };
+    }
 
     /**
     * Store created elements to instance.
@@ -84,10 +82,10 @@ export class ModelWindow {
     */
     defineElements () {
 
-        this.modelWindow = document.querySelector('.' + this.selector['model-window']);
-        this.closeButton = this.modelWindow.querySelector('.' + this.selector['model-close']);
-        this.modelContent = this.modelWindow.querySelector('.' + this.selector['model-content']);
-    };
+        this.modelWindow = document.querySelector('.' + defaults.selectors.model_window);
+        this.closeButton = this.modelWindow.querySelector('.' + defaults.selectors.model_close);
+        this.modelContent = this.modelWindow.querySelector('.' + defaults.selectors.model_content);
+    }
 
     /**
     * Bind events to created elements - Using a handleEvent object to configure the function call.
@@ -104,30 +102,32 @@ export class ModelWindow {
         }
 
         this.closeButton.addEventListener('click', close_button_event);
-    };
+    }
 
     /**
     * Get content via Ajax and place in model window.
     *
+    * @requires {function} ajaxRequest
+    * @requires {function} parseHTML
     */
     addContent () {
         let instance = this;
 
         // get parts from href string
-        let full_url = this.ModelLaunch.launchHref.split('#');
-        let page_url = full_url[0];
-        let fragment_selector = full_url[1];
+        const [page_url, fragment_selector] = this.ModelLaunch.launchHref.split('#');
 
         // ajax (util function)
         ajaxRequest(page_url, function(data){
 
-            // parse (util function), and append
+            console.log(fragment_selector);
+
             let html = parseHTML(data);
             let html_fragment = html.querySelector('.' + fragment_selector);
 
+
             instance.modelContent.appendChild(html_fragment);
         });
-    };
+    }
 
     /**
     * Control functions that remove model and reset page
@@ -136,7 +136,7 @@ export class ModelWindow {
     closeModel () {
         this.removeModel();
         this.resetPage();
-    };
+    }
 
     /**
     * Remove model HTML.
@@ -144,13 +144,13 @@ export class ModelWindow {
     */
     removeModel () {
         this.modelWindow.parentNode.removeChild(this.modelWindow);
-    };
+    }
 
     /**
     * Reset page styling.
     *
     */
     resetPage () {
-        document.body.classList.remove(this.selector['model-active']);
-    };
+        document.body.classList.remove(defaults.selectors.model_active);
+    }
 }
