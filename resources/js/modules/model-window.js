@@ -1,13 +1,12 @@
 /**
  * Dependencies
  */
-import {ajaxRequest} from '../utilities/ajax';
-import {parseHTML} from '../utilities/parsehtml';
+import * as utility from '../utilities/_utilities';
 
 /**
  * Module settings
  */
- const defaults = {
+const defaults = {
     selectors: {
         model_window: 'js-model-template--window',
         model_close: 'js-model-template--close',
@@ -105,7 +104,7 @@ export class ModelWindow {
     }
 
     /**
-    * Get content via Ajax and place in model window.
+    * Get content via Ajax, place in model window and initalise.
     *
     * @requires {function} ajaxRequest
     * @requires {function} parseHTML
@@ -116,16 +115,16 @@ export class ModelWindow {
         // get parts from href string
         const [page_url, fragment_selector] = this.ModelLaunch.launchHref.split('#');
 
-        // ajax (util function)
-        ajaxRequest(page_url, function(data){
+        // ajax util function
+        utility.ajax(page_url, data => {
 
-            console.log(fragment_selector);
+            // get fragment
+            let html_fragment = data.querySelector('.' + fragment_selector);
 
-            let html = parseHTML(data);
-            let html_fragment = html.querySelector('.' + fragment_selector);
-
-
+            // place and initalise
             instance.modelContent.appendChild(html_fragment);
+            utility.init(html_fragment);
+
         });
     }
 

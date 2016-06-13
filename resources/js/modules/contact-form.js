@@ -1,8 +1,7 @@
 /**
  * Dependencies
  */
-import {ajaxRequest} from '../utilities/ajax';
-import {parseHTML} from '../utilities/parsehtml';
+import * as utility from '../utilities/_utilities';
 
 /**
  * Module settings
@@ -110,18 +109,15 @@ export class ContactForm {
     * @requires {function} parseHTML
     */
     submitForm () {
-        // get parts from href string
+
         const [page_url, fragment_selector] = this.formAction.split('#');
 
-        // ajax (util function)
-        ajaxRequest(page_url, data => {
+        utility.ajax(page_url, data => {
 
-            // parse (util function), and append
-            let html = parseHTML(data);
-            this.htmlFragment = html.querySelector('.' + fragment_selector);
+            this.htmlFragment = data.querySelector('.' + fragment_selector);
 
             this.confirmSubmit();
-            this.confirmHeading();
+            // this.confirmHeading();
 
         });
     }
@@ -143,6 +139,6 @@ export class ContactForm {
      */
     confirmHeading () {
 
-        document.querySelector('h1').innerText = 'Said hello';
+        document.querySelector('h2').innerText = 'Said hello';
     }
 }
