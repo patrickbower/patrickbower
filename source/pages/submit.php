@@ -37,7 +37,7 @@ if (isset($_POST['confirm']) && $_POST['confirm'] == ''){
 </head>
 <body>
 
-<div class="js-contact__confirm-content">
+<div class="js-contact--confirmation">
     <h2 class="h2">
         Thanks
     </h2>

@@ -1,15 +1,26 @@
-'use strict';
-
 /**
- * @class ModelLaunch - Setup and get params from source markup ready to launch model.
- *
- * @requires {object} ModelWindow.
- * @requires {function} layout.
+ * Dependencies
  */
-
-import {ModelWindow} from '../modules/modelwindow';
+import {ModelWindow} from '../modules/model-window';
 import {breakpoint} from '../utilities/breakpoint';
 
+/**
+ * Module settings
+ */
+ const defaults = {
+    selectors: {
+        launch_button: 'js-model--launch',
+        model_template: 'js-model-template',
+        model_window: 'js-model-template--window',
+    }
+}
+
+/**
+ * Setup and get params from source markup ready to launch model.
+ *
+ * @module Model Launch
+ * @class ModelLaunch
+ */
 export class ModelLaunch {
 
     /**
@@ -19,7 +30,6 @@ export class ModelLaunch {
      * @param {object} the origin module that launches the model
      */
     constructor (context) {
-        // module markup
         this.context = context;
     };
 
@@ -29,12 +39,8 @@ export class ModelLaunch {
      */
     init () {
 
-        // selectors
-        this.selector = {
-            'launch-button': 'js-model__launch',
-            'model-template': 'js-model-template',
-            'model-window': 'js-model-template__window',
-        }
+        // set defaults
+        this.modelLayout = false;
 
         // setup
         this.getLayout();
@@ -45,16 +51,12 @@ export class ModelLaunch {
     /**
      * Model should only be shown for desktop - mobile should link to page
      *
+     * @requires {function} breakpoint
      */
     getLayout () {
 
         let layout = breakpoint();
-
-        if (layout.value === 'mobile' || layout.value === 'tablet') {
-            this.modelLayout = false;
-        } else {
-            this.modelLayout = true;
-        }
+        if (layout.value === 'desktop') this.modelLayout = true;
     }
 
     /**
@@ -63,8 +65,8 @@ export class ModelLaunch {
      */
     storeTemplate () {
 
-        let module_template = document.querySelector('#' + this.selector['model-template']);
-        this.modelWindowTemplate = module_template.content.querySelector('.' + this.selector['model-window']);
+        let module_template = document.querySelector('#' + defaults.selectors.model_template);
+        this.modelWindowTemplate = module_template.content.querySelector('.' + defaults.selectors.model_window);
     };
 
     /**
@@ -101,7 +103,7 @@ export class ModelLaunch {
             }
         }
 
-        this.launchButton = this.context.querySelector('.' + this.selector['launch-button']);
+        this.launchButton = this.context.querySelector('.' + defaults.selectors.launch_button);
         this.launchButton.addEventListener('click', launch_button_event);
 
     };
@@ -109,7 +111,7 @@ export class ModelLaunch {
     /**
      * Create a model.
      *
-     * @return {object} ModelTemplate - The appended model.
+     * @requires {object} ModelWindow.
      */
     createModel () {
 

@@ -1,8 +1,8 @@
 'use strict';
 
 // init modules
-import {ModelLaunch} from './modules/modellaunch';
-import {ContactForm} from './modules/contactform';
+import {ModelLaunch} from './modules/model-launch';
+import {ContactForm} from './modules/contact-form';
 
 // init class list
 var modules = {
