@@ -5,6 +5,7 @@
 @import "settings/shadows";
 @import "settings/fonts";
 @import "settings/typography";
+@import "settings/animation-timimg";
 
 // Tools: Functions and mixins
 @import "tools/mixins";
@@ -49,10 +50,11 @@
 @import "components/contact";
 @import "components/development";
 @import "components/design";
-@import "components/contact-form";
+@import "components/contact-section";
 @import "components/splash";
 @import "components/model";
 
 // Trumps: Helpers and overrides, e.g. .float-left { float:left !important;}
 @import "trumps/layout";
 @import "trumps/spaceing";
+@import "trumps/animations";

@@ -1,16 +1,11 @@
-/**
- * Dependencies
- */
 import * as utility from '../utilities/_utilities';
 
-/**
- * Module settings
- */
 const defaults = {
     selectors: {
         direct_link: 'js-contact--link',
-        confirm_input: 'js-contact--confirm',
+        contact_form: 'js-contact--form',
         submit_button: 'js-contact--submit',
+        confirm_input: 'js-contact--confirm',
         contact_section: 'js-contact--section'
     },
     email: {
@@ -35,9 +30,6 @@ export class ContactForm {
      */
     constructor(context) {
         this.context = context;
-
-        // settings
-        this.formAction = this.context.action;
     }
 
     /**
@@ -105,20 +97,19 @@ export class ContactForm {
     * Get content via Ajax.
     *
     * @function submitForm
-    * @requires {function} ajaxRequest
-    * @requires {function} parseHTML
+    * @requires {function} ajax utility
     */
     submitForm () {
 
-        const [page_url, fragment_selector] = this.formAction.split('#');
+        let form = this.context.querySelector('.' + defaults.selectors.contact_form);
+        let formAction = form.action;
+
+        const [page_url, fragment_selector] = formAction.split('#');
 
         utility.ajax(page_url, data => {
-
             this.htmlFragment = data.querySelector('.' + fragment_selector);
 
             this.confirmSubmit();
-            // this.confirmHeading();
-
         });
     }
 
@@ -128,17 +119,17 @@ export class ContactForm {
      */
     confirmSubmit () {
 
-        let contact_section = document.querySelector('.' + defaults.selectors.contact_section);
-        contact_section.insertAdjacentHTML('beforebegin', this.htmlFragment.innerHTML);
-        contact_section.remove();
-    }
+        let contact_section = this.context.querySelector('.' + defaults.selectors.contact_section);
+        contact_section.classList.add('fade--out');
 
-    /**
-     * Replace heading string with witty retort.
-     *
-     */
-    confirmHeading () {
+        const contact_confirm = document.createElement('div');
+        contact_confirm.classList.add('animate--in');
+        contact_confirm.appendChild(this.htmlFragment);
+        this.context.appendChild(contact_confirm);
 
-        document.querySelector('h2').innerText = 'Said hello';
+        setTimeout(function(){
+            contact_section.style.display = "none";
+            contact_confirm.classList.add('fade--in');
+        }, utility.settings.animation.default_timimg);
     }
 }

@@ -1,6 +1,6 @@
 .model
 {
-    &__active
+    &--active
     {
         position: relative;
         overflow-y: hidden;
@@ -61,7 +61,7 @@
 
     &__close
     {
-        @extend .cf;
+        @extend %clearfix;
         display: block;
         float: right;
         padding: rem(20px);
