@@ -128,7 +128,7 @@ export class ContactForm {
         this.context.appendChild(contact_confirm);
 
         setTimeout(function(){
-            contact_section.style.display = "none";
+            contact_section.classList.add('display--none');
             contact_confirm.classList.add('fade--in');
         }, utility.settings.animation.default_timimg);
     }
