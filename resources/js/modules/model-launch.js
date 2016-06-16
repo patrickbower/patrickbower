@@ -1,8 +1,8 @@
 /**
  * Dependencies
  */
-import {ModelWindow} from '../modules/model-window';
-import {breakpoint} from '../utilities/breakpoint';
+import * as utility from '../utilities/_utilities';
+import {ModelWindow} from './model-window';
 
 /**
  * Module settings
@@ -55,7 +55,7 @@ export class ModelLaunch {
      */
     getLayout () {
 
-        let layout = breakpoint();
+        let layout = utility.breakpoint();
         if (layout.value === 'desktop') this.modelLayout = true;
     }
 

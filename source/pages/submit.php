@@ -38,12 +38,13 @@ if (isset($_POST['confirm']) && $_POST['confirm'] == ''){
 <body>
 
 <div class="js-contact--confirmation">
-    <h2 class="h2">
-        Thanks
-    </h2>
-    <p>
-        I'll get back to you as soon as possible.
-    </p>
+    <div class="contact-section__confirmation">
+        <h2 class="h2">
+            Thanks
+        </h2>
+        <p>
+            I'll get back to you as soon as possible.
+        </p>
 </div>
 
 </body>

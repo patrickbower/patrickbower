@@ -1,17 +1,11 @@
-/**
- * Dependencies
- */
-import {ajaxRequest} from '../utilities/ajax';
-import {parseHTML} from '../utilities/parsehtml';
+import * as utility from '../utilities/_utilities';
 
-/**
- * Module settings
- */
 const defaults = {
     selectors: {
         direct_link: 'js-contact--link',
-        confirm_input: 'js-contact--confirm',
+        contact_form: 'js-contact--form',
         submit_button: 'js-contact--submit',
+        confirm_input: 'js-contact--confirm',
         contact_section: 'js-contact--section'
     },
     email: {
@@ -36,9 +30,6 @@ export class ContactForm {
      */
     constructor(context) {
         this.context = context;
-
-        // settings
-        this.formAction = this.context.action;
     }
 
     /**
@@ -106,23 +97,19 @@ export class ContactForm {
     * Get content via Ajax.
     *
     * @function submitForm
-    * @requires {function} ajaxRequest
-    * @requires {function} parseHTML
+    * @requires {function} ajax utility
     */
     submitForm () {
-        // get parts from href string
-        const [page_url, fragment_selector] = this.formAction.split('#');
 
-        // ajax (util function)
-        ajaxRequest(page_url, data => {
+        let form = this.context.querySelector('.' + defaults.selectors.contact_form);
+        let formAction = form.action;
 
-            // parse (util function), and append
-            let html = parseHTML(data);
-            this.htmlFragment = html.querySelector('.' + fragment_selector);
+        const [page_url, fragment_selector] = formAction.split('#');
+
+        utility.ajax(page_url, data => {
+            this.htmlFragment = data.querySelector('.' + fragment_selector);
 
             this.confirmSubmit();
-            this.confirmHeading();
-
         });
     }
 
@@ -132,17 +119,17 @@ export class ContactForm {
      */
     confirmSubmit () {
 
-        let contact_section = document.querySelector('.' + defaults.selectors.contact_section);
-        contact_section.insertAdjacentHTML('beforebegin', this.htmlFragment.innerHTML);
-        contact_section.remove();
-    }
+        let contact_section = this.context.querySelector('.' + defaults.selectors.contact_section);
+        contact_section.classList.add('fade--out');
 
-    /**
-     * Replace heading string with witty retort.
-     *
-     */
-    confirmHeading () {
+        const contact_confirm = document.createElement('div');
+        contact_confirm.classList.add('animate--in');
+        contact_confirm.appendChild(this.htmlFragment);
+        this.context.appendChild(contact_confirm);
 
-        document.querySelector('h1').innerText = 'Said hello';
+        setTimeout(function(){
+            contact_section.classList.add('display--none');
+            contact_confirm.classList.add('fade--in');
+        }, utility.settings.animation.default_timimg);
     }
 }
