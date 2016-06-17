@@ -1,6 +1,7 @@
 import * as utility from '../utilities/_utilities';
 
 const defaults = {
+    element: undefined,
     selectors: {
         direct_link: 'js-contact--link',
         contact_form: 'js-contact--form',
@@ -28,8 +29,13 @@ export class ContactForm {
      * @constructor
      * @param {object} the origin module that launches the model
      */
-    constructor(context) {
-        this.context = context;
+    constructor(properties = {}) {
+
+        let members = Object.assign({}, defaults, properties);
+
+        this.element = members.element;
+        this.selectors = members.selectors;
+        this.email = members.email;
     }
 
     /**
@@ -38,7 +44,6 @@ export class ContactForm {
      * @function init
      */
     init () {
-        // setup
         this.addEmail();
         this.hiddenInput();
         this.bindEvents();
@@ -54,11 +59,11 @@ export class ContactForm {
         // construct button
         const anchor = document.createElement('a');
         anchor.setAttribute('class', 'button button--mineshaft-lighten');
-        anchor.setAttribute('href', `mailto:${defaults.email.first}@${defaults.email.last}`);
-        anchor.innerText = `${defaults.email.first}@${defaults.email.last}`;
+        anchor.setAttribute('href', `mailto:${this.email.first}@${this.email.last}`);
+        anchor.innerText = `${this.email.first}@${this.email.last}`;
 
         // append button
-        const direct_link = document.querySelector('.' + defaults.selectors.direct_link);
+        const direct_link = document.querySelector('.' + this.selectors.direct_link);
         direct_link.appendChild(anchor);
     }
 
@@ -70,7 +75,7 @@ export class ContactForm {
     bindEvents () {
         let instance = this;
 
-        // submit button to send form
+        // form submit button
         let submit_form_event = {
             handleEvent: function(event) {
                 event.preventDefault();
@@ -78,7 +83,7 @@ export class ContactForm {
             }
         }
 
-        let submit_button = this.context.querySelector('.' + defaults.selectors.submit_button);
+        let submit_button = this.element.querySelector('.' + this.selectors.submit_button);
         submit_button.addEventListener('click', submit_form_event);
     }
 
@@ -89,7 +94,7 @@ export class ContactForm {
      * @param contactForm - The module html.
      */
     hiddenInput () {
-        let confirm = this.context.querySelector('.' + defaults.selectors.confirm_input);
+        let confirm = this.element.querySelector('.' + this.selectors.confirm_input);
         confirm.tabIndex = -1;
     }
 
@@ -101,7 +106,7 @@ export class ContactForm {
     */
     submitForm () {
 
-        let form = this.context.querySelector('.' + defaults.selectors.contact_form);
+        let form = this.element.querySelector('.' + this.selectors.contact_form);
         let formAction = form.action;
 
         const [page_url, fragment_selector] = formAction.split('#');
@@ -119,14 +124,17 @@ export class ContactForm {
      */
     confirmSubmit () {
 
-        let contact_section = this.context.querySelector('.' + defaults.selectors.contact_section);
+        // fade out content
+        let contact_section = this.element.querySelector('.' + this.selectors.contact_section);
         contact_section.classList.add('fade--out');
 
+        // build confirm element
         const contact_confirm = document.createElement('div');
         contact_confirm.classList.add('animate--in');
         contact_confirm.appendChild(this.htmlFragment);
-        this.context.appendChild(contact_confirm);
+        this.element.appendChild(contact_confirm);
 
+        // add and fade in when content faded out
         setTimeout(function(){
             contact_section.classList.add('display--none');
             contact_confirm.classList.add('fade--in');

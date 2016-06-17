@@ -17,13 +17,16 @@ export function init (context) {
     // for each occurance
     Array
         .from(js_modules)
-        .forEach(html_fragment => {
+        .forEach(element => {
 
             // get class name
-            const js_class = html_fragment.getAttribute('data-init');
+            const js_class = element.getAttribute('data-init');
+
+            const properties = {};
+            properties.element = element;
 
             // instantiate
-            const module_instance = new modules[js_class](html_fragment);
+            const module_instance = new modules[js_class](properties);
             module_instance.init();
         });
 
