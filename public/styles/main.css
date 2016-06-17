@@ -984,22 +984,41 @@ button {
 .header-logo {
   display: inline-block;
   position: relative;
-  top: 0;
-  left: 3.125rem; }
+  top: 1.25rem;
+  left: 50%;
+  margin-left: -10px; }
+  @media only screen and (min-width: 767px) {
+    .header-logo {
+      top: 0;
+      left: 3.125rem; } }
   .header-logo:before {
     content: '';
     display: inline-block;
-    width: 3.75rem;
-    height: 8.125rem;
+    width: 2.8125rem;
+    height: 2.8125rem;
     background: #ffffff;
     -ms-transform: rotate(45deg);
-        transform: rotate(45deg);
+    transform: rotate(45deg);
     position: absolute;
-    top: -3.125rem;
-    left: 0.625rem; }
+    top: 0.9375rem;
+    left: 50%;
+    margin-left: -1.5625rem; }
+    @media only screen and (min-width: 767px) {
+      .header-logo:before {
+        top: -3.125rem;
+        left: 0.625rem;
+        width: 3.75rem;
+        height: 8.125rem;
+        margin-left: 0; } }
   .header-logo__icon {
     margin-top: 1.25rem;
-    position: relative; }
+    position: relative;
+    width: 1.625rem;
+    height: 2.6875rem; }
+    @media only screen and (min-width: 767px) {
+      .header-logo__icon {
+        width: 2.25rem;
+        height: 3.3125rem; } }
   .header-logo__pb {
     position: relative;
     top: 1.25rem; }
