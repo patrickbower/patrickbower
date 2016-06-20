@@ -1,11 +1,5 @@
-/**
- * Dependencies
- */
 import * as utility from '../utilities/_utilities';
 
-/**
- * Module settings
- */
 const defaults = {
     selectors: {
         model_window: 'js-model-template--window',
@@ -27,9 +21,13 @@ export class ModelWindow {
      * @constructor
      * @param {object} the origin module that launches the model
      */
-    constructor (ModelLaunch) {
+    constructor (ModelLaunch, properties = {}) {
+
         // dependency injection
         this.ModelLaunch = ModelLaunch;
+
+        let members = Object.assign({}, defaults, properties);
+        this.selectors = members.selectors;
     }
 
     /**
@@ -47,7 +45,7 @@ export class ModelWindow {
     *
     */
     setPage () {
-        document.body.classList.add(defaults.selectors.model_active);
+        document.body.classList.add(this.selectors.model_active);
     }
 
     /**
@@ -81,9 +79,9 @@ export class ModelWindow {
     */
     defineElements () {
 
-        this.modelWindow = document.querySelector('.' + defaults.selectors.model_window);
-        this.closeButton = this.modelWindow.querySelector('.' + defaults.selectors.model_close);
-        this.modelContent = this.modelWindow.querySelector('.' + defaults.selectors.model_content);
+        this.modelWindow = document.querySelector('.' + this.selectors.model_window);
+        this.closeButton = this.modelWindow.querySelector('.' + this.selectors.model_close);
+        this.modelContent = this.modelWindow.querySelector('.' + this.selectors.model_content);
     }
 
     /**
@@ -150,6 +148,6 @@ export class ModelWindow {
     *
     */
     resetPage () {
-        document.body.classList.remove(defaults.selectors.model_active);
+        document.body.classList.remove(this.selectors.model_active);
     }
 }

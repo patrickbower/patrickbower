@@ -1,17 +1,11 @@
-/**
- * Dependencies
- */
 import * as utility from '../utilities/_utilities';
 import {ModelWindow} from './model-window';
 
-/**
- * Module settings
- */
- const defaults = {
+const defaults = {
     selectors: {
         launch_button: 'js-model--launch',
         model_template: 'js-model-template',
-        model_window: 'js-model-template--window',
+        model_window: 'js-model-template--window'
     }
 }
 
@@ -29,8 +23,12 @@ export class ModelLaunch {
      * @constructor
      * @param {object} the origin module that launches the model
      */
-    constructor (context) {
-        this.context = context;
+    constructor (properties = {}) {
+
+        let members = Object.assign({}, defaults, properties);
+
+        this.element = members.element;
+        this.selectors = members.selectors;
     };
 
     /**
@@ -65,8 +63,8 @@ export class ModelLaunch {
      */
     storeTemplate () {
 
-        let module_template = document.querySelector('#' + defaults.selectors.model_template);
-        this.modelWindowTemplate = module_template.content.querySelector('.' + defaults.selectors.model_window);
+        let module_template = document.querySelector('#' + this.selectors.model_template);
+        this.modelWindowTemplate = module_template.content.querySelector('.' + this.selectors.model_window);
     };
 
     /**
@@ -103,7 +101,7 @@ export class ModelLaunch {
             }
         }
 
-        this.launchButton = this.context.querySelector('.' + defaults.selectors.launch_button);
+        this.launchButton = this.element.querySelector('.' + this.selectors.launch_button);
         this.launchButton.addEventListener('click', launch_button_event);
 
     };
