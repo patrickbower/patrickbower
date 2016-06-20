@@ -1,13 +1,12 @@
 .form
 {
-    // font-size: 1.2rem;
-
     &__row
     {
         position: relative;
         margin-bottom: rem(50px);
         z-index: 0;
         height: 3.316em;
+        background: lighten($color-mine-shaft, 5%);
 
         &--confirm
         {
@@ -28,7 +27,7 @@
         position: absolute;
         display: inline-block;
         top: 1em;
-        left: 0;
+        left:  1em;
         transition: 0.2s ease all;
         color: $color-concrete;
     }
@@ -36,14 +35,14 @@
     &__input
     {
         z-index: 2;
-        padding: 1em 1em 1em 0;
+        padding: 1em;
         width: 100%;
         position: absolute;
         top: 0;
         left: 0;
         background: none;
         transition: 0.2s ease all;
-        border-bottom: rem(1px) solid $color-concrete;
+        border-bottom: rem(1px) solid $color-mine-shaft;
         color: $color-concrete;
 
         &--textarea
@@ -69,6 +68,5 @@
     &__submit
     {
         background: none;
-        // font-size: 1rem;
     }
 }

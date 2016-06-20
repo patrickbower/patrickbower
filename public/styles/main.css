@@ -689,25 +689,10 @@ button {
   font-weight: inherit;
   line-height: 1.2;
   color: #ffffff; }
-  .h1--secondary-page {
-    font-size: 4.236rem;
-    margin-top: 3.125rem;
-    margin-bottom: 6.25rem;
-    text-align: center; }
-    @media only screen and (min-width: 767px) {
-      .h1--secondary-page {
-        margin-top: 6.25rem;
-        text-align: left; } }
 
 .h2 {
   letter-spacing: -0.2rem;
   font-size: 4.236rem; }
-  .h2--secondary-page {
-    font-size: 2.618rem;
-    text-align: center; }
-    @media only screen and (min-width: 767px) {
-      .h2--secondary-page {
-        text-align: left; } }
 
 .h3 {
   font-size: 2.618rem; }
@@ -849,7 +834,8 @@ button {
   position: relative;
   margin-bottom: 3.125rem;
   z-index: 0;
-  height: 3.316em; }
+  height: 3.316em;
+  background: #404040; }
   .form__row--confirm {
     margin-bottom: 0;
     height: 0; }
@@ -861,20 +847,20 @@ button {
   position: absolute;
   display: inline-block;
   top: 1em;
-  left: 0;
+  left: 1em;
   transition: 0.2s ease all;
   color: #f2f2f2; }
 
 .form__input {
   z-index: 2;
-  padding: 1em 1em 1em 0;
+  padding: 1em;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   background: none;
   transition: 0.2s ease all;
-  border-bottom: 0.0625rem solid #f2f2f2;
+  border-bottom: 0.0625rem solid #333333;
   color: #f2f2f2; }
   .form__input--textarea {
     height: 100%; }
@@ -1158,6 +1144,12 @@ button {
       .header-sub__b {
         margin-left: 2.5rem; } }
 
+.header--secondary {
+  margin: 3.125rem 0; }
+
+.header--footer {
+  margin: 3.125rem 0; }
+
 .intro--media {
   margin: 0 0.625rem; }
 
@@ -1277,7 +1269,10 @@ button {
   margin: 1.25rem;
   border-radius: 50%; }
   .model__close:hover {
-    background: rgba(100, 100, 100, 0.25); }
+    background: #404040; }
+
+.secondary-footer {
+  margin: 3.125rem 0; }
 
 .float--left {
   float: left; }

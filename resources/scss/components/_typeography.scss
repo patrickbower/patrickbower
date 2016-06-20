@@ -14,37 +14,12 @@
     font-weight: inherit;
     line-height: 1.2;
     color: $color-white;
-
-    &--secondary-page
-    {
-        font-size: $h2;
-        margin-top: rem(50px);
-        margin-bottom: rem(100px);
-        text-align: center;
-
-        @media only screen and (min-width: $media-tablet)
-        {
-            margin-top: rem(100px);
-            text-align: left;
-        }
-    }
 }
 
 .h2
 {
     letter-spacing: -0.2rem;
     font-size: $h2;
-
-    &--secondary-page
-    {
-        font-size: $h3;
-        text-align: center;
-
-        @media only screen and (min-width: $media-tablet)
-        {
-            text-align: left;
-        }
-    }
 }
 
 .h3
@@ -100,3 +75,11 @@
         right: rem(-20px);
     }
 }
+
+// .text
+// {
+//     &--upper
+//     {
+//         text-transform: uppercase;
+//     }
+// }
