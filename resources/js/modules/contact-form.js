@@ -3,15 +3,10 @@ import * as utility from '../utilities/_utilities';
 const defaults = {
     element: undefined,
     selectors: {
-        direct_link: 'js-contact--link',
         contact_form: 'js-contact--form',
         submit_button: 'js-contact--submit',
         confirm_input: 'js-contact--confirm',
         contact_section: 'js-contact--section'
-    },
-    email: {
-        first: 'bower.patrick',
-        last: 'gmail.com'
     }
 }
 
@@ -44,28 +39,9 @@ export class ContactForm {
      * @function init
      */
     init () {
-        // this.addEmail();
         this.hiddenInput();
         this.bindEvents();
     }
-
-    /**
-     * Add direct email address button to limit spaming bots.
-     *
-     * @function addEmail
-     */
-    // addEmail () {
-    //
-    //     // construct button
-    //     const anchor = document.createElement('a');
-    //     anchor.setAttribute('class', 'button button--mineshaft-lighten');
-    //     anchor.setAttribute('href', `mailto:${this.email.first}@${this.email.last}`);
-    //     anchor.innerText = `${this.email.first}@${this.email.last}`;
-    //
-    //     // append button
-    //     const direct_link = document.querySelector('.' + this.selectors.direct_link);
-    //     direct_link.appendChild(anchor);
-    // }
 
     /**
      * Add event listners where requiried.

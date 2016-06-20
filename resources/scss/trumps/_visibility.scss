@@ -9,4 +9,27 @@
     {
         display: block;
     }
+
+    &--mobile
+    {
+        display: block;
+    }
+
+    &--desktop
+    {
+        display: none;
+    }
+
+    @media only screen and (min-width: $media-desktop) {
+
+        &--mobile
+        {
+            display: none;
+        }
+
+        &--desktop
+        {
+            display: block;
+        }
+    }
 }
