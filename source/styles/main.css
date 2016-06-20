@@ -1210,7 +1210,7 @@ button {
   background: #333333;
   z-index: 99;
   color: #ffffff;
-  animation: 1s forwards;
+  animation: 700ms forwards;
   animation-name: slide-in-from-top; }
 
 @keyframes slide-in-from-top {
@@ -1236,9 +1236,10 @@ button {
   overflow-y: scroll;
   overflow-x: hidden; }
 
-.model__project {
+.model__content {
+  padding: 0 0.625rem;
   opacity: 0;
-  animation: 0.5s forwards 1s;
+  animation: 300ms forwards 700ms;
   animation-name: fade-content-in; }
 
 @keyframes fade-content-in {
@@ -1246,6 +1247,9 @@ button {
     opacity: 0; }
   to {
     opacity: 1; } }
+  @media only screen and (min-width: 767px) {
+    .model__content {
+      padding: 0 1.25rem; } }
 
 .model__close {
   display: block;
