@@ -755,6 +755,7 @@ button {
       margin-top: 1.875rem; } }
 
 .button {
+  text-align: center;
   display: inline-block;
   text-decoration: none;
   color: #333333;
@@ -768,9 +769,6 @@ button {
     background: #1a1a1a;
     border-color: #1a1a1a;
     color: inherit; }
-
-.button--submit {
-  background: none; }
 
 .button--brickred {
   display: inline-block;
@@ -847,50 +845,50 @@ button {
     border-color: #4d4d4d;
     color: #ffffff; }
 
-.form {
-  padding: 3.125rem 1.875rem 1.875rem 1.875rem;
-  background: #ffffff;
-  margin-bottom: 3.125rem; }
-  .form__row {
-    position: relative;
-    margin-bottom: 2.5rem;
-    background: #f2f2f2;
-    z-index: 0;
-    height: 3.316em; }
-    .form__row--confirm {
-      margin-bottom: 0;
-      height: 0; }
-    .form__row--message {
-      min-height: 13.264em; }
-  .form__label {
-    z-index: 1;
-    position: absolute;
-    display: inline-block;
-    top: 1em;
-    left: 1em;
-    transition: 0.2s ease all;
-    color: #333333; }
-  .form__input {
-    z-index: 2;
-    padding: 1em;
-    width: 100%;
-    position: absolute;
-    top: 0;
+.form__row {
+  position: relative;
+  margin-bottom: 3.125rem;
+  z-index: 0;
+  height: 3.316em; }
+  .form__row--confirm {
+    margin-bottom: 0;
+    height: 0; }
+  .form__row--message {
+    min-height: 13.264em; }
+
+.form__label {
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  top: 1em;
+  left: 0;
+  transition: 0.2s ease all;
+  color: #f2f2f2; }
+
+.form__input {
+  z-index: 2;
+  padding: 1em 1em 1em 0;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  transition: 0.2s ease all;
+  border-bottom: 0.0625rem solid #f2f2f2;
+  color: #f2f2f2; }
+  .form__input--textarea {
+    height: 100%; }
+  .form__input:focus {
+    border-bottom: 0.0625rem solid #B3B3B3; }
+  .form__input:focus ~ label,
+  .form__input:valid ~ label {
+    top: -1.45em;
     left: 0;
-    background: none;
-    transition: 0.2s ease all;
-    border-bottom: 0.0625rem solid #f2f2f2;
-    color: #333333; }
-    .form__input--textarea {
-      height: 100%; }
-    .form__input:focus {
-      border-bottom: 0.0625rem solid #333333; }
-    .form__input:focus ~ label,
-    .form__input:valid ~ label {
-      top: -1.45em;
-      left: 0;
-      color: #B3B3B3;
-      font-size: 90%; }
+    color: #B3B3B3;
+    font-size: 90%; }
+
+.form__submit {
+  background: none; }
 
 .content {
   background: #434A54;
@@ -1184,6 +1182,12 @@ button {
 .design--strike:before {
   border-color: transparent transparent #DB4453 transparent; }
 
+.contact-section--strike:after {
+  background: #ffffff; }
+
+.contact-section--strike:before {
+  border-color: transparent transparent #333333 transparent; }
+
 .splash {
   position: relative;
   display: -ms-flexbox;
@@ -1321,3 +1325,15 @@ button {
 
 .display--show {
   display: block; }
+
+.display--mobile {
+  display: block; }
+
+.display--desktop {
+  display: none; }
+
+@media only screen and (min-width: 979px) {
+  .display--mobile {
+    display: none; }
+  .display--desktop {
+    display: block; } }

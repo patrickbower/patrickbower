@@ -1,14 +1,11 @@
 .form
 {
-    padding: rem(50px) rem(30px) rem(30px) rem(30px);
-    background: $color-white;
-    margin-bottom: rem(50px);
+    // font-size: 1.2rem;
 
     &__row
     {
         position: relative;
-        margin-bottom: rem(40px);
-        background: $color-concrete;
+        margin-bottom: rem(50px);
         z-index: 0;
         height: 3.316em;
 
@@ -31,15 +28,15 @@
         position: absolute;
         display: inline-block;
         top: 1em;
-        left: 1em;
+        left: 0;
         transition: 0.2s ease all;
-        color: $color-mine-shaft;
+        color: $color-concrete;
     }
 
     &__input
     {
         z-index: 2;
-        padding: 1em;
+        padding: 1em 1em 1em 0;
         width: 100%;
         position: absolute;
         top: 0;
@@ -47,7 +44,7 @@
         background: none;
         transition: 0.2s ease all;
         border-bottom: rem(1px) solid $color-concrete;
-        color: $color-mine-shaft;
+        color: $color-concrete;
 
         &--textarea
         {
@@ -56,7 +53,7 @@
 
         &:focus
         {
-            border-bottom: rem(1px) solid $color-mine-shaft;
+            border-bottom: rem(1px) solid $color-nobel;
         }
 
         &:focus ~ label,
@@ -67,5 +64,11 @@
             color: $color-nobel;
             font-size: 90%;
         }
+    }
+
+    &__submit
+    {
+        background: none;
+        // font-size: 1rem;
     }
 }

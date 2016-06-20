@@ -31,17 +31,12 @@
 
 // buttons
 @mixin button (
-
-    // input argument
     $button-background-color: inherit,
     $button-text-color: inherit,
     $button-text-hover-color: inherit,
     $button-hover-tint: 'darken'
-
 )
 {
-
-    // output
     display: inline-block;
     text-decoration: none;
     color: $button-text-color;
