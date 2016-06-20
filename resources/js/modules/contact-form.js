@@ -44,7 +44,7 @@ export class ContactForm {
      * @function init
      */
     init () {
-        this.addEmail();
+        // this.addEmail();
         this.hiddenInput();
         this.bindEvents();
     }
@@ -54,18 +54,18 @@ export class ContactForm {
      *
      * @function addEmail
      */
-    addEmail () {
-
-        // construct button
-        const anchor = document.createElement('a');
-        anchor.setAttribute('class', 'button button--mineshaft-lighten');
-        anchor.setAttribute('href', `mailto:${this.email.first}@${this.email.last}`);
-        anchor.innerText = `${this.email.first}@${this.email.last}`;
-
-        // append button
-        const direct_link = document.querySelector('.' + this.selectors.direct_link);
-        direct_link.appendChild(anchor);
-    }
+    // addEmail () {
+    //
+    //     // construct button
+    //     const anchor = document.createElement('a');
+    //     anchor.setAttribute('class', 'button button--mineshaft-lighten');
+    //     anchor.setAttribute('href', `mailto:${this.email.first}@${this.email.last}`);
+    //     anchor.innerText = `${this.email.first}@${this.email.last}`;
+    //
+    //     // append button
+    //     const direct_link = document.querySelector('.' + this.selectors.direct_link);
+    //     direct_link.appendChild(anchor);
+    // }
 
     /**
      * Add event listners where requiried.

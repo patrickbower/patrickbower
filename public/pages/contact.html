@@ -29,14 +29,14 @@
 
 <div class="content content--secondary">
     <header>
-    <div class="belt">
-        <a href="#" class="header-logo">
-            <svg class="icon--pb icon-colour--mako header-logo__pb">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon--pb"></use>
-            </svg>
-        </a>
-        <h1 class="h1 space--vertical-lrg">
-            Contact
+    <a href="#" class="header-logo">
+        <svg class="icon--pb icon-color--brick-red header-logo__icon">
+            <use xlink:href="#icon--pb"></use>
+        </svg>
+    </a>
+    <div class="header belt">
+        <h1 class="h1 h1--secondary-page space--vertical-lrg">
+            Get in contact
         </h1>
     </div>
 </header>
@@ -45,41 +45,25 @@
         <div class="js-model--content">
     <div class="contact-section" data-init="contact">
         <div class="js-contact--section animate--out">
-            <h2 class="h2">
-                Say hello
-            </h2>
-            <div class="grid">
-                <div class="column width-30">
-                    <p>
-                        Please feel free to use either the conatct form or the email address below - they both go to the same place and I'll come back to you as soon a possible.
-                    </p>
-                    <span class="js-contact--link"></span>
-                    <noscript>
-                        Please enable javascript in your browser if you wish to view my direct email address - or use the contact form instead.
-                    </noscript>
+            <form class="form contact-form js-contact--form" method="post" action="pages/submit.php#js-contact--confirmation">
+                <div class="form__row">
+                    <input class="form__input" name="name" type="text" required/>
+                    <label class="form__label form__label--active" for="name">Your name</label>
                 </div>
-                <div class="column width-70">
-                    <form class="form contact-form js-contact--form" method="post" action="pages/submit.php#js-contact--confirmation">
-                        <div class="form__row">
-                            <input class="form__input" name="name" type="text" required/>
-                            <label class="form__label form__label--active" for="name">Your name</label>
-                        </div>
-                        <div class="form__row">
-                            <input class="form__input" name="email" type="text" required/>
-                            <label class="form__label" for="email">Your email</label>
-                        </div>
-                        <div class="form__row form__row--confirm">
-                            <input class="form__input form__input--confirm js-contact--confirm" name="confirm" type="text"/>
-                            <label class="form__label" for="confirm">Confirm email</label>
-                        </div>
-                        <div class="form__row form__row--message">
-                            <textarea class="form__input form__input--textarea" name="message" maxlength="600" required></textarea>
-                            <label class="form__label" for="message">Your message</label>
-                        </div>
-                        <button class="button button--submit button--mineshaft-darken js-contact--submit" type="submit">Send</button>
-                    </form>
+                <div class="form__row">
+                    <input class="form__input" name="email" type="text" required/>
+                    <label class="form__label" for="email">Your email</label>
                 </div>
-            </div>
+                <div class="form__row form__row--confirm">
+                    <input class="form__input form__input--confirm js-contact--confirm" name="confirm" type="text"/>
+                    <label class="form__label" for="confirm">Confirm email</label>
+                </div>
+                <div class="form__row form__row--message">
+                    <textarea class="form__input form__input--textarea" name="message" maxlength="600" required></textarea>
+                    <label class="form__label" for="message">Your message</label>
+                </div>
+                <button class="button button--submit button--mineshaft-darken js-contact--submit" type="submit">Send</button>
+            </form>
         </div>
     </div>
 </div>

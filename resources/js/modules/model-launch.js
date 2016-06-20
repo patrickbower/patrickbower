@@ -54,7 +54,12 @@ export class ModelLaunch {
     getLayout () {
 
         let layout = utility.breakpoint();
-        if (layout.value === 'desktop') this.modelLayout = true;
+        
+        if (layout.value === 'desktop') {
+            this.modelLayout = true;
+        } else {
+            this.modelLayout = false;
+        }
     }
 
     /**
@@ -77,6 +82,7 @@ export class ModelLaunch {
         // check breakpoint on window resize
         let window_resize_event = {
             handleEvent: function(event) {
+                console.log('resizd it');
                 instance.getLayout();
             }
         }
