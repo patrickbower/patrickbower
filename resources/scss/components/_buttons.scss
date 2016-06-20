@@ -7,12 +7,8 @@
 
 .button
 {
+    text-align: center;
     @include button(
         $button-background-color: $color-mine-shaft,
         $button-text-color: $color-mine-shaft);
-}
-
-.button--submit
-{
-    background: none;
 }

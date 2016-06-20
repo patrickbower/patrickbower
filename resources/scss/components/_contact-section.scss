@@ -1,1 +1,10 @@
-
+.contact-section
+{
+    &--strike:after
+    {
+        background: $color-white;
+    }
+    &--strike:before {
+        border-color: transparent transparent $color-mine-shaft transparent;
+    }
+}
