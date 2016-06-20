@@ -683,16 +683,31 @@ button {
   font-family: "montserratbold"; }
 
 .h1 {
+  font-size: 6.854rem;
   letter-spacing: -0.25rem;
   margin: 0 0 0.5rem 0;
   font-weight: inherit;
   line-height: 1.2;
-  color: #ffffff;
-  font-size: 6.854rem; }
+  color: #ffffff; }
+  .h1--secondary-page {
+    font-size: 4.236rem;
+    margin-top: 3.125rem;
+    margin-bottom: 6.25rem;
+    text-align: center; }
+    @media only screen and (min-width: 767px) {
+      .h1--secondary-page {
+        margin-top: 6.25rem;
+        text-align: left; } }
 
 .h2 {
   letter-spacing: -0.2rem;
   font-size: 4.236rem; }
+  .h2--secondary-page {
+    font-size: 2.618rem;
+    text-align: center; }
+    @media only screen and (min-width: 979px) {
+      .h2--secondary-page {
+        text-align: left; } }
 
 .h3 {
   font-size: 2.618rem; }
@@ -1286,10 +1301,6 @@ button {
 
 .leading--none {
   line-height: 0; }
-
-.space--vertical-lrg {
-  margin-top: 6.25rem;
-  margin-bottom: 6.25rem; }
 
 .animate--in {
   transition: all 0.3s ease-out;
