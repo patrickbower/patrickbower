@@ -48,9 +48,10 @@
 
     &__content
     {
-        padding: 0 rem(10px);
+        padding: rem(10px);
         opacity: 0;
         animation: 300ms forwards 700ms;
+
         @include animation-keyframes(fade-content-in) {
             from {
                 opacity: 0;
@@ -60,7 +61,7 @@
         }
 
         @media only screen and (min-width: $media-tablet) {
-            padding: 0 rem(20px);
+            padding: rem(20px);
         }
     }
 

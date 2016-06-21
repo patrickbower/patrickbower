@@ -46,6 +46,8 @@
 // ~ Pieces of UI
 @import "components/content";
 @import "components/header";
+@import "components/title";
+@import "components/branding";
 @import "components/intro";
 @import "components/contact";
 @import "components/development";
@@ -53,7 +55,8 @@
 @import "components/contact-section";
 @import "components/splash";
 @import "components/model";
-@import "components/secondary-footer";
+@import "components/footer-secondary";
+@import "components/slice";
 
 // Trumps: Helpers and overrides, e.g. .float-left { float:left !important;}
 @import "trumps/layout";
