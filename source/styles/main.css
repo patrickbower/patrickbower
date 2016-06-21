@@ -980,65 +980,27 @@ button {
         right: -35%;
         padding-left: 10%; } }
 
-.header-logo {
-  display: inline-block;
-  position: relative;
-  top: 1.25rem;
-  left: 50%;
-  margin-left: -10px; }
-  @media only screen and (min-width: 767px) {
-    .header-logo {
-      top: 0;
-      left: 3.125rem; } }
-  .header-logo:before {
-    content: '';
-    display: inline-block;
-    width: 2.8125rem;
-    height: 2.8125rem;
-    background: #ffffff;
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 0.9375rem;
-    left: 50%;
-    margin-left: -1.5625rem; }
-    @media only screen and (min-width: 767px) {
-      .header-logo:before {
-        top: -3.125rem;
-        left: 0.625rem;
-        width: 3.75rem;
-        height: 8.125rem;
-        margin-left: 0; } }
-  .header-logo__icon {
-    margin-top: 1.25rem;
-    position: relative;
-    width: 1.625rem;
-    height: 2.6875rem; }
-    @media only screen and (min-width: 767px) {
-      .header-logo__icon {
-        width: 2.25rem;
-        height: 3.3125rem; } }
-  .header-logo__pb {
-    position: relative;
-    top: 1.25rem; }
+.header {
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem; }
 
-.header-name {
+.title-name {
   font-size: 3.5em;
   text-align: center;
   padding: 12.5rem 0;
   text-transform: uppercase;
   margin-left: -0.625rem; }
   @media only screen and (min-width: 479px) {
-    .header-name {
+    .title-name {
       font-size: 5em; } }
-  .header-name__first {
+  .title-name__first {
     position: relative;
     bottom: -1.25rem; }
     @media only screen and (min-width: 767px) {
-      .header-name__first {
+      .title-name__first {
         margin-right: -16.5625rem;
         bottom: 0; } }
-    .header-name__first:before {
+    .title-name__first:before {
       content: '';
       display: inline-block;
       width: 0;
@@ -1050,10 +1012,10 @@ button {
       right: -0.625rem;
       bottom: 0.8125rem; }
       @media only screen and (min-width: 479px) {
-        .header-name__first:before {
+        .title-name__first:before {
           right: -0.3125rem;
           bottom: 1.375rem; } }
-    .header-name__first:after {
+    .title-name__first:after {
       width: 14.375rem;
       content: '';
       border-top: 1px solid #ffffff;
@@ -1063,19 +1025,19 @@ button {
       bottom: -1.6875rem;
       right: -3.5rem; }
       @media only screen and (min-width: 479px) {
-        .header-name__first:after {
+        .title-name__first:after {
           width: 20.625rem;
           bottom: -2.4375rem;
           right: -5rem; } }
       @media only screen and (min-width: 767px) {
-        .header-name__first:after {
+        .title-name__first:after {
           content: none; } }
-  .header-name__last {
+  .title-name__last {
     position: relative; }
     @media only screen and (min-width: 767px) {
-      .header-name__last {
+      .title-name__last {
         margin-left: -16.875rem; } }
-    .header-name__last:before {
+    .title-name__last:before {
       content: '';
       display: inline-block;
       width: 0;
@@ -1087,10 +1049,10 @@ button {
       top: 0.5rem;
       left: -0.3125rem; }
       @media only screen and (min-width: 479px) {
-        .header-name__last:before {
+        .title-name__last:before {
           top: 0.9375rem;
           left: 0.3125rem; } }
-    .header-name__last:after {
+    .title-name__last:after {
       content: '';
       width: 14.375rem;
       border-top: 0.0625rem solid #ffffff;
@@ -1100,18 +1062,18 @@ button {
       top: -1.875rem;
       left: -3.25rem; }
       @media only screen and (min-width: 479px) {
-        .header-name__last:after {
+        .title-name__last:after {
           width: 20.625rem;
           top: -2.625rem;
           left: -4.5625rem; } }
       @media only screen and (min-width: 767px) {
-        .header-name__last:after {
+        .title-name__last:after {
           content: none; } }
-  .header-name__slash {
+  .title-name__slash {
     border: none;
     margin: 0; }
     @media only screen and (min-width: 767px) {
-      .header-name__slash {
+      .title-name__slash {
         width: 31.25rem;
         border-top: 0.125rem solid #ffffff;
         -ms-transform: rotate(-45deg);
@@ -1120,35 +1082,70 @@ button {
         display: inline-block;
         margin: 0 0 1.6875rem 0; } }
 
-.header-sub {
+.title-sub {
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   font-size: 0.25em;
   margin-top: 2.5rem; }
   @media only screen and (min-width: 479px) {
-    .header-sub {
+    .title-sub {
       margin-top: 3.125rem; } }
   @media only screen and (min-width: 767px) {
-    .header-sub {
+    .title-sub {
       letter-spacing: 1em;
       margin-top: 0.625rem; } }
-  .header-sub__a {
+  .title-sub__a {
     margin-right: 1.25rem; }
     @media only screen and (min-width: 767px) {
-      .header-sub__a {
+      .title-sub__a {
         margin-left: 2.5rem; } }
-  .header-sub__b {
+  .title-sub__b {
     margin-left: 1.25rem; }
     @media only screen and (min-width: 767px) {
-      .header-sub__b {
+      .title-sub__b {
         margin-left: 2.5rem; } }
 
-.header--secondary {
-  margin: 3.125rem 0; }
+.branding-diamond {
+  display: inline-block;
+  position: relative;
+  top: 1.25rem;
+  left: 50%;
+  margin-left: -10px; }
+  .branding-diamond:before {
+    content: '';
+    display: inline-block;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    background: #ffffff;
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0.9375rem;
+    left: 50%;
+    margin-left: -1.5625rem; }
+  .branding-diamond__icon {
+    margin-top: 1.25rem;
+    position: relative;
+    width: 1.625rem;
+    height: 2.6875rem; }
+  .branding-diamond__pb {
+    position: relative;
+    top: 1.25rem; }
 
-.header--footer {
-  margin: 3.125rem 0; }
+@media only screen and (min-width: 767px) {
+  .branding-oblong {
+    top: 0;
+    left: 3.125rem; }
+    .branding-oblong:before {
+      top: -3.125rem;
+      left: 0.625rem;
+      width: 3.75rem;
+      height: 8.125rem;
+      margin-left: 0; }
+    .branding-oblong__icon {
+      width: 2.25rem;
+      height: 3.3125rem; } }
 
 .intro--media {
   margin: 0 0.625rem; }
@@ -1248,7 +1245,7 @@ button {
   overflow-x: hidden; }
 
 .model__content {
-  padding: 0 0.625rem;
+  padding: 0.625rem;
   opacity: 0;
   animation: 300ms forwards 700ms;
   animation-name: fade-content-in; }
@@ -1260,7 +1257,7 @@ button {
     opacity: 1; } }
   @media only screen and (min-width: 767px) {
     .model__content {
-      padding: 0 1.25rem; } }
+      padding: 1.25rem; } }
 
 .model__close {
   display: block;
@@ -1271,7 +1268,7 @@ button {
   .model__close:hover {
     background: #404040; }
 
-.secondary-footer {
+.footer-secondary {
   margin: 3.125rem 0; }
 
 .float--left {
