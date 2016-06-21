@@ -1,0 +1,180 @@
+.title
+{
+    &-name
+    {
+        font-size: 3.5em;
+        text-align: center;
+        padding: rem(200px) 0;
+        text-transform: uppercase;
+        margin-left: rem(-10px);
+
+        @media only screen and (min-width: $media-mobile)
+        {
+            font-size: 5em;
+        }
+
+        &__first
+        {
+            position: relative;
+            bottom: rem(-20px);
+
+            @media only screen and (min-width: $media-tablet)
+            {
+                margin-right: rem(-265px);
+                bottom: 0;
+            }
+
+            &:before
+            {
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 rem(30px) rem(30px);
+                border-color: transparent transparent $color-mako transparent;
+                position: absolute;
+                right: rem(-10px);
+                bottom: rem(13px);
+
+                @media only screen and (min-width: $media-mobile)
+                {
+                    right: rem(-5px);
+                    bottom: rem(22px);
+                }
+            }
+
+            &:after {
+                width: rem(230px);
+                content: '';
+                border-top: 1px solid $color-white;
+                transform: rotate(-45deg);
+                position: absolute;
+                bottom: rem(-27px);
+                right: rem(-56px);
+
+                @media only screen and (min-width: $media-mobile)
+                {
+                    width: rem(330px);
+                    bottom: rem(-39px);
+                    right: rem(-80px);
+                }
+
+                @media only screen and (min-width: $media-tablet)
+                {
+                    content: none;
+                }
+            }
+        }
+
+        &__last
+        {
+            position: relative;
+
+            @media only screen and (min-width: $media-tablet)
+            {
+                margin-left: rem(-270px);
+            }
+
+
+            &:before
+            {
+                content: '';
+                display: inline-block;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: $color-mako transparent transparent transparent;
+                border-width: rem(30px) rem(30px) 0 0;
+                position: absolute;
+                top: rem(8px);
+                left: rem(-5px);
+
+                @media only screen and (min-width: $media-mobile)
+                {
+                    top: rem(15px);
+                    left: rem(5px);
+                }
+            }
+
+            &:after {
+                content: '';
+                width: rem(230px);
+                border-top: rem(1px) solid $color-white;
+                transform: rotate(-45deg);
+                position: absolute;
+                top: rem(-30px);
+                left: rem(-52px);
+
+                @media only screen and (min-width: $media-mobile)
+                {
+                    width: rem(330px);
+                    top: rem(-42px);
+                    left: rem(-73px);
+                }
+
+                @media only screen and (min-width: $media-tablet)
+                {
+                    content: none;
+                }
+            }
+        }
+
+        &__slash
+        {
+            border: none;
+            margin: 0;
+
+            @media only screen and (min-width: $media-tablet)
+            {
+                width: rem(500px);
+                border-top: rem(2px) solid $color-white;
+                transform: rotate(-45deg);
+                position: relative;
+                display: inline-block;
+                margin: 0 0 rem(27px) 0;
+            }
+        }
+    }
+
+    // Code / Creative
+    &-sub
+    {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        font-size: 0.25em;
+        margin-top: rem(40px);
+
+        @media only screen and (min-width: $media-mobile)
+        {
+            margin-top: rem(50px);
+        }
+
+        @media only screen and (min-width: $media-tablet)
+        {
+            letter-spacing: 1em;
+            margin-top: rem(10px);
+        }
+
+        &__a
+        {
+            margin-right: rem(20px);
+
+            @media only screen and (min-width: $media-tablet)
+            {
+                margin-left: rem(40px);
+            }
+        }
+
+        &__b
+        {
+            margin-left: rem(20px);
+
+            @media only screen and (min-width: $media-tablet)
+            {
+                margin-left: rem(40px);
+            }
+        }
+    }
+}
