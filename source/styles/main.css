@@ -649,9 +649,12 @@ button {
   .icon--pencil {
     width: 4.6875rem;
     height: 13.375rem; }
-  .icon--email {
-    width: 2.1875rem;
-    height: 2.1875rem; }
+  .icon--github {
+    width: 5rem;
+    height: 5rem; }
+  .icon--linkedin {
+    width: 5rem;
+    height: 5rem; }
   .icon--space-sml {
     margin: 0.4375rem; }
 
