@@ -4,13 +4,18 @@
     {
         font-size: 3.5em;
         text-align: center;
-        padding: rem(200px) 0;
+        padding: rem(100px) 0;
         text-transform: uppercase;
         margin-left: rem(-10px);
 
         @media only screen and (min-width: $media-mobile)
         {
             font-size: 5em;
+        }
+
+        @media only screen and (min-width: $media-tablet)
+        {
+            padding: rem(200px) 0;
         }
 
         &__first

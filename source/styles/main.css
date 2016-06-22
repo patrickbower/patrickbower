@@ -998,12 +998,15 @@ button {
 .title-name {
   font-size: 3.5em;
   text-align: center;
-  padding: 12.5rem 0;
+  padding: 6.25rem 0;
   text-transform: uppercase;
   margin-left: -0.625rem; }
   @media only screen and (min-width: 479px) {
     .title-name {
       font-size: 5em; } }
+  @media only screen and (min-width: 767px) {
+    .title-name {
+      padding: 12.5rem 0; } }
   .title-name__first {
     position: relative;
     bottom: -1.25rem; }
@@ -1295,6 +1298,13 @@ button {
     @media only screen and (min-width: 979px) {
       .footer__link {
         float: right; } }
+  .footer__link-icon {
+    width: 3.125rem;
+    height: 3.125rem; }
+    @media only screen and (min-width: 979px) {
+      .footer__link-icon {
+        width: 5rem;
+        height: 5rem; } }
 
 .float--left {
   float: left; }
