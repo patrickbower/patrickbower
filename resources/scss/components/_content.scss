@@ -13,7 +13,8 @@
     &-section--header
     {
         min-height: 100vh;
-        @media only screen and (min-width: $media-mobile) {
+        @media only screen and (min-width: $media-mobile)
+        {
             height: 100vh;
             min-height: rem(900px);
         }
@@ -26,31 +27,38 @@
         top: rem(-140px);
     }
 
-    &-section {
-        @media only screen and (min-width: $media-desktop) {
+    &-section
+    {
+        @media only screen and (min-width: $media-desktop)
+        {
             height: 50vh;
             width: 100vw;
             min-height: rem(500px);
         }
     }
 
-    &-triangle__shape {
+    &-triangle__shape
+    {
         text-align: center;
         padding: rem(100px) 0;
-        @media only screen and (min-width: $media-desktop) {
+        @media only screen and (min-width: $media-desktop)
+        {
             padding: 0;
             text-align: left;
             height: 100vw;
         	width: 100vw;
         }
 
-        &--zero {
+        &--zero
+        {
             background: $color-white;
-            @media only screen and (min-width: $media-desktop) {
+            @media only screen and (min-width: $media-desktop)
+            {
                 transform: rotate(-45deg);
                 margin-left: 30%;
 
-                &:before {
+                &:before
+                {
                     content: '';
                     width: 100%;
                     height: 100%;
@@ -63,79 +71,90 @@
             }
         }
 
-        &--one {
+        &--one
+        {
             background: $color-mischka;
-            @media only screen and (min-width: $media-desktop) {
+            @media only screen and (min-width: $media-desktop)
+            {
                 transform: rotate(45deg);
                 margin-left: -30%;
             }
         }
 
-        &--two {
+        &--two
+        {
             background: $color-brick-red;
-            @media only screen and (min-width: $media-desktop) {
+            @media only screen and (min-width: $media-desktop)
+            {
                 transform: rotate(-45deg);
                 margin-left: 30%;
             }
         }
 
-        &--three {
+        &--three
+        {
             background: $color-white;
-            @media only screen and (min-width: $media-desktop) {
+            @media only screen and (min-width: $media-desktop)
+            {
                 transform: rotate(45deg);
                 margin-left: -30%;
             }
         }
 
-        &--four {
+        &--four
+        {
             background: $color-mischka;
-            @media only screen and (min-width: $media-desktop) {
+            @media only screen and (min-width: $media-desktop)
+            {
                 transform: rotate(-45deg);
                 margin-left: 30%;
                 margin-bottom: rem(-90px);
             }
         }
 
-        &--footer {
+        &--footer
+        {
             margin-bottom: rem(-90px);
         }
     }
 
     // content__area's
-    @media only screen and (min-width: $media-desktop) {
+    @media only screen and (min-width: $media-desktop)
+    {
 
-        &__area {
+        &__area
+        {
             width: 50%;
             position: relative;
             transform-origin: top right;
 
-            &--zero {
+            &--zero
+            {
                 transform: rotate(45deg);
                 top: 35%;
                 right: -35%;
                 padding-left: 10%;
             }
 
-            &--one {
+            &--one
+            {
                 transform: rotate(-45deg);
                 padding-right: 10%;
             }
 
-            &--two {
+            &--two
+            {
                 transform: rotate(45deg);
                 top: 35%;
                 right: -35%;
                 padding-left: 10%;
             }
 
-            &--three {
+            &--three
+            {
                 transform: rotate(-45deg);
                 padding-right: 10%;
             }
-
-            // &--four {
-            //     margin-bottom: rem(-90px);
-            // }
         }
     }
 }
