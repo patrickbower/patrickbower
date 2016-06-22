@@ -45,6 +45,19 @@
     }
 }
 
+.text
+{
+    &--small
+    {
+        font-size: $text-small;
+    }
+
+    &--paragraph
+    {
+        font-size: $p;
+    }
+}
+
 .strike
 {
     display: inline-block;
@@ -75,11 +88,3 @@
         right: rem(-20px);
     }
 }
-
-// .text
-// {
-//     &--upper
-//     {
-//         text-transform: uppercase;
-//     }
-// }
