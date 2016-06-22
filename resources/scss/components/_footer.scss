@@ -1,0 +1,23 @@
+.footer
+{
+    @extend %clearfix;
+    text-align: center;
+    position: relative;
+    top: rem(-45px);
+
+    @media only screen and (min-width: $media-desktop)
+    {
+        top: rem(-30px);
+        right: rem(30px);
+    }
+
+    &__link
+    {
+        margin: 0 10px;
+
+        @media only screen and (min-width: $media-desktop) {
+            float: right;
+        }
+
+    }
+}

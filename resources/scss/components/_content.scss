@@ -10,12 +10,20 @@
         min-height: 100vh;
     }
 
-    &-section--header {
+    &-section--header
+    {
         min-height: 100vh;
         @media only screen and (min-width: $media-mobile) {
             height: 100vh;
             min-height: rem(900px);
         }
+    }
+
+    &-section--footer
+    {
+        position: relative;
+        z-index: $z-index-super;
+        top: rem(-140px);
     }
 
     &-section {
@@ -84,7 +92,12 @@
             @media only screen and (min-width: $media-desktop) {
                 transform: rotate(-45deg);
                 margin-left: 30%;
+                margin-bottom: rem(-90px);
             }
+        }
+
+        &--footer {
+            margin-bottom: rem(-90px);
         }
     }
 
@@ -120,12 +133,9 @@
                 padding-right: 10%;
             }
 
-            &--four {
-                transform: rotate(45deg);
-                top: 35%;
-                right: -35%;
-                padding-left: 10%;
-            }
+            // &--four {
+            //     margin-bottom: rem(-90px);
+            // }
         }
     }
 }
