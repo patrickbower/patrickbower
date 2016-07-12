@@ -1,2 +1,4 @@
-/public
 /node_modules
+/source/images
+/source/scripts
+/source/styles
