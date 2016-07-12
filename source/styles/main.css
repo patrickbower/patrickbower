@@ -906,7 +906,7 @@ button {
     top: -8.75rem; }
   @media only screen and (min-width: 979px) {
     .content-section {
-      height: 50vh;
+      height: 30vh;
       width: 100vw;
       min-height: 31.25rem; } }
   .content-triangle__shape {
