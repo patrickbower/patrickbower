@@ -87,7 +87,7 @@ module.exports = function(grunt) {
                 options: {
                     config: '_config.yml',
                     src: 'source',
-                    dest: 'public'
+                    dest: '../patrickbower.com'
                 }
             }
         },
