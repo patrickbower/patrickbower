@@ -1,11 +1,11 @@
 # Personal Website of Patrick Bower
-An online presence of Patrick Bower, a front end developer and designer who wants a pimped out portfolio and introductory information on the WWW.
+This is a project to create an online presence for myself and showcase both my front end development and design work.
 
 ## Installation
-This project runs on nuthin' but Node (Grunt).
+Should anyone like to run this project they would only need node installed and to run Grunt commands seen inside the Gruntfile.js
 
 ## Usage
-Please visit the [wiki](./wiki.md) for my chosen Standards.
+Please visit the [wiki](./wiki.md) for my chosen standards on how I choose to build this site.
 
 ## Contributing
 This project is only open for the public to observe.
