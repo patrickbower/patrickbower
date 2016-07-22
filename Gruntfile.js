@@ -31,16 +31,26 @@ module.exports = function(grunt) {
         },
 
         // image optimisation
-        imagemin: {
-            dist: {
+        responsive_images: {
+            myTask: {
                 options: {
-                    optimizationLevel: 5
+                    sizes: [{
+                        name: '480',
+                        width: 480,
+                        height: 240
+                    },{
+                        name: '768',
+                        width: 768
+                    },{
+                        name: "1200",
+                        width: 1200
+                    }]
                 },
                 files: [{
-                    expand : true,
-                    cwd    : 'resources/imgs/',
-                    src    : ['**/*.{png,jpg,gif}'],
-                    dest   : 'source/images/'
+                    expand: true,
+                    src: ['*.{jpg,gif,png}'],
+                    cwd: 'resources/imgs/',
+                    dest: 'source/images'
                 }]
             }
         },
@@ -108,7 +118,7 @@ module.exports = function(grunt) {
             },
             images: {
                 files: 'resources/imgs/*.{png,jpg,gif}',
-                tasks: [ 'imagemin', 'jekyll' ],
+                tasks: [ 'responsive_images', 'jekyll' ],
             },
             jekyll: {
                 files: [
@@ -124,12 +134,13 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-svg-sprite');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-browserify');
 
-    grunt.registerTask('default', ['browserify', 'imagemin', 'sass', 'svg_sprite', 'autoprefixer', 'jekyll']);
+    grunt.registerTask('default', ['browserify', 'responsive_images', 'sass', 'svg_sprite', 'autoprefixer', 'jekyll']);
+    grunt.registerTask('test', ['responsive_images']);
 
 };
