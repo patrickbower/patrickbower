@@ -49,4 +49,11 @@
     {
         margin: rem(7px);
     }
+
+    &--inline
+    {
+        width: rem(25px);
+        height: rem(25px);
+        margin: 0 rem(5px) rem(-5px) 0;
+    }
 }
