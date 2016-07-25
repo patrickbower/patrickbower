@@ -118,12 +118,18 @@
         }
     }
 
+    &__area
+    {
+        margin: 0 rem(10px);
+    }
+
     // content__area's
     @media only screen and (min-width: $media-desktop)
     {
 
         &__area
         {
+            margin: 0;
             width: 50%;
             position: relative;
             transform-origin: top right;

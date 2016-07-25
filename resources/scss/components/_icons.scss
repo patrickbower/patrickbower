@@ -37,6 +37,12 @@
     {
         width: rem(80px);
         height: rem(80px);
+
+        &-sml
+        {
+            width: rem(35px);
+            height: rem(35px);
+        }
     }
 
     &--linkedin
@@ -48,12 +54,5 @@
     &--space-sml
     {
         margin: rem(7px);
-    }
-
-    &--inline
-    {
-        width: rem(25px);
-        height: rem(25px);
-        margin: 0 rem(5px) rem(-5px) 0;
     }
 }
