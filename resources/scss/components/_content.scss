@@ -103,7 +103,7 @@
 
         &--four
         {
-            background: $color-mischka;
+            background: $color-mako;
             @media only screen and (min-width: $media-desktop)
             {
                 transform: rotate(-45deg);
@@ -121,13 +121,13 @@
     &__area
     {
         margin: 0 rem(10px);
-    }
 
-    // content__area's
-    @media only screen and (min-width: $media-desktop)
-    {
+        @media only screen and (min-width: $media-tablet)
+        {
+            margin: 0 rem(30px);
+        }
 
-        &__area
+        @media only screen and (min-width: $media-desktop)
         {
             margin: 0;
             width: 50%;
