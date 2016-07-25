@@ -42,10 +42,12 @@ export class BackButton {
      * @function bindEvents
      */
     bindEvents () {
+        let instance = this;
 
         let go_back_one_event = {
             handleEvent: function(event) {
-                goBackOnePage();
+                event.preventDefault();
+                instance.goBackOnePage();
             }
         }
 
