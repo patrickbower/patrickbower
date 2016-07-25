@@ -28,6 +28,12 @@
         display: flex;
         justify-content: flex-start;
     }
+
+    &--middle
+    {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .leading--none {
