@@ -1,0 +1,16 @@
+.unicode
+{
+    line-height: 0;
+    position: relative;
+
+    &--back
+    {
+        top: 2px;
+    }
+
+    &--external-link-arrow
+    {
+        top: -5px;
+        margin-left: -10px;
+    }
+}
