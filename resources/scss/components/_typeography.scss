@@ -47,6 +47,11 @@
 
 .text
 {
+    &--bold
+    {
+        font-weight: bold;
+    }
+
     &--small
     {
         font-size: $text-small;

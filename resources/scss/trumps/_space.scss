@@ -1,0 +1,49 @@
+.space
+{
+    &--lrg
+    {
+        &-before
+        {
+            margin-top: rem(50px);
+        }
+
+        &-after
+        {
+            margin-bottom: rem(50px);
+        }
+    }
+
+    &--med
+    {
+        &-before
+        {
+            margin-top: rem(35px);
+        }
+
+        &-after
+        {
+            margin-bottom: rem(35px);
+        }
+    }
+
+    &--sml
+    {
+        &-before
+        {
+            margin-top: rem(20px);
+        }
+
+        &-after
+        {
+            margin-bottom: rem(20px);
+        }
+    }
+
+    &--none
+    {
+        margin-top: 0!important;
+        margin-bottom: 0!important;
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+    }
+}

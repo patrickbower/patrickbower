@@ -48,7 +48,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    src: ['*.{jpg,gif,png}'],
+                    src: ['**/*.{jpg,gif,png}'],
                     cwd: 'resources/imgs/',
                     dest: 'source/images'
                 }]
@@ -117,7 +117,7 @@ module.exports = function(grunt) {
                 tasks: [ 'svg_sprite', 'jekyll' ],
             },
             images: {
-                files: 'resources/imgs/*.{png,jpg,gif}',
+                files: 'resources/imgs/**/*.{png,jpg,gif}',
                 tasks: [ 'responsive_images', 'jekyll' ],
             },
             jekyll: {
