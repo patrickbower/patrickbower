@@ -1,8 +1,16 @@
-.link--underline
-{
-    &:hover,
-    &:focus
+.link {
+
+    &--underline
     {
-        text-decoration: underline;
+        &:hover,
+        &:focus
+        {
+            text-decoration: underline;
+        }
+    }
+
+    &--unicode
+    {
+        font-weight: bold;
     }
 }
