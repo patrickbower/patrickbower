@@ -8,6 +8,14 @@
         color: $color-white;
         padding: 0 rem(10px);
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        &-body
+        {
+            flex: 1 0 auto;
+        }
     }
 
     &-section--header
