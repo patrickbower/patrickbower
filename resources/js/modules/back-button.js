@@ -37,7 +37,7 @@ export class BackButton {
     }
 
     /**
-     * Go back in history and use previous page position
+     * Add event handlers.
      *
      * @function bindEvents
      */
@@ -45,11 +45,20 @@ export class BackButton {
 
         let go_back_one_event = {
             handleEvent: function(event) {
-                event.preventDefault();
-                window.history.back();
+                goBackOnePage();
             }
         }
 
-        window.addEventListener('click', go_back_one_event);
+        let button = document.querySelector('.' + this.selectors.button);
+        button.addEventListener('click', go_back_one_event);
+    }
+
+    /**
+     * Go back in history and use previous page position
+     *
+     * @function goBackOnePage
+     */
+    goBackOnePage () {
+        window.history.back();
     }
 }
