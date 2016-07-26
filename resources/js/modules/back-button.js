@@ -30,7 +30,7 @@ export class BackButton {
     /**
      * Initalise and setup at runtime.
      *
-     * @function init
+     * @function initilise function
      */
     init () {
         this.bindEvents();
