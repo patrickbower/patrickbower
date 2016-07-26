@@ -44,6 +44,7 @@
 @import "components/buttons";
 @import "components/button-color";
 @import "components/forms";
+
 // ~ Pieces of UI
 @import "components/content";
 @import "components/header";
@@ -63,5 +64,6 @@
 // Trumps: Helpers and overrides, e.g. .float-left { float:left !important;}
 @import "trumps/layout";
 @import "trumps/animations";
+@import "trumps/in-view";
 @import "trumps/visibility";
 @import "trumps/space";
