@@ -35,8 +35,50 @@ export class InView {
      * @function init
      */
     init () {
+
+        this.items = this.getItems();
+        this.windowPosition = this.getCurrentPosition();
+
+        this.setClasses();
         this.pageReturnTest();
         this.bindEvents();
+    }
+
+    /**
+     * Get and store all elements that can be animated
+     *
+     * @function getItems
+     * @return {Array} Elements on page with animated class
+     */
+    getItems() {
+        return document.querySelectorAll('.' + this.selectors.item);
+    }
+
+    /**
+     * Get the page position
+     *
+     * @function getItems
+     * @return {interger} Page position
+     */
+    getCurrentPosition () {
+        return window.pageYOffset + window.innerHeight;
+    }
+
+    /**
+     * Set classes to any elements below the viewport
+     *
+     * @function setClasses
+     */
+    setClasses () {
+        let instance = this;
+
+        Array.from(this.items).forEach(item => {
+
+            if (instance.testBelowViewPort(item)) {
+                item.classList.add(instance.selectors.ready);
+            }
+
+        });
     }
 
     /**
@@ -60,19 +102,31 @@ export class InView {
     scrollIntoViewPort (nextElement) {
         let element = document.querySelector(nextElement);
 
-        if (this.testViewPort(element)) {
+        if (this.testInViewPort(element)) {
             element.classList.add(this.selectors.play);
-            element.classList.remove(this.selectors.item);
         }
     }
 
     /**
      * check for element and if it's in viewport
      *
-     * @function testViewPort
+     * @function testInViewPort
      */
-    testViewPort (element) {
+    testInViewPort (element) {
+
         if (element && element.getBoundingClientRect().top <= window.innerHeight) {
+            return true;
+        }
+    }
+
+    /**
+     * Check for elements above the viewport
+     *
+     * @function testAboveViewPort
+     */
+    testBelowViewPort (element) {
+
+        if (element.getBoundingClientRect().top > this.windowPosition) {
             return true;
         }
     }
@@ -83,13 +137,13 @@ export class InView {
      * @function pageReturnTest
      */
     pageReturnTest () {
-        let instance = this;
-        let allItems = document.querySelectorAll('.' + this.selectors.item);
-
-        [].forEach.call(allItems, function(item) {
-            if (instance.testViewPort(item)) {
-                item.classList.remove(instance.selectors.ready);
-            }
-        });
+        // let instance = this;
+        // let allItems = document.querySelectorAll('.' + this.selectors.item);
+        //
+        // [].forEach.call(allItems, function(item) {
+        //     if (instance.testInViewPort(item)) {
+        //         item.classList.remove(instance.selectors.ready);
+        //     }
+        // });
     }
 }
