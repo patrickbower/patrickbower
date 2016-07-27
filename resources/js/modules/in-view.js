@@ -37,10 +37,11 @@ export class InView {
     init () {
 
         this.elementsArray = this.getItems();
-        this.windowPosition = this.getCurrentPosition();
+        this.windowHeight = this.getWindowHeight();
+        this.windowPosition = this.getScrollPosition();
 
+        this.setUp();
         this.bindEvents();
-        this.setClasses();
     }
 
     /**
@@ -54,13 +55,23 @@ export class InView {
     }
 
     /**
+     * Get and store all elements that can be animated
+     *
+     * @function getWindowHeight
+     * @return {Interger} Window height
+     */
+    getWindowHeight() {
+        return window.innerHeight;
+    }
+
+    /**
      * Get the page position
      *
      * @function getItems
      * @return {interger} Page position
      */
-    getCurrentPosition () {
-        return window.pageYOffset + window.innerHeight;
+    getScrollPosition () {
+        return this.windowHeight + window.pageYOffset;
     }
 
     /**
@@ -74,7 +85,7 @@ export class InView {
         // scroll event
         let scroll_event = {
             handleEvent: function(event) {
-                instance.scrollIntoViewPort('.' + instance.selectors.ready);
+                instance.scrollIntoViewPort();
             }
         }
 
@@ -84,17 +95,22 @@ export class InView {
     /**
      * Set classes to any elements below the viewport
      *
-     * @function setClasses
+     * @function setUp
      */
-    setClasses () {
+    setUp () {
         let instance = this;
 
-        Array.from(this.elementsArray).forEach(element => {
+        Array.from(this.elementsArray).forEach((element, index) => {
 
+            // set ready state to elements that can animate (ie: below the viewport)
             if (instance.testBelowViewPort(element)) {
                 element.classList.add(instance.selectors.ready);
-            }
 
+                // store the first found ready element
+                if (typeof this.nextReadyElement === 'undefined') {
+                    this.nextReadyElement = element;
+                }
+            }
         });
     }
 
@@ -104,12 +120,14 @@ export class InView {
      *
      * @function testInViewPort
      */
-    scrollIntoViewPort (nextReadyElement) {
-        let nextElement = document.querySelector(nextReadyElement);
+    scrollIntoViewPort () {
 
-        if (this.testInViewPort(nextElement)) {
-            nextElement.classList.remove(this.selectors.ready);
-            nextElement.classList.add(this.selectors.play);
+        if (this.testInViewPort(this.nextReadyElement)) {
+
+            this.nextReadyElement.classList.remove(this.selectors.ready);
+            this.nextReadyElement.classList.add(this.selectors.play);
+
+            this.nextReadyElement = document.querySelector('.' + this.selectors.ready);
         }
     }
 
@@ -120,7 +138,7 @@ export class InView {
      */
     testInViewPort (element) {
 
-        if (element && element.getBoundingClientRect().top <= window.innerHeight) {
+        if (element && element.getBoundingClientRect().top < this.windowHeight) {
             return true;
         }
     }
@@ -132,7 +150,7 @@ export class InView {
      */
     testBelowViewPort (element) {
 
-        if (element.getBoundingClientRect().top > this.windowPosition) {
+        if (element.getBoundingClientRect().top > this.windowHeight) {
             return true;
         }
     }
