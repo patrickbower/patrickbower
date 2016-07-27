@@ -3,7 +3,7 @@ import * as utility from '../utilities/_utilities';
 const defaults = {
     element: undefined,
     selectors: {
-        item: 'js-inview',
+        element: 'js-inview',
         ready: 'inview--ready',
         play: 'inview--play'
     }
@@ -36,12 +36,11 @@ export class InView {
      */
     init () {
 
-        this.items = this.getItems();
+        this.elementsArray = this.getItems();
         this.windowPosition = this.getCurrentPosition();
 
-        this.setClasses();
-        this.pageReturnTest();
         this.bindEvents();
+        this.setClasses();
     }
 
     /**
@@ -51,7 +50,7 @@ export class InView {
      * @return {Array} Elements on page with animated class
      */
     getItems() {
-        return document.querySelectorAll('.' + this.selectors.item);
+        return document.querySelectorAll('.' + this.selectors.element);
     }
 
     /**
@@ -65,23 +64,6 @@ export class InView {
     }
 
     /**
-     * Set classes to any elements below the viewport
-     *
-     * @function setClasses
-     */
-    setClasses () {
-        let instance = this;
-
-        Array.from(this.items).forEach(item => {
-
-            if (instance.testBelowViewPort(item)) {
-                item.classList.add(instance.selectors.ready);
-            }
-
-        });
-    }
-
-    /**
      * Add event handlers
      *
      * @function bindEvents
@@ -92,18 +74,42 @@ export class InView {
         // scroll event
         let scroll_event = {
             handleEvent: function(event) {
-                instance.scrollIntoViewPort('.' + instance.selectors.item);
+                instance.scrollIntoViewPort('.' + instance.selectors.ready);
             }
         }
 
         window.addEventListener('scroll', scroll_event);
     }
 
-    scrollIntoViewPort (nextElement) {
-        let element = document.querySelector(nextElement);
+    /**
+     * Set classes to any elements below the viewport
+     *
+     * @function setClasses
+     */
+    setClasses () {
+        let instance = this;
 
-        if (this.testInViewPort(element)) {
-            element.classList.add(this.selectors.play);
+        Array.from(this.elementsArray).forEach(element => {
+
+            if (instance.testBelowViewPort(element)) {
+                element.classList.add(instance.selectors.ready);
+            }
+
+        });
+    }
+
+    /**
+     * Find next ready elemnt, when it comes into
+     * viewport remove ready and append play to animate.
+     *
+     * @function testInViewPort
+     */
+    scrollIntoViewPort (nextReadyElement) {
+        let nextElement = document.querySelector(nextReadyElement);
+
+        if (this.testInViewPort(nextElement)) {
+            nextElement.classList.remove(this.selectors.ready);
+            nextElement.classList.add(this.selectors.play);
         }
     }
 
@@ -129,21 +135,5 @@ export class InView {
         if (element.getBoundingClientRect().top > this.windowPosition) {
             return true;
         }
-    }
-
-    /**
-     * For items above viewport on page reload
-     *
-     * @function pageReturnTest
-     */
-    pageReturnTest () {
-        // let instance = this;
-        // let allItems = document.querySelectorAll('.' + this.selectors.item);
-        //
-        // [].forEach.call(allItems, function(item) {
-        //     if (instance.testInViewPort(item)) {
-        //         item.classList.remove(instance.selectors.ready);
-        //     }
-        // });
     }
 }
