@@ -1,7 +1,7 @@
 'use strict';
 
 /**
-* Get the breakpoint set on :before of the body by CSS.
+* Get the breakpoint set on :before of <body> by CSS.
 *
 * @return {string} Breakpoint value.
 */

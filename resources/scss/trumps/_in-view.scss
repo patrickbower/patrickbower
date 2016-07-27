@@ -1,0 +1,23 @@
+.inview {
+
+    @media only screen and (min-width: $media-tablet) {
+
+        &--ready
+        {
+            margin-top: 200px;
+        }
+
+        &--play
+        {
+            animation: $animation-mediem forwards;
+            @include animation-keyframes(inview--play)
+            {
+                from {
+                    margin-top: 200px;
+                } to {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
