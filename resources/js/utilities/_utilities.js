@@ -4,5 +4,14 @@ import {ajax} from './ajax';
 import {breakpoint} from './breakpoint';
 import {capitalise} from './capitalise';
 import {parseHTML} from './parsehtml';
+import {trigger} from './trigger';
 
-export { settings, init, ajax, breakpoint, capitalise, parseHTML };
+export {
+    settings,
+    init,
+    ajax,
+    breakpoint,
+    capitalise,
+    parseHTML,
+    trigger
+};
