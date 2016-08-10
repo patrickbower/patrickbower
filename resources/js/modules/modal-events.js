@@ -33,6 +33,6 @@ export class ModalEvents {
      * @function init
      */
     init () {
-        console.log('modal-events');
+        console.log('modal-events is here');
     }
 }

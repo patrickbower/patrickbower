@@ -22,6 +22,8 @@ export function init (context) {
             // get class name
             const js_class = element.getAttribute('data-init');
 
+            console.log(js_class);
+
             const properties = {};
             properties.element = element;
 

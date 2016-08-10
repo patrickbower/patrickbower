@@ -9,5 +9,5 @@ import {init} from './utilities/init';
 * @function self invoking
 */
 window.onload = function() {
-  init(document);
+    init(document);
 };
