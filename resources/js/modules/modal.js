@@ -4,13 +4,14 @@ const defaults = {
     element: undefined,
     selectors: {
         template: 'js-modal-template',
-        start_button: 'js-modal-start',
+        modal_parent: 'js-modal-parent',
+        open_button: 'js-modal-open',
         modal: 'modal'
     }
 }
 
 /**
- *
+ * Default modal
  *
  * @module Modal
  * @class Modal
@@ -67,18 +68,25 @@ export class Modal {
     bindStartEvents () {
         let instance = this;
 
-        let start_modal_event = {
+        let open_modal_event = {
             handleEvent(event) {
+
                 event.preventDefault();
-                instance.setHash(instance.getHash(event.currentTarget));
+
+                if (event.target.classList.contains(instance.selectors.open_button)) {
+
+                    instance.button = event.target;
+
+                    instance.getHash();
+                    instance.setHash();
+                }
+
             }
         }
 
-        let startButtons = document.querySelectorAll('.' + this.selectors.start_button);
+        let modalParent = document.querySelector('.' + this.selectors.modal_parent);
+        modalParent.addEventListener('click', open_modal_event);
 
-        Array.from(startButtons).forEach(button => {
-            button.addEventListener('click', start_modal_event);
-        });
     }
 
     /**
@@ -86,9 +94,8 @@ export class Modal {
      *
      * @function getHash
      */
-    getHash (currentTarget) {
-        let hash = currentTarget.getAttribute('data-modal');
-        return hash;
+    getHash () {
+        this.hash = this.button.getAttribute('data-modal');
     }
 
     /**
@@ -96,8 +103,17 @@ export class Modal {
      *
      * @function setHash
      */
-    setHash (hash) {
-        this.modal.setAttribute('id', hash);
-        window.location.hash = hash;
+    setHash () {
+        // this.modal.setAttribute('id', this.hash);
+        window.location.hash = this.hash;
     }
+
+    /**
+     * Get modal content via Ajax
+     *
+     * @function getModalContents
+     */
+    //  getModalContents () {
+    //      console.log('getModalContents');
+    //  }
 }
