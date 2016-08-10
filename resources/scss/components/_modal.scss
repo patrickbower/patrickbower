@@ -1,12 +1,5 @@
 .modal
 {
-    display: none;
-
-    &:target
-    {
-      display: block;
-    }
-
     &-active
     {
         position: relative;
@@ -97,4 +90,16 @@
             background: lighten($color-mine-shaft, 5%);
         }
     }
+}
+
+// js states
+.modal
+{
+    display: none;
+    
+}
+
+div[class^="modal"]:target
+{
+  display: block;
 }

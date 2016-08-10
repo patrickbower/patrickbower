@@ -70,25 +70,15 @@ export class Modal {
         let start_modal_event = {
             handleEvent(event) {
                 event.preventDefault();
-                let hash = instance.getHash(event.currentTarget);
-                instance.setHash(hash);
+                instance.setHash(instance.getHash(event.currentTarget));
             }
         }
 
         let startButtons = document.querySelectorAll('.' + this.selectors.start_button);
+
         Array.from(startButtons).forEach(button => {
             button.addEventListener('click', start_modal_event);
         });
-
-        // CSS Stuff
-        // <a href="#modal-2" data-stamp="#modal-2">
-        //
-        // [id^=modal-]:target
-        // {
-        //
-        // }
-        //
-        // <div id="modal-content">
     }
 
     /**
@@ -97,9 +87,7 @@ export class Modal {
      * @function getHash
      */
     getHash (currentTarget) {
-        return document.querySelector(`[data-stamp=${window.location.hash}]`);
-
-        let [url, hash] = currentTarget.href.split('#');
+        let hash = currentTarget.getAttribute('data-modal');
         return hash;
     }
 
