@@ -4,9 +4,10 @@ const defaults = {
     element: undefined,
     selectors: {
         template: 'js-modal-template',
-        // modal_listener: 'js-modal-listener',
         open_button: 'js-modal-open',
-        modal: 'modal'
+        modal: 'modal',
+        model_content: 'js-model-template--content',
+        ajax_fragment: 'js-ajax'
     }
 }
 
@@ -38,6 +39,7 @@ export class Modal {
     init () {
         this.getTemplate();
         this.setTemplate();
+        this.defineElements();
         this.bindEvents();
     }
 
@@ -57,7 +59,16 @@ export class Modal {
      */
     setTemplate () {
         document.body.insertAdjacentHTML('beforeend', this.modalTemplate);
+    }
+
+    /**
+    * Store created modal elements
+    *
+    * @function defineElements
+    */
+    defineElements () {
         this.modal = document.querySelector('.' + this.selectors.modal);
+        this.modelContent = this.modal.querySelector('.' + this.selectors.model_content);
     }
 
     /**
@@ -117,6 +128,18 @@ export class Modal {
      * @function fetch
      */
      fetch () {
-        this.href = this.button.href;
+         let instance = this;
+
+        // ajax util function
+        utility.ajax(this.button.href, data => {
+
+            // get fragment
+            let html_fragment = data.querySelector('.' + this.selectors.ajax_fragment);
+
+            // place and initalise
+            instance.modelContent.appendChild(html_fragment);
+            utility.init(html_fragment);
+
+        });
      }
 }
