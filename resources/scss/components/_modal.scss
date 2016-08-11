@@ -96,10 +96,10 @@
 .modal
 {
     display: none;
-    
+
 }
 
 div[class^="modal"]:target
 {
-  display: block;
+    display: block;
 }

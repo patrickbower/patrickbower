@@ -4,7 +4,7 @@ const defaults = {
     element: undefined,
     selectors: {
         template: 'js-modal-template',
-        modal_parent: 'js-modal-parent',
+        // modal_listener: 'js-modal-listener',
         open_button: 'js-modal-open',
         modal: 'modal'
     }
@@ -31,18 +31,18 @@ export class Modal {
     }
 
     /**
-     * Initalise module
+     * Initalise functions
      *
      * @function init
      */
     init () {
         this.getTemplate();
         this.setTemplate();
-        this.bindStartEvents();
+        this.bindEvents();
     }
 
     /**
-     * getTemplate
+     * Find and store the template from the template element.
      *
      * @function getTemplate
      */
@@ -51,7 +51,7 @@ export class Modal {
     }
 
     /**
-     * setTemplate
+     * Add modal template into the HTML ready to used.
      *
      * @function setTemplate
      */
@@ -61,11 +61,11 @@ export class Modal {
     }
 
     /**
-     * bindStartEvents
+     * Add the events to start the modal up
      *
-     * @function bindStartEvents
+     * @function bindEvents
      */
-    bindStartEvents () {
+    bindEvents () {
         let instance = this;
 
         let open_modal_event = {
@@ -79,18 +79,19 @@ export class Modal {
 
                     instance.getHash();
                     instance.setHash();
+                    instance.fetch();
                 }
 
             }
         }
 
-        let modalParent = document.querySelector('.' + this.selectors.modal_parent);
-        modalParent.addEventListener('click', open_modal_event);
-
+        // event delagation
+        this.element.addEventListener('click', open_modal_event);
     }
 
     /**
-     * getHash
+     * Store the hash from the data atribute
+     * on the start element (button).
      *
      * @function getHash
      */
@@ -99,21 +100,23 @@ export class Modal {
     }
 
     /**
-     * setHash
+     * Put hash into modal id first then
+     * append the hash to the URL to activate
+     * the CSS :target property on the modal.
      *
      * @function setHash
      */
     setHash () {
-        // this.modal.setAttribute('id', this.hash);
+        this.modal.setAttribute('id', this.hash);
         window.location.hash = this.hash;
     }
 
     /**
      * Get modal content via Ajax
      *
-     * @function getModalContents
+     * @function fetch
      */
-    //  getModalContents () {
-    //      console.log('getModalContents');
-    //  }
+     fetch () {
+        this.href = this.button.href;
+     }
 }
