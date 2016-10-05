@@ -8,7 +8,8 @@ const defaults = {
         close_button: 'js-modal-close',
         fragment_selector: 'js-ajax',
         modal: 'js-modal-window',
-        modal_content: 'js-modal-content'
+        modal_content: 'js-modal-content',
+        modal_active: 'modal-active'
     }
 }
 
@@ -91,11 +92,13 @@ export class Modals {
     launchModal(){
         this.displayModal();
         this.getScrollPosition();
+        this.hideInitialScroll();
         this.fetch(this.findURL(window.location.hash));
     }
 
     closeModal() {
         this.hideModal();
+        this.displayInitialScroll();
         this.setScrollPosition();
         this.removeModalContents();
     }
@@ -114,6 +117,14 @@ export class Modals {
 
     setScrollPosition() {
         document.body.scrollTop = this.scrollPosition;
+    }
+
+    hideInitialScroll() {
+        document.body.classList.add(this.selectors.modal_active);
+    }
+
+    displayInitialScroll() {
+        document.body.classList.remove(this.selectors.modal_active);
     }
 
     findURL(hash) {
