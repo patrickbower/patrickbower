@@ -4,9 +4,5 @@
 * @return {string} Breakpoint value.
 */
 export function breakpoint(){
-
-    let breakpoint = {};
-    breakpoint.value = window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '');
-
-    return breakpoint;
+    return window.getComputedStyle(document.querySelector('body'), ':before').getPropertyValue('content').replace(/\"/g, '');
 };

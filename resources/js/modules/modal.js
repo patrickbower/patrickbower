@@ -42,10 +42,18 @@ export class Modal {
     bindEvents () {
         let instance = this;
 
-        // open
+        /**
+         * Handle button clicks to launch modal
+         *
+         * @event open_modal_event
+         */
         let open_modal_event = {
             handleEvent(event) {
 
+                if (utility.breakpoint() !== 'desktop') return;
+
+                // Check click's from modal launch button and we're on desktop.
+                // If mobile breakpoint then default back to page visit.
                 if (event.target.classList.contains(instance.selectors.open_button)) {
 
                     event.preventDefault();
@@ -54,7 +62,6 @@ export class Modal {
             }
         }
 
-        // open listener
         this.element.addEventListener('click', open_modal_event);
     }
 }
