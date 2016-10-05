@@ -61,6 +61,11 @@ export class Modals {
         document.body.insertAdjacentHTML('afterbegin', this.modalTemplate);
     }
 
+    /**
+     * Get and store basic elements to instance
+     *
+     * @function defineElements
+     */
     defineElements() {
         this.modal = document.querySelector('.' + this.selectors.modal);
         this.modalContent = this.modal.querySelector('.' + this.selectors.modal_content);
@@ -74,13 +79,23 @@ export class Modals {
     bindEvents () {
         let instance = this;
 
-        // hash change
+        /**
+         * Handle any changes to the url hash
+         * which will manipulate modal states
+         *
+         * @event hash_change
+         */
         let hash_change = {
             handleEvent(event) {
 
+                // add hash
                 if (window.location.hash) {
+
                     instance.launchModal();
+
+                // remove hash
                 } else {
+
                     instance.closeModal();
                 }
             }
@@ -89,6 +104,11 @@ export class Modals {
         window.addEventListener('hashchange', hash_change);
     }
 
+    /**
+     * Functions to perform when opening a modal
+     *
+     * @function launchModal
+     */
     launchModal(){
         this.displayModal();
         this.getScrollPosition();
@@ -96,6 +116,11 @@ export class Modals {
         this.fetch(this.findURL(window.location.hash));
     }
 
+    /**
+     * Functions to perform when closing a modal
+     *
+     * @function closeModal
+     */
     closeModal() {
         this.hideModal();
         this.displayInitialScroll();
@@ -103,30 +128,66 @@ export class Modals {
         this.removeModalContents();
     }
 
+    /**
+     * Shows modal via css
+     *
+     * @function displayModal
+     */
     displayModal() {
         this.modal.classList.add('active');
     }
 
+    /**
+     * Hides modal via css
+     *
+     * @function hideModal
+     */
     hideModal() {
         this.modal.classList.remove('active');
     }
 
+    /**
+     * Store scroll Y position ready for hiding modal
+     *
+     * @function getScrollPosition
+     */
     getScrollPosition() {
-        this.scrollPosition = document.body.scrollTop;
+        this.scrollPosition = window.pageYOffset || document.body.scrollTop;
     }
 
+    /**
+     * Move scrollbar back to where it was before modal opened
+     *
+     * @function setScrollPosition
+     */
     setScrollPosition() {
-        document.body.scrollTop = this.scrollPosition;
+        document.documentElement.scrollTop = document.body.scrollTop = this.scrollPosition;
     }
 
+    /**
+     * Prevent scrolling on background page and double scroll bars
+     *
+     * @function hideInitialScroll
+     */
     hideInitialScroll() {
         document.body.classList.add(this.selectors.modal_active);
     }
 
+    /**
+     * Bring back scroll bar on background page
+     *
+     * @function displayInitialScroll
+     */
     displayInitialScroll() {
         document.body.classList.remove(this.selectors.modal_active);
     }
 
+    /**
+     * Find button with hash string and return href
+     *
+     * @function displayInitialScroll
+     * @return {string} - href for non-js users
+     */
     findURL(hash) {
         let modal_name = hash.substring(1);
         let launch_button = document.querySelector(`[data-modal="${modal_name}"]`);
@@ -134,19 +195,33 @@ export class Modals {
         return launch_button.getAttribute('href');
     }
 
+    /**
+     * Ajax to get modal content
+     *
+     * @function fetch
+     */
     fetch (href) {
         utility.ajax(href, data => {
-
             let html = data.querySelector('#' + this.selectors.fragment_selector);
             this.addContent(html);
         });
     }
 
+    /**
+     * Add content to modal
+     *
+     * @function addContent
+     */
     addContent(html) {
         this.modalContent.appendChild(html);
         utility.init(html);
     }
 
+    /**
+     * Clear content from modal and make blank
+     *
+     * @function removeModalContents
+     */
     removeModalContents() {
         this.modalContent.innerHTML = "";
     }
