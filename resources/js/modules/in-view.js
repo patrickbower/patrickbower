@@ -102,6 +102,8 @@ export class InView {
 
         Array.from(this.elementsArray).forEach((element, index) => {
 
+            if (utility.breakpoint() !== 'desktop') return;
+
             // set ready state to elements that can animate (ie: below the viewport)
             if (instance.testBelowViewPort(element)) {
                 element.classList.add(instance.selectors.ready);
