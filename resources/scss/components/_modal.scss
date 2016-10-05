@@ -1,5 +1,12 @@
 .modal
 {
+    display: none;
+
+    &.active
+    {
+        display: block;
+    }
+
     &-active
     {
         position: relative;
@@ -89,17 +96,9 @@
         {
             background: lighten($color-mine-shaft, 5%);
         }
+
+        .icon--close {
+            pointer-events: none;
+        }
     }
-}
-
-// js states
-.modal
-{
-    display: none;
-
-}
-
-div[class^="modal"]:target
-{
-    display: block;
 }

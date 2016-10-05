@@ -4,7 +4,6 @@ import {ajax} from './ajax';
 import {breakpoint} from './breakpoint';
 import {capitalise} from './capitalise';
 import {parseHTML} from './parsehtml';
-import {trigger} from './trigger';
 
 export {
     settings,
@@ -12,6 +11,5 @@ export {
     ajax,
     breakpoint,
     capitalise,
-    parseHTML,
-    trigger
+    parseHTML
 };

@@ -1,17 +1,19 @@
-<template id="js-modal-template">
-    <div class="modal modal__window-spring js-modal-template-window">
-        <div class="modal__window">
-            <div class="grid">
-                <div class="column width-100">
-                    <a href="#" class="modal__close leading--none js-modal-template-close">
-                        <svg class="icon--close">
-                            <use xlink:href="#icon--close"></use>
-                        </svg>
-                        <span class="visually-hidden">close</span>
-                    </a>
+<div data-init="modals">
+    <template id="js-modal-template">
+        <div class="modal modal__window-spring js-modal-window" id="modal">
+            <div class="modal__window">
+                <div class="grid">
+                    <div class="column width-100">
+                        <a href="#" class="modal__close leading--none js-modal-close">
+                            <svg class="icon--close">
+                                <use xlink:href="#icon--close"></use>
+                            </svg>
+                            <span class="visually-hidden">close</span>
+                        </a>
+                    </div>
                 </div>
+                <div class="modal__content belt js-modal-content"></div>
             </div>
-            <div class="modal__content belt js-modal-template--content"></div>
         </div>
-    </div>
-</template>
+    </template>
+</div>
