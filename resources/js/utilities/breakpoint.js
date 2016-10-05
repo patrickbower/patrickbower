@@ -1,5 +1,3 @@
-'use strict';
-
 /**
 * Get the breakpoint set on :before of <body> by CSS.
 *

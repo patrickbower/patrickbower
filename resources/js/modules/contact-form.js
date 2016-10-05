@@ -19,10 +19,10 @@ const defaults = {
 export class ContactForm {
 
     /**
-     * Launches full page model.
+     * Launches full page modal.
      *
      * @constructor
-     * @param {object} the origin module that launches the model
+     * @param {object} the origin module that launches the modal
      */
     constructor(properties = {}) {
 

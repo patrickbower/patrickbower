@@ -10,7 +10,7 @@ const defaults = {
 
 /**
  * Create direct email link instead of linking
- * to contact form model.
+ * to contact form modal.
  *
  * @module Email
  * @class Email

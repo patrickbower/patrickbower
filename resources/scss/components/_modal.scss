@@ -1,6 +1,13 @@
-.model
+.modal
 {
-    &--active
+    display: none;
+
+    &.active
+    {
+        display: block;
+    }
+
+    &-active
     {
         position: relative;
         overflow-y: hidden;
@@ -16,7 +23,7 @@
         color: $color-white;
         animation: 700ms forwards;
 
-        @include animation-keyframes(model-window--slide-in-from-top) {
+        @include animation-keyframes(modal-window--slide-in-from-top) {
             from {
                 top: -200vw;
                 bottom: 200vw;
@@ -52,7 +59,7 @@
         padding: rem(100px) rem(10px) rem(10px) rem(10px);
         opacity: 0;
         animation: 300ms forwards 700ms;
-        @include animation-keyframes(model-content--fade-in) {
+        @include animation-keyframes(modal-content--fade-in) {
             from {
                 opacity: 0;
             } to {
@@ -77,7 +84,7 @@
         background: rgba(51, 51, 51, 0.25);
         opacity: 0;
         animation: 300ms forwards 700ms;
-        @include animation-keyframes(model-close-button--fade-in) {
+        @include animation-keyframes(modal-close-button--fade-in) {
             from {
                 opacity: 0;
             } to {
@@ -88,6 +95,10 @@
         &:hover
         {
             background: lighten($color-mine-shaft, 5%);
+        }
+
+        .icon--close {
+            pointer-events: none;
         }
     }
 }
