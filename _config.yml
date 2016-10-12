@@ -1,4 +1,4 @@
-# exclude: ['filename']
+exclude: ['*.map']
 
 ## _config.build.yml sets future and show_drafts to false on `grunt build`
 # future: true
