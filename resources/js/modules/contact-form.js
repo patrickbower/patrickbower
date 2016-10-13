@@ -13,6 +13,7 @@ const defaults = {
 /**
  * Enhance the contact form.
  *
+
  * @module Contact Form
  * @class ContactForm
  */
