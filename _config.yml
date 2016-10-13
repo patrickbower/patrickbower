@@ -1,5 +1,5 @@
 # Exclude files from copy across to patrickbower.com repo
-exclude: ['*.map']
+# exclude: ['*.map']
 
 # Do not erase (clean), before adding jekyll rebuilds
-keep_files: [ 'images', 'scripts', 'styles' ]
+keep_files: [ 'images', 'scripts', 'styles', 'fonts', 'CNAME' ]
