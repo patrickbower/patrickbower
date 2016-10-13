@@ -31,17 +31,17 @@ module.exports = function(grunt) {
         },
 
         // css minify
-        // cssmin: {
-        //     target: {
-        //         files: [{
-        //             expand: true,
-        //             cwd: '../patrickbower.com/styles',
-        //             src: ['*.css', '!*.min.css'],
-        //             dest: '../patrickbower.com/styles',
-        //             ext: '.min.css'
-        //         }]
-        //     }
-        // },
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: 'build/styles',
+                    src: ['*.css'],
+                    dest: '../patrickbower.com/styles',
+                    ext: '.css'
+                }]
+            }
+        },
 
         // image optimisation
         responsive_images: {
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
                         name: '768',
                         width: 768
                     },{
-                        name: "1200",
+                        name: '1200',
                         width: 1200
                     }]
                 },
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                     expand: true,
                     src: ['**/*.{jpg,gif,png}'],
                     cwd: 'resources/imgs/',
-                    dest: 'build/images/'
+                    dest: 'build/images'
                 }]
             }
         },
@@ -105,16 +105,16 @@ module.exports = function(grunt) {
         },
 
         // minify js
-        // uglify: {
-        //     options: {
-        //         mangle: false
-        //     },
-        //     my_target: {
-        //         files: {
-        //             '../patrickbower.com/scripts/main.min.js': '../patrickbower.com/scripts/.main.js'
-        //         }
-        //     }
-        // },
+        uglify: {
+            options: {
+                mangle: false
+            },
+            my_target: {
+                files: {
+                    '../patrickbower.com/scripts/main.js': 'build/scripts/main.js'
+                }
+            }
+        },
 
         // jekyll
         jekyll: {
@@ -130,12 +130,10 @@ module.exports = function(grunt) {
             stylesheets: {
                 files: [ 'resources/scss/**/*.scss'],
                 tasks: [ 'sass', 'autoprefixer' ],
-                // 'cssmin'
             },
             scripts: {
                 files: [ 'resources/js/**/*.js' ],
                 tasks: [ 'browserify' ],
-                //  'uglify'
             },
             images: {
                 files: 'resources/imgs/**/*.{png,jpg,gif}',
@@ -152,9 +150,20 @@ module.exports = function(grunt) {
                     'templates/pages/*.html'
                 ],
                 tasks: ['jekyll']
-            },
+            }
+        },
+
+        // copy
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'build',
+                src: ['**', '!scripts/*', '!styles/*'],
+                dest: '../patrickbower.com'
+            }
         }
-    });
+
+});
 
     grunt.loadNpmTasks('grunt-svg-sprite');
     grunt.loadNpmTasks('grunt-autoprefixer');
@@ -165,7 +174,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['jekyll']);
+    grunt.registerTask('build', [ 'sass', 'autoprefixer', 'browserify', 'responsive_images', 'svg_sprite', 'jekyll' ]);
+    grunt.registerTask('production', [ 'copy', 'uglify', 'cssmin' ]);
 
 };
