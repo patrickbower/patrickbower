@@ -1,19 +1,5 @@
-exclude: ['*.map']
+# Exclude files from copy across to patrickbower.com repo
+# exclude: ['*.map']
 
-## _config.build.yml sets future and show_drafts to false on `grunt build`
-# future: true
-# show_drafts: true
-#
-# permalink: '/blog/:title'
-# paginate: 5
-# paginate_path: '/page:num'
-#
-## Markdown library
-# markdown: kramdown
-#
-## Site settings
-# baseurl: ""
-# url: ""
-#
-## Varibles
-# sitename: "Jekyll & Grunt"
+# Do not erase (clean), before adding jekyll rebuilds
+keep_files: [ 'images', 'scripts', 'styles', 'fonts', 'CNAME' ]

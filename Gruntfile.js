@@ -9,12 +9,12 @@ module.exports = function(grunt) {
         // sass
         sass: {
             options: {
-                sourceMap: true,
+                sourceMap: false,
                 sourceMapContents: true
             },
             dist: {
                 files: {
-                    'source/styles/main.css': 'resources/scss/main.scss'
+                    '../patrickbower.com/styles/main.css': 'resources/scss/main.scss'
                 }
             }
         },
@@ -25,8 +25,21 @@ module.exports = function(grunt) {
                 browsers: ['last 2 versions', 'ie 8', 'ie 9']
             },
             dist: {
-                src: 'source/styles/main.css',
-                dest: 'source/styles/main.css'
+                src: '../patrickbower.com/styles/main.css',
+                dest: '../patrickbower.com/styles/main.css'
+            }
+        },
+
+        // css minify
+        cssmin: {
+            target: {
+                files: [{
+                    expand: true,
+                    cwd: '../patrickbower.com/styles',
+                    src: ['*.css', '!*.min.css'],
+                    dest: '../patrickbower.com/styles',
+                    ext: '.min.css'
+                }]
             }
         },
 
@@ -50,7 +63,8 @@ module.exports = function(grunt) {
                     expand: true,
                     src: ['**/*.{jpg,gif,png}'],
                     cwd: 'resources/imgs/',
-                    dest: 'source/images'
+                    // dest: 'source/images'
+                    dest: '../patrickbower.com/images/'
                 }]
             }
         },
@@ -81,12 +95,24 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 files: {
-                    './source/scripts/main.min.js': ['./resources/js/main.js']
+                    '../patrickbower.com/scripts/.main.js': './resources/js/main.js'
                 },
                 options: {
                     transform: [
                         ['babelify', { presets: ['es2015'] }]
                     ]
+                }
+            }
+        },
+
+        // minify js
+        uglify: {
+            options: {
+                mangle: false
+            },
+            my_target: {
+                files: {
+                    '../patrickbower.com/scripts/main.min.js': '../patrickbower.com/scripts/.main.js'
                 }
             }
         },
@@ -106,19 +132,19 @@ module.exports = function(grunt) {
         watch: {
             stylesheets: {
                 files: [ 'resources/scss/**/*.scss'],
-                tasks: [ 'sass', 'autoprefixer', 'jekyll' ],
+                tasks: [ 'sass', 'autoprefixer', 'cssmin' ],
             },
             scripts: {
                 files: [ 'resources/js/**/*.js' ],
-                tasks: [ 'browserify', 'jekyll' ],
+                tasks: [ 'browserify', 'uglify' ],
+            },
+            images: {
+                files: 'resources/imgs/**/*.{png,jpg,gif}',
+                tasks: [ 'responsive_images'],
             },
             sprite: {
                 files: 'resources/icon/*.svg',
                 tasks: [ 'svg_sprite', 'jekyll' ],
-            },
-            images: {
-                files: 'resources/imgs/**/*.{png,jpg,gif}',
-                tasks: [ 'responsive_images', 'jekyll' ],
             },
             jekyll: {
                 files: [
@@ -140,7 +166,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-jekyll');
     grunt.loadNpmTasks('grunt-browserify');
 
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+
     grunt.registerTask('default', ['browserify', 'responsive_images', 'sass', 'svg_sprite', 'autoprefixer', 'jekyll']);
-    grunt.registerTask('test', ['responsive_images']);
+    // grunt.registerTask('test', ['responsive_images']);
 
 };
