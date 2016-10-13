@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'source/styles/main.css': 'resources/scss/main.scss'
+                    '../patrickbower.com/styles.main.css': 'resources/scss/main.scss'
                 }
             }
         },
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 files: {
-                    './source/scripts/main.min.js': ['./resources/js/main.js']
+                    '../patrickbower.com/scripts/.main.js': './resources/js/main.js'
                 },
                 options: {
                     transform: [
@@ -107,11 +107,11 @@ module.exports = function(grunt) {
         watch: {
             stylesheets: {
                 files: [ 'resources/scss/**/*.scss'],
-                tasks: [ 'sass', 'autoprefixer', 'jekyll' ],
+                tasks: [ 'sass', 'autoprefixer' ],
             },
             scripts: {
                 files: [ 'resources/js/**/*.js' ],
-                tasks: [ 'browserify', 'jekyll' ],
+                tasks: [ 'browserify' ],
             },
             sprite: {
                 files: 'resources/icon/*.svg',
