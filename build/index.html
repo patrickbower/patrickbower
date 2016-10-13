@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
     <title>Patrick Bower Home</title>
+
     <meta name="description" content="Web Devolopment &amp; Design Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- link rel="apple-touch-icon" href="apple-touch-icon.png" -->
+
     <script>
         (function() {
             var html = document.documentElement;
             html.className = html.className.replace("no-js", "js");
         })();
     </script>
+
     <link rel="stylesheet" href="/styles/main.css">
+
 </head>
+
 <!--[if IE 8]><body class="lte-ie9 lt-ie9"> <![endif]-->
 <!--[if IE 9]><body class="lte-ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <body data-init="in-view"> <!--<![endif]-->
@@ -25,7 +33,8 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div data-init="modals">
+<main>
+    <div data-init="modals">
     <template id="js-modal-template">
         <div class="modal modal__window-spring js-modal-window" id="modal">
             <div class="modal__window">
@@ -46,28 +55,26 @@
 </div>
 
 <div class="content">
-    <div class="content-section--header">
-        <header>
-    <a href="#" class="branding-diamond branding-oblong">
-        <svg class="icon--pb icon-color--mako branding-diamond__icon branding-oblong__icon">
-            <use xlink:href="#icon--pb"></use>
-        </svg>
-    </a>
-    <div class="header belt">
-        <h1 class="h1 title-name">
-            <span class="title-text title-name__first">Patrick</span>
-            <hr class="title-name__slash">
-            <span class="title-text title-name__last">Bower</span>
-            <span class="title-sub">
-                <span class="title-sub__a">Coder</span>
-                <span class="title-sub__b">Creative</span>
-            </span>
-        </h1>
-    </div>
-</header>
+    <header class="content-section--header">
+        <a href="#" class="branding-diamond branding-oblong">
+    <svg class="icon--pb icon-color--mako branding-diamond__icon branding-oblong__icon">
+        <use xlink:href="#icon--pb"></use>
+    </svg>
+</a>
+<div class="header belt">
+    <h1 class="h1 title-name">
+        <span class="title-text title-name__first">Patrick</span>
+        <hr class="title-name__slash">
+        <span class="title-text title-name__last">Bower</span>
+        <span class="title-sub">
+            <span class="title-sub__a">Coder</span>
+            <span class="title-sub__b">Creative</span>
+        </span>
+    </h1>
+</div>
 
-    </div>
-    <div class="content-section">
+    </header>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--zero">
             <div class="content__area content__area--zero">
                 <div class="intro intro--media">
@@ -81,8 +88,8 @@
 
             </div>
         </div>
-    </div>
-    <div class="content-section">
+    </article>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--one js-inview">
             <div class="content__area content__area--one">
                 <div class="development" data-init="modal">
@@ -112,8 +119,8 @@
 
             </div>
         </div>
-    </div>
-    <div class="content-section">
+    </article>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--two js-inview">
             <div class="content__area content__area--two">
                 <div class="design" data-init="modal">
@@ -143,8 +150,8 @@
 
             </div>
         </div>
-    </div>
-    <div class="content-section">
+    </article>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--three js-inview">
             <div class="content__area content__area--three">
                 <div class="contact" data-init="modal">
@@ -175,11 +182,12 @@
 
             </div>
         </div>
-    </div>
-    <div class="content-section">
+    </article>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--four content-triangle__shape--footer js-inview"></div>
-    </div>
-    <div class="footer">
+    </article>
+    <footer>
+        <div class="footer">
     <a href="https://www.linkedin.com/in/patrick-bower" class="footer__link"  target="_blank">
         <svg class="icon--linkedin icon-color--white footer__link-icon">
             <use xlink:href="#icon--linkedin"></use>
@@ -192,9 +200,11 @@
     </a>
 </div>
 
+    </footer>
 </div>
 
 
+</main>
 
 <script src="/scripts/main.js"></script>
 

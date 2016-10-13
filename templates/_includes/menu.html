@@ -1,37 +1,39 @@
 <div class="content">
-    <div class="content-section--header">
+    <header class="content-section--header">
         {% include header.html %}
-    </div>
-    <div class="content-section">
+    </header>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--zero">
             <div class="content__area content__area--zero">
                 {% include intro.html %}
             </div>
         </div>
-    </div>
-    <div class="content-section">
+    </article>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--one js-inview">
             <div class="content__area content__area--one">
                 {% include development.html %}
             </div>
         </div>
-    </div>
-    <div class="content-section">
+    </article>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--two js-inview">
             <div class="content__area content__area--two">
                 {% include design.html %}
             </div>
         </div>
-    </div>
-    <div class="content-section">
+    </article>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--three js-inview">
             <div class="content__area content__area--three">
                 {% include contact.html %}
             </div>
         </div>
-    </div>
-    <div class="content-section">
+    </article>
+    <article class="content-section">
         <div class="content-triangle__shape content-triangle__shape--four content-triangle__shape--footer js-inview"></div>
-    </div>
-    {% include footer.html %}
+    </article>
+    <footer>
+        {% include footer.html %}
+    </footer>
 </div>
