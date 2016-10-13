@@ -1,3 +1,6 @@
+source: 'templates'
+destination: 'build'
+
 # Exclude files from copy across to patrickbower.com repo
 # exclude: ['*.map']
 
