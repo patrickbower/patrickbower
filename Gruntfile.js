@@ -50,7 +50,8 @@ module.exports = function(grunt) {
                     expand: true,
                     src: ['**/*.{jpg,gif,png}'],
                     cwd: 'resources/imgs/',
-                    dest: 'source/images'
+                    // dest: 'source/images'
+                    dest: '../patrickbower.com/images/'
                 }]
             }
         },
@@ -118,7 +119,7 @@ module.exports = function(grunt) {
             },
             images: {
                 files: 'resources/imgs/**/*.{png,jpg,gif}',
-                tasks: [ 'responsive_images', 'jekyll' ],
+                tasks: [ 'responsive_images'],
             },
             jekyll: {
                 files: [
@@ -141,6 +142,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-browserify');
 
     grunt.registerTask('default', ['browserify', 'responsive_images', 'sass', 'svg_sprite', 'autoprefixer', 'jekyll']);
-    grunt.registerTask('test', ['responsive_images']);
+    // grunt.registerTask('test', ['responsive_images']);
 
 };
