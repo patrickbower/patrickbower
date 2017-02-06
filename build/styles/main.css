@@ -1123,30 +1123,6 @@ button {
         display: inline-block;
         margin: 0 0 1.6875rem 0; } }
 
-.title-sub {
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  font-size: 0.25em;
-  margin-top: 2.5rem; }
-  @media only screen and (min-width: 479px) {
-    .title-sub {
-      margin-top: 3.125rem; } }
-  @media only screen and (min-width: 767px) {
-    .title-sub {
-      letter-spacing: 1em;
-      margin-top: 0.625rem; } }
-  .title-sub__a {
-    margin-right: 1.25rem; }
-    @media only screen and (min-width: 767px) {
-      .title-sub__a {
-        margin-left: 2.5rem; } }
-  .title-sub__b {
-    margin-left: 1.25rem; }
-    @media only screen and (min-width: 767px) {
-      .title-sub__b {
-        margin-left: 2.5rem; } }
-
 .branding-diamond {
   display: inline-block;
   position: relative;
