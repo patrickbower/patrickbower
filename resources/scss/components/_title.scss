@@ -141,43 +141,4 @@
             }
         }
     }
-
-    // Code / Creative
-    &-sub
-    {
-        display: block;
-        text-transform: uppercase;
-        letter-spacing: 0.25em;
-        font-size: 0.25em;
-        margin-top: rem(40px);
-
-        @media only screen and (min-width: $media-mobile)
-        {
-            margin-top: rem(50px);
-        }
-
-        @media only screen and (min-width: $media-tablet)
-        {
-            letter-spacing: 1em;
-            margin-top: rem(10px);
-        }
-
-        &__a
-        {
-            margin-right: rem(20px);
-            @media only screen and (min-width: $media-tablet)
-            {
-                margin-left: rem(40px);
-            }
-        }
-
-        &__b
-        {
-            margin-left: rem(20px);
-            @media only screen and (min-width: $media-tablet)
-            {
-                margin-left: rem(40px);
-            }
-        }
-    }
 }

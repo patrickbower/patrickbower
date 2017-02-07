@@ -1,5 +1,3 @@
 source: 'templates'
-destination: 'build'
-
-# Do not erase (clean), before adding jekyll rebuilds
+destination: 'serve'
 keep_files: [ 'images', 'scripts', 'styles', 'fonts', 'CNAME' ]
