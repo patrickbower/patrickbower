@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'build/styles/main.css': 'resources/scss/main.scss'
+                    'serve/styles/main.css': 'resources/scss/main.scss'
                 }
             }
         },
@@ -25,8 +25,8 @@ module.exports = function(grunt) {
                 browsers: ['last 2 versions', 'ie 8', 'ie 9']
             },
             dist: {
-                src: 'build/styles/main.css',
-                dest: 'build/styles/main.css'
+                src: 'serve/styles/main.css',
+                dest: 'serve/styles/main.css'
             }
         },
 
@@ -35,9 +35,9 @@ module.exports = function(grunt) {
             target: {
                 files: [{
                     expand: true,
-                    cwd: 'build/styles',
+                    cwd: 'build/styles/main.css',
                     src: ['*.css'],
-                    dest: '../patrickbower.com/styles',
+                    dest: 'serve/styles',
                     ext: '.css'
                 }]
             }
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                     expand: true,
                     src: ['**/*.{jpg,gif,png}'],
                     cwd: 'resources/imgs/',
-                    dest: 'build/images'
+                    dest: 'serve/images'
                 }]
             }
         },
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
         browserify: {
             dist: {
                 files: {
-                    'build/scripts/main.js': './resources/js/main.js'
+                    'serve/scripts/main.js': './resources/js/main.js'
                 },
                 options: {
                     transform: [
@@ -107,11 +107,11 @@ module.exports = function(grunt) {
         // minify js
         uglify: {
             options: {
-                mangle: false
+                mangle: true
             },
             my_target: {
                 files: {
-                    '../patrickbower.com/scripts/main.js': 'build/scripts/main.js'
+                    'build/scripts/main.js': 'serve/scripts/main.js'
                 }
             }
         },
@@ -157,9 +157,9 @@ module.exports = function(grunt) {
         copy: {
             main: {
                 expand: true,
-                cwd: 'build',
-                src: ['**', '!scripts/*', '!styles/*'],
-                dest: '../patrickbower.com'
+                cwd: 'serve',
+                src: ['**', '!styles/*', '!scripts/*'],
+                dest: './build'
             }
         }
 
@@ -176,7 +176,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('build', [ 'sass', 'autoprefixer', 'browserify', 'responsive_images', 'svg_sprite', 'jekyll' ]);
-    grunt.registerTask('production', [ 'copy', 'uglify', 'cssmin' ]);
+    grunt.registerTask('develop', [ 'sass', 'autoprefixer', 'browserify', 'responsive_images', 'svg_sprite', 'jekyll' ]);
+    grunt.registerTask('build', [ 'copy', 'uglify', 'cssmin' ]);
 
 };
