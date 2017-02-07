@@ -18,12 +18,22 @@
     .grid
     {
         margin: 0 0 0 rem(-30px);
+
+        &--sm
+        {
+            margin: 0 0 0 rem(-8px);
+        }
     }
 
     .column
     {
         float: left;
         padding: 0 0 0 rem(30px);
+
+        &--sm
+        {
+            padding: 0 0 0 rem(8px);
+        }
 
         &.float--right
         {
