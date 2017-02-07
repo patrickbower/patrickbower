@@ -10,7 +10,8 @@ const defaults = {
         modal: 'js-modal-window',
         modal_content: 'js-modal-content',
         modal_active: 'modal-active'
-    }
+    },
+    isOpen: false
 }
 
 /**
@@ -41,6 +42,13 @@ export class Modals {
         this.setTemplate();
         this.defineElements();
         this.bindEvents();
+        this.testLocation();
+    }
+
+    testLocation() {
+        if (window.location.hash) {
+            this.launchModal();
+        }
     }
 
     /**
@@ -81,27 +89,38 @@ export class Modals {
 
         /**
          * Handle any changes to the url hash
-         * which will manipulate modal states
+         * which will manipulate modal states.
          *
          * @event hash_change
          */
         let hash_change = {
             handleEvent(event) {
 
-                // add hash
                 if (window.location.hash) {
-
                     instance.launchModal();
-
-                // remove hash
                 } else {
-
                     instance.closeModal();
                 }
             }
         }
 
         window.addEventListener('hashchange', hash_change);
+
+        /**
+         * Close the model if open via
+         * the delete keypress.
+         *
+         * @event close_key
+         */
+         let close_key = {
+             handleEvent(event) {
+                if (instance.isOpen === true && event.key === "Backspace") {
+                    window.location.hash = "#"
+                }
+             }
+         }
+
+        window.addEventListener('keydown', close_key);
     }
 
     /**
@@ -109,11 +128,12 @@ export class Modals {
      *
      * @function launchModal
      */
-    launchModal(){
+    launchModal() {
         this.displayModal();
         this.getScrollPosition();
         this.hideInitialScroll();
         this.fetch(this.findURL(window.location.hash));
+        this.isOpen = true;
     }
 
     /**
@@ -126,6 +146,7 @@ export class Modals {
         this.displayInitialScroll();
         this.setScrollPosition();
         this.removeModalContents();
+        this.isOpen = false;
     }
 
     /**
