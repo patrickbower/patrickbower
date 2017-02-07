@@ -2,5 +2,5 @@
 /source/images
 /source/scripts
 /source/styles
-/build
-/serve
+/build/*
+/serve/*
