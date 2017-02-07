@@ -1,9 +1,9 @@
-#Coding Standards
+#Build process
 
-##Code conventions:
-
-* Open branches on same line.
-*  Whitespace before braces and brackets of functions.
-*  Capitalize first letter for constructor functions.
-*  Variables all lowercase with underscores for word breaks unless global or values not changing and then all caps.
-*  Private Variables start with an underscore.
+git commit -am "Save local changes"
+git checkout -B gh-pages
+git add -f build
+git commit -am "Rebuild website"
+git filter-branch -f --prune-empty --subdirectory-filter build
+git push -f origin gh-pages
+git checkout -
