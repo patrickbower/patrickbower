@@ -1,0 +1,15 @@
+.development-gallery
+{
+    &__github-link
+    {
+        background: $color-ironside-gray;
+        padding: rem(20px);
+        border-radius: rem(5px);
+
+        &-icon
+        {
+            width: rem(50px);
+            height: rem(50px);
+        }
+    }
+}
