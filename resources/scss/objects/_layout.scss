@@ -3,14 +3,18 @@
     margin: 0 auto;
 }
 
-.grid,
-.row {
-    @extend %clearfix;
-}
-
 .column
 {
     padding: 0 0 rem(30px) 0;
+}
+
+.row {
+    margin-bottom: rem(20px);
+}
+
+.grid,
+.row {
+    @extend %clearfix;
 }
 
 @media only screen and (min-width: $media-tablet)
@@ -40,6 +44,10 @@
             float: right;
         }
 
+    }
+
+    .row {
+        margin-bottom: rem(30px);
     }
 
     .width

@@ -1,0 +1,50 @@
+.media-obj
+{
+    @extend %clearfix;
+    display: block;
+    letter-spacing: -.215em;
+
+    &__image,
+    &__body
+    {
+        display: inline-block;
+        letter-spacing: normal;
+        vertical-align: top;
+
+        &--middle
+        {
+            vertical-align: middle;
+        }
+    }
+
+    &--middle &__image,
+    &--middle &__body
+    {
+        vertical-align: middle;
+    }
+
+    &__image
+    {
+        max-width: percentage(1 / 4);
+
+        &--right
+        {
+            float: right;
+        }
+
+        &--gutter
+        {
+            margin-right: 20px;
+        }
+    }
+
+    &__body
+    {
+        max-width: percentage(3 / 4);
+    }
+
+    &--spacing
+    {
+        margin-left: 10px;
+    }
+}

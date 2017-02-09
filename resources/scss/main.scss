@@ -31,6 +31,7 @@
 // Objects: Unstyled design patterns (media object)
 @import "objects/layout";
 @import "objects/media";
+@import "objects/media-object";
 @import "objects/lists";
 
 // Components
@@ -54,6 +55,7 @@
 @import "components/intro";
 @import "components/contact";
 @import "components/development";
+@import "components/development-gallery";
 @import "components/design";
 @import "components/contact-section";
 @import "components/splash";

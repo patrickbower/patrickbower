@@ -81,7 +81,6 @@
         padding: rem(20px);
         margin: rem(20px);
         border-radius: 50%;
-        background: rgba(51, 51, 51, 0.25);
         opacity: 0;
         animation: 300ms forwards 700ms;
         @include animation-keyframes(modal-close-button--fade-in) {
