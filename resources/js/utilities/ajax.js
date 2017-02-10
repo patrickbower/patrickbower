@@ -9,7 +9,7 @@ import {parseHTML} from './parsehtml';
 export function ajax (url, callback) {
 
     let request = new XMLHttpRequest();
-    request.open('POST', url, true);
+    request.open('GET', url, true);
 
     request.onload = function() {
         if (request.status >= 200 && request.status < 400) {
