@@ -40,8 +40,20 @@ export class ContactForm {
      * @function init
      */
     init () {
+        this.setFormAction();
         this.hiddenInput();
         this.bindEvents();
+    }
+
+    /**
+     * Build form action with email address
+     *
+     * @function setFormAction
+     */
+    setFormAction() {
+        let form = this.element.querySelector('.' + this.selectors.contact_form);
+        const action = "https://formspree.io/" + "patrickbowercom" + "@" + "gmail" + "." + "com"
+        form.setAttribute('action', action);
     }
 
     /**
@@ -82,15 +94,8 @@ export class ContactForm {
     * @requires {function} ajax utility
     */
     submitForm () {
-
         let form = this.element.querySelector('.' + this.selectors.contact_form);
-        let formAction = form.action;
-
-        const [page_url, fragment_selector] = formAction.split('#');
-
-        utility.ajax(page_url, data => {
-            this.htmlFragment = data.querySelector('.' + fragment_selector);
-
+        utility.postJson(form.action, new FormData(form), data => {
             this.confirmSubmit();
         });
     }
@@ -99,22 +104,8 @@ export class ContactForm {
      * Replace contact form with confermation message.
      *
      */
-    confirmSubmit () {
-
-        // fade out content
+    confirmSubmit() {
         let contact_section = this.element.querySelector('.' + this.selectors.contact_section);
-        contact_section.classList.add('fade--out');
-
-        // build confirm element
-        const contact_confirm = document.createElement('div');
-        contact_confirm.classList.add('animate--in');
-        contact_confirm.appendChild(this.htmlFragment);
-        this.element.appendChild(contact_confirm);
-
-        // add and fade in when content faded out
-        setTimeout(function(){
-            contact_section.classList.add('display--none');
-            contact_confirm.classList.add('fade--in');
-        }, utility.settings.animation.default_timimg);
+        contact_section.innerHTML = "<h2 class='h2'><span class='strike contact-section--strike'>Thanks</span></h2>";
     }
 }
