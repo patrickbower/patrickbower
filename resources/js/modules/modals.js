@@ -108,13 +108,13 @@ export class Modals {
 
         /**
          * Close the model if open via
-         * the delete keypress.
+         * the Escape key.
          *
          * @event close_key
          */
          let close_key = {
              handleEvent(event) {
-                if (instance.isOpen === true && event.key === "Backspace") {
+                if (instance.isOpen === true && event.keyCode === 27) {
                     window.location.hash = "#"
                 }
              }
