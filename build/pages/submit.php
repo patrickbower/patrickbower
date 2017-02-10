@@ -4,7 +4,7 @@
 if (isset($_POST['confirm']) && $_POST['confirm'] == ''){
 
 	// put your email address here
-	$youremail = 'bower.patrick@gmail.com';
+	$youremail = 'patrickbowercom@gmail.com';
 
 	// prepare a "pretty" version of the message
 	// Important: if you added any form fields to the HTML, you will need to add them here also
