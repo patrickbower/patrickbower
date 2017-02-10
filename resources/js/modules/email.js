@@ -3,7 +3,7 @@ import * as utility from '../utilities/_utilities';
 const defaults = {
     element: undefined,
     email: {
-        first: 'bower.patrick',
+        first: 'patrickbowercom',
         last: 'gmail.com'
     }
 }

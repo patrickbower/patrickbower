@@ -6,7 +6,11 @@ const defaults = {
         contact_form: 'js-contact--form',
         submit_button: 'js-contact--submit',
         confirm_input: 'js-contact--confirm',
-        contact_section: 'js-contact--section'
+        contact_section: 'js-contact--section',
+    },
+    email: {
+        first: 'patrickbowercom',
+        last: 'gmail.com'
     }
 }
 
@@ -52,7 +56,7 @@ export class ContactForm {
      */
     setFormAction() {
         let form = this.element.querySelector('.' + this.selectors.contact_form);
-        const action = "https://formspree.io/" + "patrickbowercom" + "@" + "gmail" + "." + "com"
+        const action = `https://formspree.io/${this.email.first}@${this.email.last}`
         form.setAttribute('action', action);
     }
 
