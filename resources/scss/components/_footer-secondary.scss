@@ -1,5 +1,12 @@
 .footer-secondary
 {
     flex: none;
-    margin: rem(50px) 0 rem(10px) 0;
+    background: $color-white;
+    text-align: center;
+    color: $color-mine-shaft;
+    margin: 0 0 rem(10px) 0;
+
+    &__back-button {
+        display: block;
+    }
 }

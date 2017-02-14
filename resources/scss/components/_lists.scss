@@ -8,3 +8,38 @@
         margin-left: 20px;
     }
 }
+
+.list-horizontal
+{
+    @extend %clearfix;
+
+    li
+    {
+        float: left;
+        margin-right: rem(30px);
+    }
+
+    &--icons
+    {
+        text-align: center;
+
+        @media only screen and (min-width: $media-desktop)
+        {
+            display: table-row;
+            width: 100%;
+        }
+
+        li {
+            float: none;
+            display: block;
+            margin-bottom: rem(15px);
+
+            @media only screen and (min-width: $media-desktop)
+            {
+                padding-right: rem(50px);
+                display: table-cell;
+                vertical-align: top;
+            }
+        }
+    }
+}
