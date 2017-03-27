@@ -1,21 +1,16 @@
 .title {
   $icon-width: 400px;
   $icon-height: 75px;
-  $scale-mobile: 2.2;
+  $scale-mobile: 2.8;
   $scale-tablet: 1.6;
   $scale-desktop: 1;
 
-  padding-top: 200px;
   display: flex;
   justify-content: center;
 
-  padding-bottom: 10px;
+  padding: 130px 0 10px;
   @media only screen and (min-width: $media-tablet) {
-    padding-bottom: 20px;
-  }
-
-  @media only screen and (min-width: $media-desktop) {
-    padding-bottom: 30px;
+    padding: 200px 0 20px;
   }
 
   &__icon-patrick,
