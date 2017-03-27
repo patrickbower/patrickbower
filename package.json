@@ -1,7 +1,10 @@
 {
   "name": "patrickbower.com",
   "version": "0.0.1",
-  "description": "Portfolio",
+  "description": "Patrick Bower portfolio",
+  "scripts": {
+    "deploy": "./deploy.sh"
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
