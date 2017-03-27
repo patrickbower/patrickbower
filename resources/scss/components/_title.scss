@@ -7,7 +7,6 @@
 
   display: flex;
   justify-content: center;
-
   padding: 130px 0 10px;
   @media only screen and (min-width: $media-tablet) {
     padding: 200px 0 20px;
@@ -42,6 +41,13 @@
     display: inline-block;
     position: relative;
     z-index: 0;
+
+    &:before,
+    &:after {
+      transition: all 0.5 ease-in;
+      width: 20vw;
+      height: 20vh;
+    }
 
     &:before,
     &:after {
