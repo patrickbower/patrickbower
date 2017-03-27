@@ -1,95 +1,95 @@
 // icon sizes
 .icon
 {
-    display: block;
+  display: block;
 
-    &--patrick,
-    &--bower
-    {
-        width: 400px;
-        height: 75px;
-    }
+  // &--patrick,
+  // &--bower
+  // {
+  //   width: rem(400px);
+  //   height: rem(75px);
+  // }
 
-    &--bracket
-    {
-        width: rem(84px);
-        height: rem(112px);
-    }
+  &--bracket
+  {
+    width: rem(84px);
+    height: rem(112px);
+  }
 
-    &--close
-    {
-        width: rem(20px);
-        height: rem(20px);
-    }
+  &--close
+  {
+    width: rem(20px);
+    height: rem(20px);
+  }
 
-    &--note
-    {
-        width: rem(78px);
-        height: rem(102px);
-    }
+  &--note
+  {
+    width: rem(78px);
+    height: rem(102px);
+  }
 
-    &--pb
-    {
-        width: rem(36px);
-        height: rem(53px);
-    }
+  &--pb
+  {
+    width: rem(36px);
+    height: rem(53px);
+  }
 
-    &--pencil
-    {
-        width: rem(75px);
-        height: rem(214px);
-    }
+  &--pencil
+  {
+    width: rem(75px);
+    height: rem(214px);
+  }
 
-    &--github
-    {
-        width: rem(80px);
-        height: rem(80px);
-    }
+  &--github
+  {
+    width: rem(80px);
+    height: rem(80px);
+  }
 
-    &--linkedin
-    {
-        width: rem(80px);
-        height: rem(80px);
-    }
+  &--linkedin
+  {
+    width: rem(80px);
+    height: rem(80px);
+  }
 
-    &--vodafone
-    {
-        width: rem(160px);
-        height: rem(28px);
-    }
+  &--vodafone
+  {
+    width: rem(160px);
+    height: rem(28px);
+  }
 
-    &--rbs
-    {
-        width: rem(95px);
-        height: rem(30px);
-    }
+  &--rbs
+  {
+    width: rem(95px);
+    height: rem(30px);
+  }
 
-    &--bupa
-    {
-        width: rem(115px);
-        height: rem(50px);
-    }
+  &--bupa
+  {
+    width: rem(115px);
+    height: rem(50px);
+  }
 
-    &--bbc
-    {
-        width: rem(90px);
-        height: rem(26px);
-    }
+  &--bbc
+  {
+    width: rem(90px);
+    height: rem(26px);
+  }
 
-    &--fifa
-    {
-        width: rem(88px);
-        height: rem(29px);
-    }
+  &--fifa
+  {
+    width: rem(88px);
+    height: rem(29px);
+  }
 
-    &--universal
-    {
-        width: rem(90px);
-        height: rem(50px);
-    }
+  &--universal
+  {
+    width: rem(90px);
+    height: rem(50px);
+  }
 
-    &--space-sml
-    {
-        margin: rem(7px);
-    }
+  &--space-sml
+  {
+    margin: rem(7px);
+  }
 }

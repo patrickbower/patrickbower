@@ -1,69 +1,136 @@
-// @media only screen and (min-width: $media-mobile)
-// @media only screen and (min-width: $media-tablet)
-
-
 .title {
+  $icon-width: 400px;
+  $icon-height: 75px;
+  $scale-mobile: 2.2;
+  $scale-tablet: 1.6;
+  $scale-desktop: 1;
+
   padding-top: 200px;
   display: flex;
   justify-content: center;
+
+  padding-bottom: 10px;
+  @media only screen and (min-width: $media-tablet) {
+    padding-bottom: 20px;
+  }
+
+  @media only screen and (min-width: $media-desktop) {
+    padding-bottom: 30px;
+  }
+
+  &__icon-patrick,
+  &__icon-bower {
+    width: rem(floor($icon-width / $scale-mobile)); // 175
+    height: rem(floor($icon-height / $scale-mobile)); // 35
+
+    @media only screen and (min-width: $media-tablet) {
+      width: rem(floor($icon-width / $scale-tablet)); // 250
+      height: rem(floor($icon-height / $scale-tablet)); // 45
+    }
+    @media only screen and (min-width: $media-desktop) {
+      width: rem(400px); // 400
+      height: rem(75px); // 75
+    }
+  }
+
+  &__icon-patrick {
+    margin-right: -2px;
+    @media only screen and (min-width: $media-tablet) {
+      margin-right: -4px;
+    }
+    @media only screen and (min-width: $media-desktop) {
+      margin-right: -8px;
+    }
+  }
 
   &__patrick {
     display: inline-block;
     position: relative;
     z-index: 0;
 
-    &:before {
+    &:before,
+    &:after {
       content: '';
-      width: 300vh;
-      height: 100vh;
+      width: 200vw;
+      height: 200vh;
       background: rgba($color-mischka, 0.1);
       position: absolute;
-      bottom: 0;
-      left: -50px;
+      right: 100%;
       z-index: -1;
-      transform-origin: bottom;
+      transform-origin: right center;
       transform:
-        translate(-130vh, 0)
-        rotate(-65deg)
+        perspective(1px)
+        translateY(-50%)
+        translateX(0)
+        rotate(75deg);
+
+      height: 200vh;
+      top: floor($icon-height / $scale-mobile) / 2;
+      @media only screen and (min-width: $media-tablet) {
+        height: 300vh;
+        top: floor($icon-height / $scale-tablet) / 2;
+      }
+      @media only screen and (min-width: $media-desktop) {
+        height: 400vh;
+        top: floor($icon-height / $scale-desktop) / 2;
+      }
     }
 
     &:after {
-      content: '';
-      width: 300vh;
-      height: 100vh;
-      background: rgba($color-mischka, 0.1);
-      position: absolute;
-      bottom: 0;
-      left: -50px;
-      z-index: -1;
-      transform-origin: bottom;
+      right: 75%;
       transform:
-        translate(-100vh, 0)
-        rotate(-45deg);
+        perspective(1px)
+        translateY(-50%)
+        translateX(0)
+        rotate(30deg);
     }
   }
 
   &__bower {
     display: inline-block;
-    margin-left: -15px;
+    // margin-left: -15px;
     position: relative;
     z-index: 0;
 
-    &:after {
+    &:before {
       content: '';
-      width: 300vh;
-      height: 100vh;
-      background: rgba(204, 208, 217, 0.1);
+      width: 200vw;
+      height: 200vh;
+      background: rgba($color-mischka, 0.1);
       position: absolute;
-      bottom: 257px;
-      left: -50px;
+      right: 100%;
       z-index: -1;
-      -ms-transform-origin: bottom;
-      transform-origin: right;
+      transform-origin: right center;
       transform:
-        translate(-200vh, 0)
-        rotate(-10deg);
+        perspective(1px)
+        translateY(-50%)
+        translateX(0)
+        rotate(45deg);
+
+      height: 200vh;
+      top: floor($icon-height / $scale-mobile) / 2;
+      @media only screen and (min-width: $media-tablet) {
+        height: 300vh;
+        top: floor($icon-height / $scale-tablet) / 2;
+      }
+      @media only screen and (min-width: $media-desktop) {
+        height: 400vh;
+        top: floor($icon-height / $scale-desktop) / 2;
+      }
     }
   }
 
+  &__subhead {
+    font-family: $heading-font;
+    color: $color-white;
+    text-align: center;
+
+    font-size: rem(18px);
+    @media only screen and (min-width: $media-tablet) {
+      font-size: rem(22px);
+    }
+    @media only screen and (min-width: $media-desktop) {
+      font-size: rem(26px);
+    }
+  }
 }
