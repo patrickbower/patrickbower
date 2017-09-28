@@ -1,5 +1,6 @@
 #!/bin/bash
 
+grunt build
 git commit -am "Commit changes"
 git checkout -B gh-pages
 git add -f build
