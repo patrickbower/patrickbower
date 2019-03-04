@@ -1,7 +1,7 @@
 {
-  "name": "patrickbower.com",
-  "version": "0.0.1",
-  "description": "Patrick Bower portfolio",
+  "name": "patrickbowercom",
+  "version": "2.0.0",
+  "description": "Personal website",
   "scripts": {
     "deploy": "./deploy.sh"
   },
