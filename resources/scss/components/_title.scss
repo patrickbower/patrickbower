@@ -1,4 +1,6 @@
 .title {
+  display: none !important;
+
   $icon-width: 400px;
   $icon-height: 75px;
   $scale-mobile: 2.8;
@@ -8,6 +10,7 @@
   display: flex;
   justify-content: center;
   padding: 130px 0 10px;
+
   @media only screen and (min-width: $media-tablet) {
     padding: 200px 0 20px;
   }
@@ -22,8 +25,8 @@
       height: rem(floor($icon-height / $scale-tablet)); // 45
     }
     @media only screen and (min-width: $media-desktop) {
-      width: rem(400px); // 400
-      height: rem(75px); // 75
+      width: rem($icon-width); // 400
+      height: rem($icon-height); // 75
     }
   }
 
@@ -40,92 +43,24 @@
   &__patrick {
     display: inline-block;
     position: relative;
-    z-index: 0;
 
-    &:before,
     &:after {
-      transition: all 0.5 ease-in;
-      width: 20vw;
-      height: 20vh;
-    }
-
-    &:before,
-    &:after {
-      content: '';
-      width: 200vw;
-      height: 200vh;
-      background: rgba($color-mischka, 0.1);
+      content: "";
+      transform: rotate(45deg);
+      width: 1px;
+      height: $icon-height * 5;
+      background-color: $color-white;
       position: absolute;
-      right: 100%;
-      z-index: -1;
-      transform-origin: right center;
-      transform:
-        perspective(1px)
-        translateY(-50%)
-        translateX(0)
-        rotate(75deg);
-
-      height: 200vh;
-      top: floor($icon-height / $scale-mobile) / 2;
-      @media only screen and (min-width: $media-tablet) {
-        height: 300vh;
-        top: floor($icon-height / $scale-tablet) / 2;
-      }
-      @media only screen and (min-width: $media-desktop) {
-        height: 400vh;
-        top: floor($icon-height / $scale-desktop) / 2;
-      }
-    }
-
-    &:after {
-      right: 75%;
-      transform:
-        perspective(1px)
-        translateY(-50%)
-        translateX(0)
-        rotate(30deg);
-    }
-  }
-
-  &__bower {
-    display: inline-block;
-    // margin-left: -15px;
-    position: relative;
-    z-index: 0;
-
-    &:before {
-      content: '';
-      width: 200vw;
-      height: 200vh;
-      background: rgba($color-mischka, 0.1);
-      position: absolute;
-      right: 100%;
-      z-index: -1;
-      transform-origin: right center;
-      transform:
-        perspective(1px)
-        translateY(-50%)
-        translateX(0)
-        rotate(45deg);
-
-      height: 200vh;
-      top: floor($icon-height / $scale-mobile) / 2;
-      @media only screen and (min-width: $media-tablet) {
-        height: 300vh;
-        top: floor($icon-height / $scale-tablet) / 2;
-      }
-      @media only screen and (min-width: $media-desktop) {
-        height: 400vh;
-        top: floor($icon-height / $scale-desktop) / 2;
-      }
+      right: 0;
+      top: -($icon-height * 2);
     }
   }
 
   &__subhead {
+    display: none;
     font-family: $heading-font;
     color: $color-white;
     text-align: center;
-
     font-size: rem(18px);
     @media only screen and (min-width: $media-tablet) {
       font-size: rem(22px);
