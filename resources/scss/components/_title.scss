@@ -1,72 +1,150 @@
+$media-xlrg: 1140px;
+$media-lrg: 767px;
+$media-sml: 479px;
+$media-min: 320px;
+
 .title {
-  display: none !important;
+  height: 1200px;
 
-  $icon-width: 400px;
-  $icon-height: 75px;
-  $scale-mobile: 2.8;
-  $scale-tablet: 1.6;
-  $scale-desktop: 1;
-
-  display: flex;
-  justify-content: center;
-  padding: 130px 0 10px;
-
-  @media only screen and (min-width: $media-tablet) {
-    padding: 200px 0 20px;
-  }
-
-  &__icon-patrick,
-  &__icon-bower {
-    width: rem(floor($icon-width / $scale-mobile)); // 175
-    height: rem(floor($icon-height / $scale-mobile)); // 35
-
-    @media only screen and (min-width: $media-tablet) {
-      width: rem(floor($icon-width / $scale-tablet)); // 250
-      height: rem(floor($icon-height / $scale-tablet)); // 45
-    }
-    @media only screen and (min-width: $media-desktop) {
-      width: rem($icon-width); // 400
-      height: rem($icon-height); // 75
-    }
-  }
-
-  &__icon-patrick {
-    margin-right: -2px;
-    @media only screen and (min-width: $media-tablet) {
-      margin-right: -4px;
-    }
-    @media only screen and (min-width: $media-desktop) {
-      margin-right: -8px;
-    }
-  }
-
-  &__patrick {
-    display: inline-block;
-    position: relative;
-
-    &:after {
-      content: "";
-      transform: rotate(45deg);
-      width: 1px;
-      height: $icon-height * 5;
-      background-color: $color-white;
-      position: absolute;
-      right: 0;
-      top: -($icon-height * 2);
-    }
-  }
-
-  &__subhead {
-    display: none;
-    font-family: $heading-font;
-    color: $color-white;
+  // Patrick Bower
+  &-name {
+    font-size: 3.5em;
     text-align: center;
-    font-size: rem(18px);
-    @media only screen and (min-width: $media-tablet) {
-      font-size: rem(22px);
+    padding-top: 200px;
+    text-transform: uppercase;
+    margin-left: -10px;
+    @media only screen and (min-width: $media-sml) {
+      font-size: 5em;
     }
-    @media only screen and (min-width: $media-desktop) {
-      font-size: rem(26px);
+
+    &__first {
+      position: relative;
+      bottom: -20px;
+      @media only screen and (min-width: $media-lrg) {
+        margin-right: -265px;
+        bottom: 0;
+      }
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 30px 30px;
+        border-color: transparent transparent $color-mako transparent;
+        position: absolute;
+        right: -10px;
+        bottom: 13px;
+        @media only screen and (min-width: $media-sml) {
+          right: -5px;
+          bottom: 22px;
+        }
+      }
+
+      &:after {
+        width: 230px;
+        content: "";
+        border-top: 1px solid $color-white;
+        transform: rotate(-45deg);
+        position: absolute;
+        bottom: -27px;
+        right: -56px;
+        @media only screen and (min-width: $media-sml) {
+          width: 330px;
+          bottom: -39px;
+          right: -80px;
+        }
+        @media only screen and (min-width: $media-lrg) {
+          content: none;
+        }
+      }
+    }
+
+    &__last {
+      position: relative;
+      @media only screen and (min-width: $media-lrg) {
+        margin-left: -270px;
+      }
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: $color-mako transparent transparent transparent;
+        border-width: 30px 30px 0 0;
+        position: absolute;
+        top: 8px;
+        left: -5px;
+        @media only screen and (min-width: $media-sml) {
+          top: 15px;
+          left: 5px;
+        }
+      }
+
+      &:after {
+        content: "";
+        width: 230px;
+        border-top: 1px solid $color-white;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: -30px;
+        left: -52px;
+        @media only screen and (min-width: $media-sml) {
+          width: 330px;
+          top: -42px;
+          left: -73px;
+        }
+        @media only screen and (min-width: $media-lrg) {
+          content: none;
+        }
+      }
+    }
+
+    &__slash {
+      border: none;
+      margin: 0;
+      @media only screen and (min-width: $media-lrg) {
+        width: 500px;
+        border-top: 2px solid $color-white;
+        transform: rotate(-45deg);
+        position: relative;
+        display: inline-block;
+        margin: 0 0 27px 0;
+      }
+    }
+  }
+
+  // Code / Creative
+  &-sub {
+    opacity: 0.25;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.25em;
+    margin-top: 40px;
+    @media only screen and (min-width: $media-sml) {
+      margin-top: 50px;
+    }
+    @media only screen and (min-width: $media-lrg) {
+      letter-spacing: 1em;
+      margin-top: 10px;
+    }
+
+    &__a {
+      margin-right: 20px;
+      @media only screen and (min-width: $media-lrg) {
+        margin-left: 40px;
+      }
+    }
+
+    &__b {
+      margin-left: 20px;
+      @media only screen and (min-width: $media-lrg) {
+        margin-left: 40px;
+      }
     }
   }
 }

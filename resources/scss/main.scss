@@ -50,9 +50,8 @@
 @import "components/content";
 @import "components/header";
 @import "components/header-secondary";
-@import "components/title";
-@import "components/title-text";
-@import "components/title-animations";
+// @import "components/title-text";
+// @import "components/title-animations";
 @import "components/branding";
 @import "components/intro";
 @import "components/contact";
@@ -64,6 +63,7 @@
 @import "components/modal";
 @import "components/footer-secondary";
 @import "components/footer";
+@import "components/title";
 
 // Trumps: Helpers and overrides, e.g. .float-left { float:left !important;}
 @import "trumps/layout";
