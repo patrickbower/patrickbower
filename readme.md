@@ -1,11 +1,15 @@
 # Patrick Bower
 
-Personal website
+This is my personal website to demonstrate my creative and technical powers
 
-### Prerequisites
+### Dependencies 
 
-- NodeJS
-- Ruby
+There's needs to be globally availble versions of
+
+- Jekyll (running ruby v2.4.0 or higher)
+- Node (v5.0.0 or higher)
+- NPM
+
 
 ### Installing
 
@@ -13,29 +17,26 @@ Personal website
 - CL run `jekyll serve` to create serve dir, build files and start server.
 - CL run `grunt develop` to build assets.
 
-## Deployment
-
-- git commit -am "Save local changes"
-- git checkout -B gh-pages
-- git add -f build
-- git commit -am "Rebuild website"
-- git filter-branch -f --prune-empty --subdirectory-filter build
-- git push -f origin gh-pages
-- git checkout
 
 ## Built With
 
-[Jekyll](https://jekyllrb.com/)
-[Grunt](https://gruntjs.com/)
+This is the third incarntion but it's still holding togeather nicely with some classic's 
+
+- Jekyll SSG
+- Grunt (ES6 transpiled via Babel, SASS, SVG's to name a few)
+- GitHub Pages
+
 
 ## Contributing
 
 Open for public observation only.
 
+
 ## Versioning
 
-2.0.0
+3.0.0
+
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+Nada.
