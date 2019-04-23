@@ -1,6 +1,11 @@
 # Patrick Bower
 
-This is my personal website to demonstrate my creative and technical powers
+This is my personal website to demonstrate some creative and technical chops
+
+### About
+
+This is the third incarntion but it's still holding up nicely with some classic technology. While I could redevelop using a fancy framework (JavaScript natuarlly), it's simple enough to not need any. 
+
 
 ### Dependencies 
 
@@ -18,25 +23,23 @@ There's needs to be globally availble versions of
 - CL run `grunt develop` to build assets.
 
 
-## Built With
-
-This is the third incarntion but it's still holding togeather nicely with some classic's 
+### Built With
 
 - Jekyll SSG
 - Grunt (ES6 transpiled via Babel, SASS, SVG's to name a few)
 - GitHub Pages
 
 
-## Contributing
+### Contributing
 
 Open for public observation only.
 
 
-## Versioning
+### Versioning
 
 3.0.0
 
 
-## License
+### License
 
 Nada.
