@@ -21,13 +21,16 @@ There's needs to be globally availble versions of
 - CL run `npm install` for dependencies.
 - CL run `jekyll serve` to create serve dir, build files and start server.
 - CL run `grunt develop` to build assets.
+- CL run `grunt watch` to rebuild during development.
 
 
 ### Built With
 
 - Jekyll SSG
-- Grunt (ES6 transpiled via Babel, SASS, SVG's to name a few)
+- Grunt
 - GitHub Pages
+- ES6
+- SASS
 
 
 ### Contributing
@@ -42,4 +45,4 @@ Open for public observation only.
 
 ### License
 
-Nada.
+GNU GPLv3
