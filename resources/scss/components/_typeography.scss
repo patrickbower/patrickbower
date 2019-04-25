@@ -1,95 +1,80 @@
 .h1,
 .h2,
 .h3,
-.h4
-{
+.h4 {
+  font-family: $heading-font;
+}
+
+.h1 {
+  font-size: $h1;
+  letter-spacing: -0.25rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: inherit;
+  line-height: 1.2;
+  color: $color-white;
+}
+
+.h2 {
+  letter-spacing: -0.2rem;
+  font-size: $h2;
+}
+
+.h3 {
+  font-size: $h3;
+}
+
+.h4 {
+  font-size: $h4;
+}
+
+.subhead {
+  &__heading {
+    margin-bottom: 0;
+  }
+
+  &__sub {
+    margin: 0 0 rem(50px) 0;
+  }
+}
+
+.text {
+  &--bold {
     font-family: $heading-font;
+  }
+
+  &--small {
+    font-size: $text-small;
+  }
+
+  &--paragraph {
+    font-size: $p;
+  }
 }
 
-.h1
-{
-    font-size: $h1;
-    letter-spacing: -0.25rem;
-    margin: 0 0 0.5rem 0;
-    font-weight: inherit;
-    line-height: 1.2;
-    color: $color-white;
-}
+.strike {
+  display: inline-block;
+  transform-style: preserve-3d;
 
-.h2
-{
-    letter-spacing: -0.2rem;
-    font-size: $h2;
-}
+  &:after {
+    content: "";
+    width: rem(100px);
+    height: 1px;
+    background: $color-mine-shaft;
+    position: absolute;
+    bottom: rem(32px);
+    right: rem(-38px);
+    transform: rotate(-45deg);
+  }
 
-.h3
-{
-    font-size: $h3;
-}
-
-.h4
-{
-    font-size: $h4;
-}
-
-.subhead
-{
-    &__heading
-    {
-        margin-bottom: 0;
-    }
-
-    &__sub
-    {
-        margin: 0 0 rem(50px) 0;
-    }
-}
-
-.text
-{
-    &--bold
-    {
-        font-family: $heading-font;
-    }
-
-    &--small
-    {
-        font-size: $text-small;
-    }
-
-    &--paragraph
-    {
-        font-size: $p;
-    }
-}
-
-.strike
-{
-    display: inline-block;
-    transform-style: preserve-3d;
-
-    &:after
-    {
-        content: '';
-        width: rem(100px);
-        height: rem(2px);
-        background: $color-mine-shaft;
-        position: absolute;
-        bottom: rem(32px);
-        right: rem(-38px);
-        transform: rotate(-45deg);
-
-    }
-
-    &:before{
-        content: '';
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 0 rem(50px) rem(50px);
-        border-color: transparent transparent $color-white transparent;
-        position: absolute;
-        bottom: rem(15px);
-        right: rem(-20px);
-    }
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 rem(50px) rem(50px);
+    border-color: transparent transparent $color-white transparent;
+    position: absolute;
+    bottom: rem(15px);
+    right: rem(-20px);
+  }
 }

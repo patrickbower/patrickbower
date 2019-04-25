@@ -1,65 +1,57 @@
-.branding
-{
-    &-diamond
-    {
-        display: inline-block;
-        position: relative;
-        z-index: 999;
-        top: rem(20px);
-        left: 50%;
-        margin-left: (-10px);
+.branding {
+  &-diamond {
+    display: inline-block;
+    position: relative;
+    z-index: 999;
+    top: rem(20px);
+    left: 50%;
+    margin-left: (-10px);
 
-        &:before
-        {
-            content: '';
-            display: inline-block;
-            width: rem(45px);
-            height: rem(45px);
-            background: #ffffff;
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-            position: absolute;
-            top: rem(15px);
-            left: 50%;
-            margin-left: rem(-25px);
-        }
-
-        &__icon
-        {
-            margin-top: rem(20px);
-            position: relative;
-            width: rem(26px);
-            height: rem(43px);
-            fill: #667;
-        }
-
-        &__pb {
-            position: relative;
-            top: rem(20px);
-        }
+    &:before {
+      content: "";
+      display: inline-block;
+      width: rem(45px);
+      height: rem(45px);
+      background: $color-white;
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      position: absolute;
+      top: rem(15px);
+      left: 50%;
+      margin-left: rem(-25px);
     }
 
-    @media only screen and (min-width: $media-tablet)
-    {
-        &-oblong
-        {
-            top: 0;
-            left: rem(50px);
-
-            &:before
-            {
-                top: rem(-50px);
-                left: rem(10px);
-                width: rem(60px);
-                height: rem(130px);
-                margin-left: 0;
-            }
-
-            &__icon
-            {
-                width: rem(36px);
-                height: rem(53px);
-            }
-        }
+    &__icon {
+      margin-top: rem(20px);
+      position: relative;
+      width: rem(26px);
+      height: rem(43px);
+      fill: $color-mako;
     }
+
+    &__pb {
+      position: relative;
+      top: rem(20px);
+    }
+  }
+
+  @media only screen and (min-width: $media-tablet) {
+    &-oblong {
+      top: 0;
+      left: rem(50px);
+
+      &:before {
+        top: rem(-50px);
+        left: rem(10px);
+        width: rem(60px);
+        height: rem(130px);
+        margin-left: 0;
+      }
+
+      &__icon {
+        width: rem(36px);
+        height: rem(53px);
+      }
+    }
+  }
 }

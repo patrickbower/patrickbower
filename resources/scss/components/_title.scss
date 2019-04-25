@@ -1,26 +1,20 @@
-$media-xlrg: 1140px;
-$media-lrg: 767px;
-$media-sml: 479px;
-$media-min: 320px;
-
 .title {
   height: 1200px;
 
-  // Patrick Bower
   &-name {
     font-size: 3.5em;
     text-align: center;
     padding-top: 200px;
     text-transform: uppercase;
     margin-left: -10px;
-    @media only screen and (min-width: $media-sml) {
+    @media only screen and (min-width: $media-mobile) {
       font-size: 5em;
     }
 
     &__first {
       position: relative;
       bottom: -20px;
-      @media only screen and (min-width: $media-lrg) {
+      @media only screen and (min-width: $media-tablet) {
         margin-right: -265px;
         bottom: 0;
       }
@@ -36,7 +30,7 @@ $media-min: 320px;
         position: absolute;
         right: -10px;
         bottom: 13px;
-        @media only screen and (min-width: $media-sml) {
+        @media only screen and (min-width: $media-mobile) {
           right: -5px;
           bottom: 22px;
         }
@@ -50,12 +44,12 @@ $media-min: 320px;
         position: absolute;
         bottom: -27px;
         right: -56px;
-        @media only screen and (min-width: $media-sml) {
+        @media only screen and (min-width: $media-mobile) {
           width: 330px;
           bottom: -39px;
           right: -80px;
         }
-        @media only screen and (min-width: $media-lrg) {
+        @media only screen and (min-width: $media-tablet) {
           content: none;
         }
       }
@@ -63,7 +57,7 @@ $media-min: 320px;
 
     &__last {
       position: relative;
-      @media only screen and (min-width: $media-lrg) {
+      @media only screen and (min-width: $media-tablet) {
         margin-left: -270px;
       }
 
@@ -78,7 +72,7 @@ $media-min: 320px;
         position: absolute;
         top: 8px;
         left: -5px;
-        @media only screen and (min-width: $media-sml) {
+        @media only screen and (min-width: $media-mobile) {
           top: 15px;
           left: 5px;
         }
@@ -92,12 +86,12 @@ $media-min: 320px;
         position: absolute;
         top: -30px;
         left: -52px;
-        @media only screen and (min-width: $media-sml) {
+        @media only screen and (min-width: $media-mobile) {
           width: 330px;
           top: -42px;
           left: -73px;
         }
-        @media only screen and (min-width: $media-lrg) {
+        @media only screen and (min-width: $media-tablet) {
           content: none;
         }
       }
@@ -106,9 +100,10 @@ $media-min: 320px;
     &__slash {
       border: none;
       margin: 0;
-      @media only screen and (min-width: $media-lrg) {
+      z-index: 1;
+      @media only screen and (min-width: $media-tablet) {
         width: 500px;
-        border-top: 2px solid $color-white;
+        border-top: 1px solid $color-white;
         transform: rotate(-45deg);
         position: relative;
         display: inline-block;
@@ -117,33 +112,34 @@ $media-min: 320px;
     }
   }
 
-  // Code / Creative
-  &-sub {
-    opacity: 0.25;
+  &-byline {
+    color: $color-white;
     display: block;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
-    font-size: 0.25em;
-    margin-top: 40px;
-    @media only screen and (min-width: $media-sml) {
-      margin-top: 50px;
-    }
-    @media only screen and (min-width: $media-lrg) {
-      letter-spacing: 1em;
-      margin-top: 10px;
+    letter-spacing: 1em;
+    font-size: 0.24em;
+    margin-top: 140px;
+
+    @media only screen and (min-width: $media-tablet) {
+      margin-top: 40px;
     }
 
-    &__a {
-      margin-right: 20px;
-      @media only screen and (min-width: $media-lrg) {
-        margin-left: 40px;
-      }
-    }
+    &__clip {
+      position: relative;
 
-    &__b {
-      margin-left: 20px;
-      @media only screen and (min-width: $media-lrg) {
-        margin-left: 40px;
+      @media only screen and (min-width: $media-tablet) {
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-color: $color-mako transparent transparent transparent;
+          border-width: 15px 15px 0 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
       }
     }
   }
