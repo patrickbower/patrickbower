@@ -130,6 +130,6 @@ module.exports = function(grunt) {
     "autoprefixer",
     "browserify",
     "svg_sprite",
-    "copy:develop"
+    "copy:run"
   ]);
 };

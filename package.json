@@ -17,6 +17,6 @@
     "grunt-svg-sprite": "^1.2.16"
   },
   "scripts": {
-    "start": "grunt run"
+    "start": "grunt run && npx @11ty/eleventy --serve"
   }
 }
