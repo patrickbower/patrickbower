@@ -43,37 +43,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // image optimisation ~ deprication candidate?
-    // responsive_images: {
-    //   myTask: {
-    //     options: {
-    //       sizes: [
-    //         {
-    //           name: "480",
-    //           width: 480,
-    //           height: 240
-    //         },
-    //         {
-    //           name: "768",
-    //           width: 768
-    //         },
-    //         {
-    //           name: "1200",
-    //           width: 1200
-    //         }
-    //       ]
-    //     },
-    //     files: [
-    //       {
-    //         expand: true,
-    //         src: ["**/*.{jpg,gif,png}"],
-    //         cwd: "resources/imgs/",
-    //         dest: "serve/images"
-    //       }
-    //     ]
-    //   }
-    // },
-
     // svg sprite
     svg_sprite: {
       dist: {
@@ -139,10 +108,6 @@ module.exports = function(grunt) {
         files: ["resources/js/**/*.js"],
         tasks: ["browserify"]
       },
-      images: {
-        files: "resources/imgs/**/*.{png,jpg,gif}",
-        tasks: ["responsive_images"]
-      },
       sprite: {
         files: "resources/icon/*.svg",
         tasks: ["svg_sprite", "jekyll"]
@@ -176,7 +141,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks("grunt-svg-sprite");
   grunt.loadNpmTasks("grunt-autoprefixer");
-  grunt.loadNpmTasks("grunt-responsive-images");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-sass");
   grunt.loadNpmTasks("grunt-jekyll");
