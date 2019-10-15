@@ -16,5 +16,7 @@
     "grunt-sass": "2.1.0",
     "grunt-svg-sprite": "^1.2.16"
   },
-  "scripts": {}
+  "scripts": {
+    "start": "grunt run"
+  }
 }

@@ -12,7 +12,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          "serve/styles/main.css": "resources/scss/main.scss"
+          "_site/styles/main.css": "resources/scss/main.scss"
         }
       }
     },
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
     browserify: {
       dist: {
         files: {
-          "serve/scripts/main.js": "./resources/js/main.js"
+          "_site/scripts/main.js": "./resources/js/main.js"
         },
         options: {
           transform: [["babelify", { presets: ["es2015"] }]]
@@ -78,25 +78,16 @@ module.exports = function(grunt) {
     },
 
     // minify js
-    uglify: {
-      options: {
-        mangle: true
-      },
-      my_target: {
-        files: {
-          "build/scripts/main.js": "serve/scripts/main.js"
-        }
-      }
-    },
-
-    // jekyll
-    jekyll: {
-      dist: {
-        options: {
-          config: "_config.yml"
-        }
-      }
-    },
+    // uglify: {
+    //   options: {
+    //     mangle: true
+    //   },
+    //   my_target: {
+    //     files: {
+    //       "resources/scripts/main.js": "_site/scripts/main.js"
+    //     }
+    //   }
+    // },
 
     // watch
     watch: {
@@ -110,31 +101,17 @@ module.exports = function(grunt) {
       },
       sprite: {
         files: "resources/icon/*.svg",
-        tasks: ["svg_sprite", "jekyll"]
-      },
-      jekyll: {
-        files: [
-          "templates/_includes/*.njk",
-          "templates/_layouts/*.njk",
-          "templates/pages/*.njk"
-        ],
-        tasks: ["jekyll"]
+        tasks: ["svg_sprite"]
       }
     },
 
     // copy
     copy: {
-      build: {
-        expand: true,
-        cwd: "serve",
-        src: ["**", "!styles/*", "!scripts/*"],
-        dest: "./build"
-      },
-      develop: {
+      run: {
         expand: true,
         cwd: "resources",
-        src: ["fonts, CNAME, documents"],
-        dest: "./serve"
+        src: ["fonts/*", "CNAME", ".htaccess", "documents/*"],
+        dest: "./_site"
       }
     }
   });
@@ -143,19 +120,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-autoprefixer");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-sass");
-  grunt.loadNpmTasks("grunt-jekyll");
   grunt.loadNpmTasks("grunt-browserify");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-cssmin");
   grunt.loadNpmTasks("grunt-contrib-copy");
 
-  grunt.registerTask("develop", [
+  grunt.registerTask("run", [
     "sass",
     "autoprefixer",
     "browserify",
     "svg_sprite",
-    "jekyll",
     "copy:develop"
   ]);
-  grunt.registerTask("build", ["copy:build", "uglify", "cssmin"]);
 };
