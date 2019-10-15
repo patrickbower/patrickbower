@@ -1,3 +1,0 @@
-source: "templates"
-destination: "serve"
-keep_files: ["images", "scripts", "styles", "fonts", "CNAME"]

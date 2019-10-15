@@ -4,30 +4,24 @@ This is my personal website to demonstrate some creative and technical chops
 
 ### About
 
-This is the third incarnation but it's still holding up nicely with some classic technology. While I could redevelop using a fancy framework (JavaScript naturally), it's simple enough to not need it.
+This is the forth incarnation but it's still holding up nicely with some classic technology. While I could redevelop using a fancy framework (JavaScript naturally), it's simple enough to not need it.
 
 ### Dependencies
 
-There's needs to be globally available versions of
-
-- Jekyll (running ruby v2.4.0 or higher)
 - Node (v5.0.0 or higher)
 - NPM
 
 ### Installing
 
-- CL run `npm install` for dependencies.
-- CL run `jekyll serve` to create serve dir, build files and start server.
-- CL run `grunt develop` to build assets.
-- CL run `grunt watch` to rebuild during development.
+- Run `npm install` to add dependencies
+- Run `npx @11ty/eleventy --serve` to start
 
 ### Built With
 
-- Jekyll SSG
-- Grunt
-- GitHub Pages
+- 11ty
 - ES6
 - SASS
+- Grunt
 
 ### Contributing
 
@@ -35,7 +29,7 @@ Open for public observation only.
 
 ### Versioning
 
-3.0.0
+4.0.0
 
 ### License
 
