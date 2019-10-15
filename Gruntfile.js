@@ -114,9 +114,9 @@ module.exports = function(grunt) {
       },
       jekyll: {
         files: [
-          "templates/_includes/*.html",
-          "templates/_layouts/*.html",
-          "templates/pages/*.html"
+          "templates/_includes/*.njk",
+          "templates/_layouts/*.njk",
+          "templates/pages/*.njk"
         ],
         tasks: ["jekyll"]
       }
