@@ -18,11 +18,11 @@ This is the forth incarnation but it's still holding up nicely with some classic
 
 ### Options
 
-- `npm run start` to build and start serving
+- `npm run start` to build and start serving from `_site` with development assets
 - `npm run serve` to start server
 - `npm run develop` to build development assets
 - `npm run watch` to watch stylesheets, scripts and icons for changes
-- `npm run build` to get a production build to `_site`
+- `npm run production` to get a production build to `_site` clean of any development assets
 
 ### Built With
 
