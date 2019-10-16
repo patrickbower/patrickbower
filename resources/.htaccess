@@ -5,7 +5,7 @@
 # access to the main server configuration file (which is usually called
 # `httpd.conf`), you should add this logic there.
 #
-# https://httpd.apache.org/docs/current/howto/htaccess.html.
+# https://httpd.apache.org/docs/current/howto/htaccess.njk.
 
 # ######################################################################
 # # CROSS-ORIGIN                                                       #
@@ -32,7 +32,7 @@
 # Send the CORS header for images when browsers request it.
 #
 # https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image
-# https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.html
+# https://blog.chromium.org/2011/07/using-cross-domain-images-in-webgl-and.njk
 
 <IfModule mod_setenvif.c>
     <IfModule mod_headers.c>
@@ -83,9 +83,9 @@
 # ----------------------------------------------------------------------
 
 # Customize what Apache returns to the client in case of an error.
-# https://httpd.apache.org/docs/current/mod/core.html#errordocument
+# https://httpd.apache.org/docs/current/mod/core.njk#errordocument
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404.njk
 
 # ----------------------------------------------------------------------
 # | Error prevention                                                   |
@@ -96,7 +96,7 @@ ErrorDocument 404 /404.html
 # This setting prevents Apache from returning a 404 error as the result
 # of a rewrite when the directory with the same name does not exist.
 #
-# https://httpd.apache.org/docs/current/content-negotiation.html#multiviews
+# https://httpd.apache.org/docs/current/content-negotiation.njk#multiviews
 
 Options -MultiViews
 
@@ -161,7 +161,7 @@ Options -MultiViews
 # Serve resources with the proper media types (f.k.a. MIME types).
 #
 # https://www.iana.org/assignments/media-types/media-types.xhtml
-# https://httpd.apache.org/docs/current/mod/mod_mime.html#addtype
+# https://httpd.apache.org/docs/current/mod/mod_mime.njk#addtype
 
 <IfModule mod_mime.c>
 
@@ -248,7 +248,7 @@ Options -MultiViews
 # Serve all resources labeled as `text/html` or `text/plain`
 # with the media type `charset` parameter set to `UTF-8`.
 #
-# https://httpd.apache.org/docs/current/mod/core.html#adddefaultcharset
+# https://httpd.apache.org/docs/current/mod/core.njk#adddefaultcharset
 
 AddDefaultCharset utf-8
 
@@ -257,7 +257,7 @@ AddDefaultCharset utf-8
 # Serve the following file types with the media type `charset`
 # parameter set to `UTF-8`.
 #
-# https://httpd.apache.org/docs/current/mod/mod_mime.html#addcharset
+# https://httpd.apache.org/docs/current/mod/mod_mime.njk#addcharset
 
 <IfModule mod_mime.c>
     AddCharset utf-8 .atom \
@@ -290,29 +290,29 @@ AddDefaultCharset utf-8
 # (1) Turn on the rewrite engine (this is necessary in order for
 #     the `RewriteRule` directives to work).
 #
-#     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#RewriteEngine
+#     https://httpd.apache.org/docs/current/mod/mod_rewrite.njk#RewriteEngine
 #
 # (2) Enable the `FollowSymLinks` option if it isn't already.
 #
-#     https://httpd.apache.org/docs/current/mod/core.html#options
+#     https://httpd.apache.org/docs/current/mod/core.njk#options
 #
 # (3) If your web host doesn't allow the `FollowSymlinks` option,
 #     you need to comment it out or remove it, and then uncomment
 #     the `Options +SymLinksIfOwnerMatch` line (4), but be aware
 #     of the performance impact.
 #
-#     https://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks
+#     https://httpd.apache.org/docs/current/misc/perf-tuning.njk#symlinks
 #
 # (4) Some cloud hosting services will require you set `RewriteBase`.
 #
 #     https://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site
-#     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewritebase
+#     https://httpd.apache.org/docs/current/mod/mod_rewrite.njk#rewritebase
 #
 # (5) Depending on how your server is set up, you may also need to
 #     use the `RewriteOptions` directive to enable some options for
 #     the rewrite engine.
 #
-#     https://httpd.apache.org/docs/current/mod/mod_rewrite.html#rewriteoptions
+#     https://httpd.apache.org/docs/current/mod/mod_rewrite.njk#rewriteoptions
 #
 # (6) Set %{ENV:PROTO} variable, to allow rewrites to redirect with the
 #     appropriate schema automatically (http or https).
@@ -471,7 +471,7 @@ AddDefaultCharset utf-8
 # such as: http://cspisawesome.com/.
 #
 # http://content-security-policy.com/
-# http://www.html5rocks.com/en/tutorials/security/content-security-policy/
+# http://www.njk5rocks.com/en/tutorials/security/content-security-policy/
 # http://www.w3.org/TR/CSP11/).
 
 # <IfModule mod_headers.c>
@@ -577,7 +577,7 @@ AddDefaultCharset utf-8
 # (!) Remove the `includeSubDomains` optional directive if the website's
 # subdomains are not using HTTPS.
 #
-# http://www.html5rocks.com/en/tutorials/security/transport-layer-security/
+# http://www.njk5rocks.com/en/tutorials/security/transport-layer-security/
 # https://tools.ietf.org/html/draft-ietf-websec-strict-transport-sec-14#section-6.1
 # http://blogs.msdn.com/b/ieinternals/archive/2014/08/18/hsts-strict-transport-security-attacks-mitigations-deployment-https.aspx
 
@@ -688,7 +688,7 @@ AddDefaultCharset utf-8
 # information about the server to the server-generated documents
 # (e.g.: error messages, directory listings, etc.)
 #
-# https://httpd.apache.org/docs/current/mod/core.html#serversignature
+# https://httpd.apache.org/docs/current/mod/core.njk#serversignature
 
 ServerSignature Off
 
@@ -701,7 +701,7 @@ ServerSignature Off
 # (!) The `ServerTokens` directive will only work in the main server
 # configuration file, so don't try to enable it in the `.htaccess` file!
 #
-# https://httpd.apache.org/docs/current/mod/core.html#servertokens
+# https://httpd.apache.org/docs/current/mod/core.njk#servertokens
 
 #ServerTokens Prod
 
@@ -717,7 +717,7 @@ ServerSignature Off
 <IfModule mod_deflate.c>
 
     # Force compression for mangled `Accept-Encoding` request headers
-    # https://developer.yahoo.com/blogs/ydn/pushing-beyond-gzipping-25601.html
+    # https://developer.yahoo.com/blogs/ydn/pushing-beyond-gzipping-25601.njk
 
     <IfModule mod_setenvif.c>
         <IfModule mod_headers.c>
@@ -735,7 +735,7 @@ ServerSignature Off
     # and `</IfModule>` lines as `AddOutputFilterByType` is still in
     # the core directives.
     #
-    # https://httpd.apache.org/docs/current/mod/mod_filter.html#addoutputfilterbytype
+    # https://httpd.apache.org/docs/current/mod/mod_filter.njk#addoutputfilterbytype
 
     <IfModule mod_filter.c>
         AddOutputFilterByType DEFLATE "application/atom+xml" \
@@ -786,7 +786,7 @@ ServerSignature Off
     # the response, and thus, wouldn't be able to understand the
     # content.
     #
-    # https://httpd.apache.org/docs/current/mod/mod_mime.html#addencoding
+    # https://httpd.apache.org/docs/current/mod/mod_mime.njk#addencoding
 
     <IfModule mod_mime.c>
         AddEncoding gzip              svgz
@@ -822,7 +822,7 @@ ServerSignature Off
 
 # Remove `ETags` as resources are sent with far-future expires headers.
 #
-# https://developer.yahoo.com/performance/rules.html#etags
+# https://developer.yahoo.com/performance/rules.njk#etags
 # https://tools.ietf.org/html/rfc7232#section-2.3
 
 # `FileETag None` doesn't work in all cases.
@@ -842,7 +842,7 @@ FileETag None
 # cache busting, you should consider lowering the cache times
 # to something like one week.
 #
-# https://httpd.apache.org/docs/current/mod/mod_expires.html
+# https://httpd.apache.org/docs/current/mod/mod_expires.njk
 
 <IfModule mod_expires.c>
 

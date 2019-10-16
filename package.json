@@ -1,24 +1,26 @@
 {
   "name": "patrickbowercom",
-  "version": "2.0.0",
+  "version": "4.0.0",
   "description": "Personal website",
-  "scripts": {
-    "deploy": "./deploy.sh"
-  },
   "devDependencies": {
+    "@11ty/eleventy": "^0.9.0",
     "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
     "grunt": "^0.4.5",
     "grunt-autoprefixer": "^3.0.3",
     "grunt-browserify": "^5.0.0",
+    "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-jekyll": "^0.4.3",
-    "grunt-responsive-images": "^0.1.9",
-    "grunt-sass": "^1.0.0",
+    "grunt-sass": "2.1.0",
     "grunt-svg-sprite": "^1.2.16"
   },
-  "dependencies": {}
+  "scripts": {
+    "start": "(npm run develop && npm run serve) & npm run watch",
+    "serve": "npx @11ty/eleventy --serve",
+    "develop": "grunt develop",
+    "watch": "grunt watch",
+    "build": "npx @11ty/eleventy && grunt production"
+  }
 }

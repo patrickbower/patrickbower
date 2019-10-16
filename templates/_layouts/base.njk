@@ -12,6 +12,8 @@
 
     <!-- link rel="apple-touch-icon" href="apple-touch-icon.png" -->
 
+    <meta name="referrer" content="origin" />
+
     <script>
         (function() {
             var html = document.documentElement;
@@ -21,20 +23,20 @@
 
     <link rel="stylesheet" href="/styles/main.css">
 
+    {% include 'sprite.svg' %}
+
 </head>
 
 <!--[if IE 8]><body class="lte-ie9 lt-ie9"> <![endif]-->
 <!--[if IE 9]><body class="lte-ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <body data-init="in-view"> <!--<![endif]-->
 
-{% include sprite.svg %}
-
 <!--[if lt IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <main>
-    {{ content }}
+    {{ content | safe }}
 </main>
 
 <script src="/scripts/main.js"></script>
