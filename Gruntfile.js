@@ -1,19 +1,33 @@
 "use strict";
 
+const fs = require("fs");
+
 module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
 
     // sass
     sass: {
-      options: {
-        sourceMap: true,
-        sourceMapContents: true
+      develop: {
+        expand: true,
+        options: {
+          sourceMap: true,
+          sourceMapContents: true
+        },
+        cwd: "resources/scss/",
+        src: "main.scss",
+        dest: "_site/styles/",
+        ext: ".css"
       },
-      dist: {
-        files: {
-          "_site/styles/main.css": "resources/scss/main.scss"
-        }
+      production: {
+        expand: true,
+        options: {
+          outputStyle: "compressed"
+        },
+        cwd: "resources/scss/",
+        src: "main.scss",
+        dest: "_site/styles/",
+        ext: ".css"
       }
     },
 
@@ -23,23 +37,8 @@ module.exports = function(grunt) {
         browsers: ["last 2 versions", "ie 8", "ie 9"]
       },
       dist: {
-        src: "serve/styles/main.css",
-        dest: "serve/styles/main.css"
-      }
-    },
-
-    // css minify
-    cssmin: {
-      target: {
-        files: [
-          {
-            expand: true,
-            cwd: "serve/styles",
-            src: ["*.css"],
-            dest: "build/styles",
-            ext: ".css"
-          }
-        ]
+        src: "_site/styles/main.css",
+        dest: "_site/styles/main.css"
       }
     },
 
@@ -77,18 +76,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // minify js
-    // uglify: {
-    //   options: {
-    //     mangle: true
-    //   },
-    //   my_target: {
-    //     files: {
-    //       "resources/scripts/main.js": "_site/scripts/main.js"
-    //     }
-    //   }
-    // },
-
     // watch
     watch: {
       stylesheets: {
@@ -107,13 +94,32 @@ module.exports = function(grunt) {
 
     // copy
     copy: {
-      run: {
+      main: {
         expand: true,
         cwd: "resources",
         src: ["fonts/*", "CNAME", ".htaccess", "documents/*"],
         dest: "./_site"
       }
-    }
+    },
+
+    // minify js
+    uglify: {
+      my_target: {
+        files: [
+          {
+            expand: true,
+            mangle: true,
+            sourceMap: false,
+            cwd: "_site/scripts",
+            src: "*.js",
+            dest: "_site/scripts"
+          }
+        ]
+      }
+    },
+
+    // delete _site dir
+    clean: "_site"
   });
 
   grunt.loadNpmTasks("grunt-svg-sprite");
@@ -122,14 +128,23 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-sass");
   grunt.loadNpmTasks("grunt-browserify");
   grunt.loadNpmTasks("grunt-contrib-uglify");
-  grunt.loadNpmTasks("grunt-contrib-cssmin");
   grunt.loadNpmTasks("grunt-contrib-copy");
+  grunt.loadNpmTasks("grunt-contrib-clean");
 
-  grunt.registerTask("run", [
-    "sass",
+  grunt.registerTask("develop", [
+    "sass:develop",
     "autoprefixer",
     "browserify",
     "svg_sprite",
-    "copy:run"
+    "copy"
+  ]);
+
+  grunt.registerTask("production", [
+    "clean",
+    "sass:production",
+    "autoprefixer",
+    "browserify",
+    "uglify",
+    "copy"
   ]);
 };

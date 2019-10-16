@@ -1,7 +1,7 @@
 @mixin animation-keyframes($animation-name) {
-    animation-name: $animation-name;
+  animation-name: $animation-name;
 
-    @keyframes #{$animation-name} {
-        @content;
-    }
+  @keyframes #{$animation-name} {
+    @content;
+  }
 }
