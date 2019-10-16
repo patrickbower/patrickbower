@@ -26,9 +26,9 @@ This is the forth incarnation but it's still holding up nicely with some classic
 
 ### Built With
 
-- 11ty
-- ES6
-- SASS
+- Eleventy
+- OOP and Functional ES6
+- SASS using ITCSS
 - Grunt
 
 ### Contributing
