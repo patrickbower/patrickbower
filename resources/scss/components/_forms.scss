@@ -1,4 +1,8 @@
 .form {
+  &__legend {
+    @extend .visually-hidden;
+  }
+
   &__row {
     position: relative;
     margin-bottom: rem(50px);
@@ -6,12 +10,6 @@
     height: 3.316em;
     background: lighten($color-mine-shaft, 5%);
     border: none;
-
-    &--confirm {
-      margin-bottom: 0;
-      height: 0;
-      @extend .visually-hidden;
-    }
 
     &--message {
       min-height: 13.264em;
@@ -58,6 +56,7 @@
   }
 
   &__submit {
+    margin: 0 13px;
     background: none;
   }
 }
