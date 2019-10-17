@@ -1,12 +1,11 @@
 .design {
-
-    &__icon {
-        @media only screen and (min-width: $media-desktop) {
-            margin-top: rem(-80px);
-        }
+  &__icon {
+    @media only screen and (min-width: $media-desktop) {
+      margin-top: rem(-80px);
     }
+  }
 
-    &--strike:before {
-        border-color: transparent transparent $color-brick-red transparent;
-    }
+  &--strike:before {
+    border-color: transparent transparent $color-brick-red transparent;
+  }
 }

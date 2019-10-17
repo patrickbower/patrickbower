@@ -1,34 +1,27 @@
-.media
-{
-    &__text
-    {
-        overflow: hidden;
-        _overflow: visible;
-        zoom: 1;
+.media {
+  &__text {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1;
+  }
+
+  &__img {
+    padding: rem(30px) 0 rem(60px) 0;
+
+    @media only screen and (min-width: $media-desktop) {
+      display: block;
+      padding: 0 0 rem(60px) 0;
+      float: left;
+      margin-right: rem(30px);
     }
 
-    &__img
-    {
-        padding: rem(30px) 0 rem(60px) 0;
-
-        @media only screen and (min-width: $media-desktop)
-        {
-            display: block;
-            padding: 0 0 rem(60px) 0;
-            float: left;
-            margin-right: rem(30px);
-        }
-
-        &--sml
-        {
-            padding: 0;
-            margin-right: rem(15px);
-        }
+    &--sml {
+      padding: 0;
+      margin-right: rem(15px);
     }
+  }
 
-    &__img img
-    {
-        display: block;
-    }
-
+  &__img img {
+    display: block;
+  }
 }

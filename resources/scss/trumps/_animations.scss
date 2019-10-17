@@ -1,27 +1,21 @@
-.animate
-{
-    &--in
-    {
-        transition: all $animation-default ease-out;
-        opacity: 0;
-    }
+.animate {
+  &--in {
+    transition: all $animation-default ease-out;
+    opacity: 0;
+  }
 
-    &--out
-    {
-        transition: all $animation-default ease-out;
-        opacity: 1;
-    }
+  &--out {
+    transition: all $animation-default ease-out;
+    opacity: 1;
+  }
 }
 
-.fade
-{
-    &--in
-    {
-        opacity: 1;
-    }
+.fade {
+  &--in {
+    opacity: 1;
+  }
 
-    &--out
-    {
-        opacity: 0;
-    }
+  &--out {
+    opacity: 0;
+  }
 }

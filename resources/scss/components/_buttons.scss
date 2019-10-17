@@ -1,14 +1,14 @@
 .button__wrap {
-    margin-top: rem(50px);
-    @media only screen and (min-width: $media-tablet) {
-        margin-top: rem(30px);
-    }
+  margin-top: rem(50px);
+  @media only screen and (min-width: $media-tablet) {
+    margin-top: rem(30px);
+  }
 }
 
-.button
-{
-    text-align: center;
-    @include button(
-        $button-background-color: $color-mine-shaft,
-        $button-text-color: $color-mine-shaft);
+.button {
+  text-align: center;
+  @include button(
+    $button-background-color: $color-mine-shaft,
+    $button-text-color: $color-mine-shaft
+  );
 }

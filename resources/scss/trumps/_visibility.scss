@@ -1,35 +1,27 @@
-.display
-{
-    &--none
-    {
-        display: none;
+.display {
+  &--none {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  &--mobile {
+    display: block;
+  }
+
+  &--desktop {
+    display: none;
+  }
+
+  @media only screen and (min-width: $media-desktop) {
+    &--mobile {
+      display: none;
     }
 
-    &--show
-    {
-        display: block;
+    &--desktop {
+      display: block;
     }
-
-    &--mobile
-    {
-        display: block;
-    }
-
-    &--desktop
-    {
-        display: none;
-    }
-
-    @media only screen and (min-width: $media-desktop) {
-
-        &--mobile
-        {
-            display: none;
-        }
-
-        &--desktop
-        {
-            display: block;
-        }
-    }
+  }
 }

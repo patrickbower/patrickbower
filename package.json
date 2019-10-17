@@ -18,7 +18,7 @@
     "grunt-svg-sprite": "^1.2.16"
   },
   "scripts": {
-    "start": "npm run develop && npm run serve && npm run watch",
+    "start": "(npm run develop && npm run serve) & npm run watch",
     "serve": "npx @11ty/eleventy --serve",
     "develop": "grunt develop",
     "watch": "grunt watch",
