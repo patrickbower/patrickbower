@@ -1,103 +1,97 @@
-.modal
-{
-    display: none;
+.modal {
+  display: none;
 
-    &.active
-    {
-        display: block;
-    }
+  &.active {
+    display: block;
+  }
 
-    &-active
-    {
-        position: relative;
-        overflow-y: hidden;
-    }
+  &-active {
+    position: relative;
+    overflow-y: hidden;
+  }
 
-    &__window-spring
-    {
-        position: fixed;
-        right: 0;
-        left: 0;
-        background: $color-mine-shaft;
-        z-index: $z-index-super;
-        color: $color-white;
-        animation: 700ms forwards;
+  &__window-spring {
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: $color-mine-shaft;
+    z-index: $z-index-super;
+    color: $color-white;
+    animation: 700ms forwards;
 
-        @include animation-keyframes(modal-window--slide-in-from-top) {
-            from {
-                top: -200vw;
-                bottom: 200vw;
-            } to {
-                top: 0;
-                bottom: 0;
-            }
-        }
-
-        &:after
-        {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 100vw solid transparent;
-            border-right: 100vw solid transparent;
-            border-top: 100vw solid $color-mine-shaft;
-            position: absolute;
-            bottom: -100vw;
-            left: -100vw;
-        }
-    }
-
-    &__window
-    {
-        height: 100%;
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-
-    &__content
-    {
-        padding: rem(100px) rem(10px) rem(10px) rem(10px);
-        opacity: 0;
-        animation: 300ms forwards 700ms;
-        @include animation-keyframes(modal-content--fade-in) {
-            from {
-                opacity: 0;
-            } to {
-                opacity: 1;
-            }
-        }
-
-        @media only screen and (min-width: $media-tablet) {
-            padding: rem(100px) rem(20px) rem(20px) rem(20px);
-        }
-    }
-
-    &__close
-    {
-        position: fixed;
+    @include animation-keyframes(modal-window--slide-in-from-top) {
+      from {
+        top: -200vw;
+        bottom: 200vw;
+      }
+      to {
         top: 0;
-        right: 20px;
-        z-index: $z-index-super;
-        padding: rem(20px);
-        margin: rem(20px);
-        border-radius: 50%;
-        opacity: 0;
-        animation: 300ms forwards 700ms;
-        @include animation-keyframes(modal-close-button--fade-in) {
-            from {
-                opacity: 0;
-            } to {
-                opacity: 1;
-            }
-        }
-
-        &:hover
-        {
-            background: lighten($color-mine-shaft, 5%);
-        }
-
-        .icon--close {
-            pointer-events: none;
-        }
+        bottom: 0;
+      }
     }
+
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 100vw solid transparent;
+      border-right: 100vw solid transparent;
+      border-top: 100vw solid $color-mine-shaft;
+      position: absolute;
+      bottom: -100vw;
+      left: -100vw;
+    }
+  }
+
+  &__window {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  &__content {
+    padding: rem(100px) rem(10px) rem(10px) rem(10px);
+    opacity: 0;
+    animation: 300ms forwards 700ms;
+    @include animation-keyframes(modal-content--fade-in) {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @media only screen and (min-width: $media-tablet) {
+      padding: rem(100px) rem(20px) rem(20px) rem(20px);
+    }
+  }
+
+  &__close {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: $z-index-super;
+    padding: rem(20px);
+    margin: rem(20px);
+    border-radius: 50%;
+    opacity: 0;
+    animation: 300ms forwards 700ms;
+    @include animation-keyframes(modal-close-button--fade-in) {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      background: lighten($color-mine-shaft, 5%);
+    }
+
+    .icon--close {
+      pointer-events: none;
+    }
+  }
 }

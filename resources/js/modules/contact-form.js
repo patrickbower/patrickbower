@@ -1,18 +1,18 @@
-import * as utility from '../utilities/_utilities';
+import * as utility from "../utilities/_utilities";
 
 const defaults = {
-    element: undefined,
-    selectors: {
-        contact_form: 'js-contact--form',
-        submit_button: 'js-contact--submit',
-        confirm_input: 'js-contact--confirm',
-        contact_section: 'js-contact--section',
-    },
-    email: {
-        first: 'patrickbowercom',
-        last: 'gmail.com'
-    }
-}
+  element: undefined,
+  selectors: {
+    contact_form: "js-contact--form",
+    submit_button: "js-contact--submit",
+    confirm_input: "js-contact--confirm",
+    contact_section: "js-contact--section"
+  },
+  email: {
+    first: "patrickbowercom",
+    last: "gmail.com"
+  }
+};
 
 /**
  * Enhance the contact form.
@@ -22,94 +22,99 @@ const defaults = {
  * @class ContactForm
  */
 export class ContactForm {
+  /**
+   * Launches full page modal.
+   *
+   * @constructor
+   * @param {object} the origin module that launches the modal
+   */
+  constructor(properties = {}) {
+    let members = Object.assign({}, defaults, properties);
 
-    /**
-     * Launches full page modal.
-     *
-     * @constructor
-     * @param {object} the origin module that launches the modal
-     */
-    constructor(properties = {}) {
+    this.element = members.element;
+    this.selectors = members.selectors;
+    this.email = members.email;
+  }
 
-        let members = Object.assign({}, defaults, properties);
+  /**
+   * Initalise and setup at runtime.
+   *
+   * @function init
+   */
+  init() {
+    this.setFormAction();
+    this.hiddenInput();
+    this.bindEvents();
+  }
 
-        this.element = members.element;
-        this.selectors = members.selectors;
-        this.email = members.email;
-    }
+  /**
+   * Build form action with email address
+   *
+   * @function setFormAction
+   */
+  setFormAction() {
+    let form = this.element.querySelector("." + this.selectors.contact_form);
+    const action = `https://formspree.io/${this.email.first}@${this.email.last}`;
+    form.setAttribute("action", action);
+  }
 
-    /**
-     * Initalise and setup at runtime.
-     *
-     * @function init
-     */
-    init () {
-        this.setFormAction();
-        this.hiddenInput();
-        this.bindEvents();
-    }
+  /**
+   * Add event listners where requiried.
+   *
+   * @function bindEvents
+   */
+  bindEvents() {
+    let instance = this;
 
-    /**
-     * Build form action with email address
-     *
-     * @function setFormAction
-     */
-    setFormAction() {
-        let form = this.element.querySelector('.' + this.selectors.contact_form);
-        const action = `https://formspree.io/${this.email.first}@${this.email.last}`
-        form.setAttribute('action', action);
-    }
+    // form submit button
+    let submit_form_event = {
+      handleEvent: function(event) {
+        event.preventDefault();
+        instance.submitForm();
+      }
+    };
 
-    /**
-     * Add event listners where requiried.
-     *
-     * @function bindEvents
-     */
-    bindEvents () {
-        let instance = this;
+    let submit_button = this.element.querySelector(
+      "." + this.selectors.submit_button
+    );
+    submit_button.addEventListener("click", submit_form_event);
+  }
 
-        // form submit button
-        let submit_form_event = {
-            handleEvent: function(event) {
-                event.preventDefault();
-                instance.submitForm();
-            }
-        }
+  /**
+   * Prevent tabbing into hidden input placed to encourage spam bots.
+   *
+   * @function hiddenInput
+   * @param contactForm - The module html.
+   */
+  hiddenInput() {
+    let confirm = this.element.querySelector(
+      "." + this.selectors.confirm_input
+    );
+    confirm.tabIndex = -1;
+  }
 
-        let submit_button = this.element.querySelector('.' + this.selectors.submit_button);
-        submit_button.addEventListener('click', submit_form_event);
-    }
+  /**
+   * Get content via Ajax.
+   *
+   * @function submitForm
+   * @requires {function} ajax utility
+   */
+  submitForm() {
+    let form = this.element.querySelector("." + this.selectors.contact_form);
+    utility.postJson(form.action, new FormData(form), data => {
+      this.confirmSubmit();
+    });
+  }
 
-    /**
-     * Prevent tabbing into hidden input placed to encourage spam bots.
-     *
-     * @function hiddenInput
-     * @param contactForm - The module html.
-     */
-    hiddenInput () {
-        let confirm = this.element.querySelector('.' + this.selectors.confirm_input);
-        confirm.tabIndex = -1;
-    }
-
-    /**
-    * Get content via Ajax.
-    *
-    * @function submitForm
-    * @requires {function} ajax utility
-    */
-    submitForm () {
-        let form = this.element.querySelector('.' + this.selectors.contact_form);
-        utility.postJson(form.action, new FormData(form), data => {
-            this.confirmSubmit();
-        });
-    }
-
-    /**
-     * Replace contact form with confermation message.
-     *
-     */
-    confirmSubmit() {
-        let contact_section = this.element.querySelector('.' + this.selectors.contact_section);
-        contact_section.innerHTML = "<h2 class='h2'><span class='strike contact-section--strike'>Thanks</span></h2>";
-    }
+  /**
+   * Replace contact form with confermation message.
+   *
+   */
+  confirmSubmit() {
+    let contact_section = this.element.querySelector(
+      "." + this.selectors.contact_section
+    );
+    contact_section.innerHTML =
+      "<h2 class='h2'><span class='strike contact-section--strike'>Thanks</span></h2>";
+  }
 }

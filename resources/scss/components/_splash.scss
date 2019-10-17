@@ -1,33 +1,33 @@
 .splash {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 75vh solid transparent;
+    border-right: 75vh solid transparent;
+    border-top: 75vh solid $color-mischka;
+    margin-left: -75vh;
+  }
+
+  &__image {
+    flex: 1 0 auto;
+  }
+
+  &__heading {
     position: relative;
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    overflow: hidden;
+    flex: none;
+    padding-left: rem(40px);
+  }
 
-    &:before {
-        content: '';
-        position: absolute;
-        width: 0px;
-        height: 0px;
-        border-left: 75vh solid transparent;
-        border-right: 75vh solid transparent;
-        border-top: 75vh solid $color-mischka;
-        margin-left: -75vh;
-    }
-
-    &__image {
-        flex: 1 0 auto;
-    }
-
-    &__heading {
-        position: relative;
-        flex: none;
-        padding-left: rem(40px);
-    }
-
-    &__tilt-image {
-        transform: rotate(-45deg);
-        margin-top: -15vw;
-    }
+  &__tilt-image {
+    transform: rotate(-45deg);
+    margin-top: -15vw;
+  }
 }

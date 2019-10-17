@@ -1,36 +1,30 @@
-.footer
-{
-    @extend %clearfix;
-    text-align: center;
-    position: relative;
-    top: rem(-45px);
+.footer {
+  @extend %clearfix;
+  text-align: center;
+  position: relative;
+  top: rem(-45px);
 
-    @media only screen and (min-width: $media-desktop)
-    {
-        margin-top: rem(-90px);
-        top: rem(-30px);
-        right: rem(30px);
+  @media only screen and (min-width: $media-desktop) {
+    margin-top: rem(-90px);
+    top: rem(-30px);
+    right: rem(30px);
+  }
+
+  &__link {
+    margin: 0 10px;
+
+    @media only screen and (min-width: $media-desktop) {
+      float: right;
     }
+  }
 
-    &__link
-    {
-        margin: 0 10px;
+  &__link-icon {
+    width: rem(50px);
+    height: rem(50px);
 
-        @media only screen and (min-width: $media-desktop)
-        {
-            float: right;
-        }
+    @media only screen and (min-width: $media-desktop) {
+      width: rem(80px);
+      height: rem(80px);
     }
-
-    &__link-icon
-    {
-        width: rem(50px);
-        height: rem(50px);
-
-        @media only screen and (min-width: $media-desktop)
-        {
-            width: rem(80px);
-            height: rem(80px);
-        }
-    }
+  }
 }

@@ -1,12 +1,12 @@
-import * as utility from '../utilities/_utilities';
+import * as utility from "../utilities/_utilities";
 
 const defaults = {
-    element: undefined,
-    email: {
-        first: 'patrickbowercom',
-        last: 'gmail.com'
-    }
-}
+  element: undefined,
+  email: {
+    first: "patrickbowercom",
+    last: "gmail.com"
+  }
+};
 
 /**
  * Create direct email link instead of linking
@@ -16,43 +16,43 @@ const defaults = {
  * @class Email
  */
 export class Email {
+  /**
+   * @constructor
+   * @param {object} element to add email button into.
+   */
+  constructor(properties = {}) {
+    let members = Object.assign({}, defaults, properties);
 
-    /**
-     * @constructor
-     * @param {object} element to add email button into.
-     */
-    constructor(properties = {}) {
+    this.element = members.element;
+    this.selectors = members.selectors;
+    this.email = members.email;
+  }
 
-        let members = Object.assign({}, defaults, properties);
+  /**
+   * Initalise and setup at runtime.
+   *
+   * @function init
+   */
+  init() {
+    this.addEmail();
+  }
 
-        this.element = members.element;
-        this.selectors = members.selectors;
-        this.email = members.email;
-    }
+  /**
+   * Add direct email address button to limit spaming bots.
+   *
+   * @function addEmail
+   */
+  addEmail() {
+    // construct button
+    const anchor = document.createElement("a");
+    anchor.setAttribute("class", "button button--white");
+    anchor.setAttribute(
+      "href",
+      `mailto:${this.email.first}@${this.email.last}`
+    );
+    anchor.innerText = `${this.email.first}@${this.email.last}`;
 
-    /**
-     * Initalise and setup at runtime.
-     *
-     * @function init
-     */
-    init () {
-        this.addEmail();
-    }
-
-    /**
-     * Add direct email address button to limit spaming bots.
-     *
-     * @function addEmail
-     */
-    addEmail () {
-
-        // construct button
-        const anchor = document.createElement('a');
-        anchor.setAttribute('class', 'button button--white');
-        anchor.setAttribute('href', `mailto:${this.email.first}@${this.email.last}`);
-        anchor.innerText = `${this.email.first}@${this.email.last}`;
-
-        // append button
-        this.element.appendChild(anchor);
-    }
+    // append button
+    this.element.appendChild(anchor);
+  }
 }
