@@ -1,57 +1,46 @@
-.float
-{
-    &--left
-    {
-        float: left;
-    }
+.float {
+  &--left {
+    float: left;
+  }
 
-    &--right
-    {
-        float: right;
-    }
+  &--right {
+    float: right;
+  }
 }
 
-.align
-{
+.align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &--right {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &--left {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &--middle {
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    &--right
-    {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    &--left
-    {
-        display: flex;
-        justify-content: flex-start;
-    }
-
-    &--middle
-    {
-        display: flex;
-        align-items: center;
-    }
+  }
 }
 
 .leading--none {
-    line-height: 0;
+  line-height: 0;
 }
 
-.center
-{
-    &--mobile
-    {
-        text-align: center;
-    }
+.center {
+  &--mobile {
+    text-align: center;
+  }
 
-    @media only screen and (min-width: $media-tablet)
-    {
-        &--mobile
-        {
-            text-align: left;
-        }
+  @media only screen and (min-width: $media-tablet) {
+    &--mobile {
+      text-align: left;
     }
+  }
 }

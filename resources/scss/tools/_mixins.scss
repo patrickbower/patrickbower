@@ -1,77 +1,61 @@
 // micro-clearfix
 %clearfix:before,
-%clearfix:after
-{
-    content: " ";
-    display: table;
+%clearfix:after {
+  content: " ";
+  display: table;
 }
-%clearfix:after
-{
-    clear: both;
+%clearfix:after {
+  clear: both;
 }
-.lt-ie8 %clearfix
-{
-    zoom: 1;
+.lt-ie8 %clearfix {
+  zoom: 1;
 }
 
 // convert px to rem
-@function rem($size)
-{
-    $size: $size / ($size * 0 + 1);
-    $remSize: $size / $base;
+@function rem($size) {
+  $size: $size / ($size * 0 + 1);
+  $remSize: $size / $base;
 
-    @return #{$remSize}rem;
+  @return #{$remSize}rem;
 }
 
 // borders
-@mixin border($color)
-{
-    border: 1px solid $color;
+@mixin border($color) {
+  border: 1px solid $color;
 }
 
 // buttons
-@mixin button (
-    $button-background-color: inherit,
-    $button-text-color: inherit,
-    $button-text-hover-color: inherit,
-    $button-hover-tint: 'darken'
-)
-{
-    display: inline-block;
-    text-decoration: none;
-    color: $button-text-color;
-    padding: rem(13px) rem(46px);
-    @include border($button-text-color);
+@mixin button(
+  $button-background-color: inherit,
+  $button-text-color: inherit,
+  $button-text-hover-color: inherit,
+  $button-hover-tint: "darken"
+) {
+  display: inline-block;
+  text-decoration: none;
+  color: $button-text-color;
+  padding: rem(13px) rem(46px);
+  @include border($button-text-color);
 
-    &:hover
-    {
-        @if $button-hover-tint == 'lighten'
-        {
-            background: lighten($button-background-color, 5%);
-            border-color: lighten($button-background-color, 5%);
-        }
-
-        @else if $button-hover-tint == 'darken'
-        {
-            background: darken($button-background-color, 5%);
-            border-color: darken($button-background-color, 5%);
-        }
-        color: $button-text-hover-color;
+  &:hover {
+    @if $button-hover-tint == "lighten" {
+      background: lighten($button-background-color, 5%);
+      border-color: lighten($button-background-color, 5%);
+    } @else if $button-hover-tint == "darken" {
+      background: darken($button-background-color, 5%);
+      border-color: darken($button-background-color, 5%);
     }
+    color: $button-text-hover-color;
+  }
 
-    &:active
-    {
-        @if $button-hover-tint == 'lighten'
-        {
-            background: lighten($button-background-color, 10%);
-            border-color: lighten($button-background-color, 10%);
-        }
-
-        @else if $button-hover-tint == 'darken'
-        {
-            background: darken($button-background-color, 10%);
-            border-color: darken($button-background-color, 10%);
-        }
-        color: $button-text-hover-color;
+  &:active {
+    @if $button-hover-tint == "lighten" {
+      background: lighten($button-background-color, 10%);
+      border-color: lighten($button-background-color, 10%);
+    } @else if $button-hover-tint == "darken" {
+      background: darken($button-background-color, 10%);
+      border-color: darken($button-background-color, 10%);
     }
+    color: $button-text-hover-color;
+  }
 }

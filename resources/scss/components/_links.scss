@@ -1,16 +1,12 @@
 .link {
-
-    &--underline
-    {
-        &:hover,
-        &:focus
-        {
-            text-decoration: underline;
-        }
+  &--underline {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
+  }
 
-    &--unicode
-    {
-        font-weight: bold;
-    }
+  &--unicode {
+    font-weight: bold;
+  }
 }

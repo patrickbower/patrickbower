@@ -1,73 +1,62 @@
-.form
-{
-    &__row
-    {
-        position: relative;
-        margin-bottom: rem(50px);
-        z-index: 0;
-        height: 3.316em;
-        background: lighten($color-mine-shaft, 5%);
-        border: none;
+.form {
+  &__legend {
+    @extend .visually-hidden;
+  }
 
-        &--confirm
-        {
-            margin-bottom: 0;
-            height: 0;
-            @extend .visually-hidden;
-        }
+  &__row {
+    position: relative;
+    margin-bottom: rem(50px);
+    z-index: 0;
+    height: 3.316em;
+    background: lighten($color-mine-shaft, 5%);
+    border: none;
 
-        &--message
-        {
-            min-height: 13.264em;
-        }
+    &--message {
+      min-height: 13.264em;
+    }
+  }
+
+  &__label {
+    z-index: 1;
+    position: absolute;
+    display: inline-block;
+    top: 1em;
+    left: 1em;
+    transition: 0.2s ease all;
+    color: $color-concrete;
+  }
+
+  &__input {
+    z-index: 2;
+    padding: 1em;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    transition: 0.2s ease all;
+    border-bottom: rem(1px) solid $color-mine-shaft;
+    color: $color-concrete;
+
+    &--textarea {
+      height: 100%;
     }
 
-    &__label
-    {
-        z-index: 1;
-        position: absolute;
-        display: inline-block;
-        top: 1em;
-        left:  1em;
-        transition: 0.2s ease all;
-        color: $color-concrete;
+    &:focus {
+      border-bottom: rem(1px) solid $color-nobel;
     }
 
-    &__input
-    {
-        z-index: 2;
-        padding: 1em;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: none;
-        transition: 0.2s ease all;
-        border-bottom: rem(1px) solid $color-mine-shaft;
-        color: $color-concrete;
-
-        &--textarea
-        {
-            height: 100%;
-        }
-
-        &:focus
-        {
-            border-bottom: rem(1px) solid $color-nobel;
-        }
-
-        &:focus ~ label,
-        &:valid ~ label
-        {
-            top: -1.45em;
-            left: 0;
-            color: $color-nobel;
-            font-size: 90%;
-        }
+    &:focus ~ label,
+    &:valid ~ label {
+      top: -1.45em;
+      left: 0;
+      color: $color-nobel;
+      font-size: 90%;
     }
+  }
 
-    &__submit
-    {
-        background: none;
-    }
+  &__submit {
+    margin: 0 13px;
+    background: none;
+  }
 }

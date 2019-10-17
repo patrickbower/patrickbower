@@ -1,5 +1,5 @@
 export const settings = {
-    animation: {
-        default_timimg: 300
-    }
-}
+  animation: {
+    default_timimg: 300
+  }
+};
