@@ -97,7 +97,7 @@ module.exports = function(grunt) {
       main: {
         expand: true,
         cwd: "resources",
-        src: ["fonts/*", "CNAME", ".htaccess", "documents/*"],
+        src: ["fonts/*", "CNAME", "documents/*"],
         dest: "./_site"
       }
     },
