@@ -97,7 +97,7 @@ module.exports = function(grunt) {
       main: {
         expand: true,
         cwd: "resources",
-        src: ["fonts/*", "CNAME", "robots.txt", "sitemap.xml"],
+        src: ["fonts/*", "CNAME", "robots.txt", "sitemap.xml", "favicon.ico"],
         dest: "./_site"
       }
     },
