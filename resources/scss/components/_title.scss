@@ -19,6 +19,8 @@
       -webkit-text-fill-color: transparent;
 
       @media only screen and (min-width: $media-tablet) {
+        background: none;
+        -webkit-text-fill-color: initial;
         margin-right: -265px;
         bottom: 0;
       }
