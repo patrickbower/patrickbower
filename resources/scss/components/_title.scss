@@ -14,7 +14,13 @@
     &__first {
       position: relative;
       bottom: -20px;
+      background: linear-gradient(135deg, $color-white 85%, $color-mako 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
       @media only screen and (min-width: $media-tablet) {
+        background: none;
+        -webkit-text-fill-color: initial;
         margin-right: -265px;
         bottom: 0;
       }
@@ -57,6 +63,10 @@
 
     &__last {
       position: relative;
+      background: linear-gradient(135deg, $color-mako 12%, $color-white 20%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
       @media only screen and (min-width: $media-tablet) {
         margin-left: -270px;
       }
@@ -116,29 +126,34 @@
     color: $color-white;
     display: block;
     text-transform: uppercase;
-    letter-spacing: 1em;
+    letter-spacing: 0.5em;
     font-size: 0.24em;
     margin-top: 140px;
+    padding: 0 3em;
 
     @media only screen and (min-width: $media-tablet) {
-      margin-top: 40px;
+      margin-top: 25px;
     }
 
     &__clip {
       position: relative;
 
       @media only screen and (min-width: $media-tablet) {
+        background: linear-gradient(135deg, $color-white 83%, $color-mako 89%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
         &:before {
           content: "";
           display: inline-block;
           width: 0;
           height: 0;
           border-style: solid;
-          border-color: $color-mako transparent transparent transparent;
-          border-width: 15px 15px 0 0;
+          border-color: transparent transparent $color-mako transparent;
+          border-width: 0 0 15px 15px;
           position: absolute;
-          top: 0;
-          left: 0;
+          bottom: 0;
+          right: 0.35em;
         }
       }
     }
