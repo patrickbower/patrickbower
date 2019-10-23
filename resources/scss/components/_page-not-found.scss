@@ -1,0 +1,14 @@
+.page-not-found {
+  padding: 0;
+  background: $color-mako;
+
+  &__section {
+    padding-top: 155px;
+    text-align: center;
+  }
+
+  &__link {
+    border-color: $color-white;
+    color: $color-white;
+  }
+}
