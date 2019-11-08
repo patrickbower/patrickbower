@@ -95,10 +95,18 @@
     }
 
     &--four {
-      background: $color-mako;
+      background: $color-mischka;
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(-45deg);
         margin-left: 30%;
+      }
+    }
+
+    &--five {
+      background: $color-mako;
+      @media only screen and (min-width: $media-desktop) {
+        transform: rotate(45deg);
+        margin-left: -30%;
         margin-bottom: rem(-90px);
       }
     }
@@ -143,6 +151,13 @@
       &--three {
         transform: rotate(-45deg);
         padding-right: 10%;
+      }
+
+      &--four {
+        transform: rotate(45deg);
+        top: 35%;
+        right: -35%;
+        padding-left: 10%;
       }
     }
   }

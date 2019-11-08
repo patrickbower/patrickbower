@@ -7,14 +7,14 @@
   @media only screen and (min-width: $media-desktop) {
     margin-top: rem(-90px);
     top: rem(-30px);
-    right: rem(30px);
+    left: rem(30px);
   }
 
   &__link {
     margin: 0 10px;
 
     @media only screen and (min-width: $media-desktop) {
-      float: right;
+      float: left;
     }
   }
 
