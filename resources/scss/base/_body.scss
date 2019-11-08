@@ -1,5 +1,9 @@
+html {
+  font-size: $base + px;
+}
+
 body {
-  font-size: $p;
+  // font-size: $p;
   background-color: $color-white;
   font-family: $body-font;
   font-weight: 400;

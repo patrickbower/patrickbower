@@ -1,0 +1,11 @@
+.comms {
+  &__icon {
+    @media only screen and (min-width: $media-desktop) {
+      margin-top: rem(-10px);
+    }
+  }
+
+  &--strike:before {
+    border-color: transparent transparent $color-mischka transparent;
+  }
+}
