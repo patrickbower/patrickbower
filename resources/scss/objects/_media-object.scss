@@ -20,7 +20,7 @@
   }
 
   &__image {
-    max-width: percentage(1 / 4);
+    // max-width: percentage(1 / 4);
 
     &--right {
       float: right;
@@ -31,9 +31,9 @@
     }
   }
 
-  &__body {
-    max-width: percentage(3 / 4);
-  }
+  // &__body {
+  //   max-width: percentage(3 / 4);
+  // }
 
   &--spacing {
     margin-left: 10px;
