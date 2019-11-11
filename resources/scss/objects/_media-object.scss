@@ -1,41 +1,13 @@
 .media-obj {
-  @extend %clearfix;
-  display: block;
-  letter-spacing: -0.215em;
+  display: flex;
+  align-items: center;
 
   &__image,
   &__body {
-    display: inline-block;
-    letter-spacing: normal;
-    vertical-align: top;
-
-    &--middle {
-      vertical-align: middle;
-    }
+    margin-right: 25px;
   }
 
-  &--middle &__image,
-  &--middle &__body {
-    vertical-align: middle;
-  }
-
-  &__image {
-    // max-width: percentage(1 / 4);
-
-    &--right {
-      float: right;
-    }
-
-    &--gutter {
-      margin-right: 20px;
-    }
-  }
-
-  // &__body {
-  //   max-width: percentage(3 / 4);
-  // }
-
-  &--spacing {
-    margin-left: 10px;
+  .media-body {
+    flex: 1;
   }
 }

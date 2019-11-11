@@ -6,7 +6,19 @@
     }
   }
 
-  &--unicode {
-    font-weight: bold;
+  &__site-link {
+    background: lighten($color-mine-shaft, 5%);
+    padding: rem(20px);
+    border-radius: rem(5px);
+    margin-bottom: rem(40px);
+
+    &-icon {
+      width: rem(50px);
+      height: rem(50px);
+    }
+
+    &:hover {
+      background: darken($color-ironside-gray, 10%);
+    }
   }
 }
