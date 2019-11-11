@@ -1,33 +1,32 @@
 .space {
-  @media only screen and (min-width: $media-desktop) {
-    &--lrg {
-      &-before {
-        margin-top: rem(50px);
-      }
-
-      &-after {
-        margin-bottom: rem(50px);
-      }
+  // @media only screen and (min-width: $media-desktop) {
+  &--lrg {
+    &-before {
+      margin-top: rem(50px);
     }
 
-    &--med {
-      &-before {
-        margin-top: rem(35px);
-      }
+    &-after {
+      margin-bottom: rem(50px);
+    }
+  }
 
-      &-after {
-        margin-bottom: rem(35px);
-      }
+  &--med {
+    &-before {
+      margin-top: rem(35px);
     }
 
-    &--sml {
-      &-before {
-        margin-top: rem(10px);
-      }
+    &-after {
+      margin-bottom: rem(35px);
+    }
+  }
 
-      &-after {
-        margin-bottom: rem(10px);
-      }
+  &--sml {
+    &-before {
+      margin-top: rem(10px);
+    }
+
+    &-after {
+      margin-bottom: rem(10px);
     }
   }
 
@@ -38,3 +37,5 @@
     padding-bottom: 0 !important;
   }
 }
+
+// }

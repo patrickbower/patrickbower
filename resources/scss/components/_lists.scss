@@ -8,31 +8,14 @@
 }
 
 .list-horizontal {
-  @extend %clearfix;
+  display: flex;
+  align-items: center;
 
-  li {
-    float: left;
-    margin-right: rem(30px);
+  &--align-bottom {
+    align-items: flex-end;
   }
 
-  &--icons {
-    text-align: center;
-
-    @media only screen and (min-width: $media-desktop) {
-      display: table-row;
-      width: 100%;
-    }
-
-    li {
-      float: none;
-      display: block;
-      margin-bottom: rem(15px);
-
-      @media only screen and (min-width: $media-desktop) {
-        padding-right: rem(50px);
-        display: table-cell;
-        vertical-align: middle;
-      }
-    }
+  li {
+    margin-right: rem(30px);
   }
 }
