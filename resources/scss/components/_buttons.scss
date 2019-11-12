@@ -11,4 +11,11 @@
     $button-background-color: $color-mine-shaft,
     $button-text-color: $color-mine-shaft
   );
+  @media only screen and (max-width: $media-tablet) {
+    width: 100%;
+  }
+
+  &--only-border {
+    background: none;
+  }
 }
