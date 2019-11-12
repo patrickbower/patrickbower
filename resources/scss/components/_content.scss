@@ -18,7 +18,9 @@
 
   &-section--header {
     min-height: 100vh;
-    @media only screen and (min-width: $media-mobile) {
+    text-align: center;
+    @media only screen and (min-width: $media-tablet) {
+      text-align: initial;
       height: 100vh;
       min-height: rem(900px);
     }

@@ -4,8 +4,8 @@
     position: relative;
     z-index: 999;
     top: rem(20px);
-    left: 50%;
-    margin-left: (-10px);
+    // left: 50%;
+    // margin-left: (-10px);
 
     &:before {
       content: "";
@@ -22,7 +22,7 @@
     }
 
     &__icon {
-      margin-top: rem(20px);
+      top: rem(20px);
       position: relative;
       width: rem(26px);
       height: rem(43px);

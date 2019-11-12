@@ -48,9 +48,9 @@
 @import "components/forms";
 // ~ Pieces of UI
 @import "components/content";
+@import "components/branding";
 @import "components/header";
 @import "components/header-secondary";
-@import "components/branding";
 @import "components/intro";
 @import "components/contact";
 @import "components/comms";
@@ -62,6 +62,8 @@
 @import "components/footer-secondary";
 @import "components/footer";
 @import "components/title";
+@import "components/back-button";
+@import "components/next-button";
 @import "components/page-not-found";
 
 // Trumps: Helpers and overrides
