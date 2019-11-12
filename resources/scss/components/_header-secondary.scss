@@ -1,3 +1,17 @@
 .header-secondary {
-  margin-bottom: rem(50px);
+  &__logo {
+    text-align: center;
+    margin-bottom: -8px;
+  }
+
+  &__nav {
+    margin-bottom: rem(50px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__pb-icon {
+    fill: $color-mine-shaft;
+  }
 }
