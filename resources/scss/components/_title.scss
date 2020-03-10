@@ -5,6 +5,7 @@
     padding-top: 200px;
     text-transform: uppercase;
     margin-left: -10px;
+
     @media only screen and (min-width: $media-mobile) {
       font-size: 5em;
     }
@@ -34,6 +35,7 @@
         position: absolute;
         right: -10px;
         bottom: 13px;
+
         @media only screen and (min-width: $media-mobile) {
           right: -5px;
           bottom: 22px;
@@ -48,11 +50,13 @@
         position: absolute;
         bottom: -27px;
         right: -56px;
+
         @media only screen and (min-width: $media-mobile) {
           width: 330px;
           bottom: -39px;
           right: -80px;
         }
+
         @media only screen and (min-width: $media-tablet) {
           content: none;
         }
@@ -61,7 +65,7 @@
 
     &__last {
       position: relative;
-      background: linear-gradient(135deg, $color-mako 12%, $color-white 20%);
+      background: linear-gradient(135deg, $color-mako 13%, $color-white 20%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
@@ -80,6 +84,7 @@
         position: absolute;
         top: 8px;
         left: -5px;
+
         @media only screen and (min-width: $media-mobile) {
           top: 15px;
           left: 5px;
@@ -94,11 +99,13 @@
         position: absolute;
         top: -30px;
         left: -52px;
+
         @media only screen and (min-width: $media-mobile) {
           width: 330px;
           top: -42px;
           left: -73px;
         }
+
         @media only screen and (min-width: $media-tablet) {
           content: none;
         }
@@ -109,6 +116,7 @@
       border: none;
       margin: 0;
       z-index: 1;
+
       @media only screen and (min-width: $media-tablet) {
         width: 500px;
         border-top: 1px solid $color-white;
@@ -137,7 +145,7 @@
       position: relative;
 
       @media only screen and (min-width: $media-tablet) {
-        background: linear-gradient(135deg, $color-white 83%, $color-mako 89%);
+        background: linear-gradient(-45deg, #fff 88%, #434a54 93%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
@@ -146,12 +154,11 @@
           display: inline-block;
           width: 0;
           height: 0;
-          border-style: solid;
-          border-color: transparent transparent $color-mako transparent;
-          border-width: 0 0 15px 15px;
+          border-top: 14px solid $color-mako;
+          border-right: 14px solid transparent;
           position: absolute;
-          bottom: 0;
-          right: 0.35em;
+          top: 0;
+          left: 0;
         }
       }
     }
