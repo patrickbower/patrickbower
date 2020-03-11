@@ -13,7 +13,7 @@
     &__first {
       position: relative;
       bottom: -20px;
-      background: linear-gradient(135deg, $color-white 85%, $color-mako 90%);
+      background: linear-gradient(135deg, $color-white 85%, $color-mako 92%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
@@ -65,11 +65,14 @@
 
     &__last {
       position: relative;
-      background: linear-gradient(135deg, $color-mako 13%, $color-white 20%);
+      background: linear-gradient(135deg, $color-mako 11%, $color-white 20%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
       @media only screen and (min-width: $media-tablet) {
+        background: linear-gradient(135deg, $color-mako 13%, $color-white 20%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         margin-left: -270px;
       }
 
@@ -143,9 +146,10 @@
 
     &__clip {
       position: relative;
+      padding-left: 5px;
 
       @media only screen and (min-width: $media-tablet) {
-        background: linear-gradient(-45deg, #fff 88%, #434a54 93%);
+        background: linear-gradient(-45deg, #fff 88%, #434a54 92%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
