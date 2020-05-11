@@ -1,5 +1,5 @@
 .content {
-  background: $color-mako;
+  background: $colour-cinnabar;
   overflow: hidden;
 
   &--secondary {
@@ -19,6 +19,7 @@
   &-section--header {
     min-height: 100vh;
     text-align: center;
+
     @media only screen and (min-width: $media-tablet) {
       text-align: initial;
       height: 100vh;
@@ -47,6 +48,7 @@
   &-triangle__shape {
     text-align: center;
     padding: rem(100px) 0;
+
     @media only screen and (min-width: $media-desktop) {
       padding: 0;
       text-align: left;
@@ -56,6 +58,7 @@
 
     &--zero {
       background: $color-white;
+
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(-45deg);
         margin-left: 30%;
@@ -73,7 +76,8 @@
     }
 
     &--one {
-      background: $color-mischka;
+      background: $colour-mischka;
+
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(45deg);
         margin-left: -30%;
@@ -81,7 +85,8 @@
     }
 
     &--two {
-      background: $color-brick-red;
+      background: $colour-cinnabar;
+
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(-45deg);
         margin-left: 30%;
@@ -90,6 +95,7 @@
 
     &--three {
       background: $color-white;
+
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(45deg);
         margin-left: -30%;
@@ -97,7 +103,8 @@
     }
 
     &--four {
-      background: $color-mischka;
+      background: $colour-mischka;
+
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(-45deg);
         margin-left: 30%;
@@ -105,7 +112,8 @@
     }
 
     &--five {
-      background: $color-mako;
+      background: $colour-cinnabar;
+
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(45deg);
         margin-left: -30%;
