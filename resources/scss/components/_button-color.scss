@@ -1,14 +1,14 @@
 .button {
   &--brickred {
     @include button(
-      $button-background-color: $color-brick-red,
+      $button-background-color: $colour-cinnabar,
       $button-text-color: $color-mine-shaft
     );
   }
 
   &--mischka {
     @include button(
-      $button-background-color: $color-mischka,
+      $button-background-color: $colour-mischka,
       $button-text-color: $color-mine-shaft
     );
   }
