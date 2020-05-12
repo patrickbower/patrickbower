@@ -1,22 +1,30 @@
+// @font-face {
+//   font-family: "source_sans_regular";
+//   src: url("../fonts/sourcesanspro-regular-webfont.eot");
+//   src: url("../fonts/sourcesanspro-regular-webfont.eot?#iefix")
+//       format("embedded-opentype"),
+//     url("../fonts/sourcesanspro-regular-webfont.woff2") format("woff2"),
+//     url("../fonts/sourcesanspro-regular-webfont.woff") format("woff"),
+//     url("../fonts/sourcesanspro-regular-webfont.ttf") format("truetype"),
+//     url("../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular")
+//       format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
 @font-face {
-  font-family: "source_sans_regular";
-  src: url("../fonts/sourcesanspro-regular-webfont.eot");
-  src: url("../fonts/sourcesanspro-regular-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("../fonts/sourcesanspro-regular-webfont.woff2") format("woff2"),
-    url("../fonts/sourcesanspro-regular-webfont.woff") format("woff"),
-    url("../fonts/sourcesanspro-regular-webfont.ttf") format("truetype"),
-    url("../fonts/sourcesanspro-regular-webfont.svg#source_sans_proregular")
-      format("svg");
-  font-weight: normal;
+  font-family: 'RobotoSlab-VariableFont';
+  src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
+  // font-weight: 125 950;
+  // font-stretch: 75% 125%;
   font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "montserratbold";
   src: url("../fonts/montserrat-bold-webfont.eot");
-  src: url("../fonts/montserrat-bold-webfont.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../fonts/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"),
     url("../fonts/montserrat-bold-webfont.woff2") format("woff2"),
     url("../fonts/montserrat-bold-webfont.woff") format("woff"),
     url("../fonts/montserrat-bold-webfont.ttf") format("truetype"),
