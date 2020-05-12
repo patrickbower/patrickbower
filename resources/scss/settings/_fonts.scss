@@ -13,10 +13,17 @@
 // }
 
 @font-face {
-  font-family: 'RobotoSlab-VariableFont';
-  src: url('../fonts/RobotoSlab-VariableFont_wght.ttf') format('truetype');
-  // font-weight: 125 950;
-  // font-stretch: 75% 125%;
+  font-family: 'RobotoSlab-Variable';
+  src:
+    url('../fonts/RobotoSlab-Variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 1 999;
+}
+
+@font-face {
+  font-family: 'RobotoSlab';
+  src:
+    url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
