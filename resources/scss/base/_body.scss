@@ -12,5 +12,12 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -moz-font-feature-settings: "liga" off;
+  -moz-font-feature-settings: "liga"off;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: $body-font-variable;
+    font-variation-settings: "wght"400;
+  }
 }
