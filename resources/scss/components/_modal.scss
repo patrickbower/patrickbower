@@ -14,9 +14,9 @@
     position: fixed;
     right: 0;
     left: 0;
-    background: $color-mine-shaft;
+    background: $colour-mine-shaft;
     z-index: $z-index-super;
-    color: $color-white;
+    color: $colour-white;
     animation: 700ms forwards;
 
     @include animation-keyframes(modal-window--slide-in-from-top) {
@@ -36,7 +36,7 @@
       height: 0;
       border-left: 100vw solid transparent;
       border-right: 100vw solid transparent;
-      border-top: 100vw solid $color-mine-shaft;
+      border-top: 100vw solid $colour-mine-shaft;
       position: absolute;
       bottom: -100vw;
       left: -100vw;
@@ -87,7 +87,7 @@
     }
 
     &:hover {
-      background: lighten($color-mine-shaft, 5%);
+      background: lighten($colour-mine-shaft, 5%);
     }
 
     .icon--close {

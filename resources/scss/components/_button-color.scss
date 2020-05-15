@@ -1,39 +1,39 @@
 .button {
   &--mako {
     @include button($button-background-color: $colour-mako,
-      $button-text-color: $color-mine-shaft);
+      $button-text-color: $colour-mine-shaft);
   }
 
   &--mischka {
     @include button($button-background-color: $colour-mischka,
-      $button-text-color: $color-mine-shaft);
+      $button-text-color: $colour-mine-shaft);
   }
 
   &--white {
-    @include button($button-background-color: $color-white,
-      $button-text-color: $color-mine-shaft);
+    @include button($button-background-color: $colour-white,
+      $button-text-color: $colour-mine-shaft);
   }
 
   &--mako-darken {
     @include button($button-background-color: $colour-mako,
-      $button-text-color: $color-mine-shaft,
-      $button-text-hover-color: $color-mine-shaft,
+      $button-text-color: $colour-mine-shaft,
+      $button-text-hover-color: $colour-mine-shaft,
       $button-hover-tint: "darken"
     );
   }
 
   &--mineshaft-darken {
-    @include button($button-background-color: $color-white,
-      $button-text-color: $color-mine-shaft,
-      $button-text-hover-color: $color-mine-shaft,
+    @include button($button-background-color: $colour-white,
+      $button-text-color: $colour-mine-shaft,
+      $button-text-hover-color: $colour-mine-shaft,
       $button-hover-tint: "darken"
     );
   }
 
   &--mineshaft-lighten {
-    @include button($button-background-color: $color-mine-shaft,
-      $button-text-color: $color-white,
-      $button-text-hover-color: $color-white,
+    @include button($button-background-color: $colour-mine-shaft,
+      $button-text-color: $colour-white,
+      $button-text-hover-color: $colour-white,
       $button-hover-tint: "lighten"
     );
   }

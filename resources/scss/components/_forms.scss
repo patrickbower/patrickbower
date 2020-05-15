@@ -8,7 +8,7 @@
     margin-bottom: rem(50px);
     z-index: 0;
     height: 3.316em;
-    background: lighten($color-mine-shaft, 5%);
+    background: lighten($colour-mine-shaft, 5%);
     border: none;
 
     &--message {
@@ -23,7 +23,7 @@
     top: 1em;
     left: 1em;
     transition: 0.2s ease all;
-    color: $color-concrete;
+    color: $colour-concrete;
   }
 
   &__input {
@@ -35,22 +35,22 @@
     left: 0;
     background: none;
     transition: 0.2s ease all;
-    border-bottom: rem(1px) solid $color-mine-shaft;
-    color: $color-concrete;
+    border-bottom: rem(1px) solid $colour-mine-shaft;
+    color: $colour-concrete;
 
     &--textarea {
       height: 100%;
     }
 
     &:focus {
-      border-bottom: rem(1px) solid $color-nobel;
+      border-bottom: rem(1px) solid $colour-nobel;
     }
 
     &:focus ~ label,
     &:valid ~ label {
       top: -1.45em;
       left: 0;
-      color: $color-nobel;
+      color: $colour-nobel;
       font-size: 90%;
     }
   }
