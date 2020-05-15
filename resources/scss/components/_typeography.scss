@@ -11,12 +11,13 @@
   margin: 0 0 0.5rem 0;
   font-weight: inherit;
   line-height: 1.2;
-  color: $color-white;
+  color: $colour-white;
 }
 
 .h2 {
   letter-spacing: -0.2rem;
   font-size: $h2;
+  margin: 0 0 0.5rem 0;
 }
 
 .h3 {
@@ -51,34 +52,6 @@
   }
 }
 
-// .strike {
-//   display: inline-block;
-//   transform-style: preserve-3d;
-
-//   &:after {
-//     content: "";
-//     width: rem(100px);
-//     height: 2px;
-//     background: $color-mine-shaft;
-//     position: absolute;
-//     bottom: rem(32px);
-//     right: rem(-38px);
-//     transform: rotate(-45deg);
-//   }
-
-//   &:before {
-//     content: "";
-//     width: 0;
-//     height: 0;
-//     border-style: solid;
-//     border-width: 0 0 rem(50px) rem(50px);
-//     border-color: transparent transparent $color-white transparent;
-//     position: absolute;
-//     bottom: rem(15px);
-//     right: rem(-20px);
-//   }
-// }
-
 .strike {
   display: inline-block;
   overflow: hidden;
@@ -86,16 +59,9 @@
 
 
   &__heading {
-    margin: 0;
-    // font-size: 26em;
     display: inline-block;
-    letter-spacing: -0.05em;
-    // color: #00BFA5;
     position: relative;
     transform-style: preserve-3d;
-    // background: linear-gradient(135deg, #1bd788 25%, $color-mine-shaft 80%);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
     clip-path: polygon(0 0, calc(100% + 0.2em) 0%, calc(100% - 1em) 100%, 0 100%);
     padding-right: 0.4em;
 
@@ -104,7 +70,7 @@
       width: 0;
       height: 100%;
       display: inline-block;
-      border-left: 0.03em solid $color-mine-shaft;
+      border-left: rem(2px) solid $colour-mine-shaft;
       position: absolute;
       transform: skew(-45deg);
       right: 0.4em;

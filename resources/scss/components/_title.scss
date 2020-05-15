@@ -14,7 +14,7 @@
     &__first {
       position: relative;
       bottom: -20px;
-      background: linear-gradient(135deg, $color-white 85%, $colour-cinnabar 92%);
+      background: linear-gradient(135deg, $colour-white 85%, $colour-cinnabar 92%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
@@ -46,7 +46,7 @@
       &:after {
         width: 230px;
         content: "";
-        border-top: 1px solid $color-white;
+        border-top: 1px solid $colour-white;
         transform: rotate(-45deg);
         position: absolute;
         bottom: -27px;
@@ -66,12 +66,12 @@
 
     &__last {
       position: relative;
-      background: linear-gradient(135deg, $colour-cinnabar 11%, $color-white 20%);
+      background: linear-gradient(135deg, $colour-cinnabar 11%, $colour-white 20%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
       @media only screen and (min-width: $media-tablet) {
-        background: linear-gradient(135deg, $colour-cinnabar 13%, $color-white 20%);
+        background: linear-gradient(135deg, $colour-cinnabar 13%, $colour-white 20%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-left: -270px;
@@ -98,7 +98,7 @@
       &:after {
         content: "";
         width: 230px;
-        border-top: 1px solid $color-white;
+        border-top: 1px solid $colour-white;
         transform: rotate(-45deg);
         position: absolute;
         top: -30px;
@@ -123,7 +123,7 @@
 
       @media only screen and (min-width: $media-tablet) {
         width: 500px;
-        border-top: 1px solid $color-white;
+        border-top: 1px solid $colour-white;
         transform: rotate(-45deg);
         position: relative;
         display: inline-block;
@@ -133,7 +133,7 @@
   }
 
   &-byline {
-    color: $color-white;
+    color: $colour-white;
     display: block;
     text-transform: uppercase;
     letter-spacing: 0.5em;
@@ -150,7 +150,7 @@
       padding-left: 5px;
 
       @media only screen and (min-width: $media-tablet) {
-        background: linear-gradient(-45deg, $color-white 88%, $colour-cinnabar 92%);
+        background: linear-gradient(-45deg, $colour-white 88%, $colour-cinnabar 92%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 

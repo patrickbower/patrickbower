@@ -9,8 +9,8 @@
 .button {
   text-align: center;
 
-  @include button($button-background-color: $color-mine-shaft,
-    $button-text-color: $color-mine-shaft);
+  @include button($button-background-color: $colour-mine-shaft,
+    $button-text-color: $colour-mine-shaft);
 
   @media only screen and (max-width: $media-tablet) {
     width: 100%;
