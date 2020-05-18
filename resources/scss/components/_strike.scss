@@ -12,18 +12,17 @@
         100% calc(100% - 0.5em),
         calc(100% - 0.5em) 100%);
     padding-right: 0.05em;
-    // border: 1px solid green;
 
     &:first-letter {
       margin-left: -0.05em;
     }
 
-    &--opposite-clip {
+    &--reverse {
       clip-path: polygon(0 0.5em, 0 100%, 100% 100%, 100% 0, 0.5em 0);
     }
   }
 
-  &:after {
+  &__line {
     content: "";
     display: inline-block;
     width: 2px;
