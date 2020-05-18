@@ -1,171 +1,70 @@
 .title {
+  font-size: 14vw;
+  letter-spacing: -0.05em;
 
-  &-name {
-    font-size: 3.5em;
-    text-align: center;
-    padding-top: 200px;
-    text-transform: uppercase;
-    margin-left: -10px;
+  @media only screen and (min-width: $media-tablet) {
+    font-size: 10vw;
+  }
+}
 
-    @media only screen and (min-width: $media-mobile) {
-      font-size: 5em;
+.title-strike {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &__heading {
+    line-height: 1;
+    display: inline-block;
+    color: white;
+    clip-path: polygon(0% 100%,
+        0% 0%,
+        100% 0%,
+        100% calc(100% - 0.5em),
+        calc(100% - 0.5em) 100%);
+    padding-right: 0.05em;
+
+    &:first-letter {
+      margin-left: -0.05em;
     }
 
-    &__first {
-      position: relative;
-      bottom: -20px;
-      background: linear-gradient(135deg, $colour-white 85%, $colour-cinnabar 92%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-
-      @media only screen and (min-width: $media-tablet) {
-        background: none;
-        -webkit-text-fill-color: initial;
-        margin-right: -265px;
-        bottom: 0;
-      }
-
-      &:before {
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 0 30px 30px;
-        border-color: transparent transparent $colour-cinnabar transparent;
-        position: absolute;
-        right: -10px;
-        bottom: 13px;
-
-        @media only screen and (min-width: $media-mobile) {
-          right: -5px;
-          bottom: 22px;
-        }
-      }
-
-      &:after {
-        width: 230px;
-        content: "";
-        border-top: 1px solid $colour-white;
-        transform: rotate(-45deg);
-        position: absolute;
-        bottom: -27px;
-        right: -56px;
-
-        @media only screen and (min-width: $media-mobile) {
-          width: 330px;
-          bottom: -39px;
-          right: -80px;
-        }
-
-        @media only screen and (min-width: $media-tablet) {
-          content: none;
-        }
-      }
-    }
-
-    &__last {
-      position: relative;
-      background: linear-gradient(135deg, $colour-cinnabar 11%, $colour-white 20%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-
-      @media only screen and (min-width: $media-tablet) {
-        background: linear-gradient(135deg, $colour-cinnabar 13%, $colour-white 20%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-left: -270px;
-      }
-
-      &:before {
-        content: "";
-        display: inline-block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-color: $colour-cinnabar transparent transparent transparent;
-        border-width: 30px 30px 0 0;
-        position: absolute;
-        top: 8px;
-        left: -5px;
-
-        @media only screen and (min-width: $media-mobile) {
-          top: 15px;
-          left: 5px;
-        }
-      }
-
-      &:after {
-        content: "";
-        width: 230px;
-        border-top: 1px solid $colour-white;
-        transform: rotate(-45deg);
-        position: absolute;
-        top: -30px;
-        left: -52px;
-
-        @media only screen and (min-width: $media-mobile) {
-          width: 330px;
-          top: -42px;
-          left: -73px;
-        }
-
-        @media only screen and (min-width: $media-tablet) {
-          content: none;
-        }
-      }
-    }
-
-    &__slash {
-      border: none;
-      margin: 0;
-      z-index: 1;
-
-      @media only screen and (min-width: $media-tablet) {
-        width: 500px;
-        border-top: 1px solid $colour-white;
-        transform: rotate(-45deg);
-        position: relative;
-        display: inline-block;
-        margin: 0 0 27px 0;
-      }
+    &--reverse {
+      clip-path: polygon(0 0.5em, 0 100%, 100% 100%, 100% 0, 0.5em 0);
     }
   }
 
-  &-byline {
-    color: $colour-white;
-    display: block;
-    text-transform: uppercase;
-    letter-spacing: 0.5em;
-    font-size: 0.24em;
-    margin-top: 140px;
-    padding: 0 3em;
+  &__slash {
+    display: inline-block;
+    width: 1px;
+    height: 5em;
+    background: white;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+}
+
+.title-subhead {
+  text-align: center;
+  font-size: 4vw;
+  letter-spacing: 1em;
+  text-transform: uppercase;
+  margin-top: 0;
+  color: white;
+
+  @media only screen and (min-width: $media-tablet) {
+    margin-top: -8.7em;
+    font-size: 2vw;
+  }
+
+  @media only screen and (min-width: $media-desktop) {
+    margin-top: -8.5em;
+  }
+
+  &__strike {
+    clip-path: none;
 
     @media only screen and (min-width: $media-tablet) {
-      margin-top: 25px;
-    }
-
-    &__clip {
-      position: relative;
-      padding-left: 5px;
-
-      @media only screen and (min-width: $media-tablet) {
-        background: linear-gradient(-45deg, $colour-white 88%, $colour-cinnabar 92%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        &:before {
-          content: "";
-          display: inline-block;
-          width: 0;
-          height: 0;
-          border-top: 14px solid $colour-cinnabar;
-          border-right: 14px solid transparent;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-      }
+      clip-path: polygon(0 0.5em, 0 100%, 100% 100%, 100% 0, 0.5em 0);
     }
   }
 }
