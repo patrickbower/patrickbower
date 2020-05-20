@@ -24,6 +24,7 @@
         top: -200vw;
         bottom: 200vw;
       }
+
       to {
         top: 0;
         bottom: 0;
@@ -53,10 +54,12 @@
     padding: rem(100px) rem(10px) rem(10px) rem(10px);
     opacity: 0;
     animation: 300ms forwards 700ms;
+
     @include animation-keyframes(modal-content--fade-in) {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -77,10 +80,12 @@
     border-radius: 50%;
     opacity: 0;
     animation: 300ms forwards 700ms;
+
     @include animation-keyframes(modal-close-button--fade-in) {
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
