@@ -1,6 +1,5 @@
 .content {
-  background: $colour-cinnabar;
-  background-image: linear-gradient(135deg, $colour-cinnabar 0%, darken($colour-cinnabar, 30%) 60%);
+  background: $colour-mine-shaft;
   overflow: hidden;
 
   &--secondary {
@@ -76,7 +75,7 @@
     }
 
     &--one {
-      background: $colour-mischka;
+      background: darken($colour-white, 5%);
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(45deg);
@@ -85,7 +84,7 @@
     }
 
     &--two {
-      background: $colour-mako;
+      background: darken($colour-white, 10%);
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(-45deg);
@@ -94,7 +93,7 @@
     }
 
     &--three {
-      background: $colour-white;
+      background: darken($colour-white, 15%);
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(45deg);
@@ -103,7 +102,7 @@
     }
 
     &--four {
-      background: $colour-mischka;
+      background: darken($colour-white, 20%);
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(-45deg);
@@ -112,13 +111,12 @@
     }
 
     &--five {
-      background: $colour-cinnabar;
+      background: $colour-mine-shaft;
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(45deg);
-        margin-left: -30%;
+        margin-left: -60%;
         margin-bottom: rem(-90px);
-        background-image: linear-gradient(135deg, $colour-cinnabar 0%, darken($colour-cinnabar, 35%) 100%);
       }
     }
 

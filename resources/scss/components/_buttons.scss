@@ -8,9 +8,22 @@
 
 .button {
   text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: $colour-mine-shaft;
+  padding: rem(13px) rem(46px);
+  @include border($colour-mine-shaft);
 
-  @include button($button-background-color: $colour-mine-shaft,
-    $button-text-color: $colour-mine-shaft);
+  &:hover {
+    color: $colour-white;
+    background: $colour-mine-shaft;
+    border-color: $colour-mine-shaft;
+  }
+
+  &:active {
+    background: darken($colour-mine-shaft, 20%);
+    border-color: darken($colour-mine-shaft, 20%);
+  }
 
   @media only screen and (max-width: $media-tablet) {
     width: 100%;

@@ -12,6 +12,7 @@
         100% calc(100% - 0.5em),
         calc(100% - 0.5em) 100%);
     padding-right: 0.05em;
+    color: $colour-cinnabar;
 
     &:first-letter {
       margin-left: -0.05em;
@@ -29,5 +30,9 @@
     background: $colour-mine-shaft;
     transform: rotate(45deg);
     z-index: 1;
+
+    &--lrg {
+      width: 2px;
+    }
   }
 }

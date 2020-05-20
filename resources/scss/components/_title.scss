@@ -9,22 +9,25 @@
     font-size: 6vw;
   }
 
+  &__strike-text {
+    color: $colour-white;
+  }
+
   &__text-reverse {
-    background: -webkit-linear-gradient(-45deg, darken($colour-cinnabar, 25%) 10%, $colour-white 20%);
+    background: -webkit-linear-gradient(-45deg, darken($colour-mine-shaft, 15%) 10%, $colour-white 16%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   &__strike-line {
-    background: $colour-white;
+    background: $colour-cinnabar;
     height: 6em;
     display: inline-block;
   }
 }
 
 .title-subhead {
-  $subheadColour: darken($colour-cinnabar, 25%);
-  color: $subheadColour;
+  color: $colour-cinnabar;
   font-size: 4vw;
   letter-spacing: 0.85em;
   text-transform: uppercase;
@@ -36,12 +39,6 @@
   }
 
   &__text {
-    // @media only screen and (min-width: $media-desktop) {
-    //   background: -webkit-linear-gradient(-45deg, darken($colour-cinnabar, 20%) 3%, $subheadColour 7%);
-    //   -webkit-background-clip: text;
-    //   -webkit-text-fill-color: transparent;
-    // }
-
     @media only screen and (max-width: $media-desktop) {
       clip-path: none;
     }
