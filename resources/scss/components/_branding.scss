@@ -4,8 +4,11 @@
     position: relative;
     z-index: 999;
     top: rem(20px);
-    // left: 50%;
-    // margin-left: (-10px);
+    text-align: center;
+
+    @media only screen and (min-width: $media-desktop) {
+      text-align: initial;
+    }
 
     &:before {
       content: "";
@@ -35,7 +38,7 @@
     }
   }
 
-  @media only screen and (min-width: $media-tablet) {
+  @media only screen and (min-width: $media-desktop) {
     &-oblong {
       top: 0;
       left: rem(50px);
