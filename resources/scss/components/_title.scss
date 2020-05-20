@@ -5,7 +5,7 @@
   text-transform: uppercase;
   margin: 0 1em;
 
-  @media only screen and (min-width: $media-tablet) {
+  @media only screen and (min-width: $media-desktop) {
     font-size: 6vw;
   }
 
@@ -17,21 +17,19 @@
 }
 
 .title-subhead {
+  font-size: 4vw;
   letter-spacing: 0.85em;
   text-transform: uppercase;
   color: white;
-  margin-top: -5em;
-  font-size: 4vw;
   justify-content: center;
 
-  @media only screen and (min-width: $media-tablet) {
+  @media only screen and (min-width: $media-desktop) {
+    margin-top: -5em;
     font-size: 2vw;
   }
 
-  &__text {
-    // margin-left: 2.1em;
-
-    @media only screen and (max-width: $media-tablet) {
+  @media only screen and (max-width: $media-desktop) {
+    &__text {
       clip-path: none;
     }
   }

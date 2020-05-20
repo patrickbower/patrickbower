@@ -1,10 +1,10 @@
 .header {
-  min-height: 50vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  @media only screen and (min-width: $media-tablet) {
+  @media only screen and (min-width: $media-desktop) {
     justify-content: start;
   }
 }

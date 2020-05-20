@@ -6,7 +6,7 @@
     top: rem(20px);
     text-align: center;
 
-    @media only screen and (min-width: $media-tablet) {
+    @media only screen and (min-width: $media-desktop) {
       text-align: initial;
     }
 
@@ -38,7 +38,7 @@
     }
   }
 
-  @media only screen and (min-width: $media-tablet) {
+  @media only screen and (min-width: $media-desktop) {
     &-oblong {
       top: 0;
       left: rem(50px);
