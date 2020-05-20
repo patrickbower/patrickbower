@@ -1,5 +1,6 @@
 .content {
   background: $colour-cinnabar;
+  background-image: linear-gradient(135deg, $colour-cinnabar 0%, darken($colour-cinnabar, 30%) 60%);
   overflow: hidden;
 
   &--secondary {
@@ -117,6 +118,7 @@
         transform: rotate(45deg);
         margin-left: -30%;
         margin-bottom: rem(-90px);
+        background-image: linear-gradient(135deg, $colour-cinnabar 0%, darken($colour-cinnabar, 35%) 100%);
       }
     }
 

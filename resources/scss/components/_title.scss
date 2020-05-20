@@ -9,6 +9,12 @@
     font-size: 6vw;
   }
 
+  &__text-reverse {
+    background: -webkit-linear-gradient(-45deg, darken($colour-cinnabar, 25%) 10%, $colour-white 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   &__strike-line {
     background: $colour-white;
     height: 6em;
@@ -17,10 +23,11 @@
 }
 
 .title-subhead {
+  $subheadColour: darken($colour-cinnabar, 25%);
+  color: $subheadColour;
   font-size: 4vw;
   letter-spacing: 0.85em;
   text-transform: uppercase;
-  color: white;
   justify-content: center;
 
   @media only screen and (min-width: $media-desktop) {
@@ -28,8 +35,14 @@
     font-size: 2vw;
   }
 
-  @media only screen and (max-width: $media-desktop) {
-    &__text {
+  &__text {
+    // @media only screen and (min-width: $media-desktop) {
+    //   background: -webkit-linear-gradient(-45deg, darken($colour-cinnabar, 20%) 3%, $subheadColour 7%);
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    // }
+
+    @media only screen and (max-width: $media-desktop) {
       clip-path: none;
     }
   }
