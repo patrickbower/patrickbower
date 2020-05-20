@@ -1,70 +1,38 @@
-// .title {
-//   font-size: 14vw;
-//   letter-spacing: -0.05em;
+.title {
+  font-size: 10vw;
+  letter-spacing: -0.05em;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 0 1em;
 
-//   @media only screen and (min-width: $media-tablet) {
-//     font-size: 10vw;
-//   }
-// }
+  @media only screen and (min-width: $media-tablet) {
+    font-size: 6vw;
+  }
 
-// .title-strike {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: center;
+  &__strike-line {
+    background: $colour-white;
+    height: 6em;
+    display: inline-block;
+  }
+}
 
-//   &__heading {
-//     line-height: 1;
-//     display: inline-block;
-//     color: white;
-//     clip-path: polygon(0% 100%,
-//         0% 0%,
-//         100% 0%,
-//         100% calc(100% - 0.5em),
-//         calc(100% - 0.5em) 100%);
-//     padding-right: 0.05em;
+.title-subhead {
+  letter-spacing: 0.85em;
+  text-transform: uppercase;
+  color: white;
+  margin-top: -5em;
+  font-size: 4vw;
+  justify-content: center;
 
-//     &:first-letter {
-//       margin-left: -0.05em;
-//     }
+  @media only screen and (min-width: $media-tablet) {
+    font-size: 2vw;
+  }
 
-//     &--reverse {
-//       clip-path: polygon(0 0.5em, 0 100%, 100% 100%, 100% 0, 0.5em 0);
-//     }
-//   }
+  &__text {
+    // margin-left: 2.1em;
 
-//   &__slash {
-//     display: inline-block;
-//     width: 1px;
-//     height: 5em;
-//     background: white;
-//     transform: rotate(45deg);
-//     z-index: 1;
-//   }
-// }
-
-// .title-subhead {
-//   text-align: center;
-//   font-size: 4vw;
-//   letter-spacing: 1em;
-//   text-transform: uppercase;
-//   margin-top: 0;
-//   color: white;
-
-//   @media only screen and (min-width: $media-tablet) {
-//     margin-top: -8.7em;
-//     font-size: 2vw;
-//   }
-
-//   @media only screen and (min-width: $media-desktop) {
-//     margin-top: -8.5em;
-//   }
-
-//   &__strike {
-//     clip-path: none;
-
-//     @media only screen and (min-width: $media-tablet) {
-//       clip-path: polygon(0 0.5em, 0 100%, 100% 100%, 100% 0, 0.5em 0);
-//     }
-//   }
-// }
+    @media only screen and (max-width: $media-tablet) {
+      clip-path: none;
+    }
+  }
+}
