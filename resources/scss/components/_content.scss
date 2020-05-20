@@ -1,6 +1,5 @@
 .content {
   background: $colour-mine-shaft;
-  // background-image: linear-gradient(135deg, $colour-cinnabar 0%, darken($colour-cinnabar, 30%) 60%);
   overflow: hidden;
 
   &--secondary {
@@ -76,9 +75,7 @@
     }
 
     &--one {
-      // background: $colour-mischka;
       background: darken($colour-white, 5%);
-      // background: #f3f4f1;
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(45deg);
@@ -87,9 +84,7 @@
     }
 
     &--two {
-      // background: $colour-mako;
       background: darken($colour-white, 10%);
-      // background: #e6e8e2;
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(-45deg);
@@ -98,9 +93,7 @@
     }
 
     &--three {
-      // background: $colour-white;
       background: darken($colour-white, 15%);
-      // background: #daddd4;
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(45deg);
@@ -109,9 +102,7 @@
     }
 
     &--four {
-      // background: $colour-mischka;
       background: darken($colour-white, 20%);
-      // background: #cdd1c5;
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(-45deg);
@@ -121,14 +112,11 @@
 
     &--five {
       background: $colour-mine-shaft;
-      // background: darken($colour-white, 25%);
-      // background: #c1c6b7;
 
       @media only screen and (min-width: $media-desktop) {
         transform: rotate(45deg);
         margin-left: -60%;
         margin-bottom: rem(-90px);
-        // backgroundimage: linear-gradient(135deg, $colour-cinnabar 0%, darken($colour-cinnabar, 35%) 100%);
       }
     }
 

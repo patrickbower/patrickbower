@@ -27,8 +27,7 @@
 }
 
 .title-subhead {
-  $subheadColour: $colour-cinnabar;
-  color: $subheadColour;
+  color: $colour-cinnabar;
   font-size: 4vw;
   letter-spacing: 0.85em;
   text-transform: uppercase;
@@ -40,12 +39,6 @@
   }
 
   &__text {
-    // @media only screen and (min-width: $media-desktop) {
-    //   background: -webkit-linear-gradient(-45deg, darken($colour-cinnabar, 20%) 3%, $subheadColour 7%);
-    //   -webkit-background-clip: text;
-    //   -webkit-text-fill-color: transparent;
-    // }
-
     @media only screen and (max-width: $media-desktop) {
       clip-path: none;
     }
