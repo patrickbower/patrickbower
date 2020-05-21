@@ -6,6 +6,7 @@
   justify-content: space-between;
 
   @media only screen and (min-width: $media-desktop) {
+    margin-top: 0;
     justify-content: start;
   }
 }
