@@ -3,6 +3,16 @@
   flex-direction: row;
   align-items: center;
 
+  @media only screen and (max-width: $media-desktop) {
+    justify-content: center;
+  }
+
+  &--left {
+    @media only screen and (max-width: $media-desktop) {
+      justify-content: start;
+    }
+  }
+
   &__text {
     line-height: 1;
     display: inline-block;
@@ -13,6 +23,10 @@
         calc(100% - 0.5em) 100%);
     padding-right: 0.05em;
     color: $colour-cinnabar;
+
+    &--white {
+      color: $colour-white;
+    }
 
     &:first-letter {
       margin-left: -0.05em;
@@ -31,8 +45,16 @@
     transform: rotate(45deg);
     z-index: 1;
 
+    &--white {
+      background: $colour-white;
+    }
+
+    &--red {
+      background: $colour-cinnabar;
+    }
+
     &--lrg {
-      width: 2px;
+      height: 2em;
     }
   }
 }

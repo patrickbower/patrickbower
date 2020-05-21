@@ -1,5 +1,6 @@
 .link {
   &--underline {
+
     &:hover,
     &:focus {
       text-decoration: underline;
@@ -11,6 +12,7 @@
     padding: rem(20px);
     border-radius: rem(5px);
     margin-bottom: rem(40px);
+    // border: 1px solid $colour-cinnabar;
 
     &-icon {
       width: rem(50px);

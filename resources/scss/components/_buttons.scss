@@ -25,10 +25,6 @@
     border-color: darken($colour-mine-shaft, 20%);
   }
 
-  @media only screen and (max-width: $media-tablet) {
-    width: 100%;
-  }
-
   &--only-border {
     background: none;
   }
