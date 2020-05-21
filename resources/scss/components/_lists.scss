@@ -1,29 +1,23 @@
-// .list {
-//   margin-bottom: 20px;
-
-//   li {
-//     list-style-type: disc;
-//     margin-left: 20px;
-//   }
-// }
-
 .list {
   list-style: none;
 
-  & li::before {
-    content: "\2022";
+  li {
+    padding: 0 0 0.5em 1em;
+  }
+
+  li:before {
     color: $colour-cinnabar;
-    font-weight: bold;
-    display: inline-block;
+    content: "\2022";
+    display: block;
+    margin: 0 0 -1.8em -1em;
     width: 1em;
-    // margin-left: -1em;
   }
 }
 
 
 .list-horizontal {
   display: flex;
-  align-items: center;
+  align-items: end;
 
   &--align-bottom {
     align-items: flex-end;
