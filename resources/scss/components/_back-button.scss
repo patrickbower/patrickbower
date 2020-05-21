@@ -1,12 +1,5 @@
 .back-button {
-  &:before {
-    content: "";
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-left: 2px solid white;
-    border-bottom: 2px solid white;
-    transform: rotate(45deg);
-    margin-bottom: -2px;
-  }
+  background: lighten($colour-mine-shaft, 5%);
+  padding: rem(20px);
+  border-radius: rem(5px);
 }

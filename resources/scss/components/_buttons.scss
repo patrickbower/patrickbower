@@ -12,6 +12,7 @@
   text-decoration: none;
   color: $colour-mine-shaft;
   padding: rem(13px) rem(46px);
+  border-radius: rem(5px);
   @include border($colour-mine-shaft);
 
   &:hover {
