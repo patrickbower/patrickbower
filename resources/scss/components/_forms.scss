@@ -8,7 +8,7 @@
     margin-bottom: rem(50px);
     z-index: 0;
     height: 3.316em;
-    background: lighten($colour-mine-shaft, 5%);
+    background: lighten($colour-mine-shaft, 10%);
     border: none;
 
     &--message {
@@ -46,8 +46,8 @@
       border-bottom: rem(1px) solid $colour-nobel;
     }
 
-    &:focus ~ label,
-    &:valid ~ label {
+    &:focus~label,
+    &:valid~label {
       top: -1.45em;
       left: 0;
       color: $colour-nobel;
