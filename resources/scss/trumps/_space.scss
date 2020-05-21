@@ -1,31 +1,31 @@
 .space {
   &--lrg {
     &-before {
-      margin-top: rem(50px);
+      margin-top: rem(100px);
     }
 
     &-after {
-      margin-bottom: rem(50px);
+      margin-bottom: rem(100px);
     }
   }
 
   &--med {
     &-before {
-      margin-top: rem(35px);
+      margin-top: rem(60px);
     }
 
     &-after {
-      margin-bottom: rem(35px);
+      margin-bottom: rem(60px);
     }
   }
 
   &--sml {
     &-before {
-      margin-top: rem(10px);
+      margin-top: rem(20px);
     }
 
     &-after {
-      margin-bottom: rem(10px);
+      margin-bottom: rem(20px);
     }
   }
 

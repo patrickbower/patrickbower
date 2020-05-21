@@ -1,21 +1,17 @@
-<div class="header-secondary" data-init="back-button">
-  <div class="header-secondary__logo">
-    <a href="/" class="branding-diamond branding-oblong">
-      <svg class="icon--pb branding-diamond__icon branding-oblong__icon header-secondary__pb-icon">
-        <use xlink:href="#icon--pb"></use>
+<nav>
+  <div class="header-secondary" data-init="back-button">
+    <a href="/" class="js-back-button back-button leading--none">
+      <svg class="icon--arrow-left">
+        <use xlink:href="#icon--arrow-left"></use>
       </svg>
+      <span class="visually-hidden">Back</span>
     </a>
-  </div>
-  <nav>
-    <div class="header-secondary__nav">
-      <a class="js-back-button text--bold back-button" href="/">
-        Back
+    <div class="header-secondary__logo">
+      <a href="/" class="branding-diamond branding-oblong">
+        <svg class="icon--pb branding-diamond__icon branding-oblong__icon header-secondary__pb-icon">
+          <use xlink:href="#icon--pb"></use>
+        </svg>
       </a>
-      {% if nextPage %}
-        <a class="js-back-button text--bold next-button" href="../{{ nextPage }}">
-          Next
-        </a>
-      {% endif %}
     </div>
-  </nav>
-</div>
+  </div>
+</nav>

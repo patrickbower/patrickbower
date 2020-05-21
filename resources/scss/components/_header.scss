@@ -1,10 +1,12 @@
 .header {
+  margin-top: rem(80px);
   min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   @media only screen and (min-width: $media-desktop) {
+    margin-top: 0;
     justify-content: start;
   }
 }

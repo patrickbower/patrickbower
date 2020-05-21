@@ -3,8 +3,8 @@
     display: inline-block;
     position: relative;
     z-index: 999;
-    top: rem(20px);
     text-align: center;
+    top: rem(20px);
 
     @media only screen and (min-width: $media-desktop) {
       text-align: initial;
@@ -15,17 +15,17 @@
       display: inline-block;
       width: rem(45px);
       height: rem(45px);
-      background: $colour-white;
+      background: lighten($colour-mine-shaft, 10%);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
       position: absolute;
-      top: rem(15px);
+      top: 0;
       left: 50%;
       margin-left: rem(-25px);
     }
 
     &__icon {
-      top: rem(20px);
+      top: rem(5px);
       position: relative;
       width: rem(26px);
       height: rem(43px);
@@ -52,6 +52,7 @@
       }
 
       &__icon {
+        top: 0.85rem;
         width: rem(36px);
         height: rem(53px);
       }

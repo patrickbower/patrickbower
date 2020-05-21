@@ -12,6 +12,7 @@
   text-decoration: none;
   color: $colour-mine-shaft;
   padding: rem(13px) rem(46px);
+  border-radius: rem(5px);
   @include border($colour-mine-shaft);
 
   &:hover {
@@ -23,10 +24,6 @@
   &:active {
     background: darken($colour-mine-shaft, 20%);
     border-color: darken($colour-mine-shaft, 20%);
-  }
-
-  @media only screen and (max-width: $media-tablet) {
-    width: 100%;
   }
 
   &--only-border {
