@@ -14,10 +14,9 @@
   }
 }
 
-
 .list-horizontal {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 
   &--align-bottom {
     align-items: flex-end;
